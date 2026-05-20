@@ -14,7 +14,6 @@ heartrate_data$date <- as.Date(heartrate_data$date)
 data <- merge(sleep_data[, c("date", "overall_score", "resting_heart_rate")], 
               heartrate_data[, c("date", "average_heart_rate")], 
               by = "date")
-data <- data[complete.cases(data), ]
 
 # Statistieken
 cat("=== SLAAPSCORE vs HARTSLAG OVERDAG ===\n\n")
@@ -24,7 +23,7 @@ cat("Data punten: n =", nrow(data), "\n\n")
 # Beschrijvend
 cat("Slaapscore - Mean:", round(mean(data$overall_score), 2), 
     ", SD:", round(sd(data$overall_score), 2), "\n")
-cat("Hartslag - Mean:", round(mean(data$average_heart_rate), 2), 
+cat("Hartslag - Mean:", round(mean(data$average_heart_rate), 2),
     ", SD:", round(sd(data$average_heart_rate), 2), "\n\n")
 
 # Correlatie - ONE-TAILED (richting: lagere hartslag = hogere score)

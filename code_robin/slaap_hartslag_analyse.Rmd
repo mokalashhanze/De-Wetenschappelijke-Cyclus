@@ -1,0 +1,105 @@
+---
+title: "Slaapscore vs Hartslag — Analyse"
+author: "Robin Offringa"
+
+
+## 1. Libraries laden
+
+```{r libraries}
+library(ggplot2)
+```
+
+---
+
+## 2. Data inladen
+
+```{r data-laden}
+sleep_data     <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/Sleep Score/sleep_score.csv")
+heartrate_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/average_heart_rate_excluding_sleep.csv")
+```
+
+---
+
+## 3. Data voorbereiden & samenvoegen
+
+```{r data-prep}
+# Datumkolommen omzetten
+sleep_data$date     <- as.Date(sleep_data$timestamp)
+heartrate_data$date <- as.Date(heartrate_data$date)
+
+# Merge op datum
+data <- merge(
+  sleep_data[, c("date", "overall_score", "resting_heart_rate")],
+  heartrate_data[, c("date", "average_heart_rate")],
+  by = "date"
+)
+
+# Verwijder rijen met ontbrekende waarden
+data <- data[complete.cases(data), ]
+
+cat("Data punten: n =", nrow(data), "\n")
+```
+
+---
+
+## 4. Beschrijvende statistieken
+
+```{r statistieken}
+cat("Slaapscore       — Mean:", round(mean(data$overall_score), 2),
+    ", SD:", round(sd(data$overall_score), 2), "\n")
+
+cat("Hartslag overdag — Mean:", round(mean(data$average_heart_rate), 2),
+    ", SD:", round(sd(data$average_heart_rate), 2), "\n")
+```
+
+---
+
+## 5. Analyse A — Slaapscore vs Hartslag Overdag
+
+### Correlatie
+
+```{r correlatie-hartslag}
+corr <- cor.test(data$overall_score, data$average_heart_rate, alternative = "less")
+cat("r =", round(corr$estimate, 3), "\n")
+cat("p =", round(corr$p.value, 3), "\n")
+```
+
+### Plot
+
+```{r plot-hartslag, fig.width=7, fig.height=5}
+ggplot(data, aes(x = average_heart_rate, y = overall_score)) +
+  geom_point(size = 4, color = "blue", alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    title = "Slaapscore vs Hartslag Overdag",
+    x     = "Gemiddelde Hartslag (bpm)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 6. Analyse B — Slaapscore vs Rusthartslag
+
+### Correlatie
+
+```{r correlatie-rusthartslag}
+corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "less")
+cat("r =", round(corr2$estimate, 3), "\n")
+cat("p =", round(corr2$p.value, 3), "\n")
+```
+
+### Plot
+
+```{r plot-rusthartslag, fig.width=7, fig.height=5}
+ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
+  geom_point(size = 4, color = "darkgreen", alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    title = "Slaapscore vs Rusthartslag",
+    x     = "Rusthartslag (bpm)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
