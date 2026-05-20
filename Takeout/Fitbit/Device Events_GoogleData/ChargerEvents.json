@@ -1,0 +1,80 @@
+[
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 57,
+        "percentageRt": 57,
+        "powerGood": true,
+        "voltage": 4048
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-06T09:58:48.569Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 57,
+        "percentageRt": 57,
+        "powerGood": true,
+        "voltage": 4048
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-06T09:58:48.78Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 68,
+        "percentageRt": 68,
+        "powerGood": false,
+        "voltage": 3835
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-06T09:59:45.972Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 45,
+        "percentageRt": 45,
+        "powerGood": true,
+        "voltage": 4001
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-08T09:09:25.702Z"
+  },
+  {
+    "event": {
+      "batteryChargeDcr": {
+        "dcr": 1010,
+        "socStart": 45,
+        "vbatEnd": 4114,
+        "vbatMiddle": 3989,
+        "vbatStart": 4128
+      },
+      "event": "BATTERY_CHARGE_DCR"
+    },
+    "timestamp": "2026-05-08T09:10:31.162Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 99,
+        "percentageRt": 99,
+        "powerGood": false,
+        "voltage": 4387
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-08T10:55:47.224Z"
+  }
+]

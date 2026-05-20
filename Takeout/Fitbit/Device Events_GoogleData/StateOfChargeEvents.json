@@ -1,0 +1,569 @@
+[
+  {
+    "event": {
+      "isCharging": false,
+      "percentage": 30,
+      "percentageRt": 30,
+      "powerGood": false,
+      "type": "BOOT",
+      "voltage": 3777
+    },
+    "timestamp": "2026-04-06T10:04:39.598Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2502,
+      "isCharging": false,
+      "percentage": 30,
+      "percentageRt": 30,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3748
+    },
+    "timestamp": "2026-04-06T10:04:47.225Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2484,
+      "isCharging": false,
+      "percentage": 19,
+      "percentageRt": 19,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3727
+    },
+    "timestamp": "2026-04-06T10:06:01.135Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 10,
+      "percentageRt": 10,
+      "powerGood": true,
+      "type": "HOURLY",
+      "voltage": 3948
+    },
+    "timestamp": "2026-05-06T09:48:48.203Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 10,
+      "percentageRt": 10,
+      "powerGood": true,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3948
+    },
+    "timestamp": "2026-05-06T09:48:48.203Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 10,
+      "percentageRt": 10,
+      "powerGood": true,
+      "type": "HOURLY",
+      "voltage": 3957
+    },
+    "timestamp": "2026-05-06T09:49:00.401Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 15,
+      "percentageRt": 15,
+      "powerGood": true,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3996
+    },
+    "timestamp": "2026-05-06T09:53:00.265Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 20,
+      "percentageRt": 20,
+      "powerGood": true,
+      "type": "BATTERY_LEVEL",
+      "voltage": 4032
+    },
+    "timestamp": "2026-05-06T09:56:42.03Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 57,
+      "percentageRt": 57,
+      "powerGood": true,
+      "type": "BATTERY_LEVEL",
+      "voltage": 4048
+    },
+    "timestamp": "2026-05-06T09:58:48.569Z"
+  },
+  {
+    "event": {
+      "isCharging": true,
+      "percentage": 68,
+      "percentageRt": 68,
+      "powerGood": true,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3888
+    },
+    "timestamp": "2026-05-06T09:59:04.479Z"
+  },
+  {
+    "event": {
+      "isCharging": false,
+      "percentage": 68,
+      "percentageRt": 68,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3836
+    },
+    "timestamp": "2026-05-06T10:00:00.253Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2546,
+      "isCharging": false,
+      "percentage": 19,
+      "percentageRt": 19,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3766
+    },
+    "timestamp": "2026-05-06T11:00:00.891Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2626,
+      "isCharging": false,
+      "percentage": 19,
+      "percentageRt": 19,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3735
+    },
+    "timestamp": "2026-05-06T12:00:00.151Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2599,
+      "isCharging": false,
+      "percentage": 19,
+      "percentageRt": 19,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3733
+    },
+    "timestamp": "2026-05-06T13:00:00.142Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2608,
+      "isCharging": false,
+      "percentage": 19,
+      "percentageRt": 19,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3728
+    },
+    "timestamp": "2026-05-06T14:00:00.337Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2423,
+      "isCharging": false,
+      "percentage": 18,
+      "percentageRt": 18,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3727
+    },
+    "timestamp": "2026-05-06T15:00:00.804Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2484,
+      "isCharging": false,
+      "percentage": 18,
+      "percentageRt": 18,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3722
+    },
+    "timestamp": "2026-05-06T16:00:00.76Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2519,
+      "isCharging": false,
+      "percentage": 17,
+      "percentageRt": 17,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3720
+    },
+    "timestamp": "2026-05-06T17:00:00.556Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2546,
+      "isCharging": false,
+      "percentage": 17,
+      "percentageRt": 17,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3717
+    },
+    "timestamp": "2026-05-06T18:00:00.203Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2493,
+      "isCharging": false,
+      "percentage": 16,
+      "percentageRt": 16,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3714
+    },
+    "timestamp": "2026-05-06T19:00:00.451Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2599,
+      "isCharging": false,
+      "percentage": 16,
+      "percentageRt": 16,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3710
+    },
+    "timestamp": "2026-05-06T20:00:00.48Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2591,
+      "isCharging": false,
+      "percentage": 15,
+      "percentageRt": 15,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3705
+    },
+    "timestamp": "2026-05-06T21:00:00.76Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2644,
+      "isCharging": false,
+      "percentage": 14,
+      "percentageRt": 14,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3702
+    },
+    "timestamp": "2026-05-06T21:23:00.251Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3240,
+      "isCharging": false,
+      "percentage": 14,
+      "percentageRt": 14,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3699
+    },
+    "timestamp": "2026-05-06T22:00:00.432Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3405,
+      "isCharging": false,
+      "percentage": 86,
+      "percentageRt": 86,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4216
+    },
+    "timestamp": "2026-05-09T12:00:00.219Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3575,
+      "isCharging": false,
+      "percentage": 84,
+      "percentageRt": 84,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 4194
+    },
+    "timestamp": "2026-05-09T12:27:00.283Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3121,
+      "isCharging": false,
+      "percentage": 81,
+      "percentageRt": 81,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4194
+    },
+    "timestamp": "2026-05-09T13:00:01.014Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3240,
+      "isCharging": false,
+      "percentage": 80,
+      "percentageRt": 80,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4190
+    },
+    "timestamp": "2026-05-09T14:00:00.833Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3057,
+      "isCharging": false,
+      "percentage": 80,
+      "percentageRt": 80,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4186
+    },
+    "timestamp": "2026-05-09T15:00:00.593Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2670,
+      "isCharging": false,
+      "percentage": 80,
+      "percentageRt": 80,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4181
+    },
+    "timestamp": "2026-05-09T16:00:00.156Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2002,
+      "isCharging": false,
+      "percentage": 79,
+      "percentageRt": 79,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 4178
+    },
+    "timestamp": "2026-05-09T16:43:00.726Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2502,
+      "isCharging": false,
+      "percentage": 79,
+      "percentageRt": 79,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4178
+    },
+    "timestamp": "2026-05-09T17:00:00.997Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2546,
+      "isCharging": false,
+      "percentage": 72,
+      "percentageRt": 72,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4095
+    },
+    "timestamp": "2026-05-10T08:00:00.638Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2484,
+      "isCharging": false,
+      "percentage": 72,
+      "percentageRt": 72,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4092
+    },
+    "timestamp": "2026-05-10T09:00:00.457Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2405,
+      "isCharging": false,
+      "percentage": 71,
+      "percentageRt": 71,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4086
+    },
+    "timestamp": "2026-05-10T10:00:00.22Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2724,
+      "isCharging": false,
+      "percentage": 71,
+      "percentageRt": 71,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4085
+    },
+    "timestamp": "2026-05-10T11:00:00.057Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3240,
+      "isCharging": false,
+      "percentage": 71,
+      "percentageRt": 71,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4080
+    },
+    "timestamp": "2026-05-10T12:00:00.877Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2857,
+      "isCharging": false,
+      "percentage": 70,
+      "percentageRt": 70,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4076
+    },
+    "timestamp": "2026-05-10T13:00:00.607Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2804,
+      "isCharging": false,
+      "percentage": 70,
+      "percentageRt": 70,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4072
+    },
+    "timestamp": "2026-05-10T14:00:00.488Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3066,
+      "isCharging": false,
+      "percentage": 70,
+      "percentageRt": 70,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4065
+    },
+    "timestamp": "2026-05-10T15:00:00.245Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3103,
+      "isCharging": false,
+      "percentage": 69,
+      "percentageRt": 69,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 4064
+    },
+    "timestamp": "2026-05-10T15:06:00.849Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3011,
+      "isCharging": false,
+      "percentage": 69,
+      "percentageRt": 69,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4061
+    },
+    "timestamp": "2026-05-10T16:00:00.426Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2361,
+      "isCharging": false,
+      "percentage": 69,
+      "percentageRt": 69,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4057
+    },
+    "timestamp": "2026-05-10T17:00:00.63Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2591,
+      "isCharging": false,
+      "percentage": 68,
+      "percentageRt": 68,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4051
+    },
+    "timestamp": "2026-05-10T18:00:01.001Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2741,
+      "isCharging": false,
+      "percentage": 67,
+      "percentageRt": 67,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 4048
+    },
+    "timestamp": "2026-05-10T19:00:00.542Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2965,
+      "isCharging": false,
+      "percentage": 11,
+      "percentageRt": 11,
+      "powerGood": false,
+      "type": "BATTERY_LEVEL",
+      "voltage": 3678
+    },
+    "timestamp": "2026-05-14T22:29:00.343Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 2901,
+      "isCharging": false,
+      "percentage": 10,
+      "percentageRt": 10,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3697
+    },
+    "timestamp": "2026-05-14T23:00:00.828Z"
+  },
+  {
+    "event": {
+      "batteryTemperature": 3268,
+      "isCharging": false,
+      "percentage": 10,
+      "percentageRt": 10,
+      "powerGood": false,
+      "type": "HOURLY",
+      "voltage": 3691
+    },
+    "timestamp": "2026-05-15T00:00:00.729Z"
+  }
+]

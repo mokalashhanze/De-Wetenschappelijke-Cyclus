@@ -1,0 +1,3 @@
+timestamp,score,type,readiness level,sleep readiness,heart rate variability readiness,resting heart rate readiness,data source
+2026-05-13,16,LOW,TYPE_UNSPECIFIED,VERY_HIGH,VERY_LOW,HIGH,Fitbit App
+2026-05-14,72,HIGH,TYPE_UNSPECIFIED,HIGH,HIGH,HIGH,Fitbit App

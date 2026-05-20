@@ -1,0 +1,1175 @@
+[
+  {
+    "event": {
+      "autoWake": {
+        "stateChanged": {
+          "state": "ON"
+        }
+      }
+    },
+    "timestamp": "2026-04-06T10:06:03.308Z"
+  },
+  {
+    "event": {
+      "arSettings": {
+        "arSetting": [ {
+          "exerciseType": "WALK",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "RUN",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "CYCLE",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "ROW",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "ELLIPTICAL",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "SPINNING",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        } ]
+      }
+    },
+    "timestamp": "2026-04-06T10:06:04.06Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DEVICE_PAIRED"
+      }
+    },
+    "timestamp": "2026-05-06T09:48:49.108Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:39.76Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:39.945Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:41.76Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:43.764Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:45.551Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:45.919Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:47.4Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:49.271Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:51.074Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:53.072Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:54.927Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:56.438Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T09:59:58.218Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:00.148Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:01.907Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:03.681Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:05.611Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:07.348Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:08.728Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:10.63Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:12.391Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:14.087Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:15.969Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:17.697Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:19.511Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:21.276Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:23.161Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:24.882Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:26.659Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:28.539Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:30.306Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:32.103Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:33.864Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:35.685Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:36.665Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:37.683Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:38.98Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:40.234Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:40.963Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:41.211Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:41.5Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:41.745Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:42.646Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:42.985Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:42.325Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:42.027Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:43.3Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:43.526Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:44.368Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:46.215Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:48.053Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:49.815Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:51.612Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:53.385Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:55.297Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:57.072Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:00:58.696Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:00.599Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:02.214Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:03.677Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:05.499Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:07.08Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:07.397Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:07.618Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:09.163Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:10.96Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:12.764Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:14.6Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:16.408Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:17.819Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:18.566Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:18.869Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:19.141Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:19.504Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:19.902Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:20.134Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:20.536Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:20.81Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:21.452Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:22.861Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:22.183Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:22.518Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:23.601Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:24.227Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:24.675Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:25.059Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:25.529Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:25.981Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:26.356Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:26.735Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:27.559Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:28.576Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:30.106Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:31.344Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:32.349Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:33.11Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:33.986Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:34.684Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:35.589Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:36.845Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:37.971Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:38.966Z"
+  },
+  {
+    "event": {
+      "oobe": {
+        "type": "DOWNLOAD_START"
+      }
+    },
+    "timestamp": "2026-05-06T10:01:39.272Z"
+  },
+  {
+    "event": {
+      "autoWake": {
+        "stateChanged": {
+          "state": "ON"
+        }
+      }
+    },
+    "timestamp": "2026-05-06T10:12:36.404Z"
+  },
+  {
+    "event": {
+      "arSettings": {
+        "arSetting": [ {
+          "exerciseType": "WALK",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "RUN",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "CYCLE",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "ROW",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "ELLIPTICAL",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "SPINNING",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        } ]
+      }
+    },
+    "timestamp": "2026-05-06T10:12:37.225Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-06T10:18:10.029Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-06T10:18:11.21Z"
+  },
+  {
+    "event": {
+      "autoWake": {
+        "stateChanged": {
+          "state": "ON"
+        }
+      }
+    },
+    "timestamp": "2026-05-06T12:29:13.343Z"
+  },
+  {
+    "event": {
+      "arSettings": {
+        "arSetting": [ {
+          "exerciseType": "WALK",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "RUN",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "CYCLE",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "ROW",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "ELLIPTICAL",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "SPINNING",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        } ]
+      }
+    },
+    "timestamp": "2026-05-06T12:29:14.259Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-06T22:08:10.6Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1778062690
+        }
+      }
+    },
+    "timestamp": "2026-05-06T22:08:12.033Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1778307510,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-09T15:36:35.766Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1778105290
+        }
+      }
+    },
+    "timestamp": "2026-05-09T15:36:36.875Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:20:27.478Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:20:36.419Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appCommsState": "APP_COMMS_READ_OBSOLETE",
+          "appError": "MUSIC_ERROR_CANT_FIND_PHONE",
+          "appFormat": "APP_FORMAT_STANDALONE",
+          "btLinkState": "BT_LINK_STATE_DOWN",
+          "obdState": "APP_OBD_STATE_NOT_DONE"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:20:37.559Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:21:56.291Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:21:57.182Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:21:57.598Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:22:09.785Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appError": "MUSIC_ERROR_EMPTY_PLAYLIST"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:22:18.763Z"
+  },
+  {
+    "event": {
+      "musicApp": {
+        "errorField": {
+          "appCommsState": "APP_COMMS_READ_OBSOLETE",
+          "appError": "MUSIC_ERROR_CANT_FIND_PHONE",
+          "appFormat": "APP_FORMAT_STANDALONE",
+          "btLinkState": "BT_LINK_STATE_DOWN",
+          "obdState": "APP_OBD_STATE_NOT_DONE"
+        }
+      }
+    },
+    "timestamp": "2026-05-10T07:22:19.83Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1778307510
+        }
+      }
+    },
+    "timestamp": "2026-05-10T13:49:37.426Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-10T13:49:43.176Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1778341008
+        }
+      }
+    },
+    "timestamp": "2026-05-10T13:49:47.479Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1778392140,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-10T14:06:54.679Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1778392140
+        }
+      }
+    },
+    "timestamp": "2026-05-15T00:11:34.598Z"
+  }
+]

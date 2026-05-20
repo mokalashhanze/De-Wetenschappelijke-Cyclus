@@ -1,0 +1,4 @@
+timestamp,event_name,email,location,ip,outcome,reason
+Wed May 06 12:18:11 UTC 2026,Update profile data,robinoffringa27@gmail.com,,172.22.34.237,SUCCESS,
+Wed May 06 09:46:50 UTC 2026,Update profile data,robinoffringa27@gmail.com,,172.22.25.230,SUCCESS,
+Wed May 06 09:46:38 UTC 2026,Signup,Hw6pRq5DxaelwkiV9he3@fitbit-identity.goog,,,SUCCESS,
