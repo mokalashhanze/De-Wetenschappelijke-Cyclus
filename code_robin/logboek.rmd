@@ -20,7 +20,7 @@ In dit project onderzoeken we of betere slaapkwaliteit samenhangt met een lagere
 - Tijdspanne: vier weken per proefpersoon
 - Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en eenvoudige regressies met slaapscore als uitkomst
 
-## 2026-05-20 — Opsplitsing naar Rmd
+## 2026-05-20 — Opsplitsing naar Rmd en correlatie stappen en hartslag analyse
 
 Vandaag heb ik mijn eerdere R-script opgesplitst naar een R Markdown-bestand zodat ik losse codechunks kan runnen en direct resultaten (tabellen/plots) kan tonen.
 Hieronder staan korte voorbeelden van het inlezen en verkennen van de Fitbit-data uit de export.
@@ -33,8 +33,8 @@ Hieronder wat snippets met korte toelichting.
 ```{r load-data, echo=TRUE}
 # Libraries + inlezen (pas paden aan indien nodig)
 library(ggplot2); library(dplyr)
-sleep_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/Sleep Score/sleep_score.csv")
-hr_data    <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/average_heart_rate_excluding_sleep.csv")
+sleep_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
+hr_data    <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
 ```
 
 lees de sleepscore- en hartslagbestanden in; controleer kolomnamen (`timestamp`, `overall_score`, `resting_heart_rate`, `average_heart_rate`).
@@ -53,9 +53,9 @@ data <- data[complete.cases(data), ]
 
 samenvoegen en NA-waarden verwijderen zodat analyses op complete dagen lopen.
 
-```{r key-analysis, echo=TRUE, fig.width=7, fig.height=5}
+```{r key-analysis, echo=TRUE, fig.width=10, fig.height=4}
 # Belangrijkste statistische test en visualisatie (rusthartslag)
-corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "less")
+corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "two.sided")
 print(corr2)
 
 ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
@@ -66,11 +66,11 @@ ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
 	theme_minimal()
 ```
 
-Dit test of een lagere rusthartslag correspondeert met hogere slaapscore. De plot toont de spreiding en regressielijn.
+Dit test of een lagere rusthartslag correleert met hogere slaapscore. De plot toont de spreiding en regressielijn.
 
-```{r steps-analysis, echo=TRUE, fig.width=7, fig.height=5}
+```{r steps-analysis, echo=TRUE, fig.width=10, fig.height=4}
 # Extra vergelijking: stappen per dag vs slaapscore
-corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "greater")
+corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "two.sided")
 print(corr3)
 
 ggplot(data, aes(x = total_steps, y = overall_score)) +
@@ -81,5 +81,14 @@ ggplot(data, aes(x = total_steps, y = overall_score)) +
 	theme_minimal()
 ```
 
-Korte toelichting: hiermee kijk ik of meer stappen per dag samenhangen met een hogere slaapscore. Dit is een tweede, simpele manier om de link tussen leefstijl en slaap te laten zien.
+Hiermee kijk ik of meer stappen per dag samenhangen met een hogere slaapscore. Dit is een tweede manier om de link tussen leefstijl en slaap te laten zien.
+
+## Observatie — Correlaties vergeleken
+
+Bij vergelijking van de correlaties tussen slaapscore en de twee variabelen valt een interessant patroon op:
+
+- **Slaapscore vs Hartslag**: Er is een duidelijke negatieve correlatie — betere slaapscores gaan samen met een lagere hartslag (zowel rusthartslag als gemiddelde daghartslag).
+- **Slaapscore vs Stappen per dag**: Hier is bijna geen correlatie te zien — het aantal stappen per dag heeft vrijwel geen verband met de slaapscore.
+
+Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). Dit sluit aan bij de theorie dat rust en herstelling belangrijker zijn voor slaapkwaliteit dan pure hoeveelheid beweging.
 

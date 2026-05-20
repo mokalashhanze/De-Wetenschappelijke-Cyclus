@@ -1,6 +1,8 @@
 ---
 title: "Slaapscore vs Hartslag — Analyse"
 author: "Robin Offringa"
+output: html_document
+---
 
 
 ## 1. Libraries laden
@@ -14,8 +16,8 @@ library(ggplot2)
 ## 2. Data inladen
 
 ```{r data-laden}
-sleep_data     <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/Sleep Score/sleep_score.csv")
-heartrate_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/Takeout/Fitbit/average_heart_rate_excluding_sleep.csv")
+sleep_data     <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
+heartrate_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
 ```
 
 ---
@@ -42,7 +44,7 @@ cat("Data punten: n =", nrow(data), "\n")
 
 ---
 
-## 4. Beschrijvende statistieken
+## 4. Statistieken
 
 ```{r statistieken}
 cat("Slaapscore       — Mean:", round(mean(data$overall_score), 2),
@@ -62,7 +64,7 @@ cat("Stappen per dag   — Mean:", round(mean(data$total_steps), 2),
 ### Correlatie
 
 ```{r correlatie-hartslag}
-corr <- cor.test(data$overall_score, data$average_heart_rate, alternative = "less")
+corr <- cor.test(data$overall_score, data$average_heart_rate, alternative = "two.sided")
 cat("r =", round(corr$estimate, 3), "\n")
 cat("p =", round(corr$p.value, 3), "\n")
 ```
@@ -88,7 +90,7 @@ ggplot(data, aes(x = average_heart_rate, y = overall_score)) +
 ### Correlatie
 
 ```{r correlatie-rusthartslag}
-corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "less")
+corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "two.sided")
 cat("r =", round(corr2$estimate, 3), "\n")
 cat("p =", round(corr2$p.value, 3), "\n")
 ```
@@ -114,7 +116,7 @@ ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
 ### Correlatie
 
 ```{r correlatie-stappen}
-corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "greater")
+corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "two.sided")
 cat("r =", round(corr3$estimate, 3), "\n")
 cat("p =", round(corr3$p.value, 3), "\n")
 ```
