@@ -16,3 +16,6 @@ laatste maaltijd voor slapen.
 * aanvullend meerkeuzevraag in de form invullen elke dag
 * Tijd voor het laatst voor blauw licht hebt gezeten (bijv. telefoons, computers, etc.)
 * tijdstip invullen van laatste tijd achter blauw licht gezeten in google forms
+
+**het moet op de volgende manier genoteerd worden:**
+* https://docs.google.com/forms/d/e/1FAIpQLSdu5ueiKrxmoItkctAfPo8y3DHmR7RH2bo1FQwmFwkfFW0zAQ/viewform?usp=dialog
