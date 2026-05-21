@@ -1,0 +1,43 @@
+---
+title: "logboek"
+author: "mohammed"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introductie:
+**Inleiding:**  
+Goed slapen is heel belangrijk voor je lichaam en je hersenen. Als je slaapt, herstelt je lichaam van de dag. Je hartslag gaat tijdens het slapen omlaag omdat je lichaam helemaal tot rust komt. Als je een lage hartslag hebt in de nacht, betekent dit meestal dat je diep en goed slaapt. Je hart hoeft dan minder hard te werken. Daarom kijken we in dit onderzoek naar de hartslag, want die vertelt ons veel over hoe goed je slaapt.
+
+**Onderzoek**  
+In dit onderzoek bestuderen we de slaapkwaliteit door middel van een smartwatch die de hartslag tijdens het slapen meet. Dit onderzoek wordt uitgevoerd bij drie proefpersonen. We hopen met de resultaten mensen te kunnen helpen hun slaap te verbeteren. We weten dat ook andere factoren een rol spelen bij de hartslagmetingen, zoals het tijdstip van slapen, het type fysieke activiteit overdag, het tijdstip van de laatste maaltijd en telefoongebruik voor het slapengaan. Om deze factoren in kaart te brengen, vullen de proefpersonen dagelijks een korte vragenlijst in. Zo registreren we mogelijke storende variabelen die invloed kunnen hebben op de slaap en de hartslag.   
+
+**Onderzoekvraag en hypothese:**    
+Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap? De verwachting is dat proefpersonen met een lagere gemiddelde hartslag tijdens de slaap beter slapen. Daarnaast wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. Dit onderzoek is relevant omdat het inzichtelijk maakt hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewustere keuzes maken voor een betere rust en optimaal herstel.   
+
+**Gebruikte data:**   
+Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De benodigde gegevens worden via een data-export uit de Fitbit-app gehaald. Dit bestand bevat alle relevante variabelen, waaronder de gemiddelde slaapkwaliteit en de gemiddelde hartslag tijdens de slaap. Via Google Forms registreren we de overige dagelijkse factoren met een vragenlijst. Met behulp van R-code analyseren we de data en genereren we een plot die de relatie tussen de slaapkwaliteit en de hartslag tijdens het slapen visualiseert.   
+
+
+# Dag 1: 
+*Datum:21/05/2026*
+
+**Doel van de dag:**  
+Het intro voor de artikel klaarmaken
+
+**Uitgevoerde werkzaamheden:**    
+eerste versie met mijn groep gedeelt
+we hebben besloten om de onderzoekvraag te veranderen.
+Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap?
+
+**Resultaten:**  
+nieuwe onderzoekvraag, het intro is bijna af.
+
+**Analyse van de resultaten:**  
+Het is 
+**Conclusie en vervolgstappen:**  
+
+# Dag 2:
