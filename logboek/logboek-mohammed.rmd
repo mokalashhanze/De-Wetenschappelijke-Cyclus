@@ -23,7 +23,7 @@ Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De
 
 
 # Dag 1: 
-*Datum:21/05/2026*
+*Datum:20/05/2026*
 
 **Doel van de dag:**  
 Het intro voor de artikel klaarmaken
@@ -34,10 +34,18 @@ we hebben besloten om de onderzoekvraag te veranderen.
 Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap?
 
 **Resultaten:**  
-nieuwe onderzoekvraag, het intro is bijna af.
-
-**Analyse van de resultaten:**  
-Het is 
-**Conclusie en vervolgstappen:**  
+het intro is bijna af, het moet iets langer zijn.
 
 # Dag 2:
+*Datum:21/05/2026*
+
+**Doel van de dag:**  
+beginnen met de Readme
+
+**Uitgevoerde werkzaamheden:**   
+Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.
+Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
+
+**Resultaten:**  readme is bijna af, het mist nog informatie over de code
+
+
