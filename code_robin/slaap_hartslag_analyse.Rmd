@@ -16,8 +16,8 @@ library(ggplot2)
 ## 2. Data inladen
 
 ```{r data-laden}
-sleep_data     <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
-heartrate_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
+sleep_data     <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
+heartrate_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
 ```
 
 ---

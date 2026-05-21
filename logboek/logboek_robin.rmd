@@ -1,0 +1,121 @@
+---
+title: "Logboek"
+author: "Robin Offringa"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+# Slaap en hartslag — logboek
+
+## Introductie
+
+Slaap is een van de belangrijkste processen voor herstel van lichaam en hersenen. Tijdens de slaap vertraagt de hartslag, wat vaak aangeeft dat het lichaam tot rust komt.
+Een lagere hartslag tijdens slaap wordt daarom vaak gezien als een aanwijzing voor betere slaapkwaliteit.
+Verschillende factoren zoals stress, fysieke activiteit en avondgedrag beïnvloeden de hartslag overdag en tijdens slaap.
+
+In dit project onderzoeken we of betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag.
+Drie proefpersonen dragen een Fitbit-smartwatch en meten continu hartslag en slaap gedurende vier weken.
+Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eetgedrag en schermgebruik voor het slapen.
+
+
+## Data en methode
+
+- Data: Fitbit-export (voorbeeldbestand: `takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv`)
+- Tijdspanne: vier weken per proefpersoon
+- Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en eenvoudige regressies met slaapscore als uitkomst
+
+## 2026-05-20 — Opsplitsing naar Rmd en correlatie stappen en hartslag analyse
+
+Vandaag heb ik mijn eerdere R-script opgesplitst naar een R Markdown-bestand zodat ik losse codechunks kan runnen en direct resultaten (tabellen/plots) kan tonen.
+Hieronder staan korte voorbeelden van het inlezen en verkennen van de Fitbit-data uit de export.
+Ik heb het script opgesplitst naar een Rmd zodat ik stukjes code interactiv run en opmerkingen bij de resultaten kan zetten.
+
+### Geknipte analysevoorbeelden (kort)
+
+Hieronder wat snippets met korte toelichting.
+
+```{r load-data, echo=TRUE}
+# Libraries + inlezen (pas paden aan indien nodig)
+library(ggplot2); library(dplyr)
+sleep_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
+hr_data    <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
+```
+
+lees de sleepscore- en hartslagbestanden in; controleer kolomnamen (`timestamp`, `overall_score`, `resting_heart_rate`, `average_heart_rate`).
+
+```{r prep-data, echo=TRUE}
+# Snel samenvoegen op datum
+sleep_data$date <- as.Date(sleep_data$timestamp)
+hr_data$date    <- as.Date(hr_data$date)
+data <- merge(
+	sleep_data[, c("date","overall_score","resting_heart_rate")],
+	hr_data[, c("date","average_heart_rate","total_steps")],
+	by = "date"
+)
+data <- data[complete.cases(data), ]
+```
+
+samenvoegen en NA-waarden verwijderen zodat analyses op complete dagen lopen.
+
+```{r key-analysis, echo=TRUE, fig.width=10, fig.height=4}
+# Belangrijkste statistische test en visualisatie (rusthartslag)
+corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "two.sided")
+print(corr2)
+
+ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
+	geom_point(alpha = 0.7) +
+	geom_smooth(method = "lm", color = "red") +
+	labs(title = "Slaapscore vs Rusthartslag",
+			 x = "Rusthartslag (bpm)", y = "Slaapscore") +
+	theme_minimal()
+```
+
+Dit test of een lagere rusthartslag correleert met hogere slaapscore. De plot toont de spreiding en regressielijn.
+
+```{r steps-analysis, echo=TRUE, fig.width=10, fig.height=4}
+# Extra vergelijking: stappen per dag vs slaapscore
+corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "two.sided")
+print(corr3)
+
+ggplot(data, aes(x = total_steps, y = overall_score)) +
+	geom_point(alpha = 0.7, color = "orange") +
+	geom_smooth(method = "lm", color = "red") +
+	labs(title = "Slaapscore vs Stappen per dag",
+			 x = "Stappen per dag", y = "Slaapscore") +
+	theme_minimal()
+```
+
+Hiermee kijk ik of meer stappen per dag samenhangen met een hogere slaapscore. Dit is een tweede manier om de link tussen leefstijl en slaap te laten zien.
+
+## Observatie — Correlaties vergeleken
+
+Bij vergelijking van de correlaties tussen slaapscore en de twee variabelen valt een interessant patroon op:
+
+- **Slaapscore vs Hartslag**: Er is een duidelijke negatieve correlatie — betere slaapscores gaan samen met een lagere hartslag (zowel rusthartslag als gemiddelde daghartslag).
+- **Slaapscore vs Stappen per dag**: Hier is bijna geen correlatie te zien — het aantal stappen per dag heeft vrijwel geen verband met de slaapscore.
+
+Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). Dit sluit aan bij de theorie dat rust en herstelling belangrijker zijn voor slaapkwaliteit dan pure hoeveelheid beweging.
+
+## Toekomstige plannen
+
+- Data van groepsgenoten toevoegen en vergelijken
+- Eigen data vernieuwen met nieuwe export
+- Google Form data exporteren en integreren voor aanvullende analyses (schermgebruik, etc.)
+- R^2 analyse toevoegen om procenten verklaarde variantie te berekenen
+- lm() functie gebruiken om meerdere variabalen tegelijk te analyseren (hartslag + stappen etc) en p waarden vergelijken
+
+## 2026-05-21 — R^2 analyse en lm() functie toegevoegd
+
+Vandaag heb ik de R^2-waarden toegevoegd aan de correlatietests zodat we kunnen zien hoeveel van de variantie in slaapscore wordt verklaard door hartslag en stappen.
+Daarnaast heb ik een lineair model gemaakt met zowel hartslag als stappen als voorspellers van slaapscore, zodat we kunnen zien welke variabele sterker bijdraagt als we ze samen in één model
+zetten.
+
+Ik kon gister niet goed slapen en had veel stress. Mijn slaapscore was 70, lager dan mijn gemiddelde.
+Ik vraag me af of mijn hartslag hoger was die dag.
+
+Ik kwam er achter dat de fitbit elke dag een hoeveelheid verbrandde calorieën rapporteert,
+wat waarschijnlijk een betere maat is voor fysieke activiteit dan stappen. 
+Ik kwam er ook achter dat de fitbit elke dag een stressmanagement score geeft, gebaseerd op hartslagvariabiliteit.
+Ik ga van deze data ook kijken of die samenhangt met slaapkwaliteit.
+
+Verder hebben Lucas en Mohammed hun Fitbit data gedeeld, dus kan ik deze data vergelijken met mijn eigen data.

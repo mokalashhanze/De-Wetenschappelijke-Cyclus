@@ -1,0 +1,12 @@
+timestamp,average heart rate variability milliseconds,non rem heart rate beats per minute,entropy,deep sleep root mean square of successive differences milliseconds,data source
+2026-05-08T00:00:00Z,38.9,60.6,3.177,40.5,Fitbit App
+2026-05-09T00:00:00Z,40.3,59.3,2.89,34.3,Fitbit App
+2026-05-10T00:00:00Z,35.5,59.9,2.579,34.7,Fitbit App
+2026-05-12T00:00:00Z,34.3,57.7,2.668,34.65,Fitbit App
+2026-05-13T00:00:00Z,32.6,63.0,2.983,30.6,Fitbit App
+2026-05-14T00:00:00Z,29.9,60.2,2.527,29.8,Fitbit App
+2026-05-15T00:00:00Z,36.7,58.2,2.864,33.4,Fitbit App
+2026-05-17T00:00:00Z,32.7,59.0,2.715,33.15,Fitbit App
+2026-05-18T00:00:00Z,33.7,59.5,2.671,36.25,Fitbit App
+2026-05-19T00:00:00Z,30.8,59.9,2.629,30.0,Fitbit App
+2026-05-20T00:00:00Z,42.9,57.6,2.638,41.4,Fitbit App
