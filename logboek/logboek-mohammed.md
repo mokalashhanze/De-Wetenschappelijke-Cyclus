@@ -4,10 +4,6 @@ author: "mohammed"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Introductie:
 **Inleiding:**  
 Goed slapen is heel belangrijk voor je lichaam en je hersenen. Als je slaapt, herstelt je lichaam van de dag. Je hartslag gaat tijdens het slapen omlaag omdat je lichaam helemaal tot rust komt. Als je een lage hartslag hebt in de nacht, betekent dit meestal dat je diep en goed slaapt. Je hart hoeft dan minder hard te werken. Daarom kijken we in dit onderzoek naar de hartslag, want die vertelt ons veel over hoe goed je slaapt.
