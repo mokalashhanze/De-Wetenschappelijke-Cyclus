@@ -9,9 +9,13 @@ output: html_document
 
 ## Introductie
 
-Slaap is een van de belangrijkste processen voor herstel van lichaam en hersenen. Tijdens de slaap vertraagt de hartslag, wat vaak aangeeft dat het lichaam tot rust komt. Een lagere hartslag tijdens slaap wordt daarom vaak gezien als een aanwijzing voor betere slaapkwaliteit (Cleveland Clinic, 2024). Verschillende factoren zoals stress, fysieke activiteit en avondgedrag beïnvloeden de hartslag overdag en tijdens slaap (Valentini & Parati, 2009).
+Slaap is een van de belangrijkste processen voor herstel van lichaam en hersenen. Tijdens de slaap vertraagt de hartslag, wat vaak aangeeft dat het lichaam tot rust komt.
+Een lagere hartslag tijdens slaap wordt daarom vaak gezien als een aanwijzing voor betere slaapkwaliteit.
+Verschillende factoren zoals stress, fysieke activiteit en avondgedrag beïnvloeden de hartslag overdag en tijdens slaap.
 
-In dit project onderzoeken we of betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag. Drie proefpersonen dragen een Fitbit-smartwatch en meten continu hartslag en slaap gedurende vier weken. Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eetgedrag en schermgebruik voor het slapen.
+In dit project onderzoeken we of betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag.
+Drie proefpersonen dragen een Fitbit-smartwatch en meten continu hartslag en slaap gedurende vier weken.
+Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eetgedrag en schermgebruik voor het slapen.
 
 
 ## Data en methode
@@ -92,3 +96,26 @@ Bij vergelijking van de correlaties tussen slaapscore en de twee variabelen valt
 
 Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). Dit sluit aan bij de theorie dat rust en herstelling belangrijker zijn voor slaapkwaliteit dan pure hoeveelheid beweging.
 
+## Toekomstige plannen
+
+- Data van groepsgenoten toevoegen en vergelijken
+- Eigen data vernieuwen met nieuwe export
+- Google Form data exporteren en integreren voor aanvullende analyses (schermgebruik, etc.)
+- R^2 analyse toevoegen om procenten verklaarde variantie te berekenen
+- lm() functie gebruiken om meerdere variabalen tegelijk te analyseren (hartslag + stappen etc) en p waarden vergelijken
+
+## 2026-05-21 — R^2 analyse en lm() functie toegevoegd
+
+Vandaag heb ik de R^2-waarden toegevoegd aan de correlatietests zodat we kunnen zien hoeveel van de variantie in slaapscore wordt verklaard door hartslag en stappen.
+Daarnaast heb ik een lineair model gemaakt met zowel hartslag als stappen als voorspellers van slaapscore, zodat we kunnen zien welke variabele sterker bijdraagt als we ze samen in één model
+zetten.
+
+Ik kon gister niet goed slapen en had veel stress. Mijn slaapscore was 70, lager dan mijn gemiddelde.
+Ik vraag me af of mijn hartslag hoger was die dag.
+
+Ik kwam er achter dat de fitbit elke dag een hoeveelheid verbrandde calorieën rapporteert,
+wat waarschijnlijk een betere maat is voor fysieke activiteit dan stappen. 
+Ik kwam er ook achter dat de fitbit elke dag een stressmanagement score geeft, gebaseerd op hartslagvariabiliteit.
+Ik ga van deze data ook kijken of die samenhangt met slaapkwaliteit.
+
+Verder hebben Lucas en Mohammed hun Fitbit data gedeeld, dus kan ik deze data vergelijken met mijn eigen data.

@@ -64,9 +64,10 @@ cat("Stappen per dag   — Mean:", round(mean(data$total_steps), 2),
 ### Correlatie
 
 ```{r correlatie-hartslag}
+model_hr <- lm(overall_score ~ average_heart_rate, data = data)
+sum_hr <- summary(model_hr)
 corr <- cor.test(data$overall_score, data$average_heart_rate, alternative = "two.sided")
-cat("r =", round(corr$estimate, 3), "\n")
-cat("p =", round(corr$p.value, 3), "\n")
+cat("R^2 =", round(sum_hr$r.squared, 3), ", p (cor.test) =", round(corr$p.value, 3), "\n")
 ```
 
 ### Plot
@@ -90,9 +91,10 @@ ggplot(data, aes(x = average_heart_rate, y = overall_score)) +
 ### Correlatie
 
 ```{r correlatie-rusthartslag}
+model_rest <- lm(overall_score ~ resting_heart_rate, data = data)
+sum_rest <- summary(model_rest)
 corr2 <- cor.test(data$overall_score, data$resting_heart_rate, alternative = "two.sided")
-cat("r =", round(corr2$estimate, 3), "\n")
-cat("p =", round(corr2$p.value, 3), "\n")
+cat("R^2 =", round(sum_rest$r.squared, 3), ", p (cor.test) =", round(corr2$p.value, 3), "\n")
 ```
 
 ### Plot
@@ -116,9 +118,10 @@ ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
 ### Correlatie
 
 ```{r correlatie-stappen}
+model_steps <- lm(overall_score ~ total_steps, data = data)
+sum_steps <- summary(model_steps)
 corr3 <- cor.test(data$overall_score, data$total_steps, alternative = "two.sided")
-cat("r =", round(corr3$estimate, 3), "\n")
-cat("p =", round(corr3$p.value, 3), "\n")
+cat("R^2 =", round(sum_steps$r.squared, 3), ", p (cor.test) =", round(corr3$p.value, 3), "\n")
 ```
 
 ### Plot
@@ -135,3 +138,12 @@ ggplot(data, aes(x = total_steps, y = overall_score)) +
   theme_minimal()
 ```
 
+## 8. Alle variabelen samen meerdere dimensies bekijken
+
+### Correlaties
+
+```{r^2 correlaties-overzicht}
+model_all <- lm(overall_score ~ average_heart_rate + resting_heart_rate + total_steps, data = data)
+sum_all <- summary(model_all)
+cat("R^2 =", round(sum_all$r.squared, 3), ", p (model) =", round(sum_all$fstatistic[1], 3), "\n")
+```
