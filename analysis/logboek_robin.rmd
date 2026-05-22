@@ -20,7 +20,7 @@ Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eet
 
 ## Data en methode
 
-- Data: Fitbit-export (voorbeeldbestand: `takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv`)
+- Data: Fitbit-export met afgeleide output in `analysis/data/combined_data_robin.csv`
 - Tijdspanne: vier weken per proefpersoon
 - Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en eenvoudige regressies met slaapscore als uitkomst
 
@@ -38,10 +38,10 @@ Hieronder wat snippets met korte toelichting.
 # Libraries + inlezen (pas paden aan indien nodig)
 library(ggplot2); library(dplyr)
 sleep_data <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/Sleep Score/sleep_score.csv")
-hr_data    <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/data/takeout_robin/Fitbit/average_heart_rate_excluding_sleep.csv")
+hr_data    <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data_robin.csv")
 ```
 
-lees de sleepscore- en hartslagbestanden in; controleer kolomnamen (`timestamp`, `overall_score`, `resting_heart_rate`, `average_heart_rate`).
+lees de sleepscore en hartslagbestanden in.
 
 ```{r prep-data, echo=TRUE}
 # Snel samenvoegen op datum
@@ -55,7 +55,7 @@ data <- merge(
 data <- data[complete.cases(data), ]
 ```
 
-samenvoegen en NA-waarden verwijderen zodat analyses op complete dagen lopen.
+samenvoegen en NA-waarden verwijderen zodat analyses op hele dagen lopen.
 
 ```{r key-analysis, echo=TRUE, fig.width=10, fig.height=4}
 # Belangrijkste statistische test en visualisatie (rusthartslag)
@@ -70,7 +70,7 @@ ggplot(data, aes(x = resting_heart_rate, y = overall_score)) +
 	theme_minimal()
 ```
 
-Dit test of een lagere rusthartslag correleert met hogere slaapscore. De plot toont de spreiding en regressielijn.
+Dit test of een lagere rusthartslag correleert met hogere slaapscore.
 
 ```{r steps-analysis, echo=TRUE, fig.width=10, fig.height=4}
 # Extra vergelijking: stappen per dag vs slaapscore
@@ -85,16 +85,16 @@ ggplot(data, aes(x = total_steps, y = overall_score)) +
 	theme_minimal()
 ```
 
-Hiermee kijk ik of meer stappen per dag samenhangen met een hogere slaapscore. Dit is een tweede manier om de link tussen leefstijl en slaap te laten zien.
+Hiermee kan ik zien of meer stappen per dag samenhangen met een hogere slaapscore.
 
 ## Observatie — Correlaties vergeleken
 
 Bij vergelijking van de correlaties tussen slaapscore en de twee variabelen valt een interessant patroon op:
 
-- **Slaapscore vs Hartslag**: Er is een duidelijke negatieve correlatie — betere slaapscores gaan samen met een lagere hartslag (zowel rusthartslag als gemiddelde daghartslag).
-- **Slaapscore vs Stappen per dag**: Hier is bijna geen correlatie te zien — het aantal stappen per dag heeft vrijwel geen verband met de slaapscore.
+- **Slaapscore vs Hartslag**: Er is een duidelijke negatieve correlatie. betere slaapscores gaan samen met een lagere hartslag (zowel rusthartslag als gemiddelde daghartslag).
+- **Slaapscore vs Stappen per dag**: Hier is bijna geen correlatie te zien. het aantal stappen per dag heeft vrijwel geen verband met de slaapscore.
 
-Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). Dit sluit aan bij de theorie dat rust en herstelling belangrijker zijn voor slaapkwaliteit dan pure hoeveelheid beweging.
+Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). 
 
 ## Toekomstige plannen
 
@@ -119,3 +119,8 @@ Ik kwam er ook achter dat de fitbit elke dag een stressmanagement score geeft, g
 Ik ga van deze data ook kijken of die samenhangt met slaapkwaliteit.
 
 Verder hebben Lucas en Mohammed hun Fitbit data gedeeld, dus kan ik deze data vergelijken met mijn eigen data.
+
+## 2026-05-22 — Ziek
+
+Vandaag heb ik weer slecht geslapen en voel ik me ziek. Ik ga vandaag niet zo veel doen.
+In de les analyseren we de githubs van klasgenoten en bespreken we de data die ze hebben verzameld.

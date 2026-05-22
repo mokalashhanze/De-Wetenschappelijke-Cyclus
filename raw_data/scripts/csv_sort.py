@@ -2,10 +2,10 @@ import csv
 from datetime import datetime
 
 # File paths
-sleep_file = "/Users/robinoffringa/Desktop/Takeout/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
-steps_file = "/Users/robinoffringa/Desktop/Takeout/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
-output_file = "/Users/robinoffringa/Desktop/Takeout/Fitbit/average_heart_rate_excluding_sleep.csv"
-heart_rate_dir = "/Users/robinoffringa/Desktop/Takeout/Fitbit/Physical Activity_GoogleData"
+sleep_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_robin/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
+steps_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_robin/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
+output_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data_robin.csv"
+heart_rate_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_robin/Fitbit/Physical Activity_GoogleData"
 
 # Heart rate files
 heart_rate_files = [
