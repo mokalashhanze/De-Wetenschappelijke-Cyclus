@@ -96,7 +96,7 @@ Bij vergelijking van de correlaties tussen slaapscore en de twee variabelen valt
 
 Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysieke activiteit (gemeten in stappen). 
 
-## Toekomstige plannen
+## To do's
 
 - Data van groepsgenoten toevoegen en vergelijken
 - Eigen data vernieuwen met nieuwe export
@@ -118,9 +118,24 @@ wat waarschijnlijk een betere maat is voor fysieke activiteit dan stappen.
 Ik kwam er ook achter dat de fitbit elke dag een stressmanagement score geeft, gebaseerd op hartslagvariabiliteit.
 Ik ga van deze data ook kijken of die samenhangt met slaapkwaliteit.
 
+
+## To do's
+
+- Calorieën en stressmanagement score toevoegen aan de analyses
+- Eigen data vernieuwen met nieuwe export
+- Google Form data exporteren en integreren voor aanvullende analyses (schermgebruik, etc.)
+
+
 Verder hebben Lucas en Mohammed hun Fitbit data gedeeld, dus kan ik deze data vergelijken met mijn eigen data.
 
 ## 2026-05-22 — Ziek
 
 Vandaag heb ik weer slecht geslapen en voel ik me ziek. Ik ga vandaag niet zo veel doen.
 In de les analyseren we de githubs van klasgenoten en bespreken we de data die ze hebben verzameld.
+
+## To do's
+
+- Calorieën en stressmanagement score toevoegen aan de analyses
+- Eigen data vernieuwen met nieuwe export
+- Google Form data exporteren en integreren voor aanvullende analyses (schermgebruik, etc.)
+- Python code opsplitsen in meer functies voor leesbaarheid en wijzigbaarheid
