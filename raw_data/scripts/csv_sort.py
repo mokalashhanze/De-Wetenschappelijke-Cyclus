@@ -1,5 +1,4 @@
 import csv
-import sys
 from datetime import datetime
 
 def is_during_sleep(timestamp, sleep_intervals):
@@ -111,6 +110,6 @@ def process_person(person):
     print(f"Done. Created {len(results)} daily datasets.")
 
 
-person_names = sys.argv[1:] or ["robin"]
+person_names = ['robin', 'mohammed']
 for person in person_names:
     process_person(person)
