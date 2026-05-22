@@ -139,3 +139,5 @@ In de les analyseren we de githubs van klasgenoten en bespreken we de data die z
 - Eigen data vernieuwen met nieuwe export
 - Google Form data exporteren en integreren voor aanvullende analyses (schermgebruik, etc.)
 - Python code opsplitsen in meer functies voor leesbaarheid en wijzigbaarheid
+- Data van Mohammed toevoegen aan analyses en vergelijken met mijn data
+- Lucas vertellen dat hij wat moet gaan doen
