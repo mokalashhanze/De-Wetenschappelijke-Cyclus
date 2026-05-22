@@ -1,5 +1,3 @@
-
-
 # Methode en materiaal 
 ## benodigdheden:
 * hartslagmeter (bijv. fitbit)
