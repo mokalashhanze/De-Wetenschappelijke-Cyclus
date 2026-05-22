@@ -48,4 +48,14 @@ Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
 
 **Resultaten:**  readme is bijna af, het mist nog informatie over de code
 
+# Dag 3:
+**Doel van de dag:**  
+het Readme afmaken, de github structuur aanpassen.
+
+**Uitgevoerde werkzaamheden:**   
+Meerdere mappen toegevoegd.
+analysis map die de loegboeken bevat, protocols map die de meetprotcol bevat,raw_data die scripts en 
+Ik heb in Readme de Header *projectstructuur* toegevoegd.
+dit bevat het uitleg over alle mappen die in de github staan.
+
 

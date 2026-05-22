@@ -11,3 +11,16 @@ Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een
 
 **Gebruikte data:**   
 Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De benodigde gegevens worden via een data-export uit de Fitbit-app gehaald. Dit bestand bevat alle relevante variabelen, waaronder de gemiddelde slaapkwaliteit en de gemiddelde hartslag tijdens de slaap. Via Google Forms registreren we de overige dagelijkse factoren met een vragenlijst. Met behulp van R-code analyseren we de data en genereren we een plot die de relatie tussen de slaapkwaliteit en de hartslag tijdens het slapen visualiseert.   
+
+## Projectstructuur
+
+Hieronder vind je een overzicht van de mappen en bestanden in deze repository:
+
+* **analysis/**: Bevat de logboeken van de groepsleden (`logboek_mohammed.rmd` en `logboek_robin.rmd`).
+* **protocols/**: Bevat het meetprotocol (`meetprotocol.md`) met de afspraken en methodologie.
+* **raw_data/**: De map waarin de onbewerkte (ruwe) data wordt opgeslagen.
+* **scripts/**: Bevat alle codebestanden voor de data-analyse:
+  * `csv_sort.py`: Python-script voor het sorteren van data.
+  * `slaap_hartslag_analyse.Rmd`: R-Markdown script voor de analyse.
+  * `slaap_hartslag_analyse.html`: De gegenereerde rapportage van de analyse.
+* **takeout_mohammed/Fitbit** & **takeout_robin/Fitbit**: Mappen met de geëxporteerde Fitbit-data per persoon.
