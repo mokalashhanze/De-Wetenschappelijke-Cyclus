@@ -1,7 +1,6 @@
 ---
 title: "Logboek"
 author: "Robin Offringa"
-date: '`r Sys.Date()`'
 output: html_document
 ---
 
