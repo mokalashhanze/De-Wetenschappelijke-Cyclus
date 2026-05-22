@@ -46,15 +46,16 @@ beginnen met de Readme
 Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.
 Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
 
-**Resultaten:**  readme is bijna af, het mist nog informatie over de code
+**Resultaten:**  readme is bijna af, het mist nog informatie over de Github en structuur.
 
 # Dag 3:
 **Doel van de dag:**  
-het Readme afmaken, de github structuur aanpassen.
+het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.
 
 **Uitgevoerde werkzaamheden:**   
-Meerdere mappen toegevoegd.
-analysis map die de loegboeken bevat, protocols map die de meetprotcol bevat,raw_data die scripts en 
+Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data 
+git_ignore toegevoegd.
+Intro aangepast en is klaar.
 Ik heb in Readme de Header *projectstructuur* toegevoegd.
 dit bevat het uitleg over alle mappen die in de github staan.
 
