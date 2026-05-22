@@ -5,13 +5,13 @@ Slaap is een van de belangrijkste processen voor het herstel van het lichaam en 
 
 Uit onderzoek blijkt dat verschillende factoren invloed hebben op de hartslag. Zo spelen stress, lichamelijke beweging en dagelijkse gewoonten een grote rol bij hoe hoog of laag de hartslag is, zowel overdag als tijdens de slaap (Valentini & Parati, 2009). Wanneer het lichaam voldoende kan herstellen, daalt de hartslag en komt het lichaam in een diepere rusttoestand. 
 
-In dit onderzoek wordt gekeken of een betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag, zowel overdag als tijdens de slaap. Drie proefpersonen meten gedurende vier weken hun hartslag met behulp van een Fitbit-smartwatch. Deze smartwatch houdt continu de hartslag bij en verzamelt ook gegevens over de slaap. 
+In dit onderzoek willen we kijken of een betere slaapkwaliteit echt zorgt voor een lagere gemiddelde hartslag. We kijken hierbij naar de hartslag overdag en in de nacht. Om dit te onderzoeken, hebben drie proefpersonen vier weken lang hun hartslag gemeten. Ze droegen hiervoor een Fitbit-smartwatch. Dit slimme horloge meet de hele dag door de hartslag via de pols. Ook houdt het horloge met speciale software bij hoe lang en hoe diep de proefpersonen slapen.
 
-Naast de hartslagmetingen vullen de proefpersonen elke dag een korte vragenlijst in. Hierin noteren zij factoren die mogelijk invloed hebben op hun slaap en hartslag, zoals lichamelijke beweging, alcoholgebruik, laat eten en schermgebruik vlak voor het slapengaan. Het gebruik van een telefoon voor het slapen kan de slaap verstoren en zorgen voor een minder diepe slaap, wat invloed kan hebben op de hartslag (Cleveland Clinic, 2022). 
+De proefpersonen moesten niet alleen het horloge dragen, maar ook elke dag een korte vragenlijst invullen. In dit dagboekje schreven ze op wat ze die dag hadden gedaan. Ze letten bijvoorbeeld op hoeveel ze hadden bewogen, of ze alcohol hadden gedronken, hoe laat ze nog hadden gegeten en of ze vlak voor het slapen op een scherm keken. Vooral dat laatste is belangrijk. Het blauwe licht en de prikkels van een telefoon zorgen ervoor dat je minder snel slaperig wordt. Dit verstoort je slaap en zorgt voor een minder diepe slaap, waardoor je hartslag in de nacht hoger blijft (Cleveland Clinic, 2022).
 
-De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter slapen. Ook wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals veel schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. 
+De verwachting van dit onderzoek is dat proefpersonen met een lagere gemiddelde hartslag beter en dieper slapen. Ook verwachten we dat genoeg bewegen overdag helpt. Als je daarnaast stopt met slechte gewoonten, zoals op je telefoon kijken in bed, zal dit zorgen voor een lagere hartslag en een betere nachtrust.
 
-Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel. 
+Dit onderzoek is belangrijk omdat het laat zien hoe onze dagelijkse gewoonten invloed hebben op onze gezondheid. Als we deze verbanden beter begrijpen, kunnen mensen slimmere keuzes maken in hun dagelijks leven. Hierdoor kunnen ze beter uitrusten, sneller herstellen en zich overdag fitter voelen.
 
  
 
