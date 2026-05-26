@@ -69,7 +69,7 @@ Het schrijven van de Readme ging snel. Het uitzoeken van de juiste computergegev
 ## Datum:22/05/2026  
 
 **Doel van de dag:**  
-het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.  
+het Readme afmaken, de github structuur aanpassen en het intro klaarmaken.  
 
 **Motivatie:**  
 Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.  
