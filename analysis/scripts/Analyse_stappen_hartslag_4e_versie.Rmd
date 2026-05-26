@@ -8,7 +8,6 @@ output: html_document
 ## 1. Libraries laden
 
 ```{r libraries}
-if (!require(ggplot2)) install.packages("ggplot2")
 library(ggplot2)
 ```
 
