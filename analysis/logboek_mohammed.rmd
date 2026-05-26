@@ -4,7 +4,7 @@ author: "mohammed"
 output: html_document
 ---
 
- ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -27,6 +27,9 @@ Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De
 
 **Doel van de dag:**  
 Het intro voor de artikel klaarmaken
+
+**Motivatie:**
+
 
 **Uitgevoerde werkzaamheden:**    
 eerste versie met mijn groep gedeelt
