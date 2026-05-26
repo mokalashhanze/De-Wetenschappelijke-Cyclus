@@ -29,7 +29,7 @@ Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De
 Het intro voor de artikel klaarmaken
 
 **Motivatie:**
-* Een goede start is het halve werk. Door nu een duidelijke inleiding te schrijven en te overleggen met de groep, weet iedereen meteen wat we precies gaan onderzoeken.*
+Door nu een duidelijke inleiding te schrijven en te overleggen met de groep, weet iedereen meteen wat we precies gaan onderzoeken.
 
 **Uitgevoerde werkzaamheden:**    
 eerste versie met mijn groep gedeelt
@@ -46,7 +46,7 @@ het intro is bijna af, het moet iets langer zijn.
 beginnen met de Readme
 
 **Motivatie:**
-* Het is belangrijk dat anderen snel begrijpen waar ons onderzoek over gaat. In de README leggen we simpel uit wat ons doel is en wat we verwachten te vinden.*
+Het is belangrijk dat anderen snel begrijpen waar ons onderzoek over gaat. In de README leggen we simpel uit wat ons doel is en wat we verwachten te vinden.
 
 **Uitgevoerde werkzaamheden:**   
 Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.
@@ -63,10 +63,10 @@ readme is bijna af, het mist nog informatie over de Github en structuur.
 het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.
 
 **Motivatie:**
-* Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.*
+Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.
 
 **Uitgevoerde werkzaamheden:**   
-Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data 
+Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data. 
 git_ignore toegevoegd.
 Intro aangepast en is klaar.
 Ik heb in Readme de Header *projectstructuur* toegevoegd.
