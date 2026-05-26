@@ -4,10 +4,6 @@ author: "mohammed"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Introductie:
 **Inleiding:**  
 Goed slapen is heel belangrijk voor je lichaam en je hersenen. Als je slaapt, herstelt je lichaam van de dag. Je hartslag gaat tijdens het slapen omlaag omdat je lichaam helemaal tot rust komt. Als je een lage hartslag hebt in de nacht, betekent dit meestal dat je diep en goed slaapt. Je hart hoeft dan minder hard te werken. Daarom kijken we in dit onderzoek naar de hartslag, want die vertelt ons veel over hoe goed je slaapt.
@@ -23,7 +19,7 @@ Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De
 
 
 # Dag 1: 
-*Datum:20/05/2026*
+## Datum:20/05/2026
 
 **Doel van de dag:**  
 Het intro voor de artikel klaarmaken
@@ -39,8 +35,14 @@ Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de F
 **Resultaten:**  
 het intro is bijna af, het moet iets langer zijn.
 
+**Analyse:**
+Het delen van de tekst in de groep ging erg goed. Iedereen gaf nuttige feedback. We merkten wel dat de oude onderzoeksvraag nog te vaag was om goed te kunnen onderzoeken.
+
+**Conclusie:**
+De belangrijkste beslissing van vandaag is dat we de onderzoeksvraag hebben aangescherpt. Hierdoor kunnen we gerichter gaan zoeken naar data over hartslag en slaapkwaliteit.
+
 # Dag 2:
-*Datum:21/05/2026*
+## Datum:21/05/2026
 
 **Doel van de dag:**  
 beginnen met de Readme
@@ -55,9 +57,14 @@ Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
 **Resultaten:**  
 readme is bijna af, het mist nog informatie over de Github en structuur. 
 
-# Dag 3:
+**Analyse:**
+Het schrijven van de Readme ging snel. Het uitzoeken van de juiste computergegevens kostte wel wat meer tijd. 
 
-*Datum:22/05/2026*
+**Conclusie:**
+ De basis van de Readme staat nu. De volgende stap is om de mappen op de computer netjes te ordenen en uileggen.
+
+# Dag 3:
+## Datum:22/05/2026
 
 **Doel van de dag:**  
 het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.
@@ -71,5 +78,36 @@ git_ignore toegevoegd.
 Intro aangepast en is klaar.
 Ik heb in Readme de Header *projectstructuur* toegevoegd.
 dit bevat het uitleg over alle mappen die in de github staan.
+
+**Resultaten:**
+Alles is gelukt voor vandaag: de mappen staan netjes op hun plek en de uitleg is helemaal klaar.
+
+**Analyse:**
+Het maken van de mappen gaf direct veel overzicht. Het kostte even tijd om uit te zoeken welke computerbestanden we wel en niet moesten uploaden, maar het staat nu heel netjes.
+
+**Conclusie:**
+Ons project heeft nu een perfecte start. Nu alle mappen netjes zijn opgeruimd en de uitleg klaar is, kunnen we gaan meten en grafieken maken in R.
+# Dag 4:
+## Datum: 26/05/2026
+
+**doel van de dag:**
+Het logboek helemaal bijwerken en netjes maken.
+
+**Motivatie:**
+Het doel is om duidelijk te maken wat ik precies gedaan heb. Een net logboek zorgt ervoor dat mijn groepje ook makkelijk kan zien hoever ik ben met mijn taken.
+
+**Uitgevoerde werkzaamheden:**
+* Alle teksten van de afgelopen dagen nagekeken op spelfouten.
+* Voor elke dag een duidelijke motivatie opgeschreven.
+* Per dag een korte analyse en conclusie toegevoegd om te laten zien wat er goed ging.
+
+**Resultaten:**
+Het logboek is voor nu helemaal compleet, overzichtelijk en klaar om zonder fouten te knitten naar een HTML-bestand.
+
+**Analyse:**
+Het is fijn dat alles nu opgeschreven is, want zo kan ik niks meer vergeten en is het voor iedereen duidelijk.
+
+**Conclusie:**
+Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken met de data en het schrijven van het artikel.
 
 
