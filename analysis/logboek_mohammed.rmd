@@ -28,6 +28,7 @@ Het intro voor de artikel klaarmaken
 Door nu een duidelijke inleiding te schrijven en te overleggen met de groep, weet iedereen meteen wat we precies gaan onderzoeken.
 
 **Uitgevoerde werkzaamheden:**     
+
 * eerste versie met mijn groep gedeelt
 * we hebben besloten om de onderzoekvraag te veranderen.
 * Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap?
