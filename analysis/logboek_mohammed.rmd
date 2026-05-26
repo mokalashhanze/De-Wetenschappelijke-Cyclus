@@ -49,6 +49,7 @@ Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
 **Resultaten:**  readme is bijna af, het mist nog informatie over de Github en structuur.
 
 # Dag 3:
+*Datum:22/05/2026*
 **Doel van de dag:**  
 het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.
 
