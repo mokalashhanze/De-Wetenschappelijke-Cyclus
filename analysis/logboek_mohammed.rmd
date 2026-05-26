@@ -11,28 +11,28 @@ Goed slapen is heel belangrijk voor je lichaam en je hersenen. Als je slaapt, he
 **Onderzoek**  
 In dit onderzoek bestuderen we de slaapkwaliteit door middel van een smartwatch die de hartslag tijdens het slapen meet. Dit onderzoek wordt uitgevoerd bij drie proefpersonen. We hopen met de resultaten mensen te kunnen helpen hun slaap te verbeteren. We weten dat ook andere factoren een rol spelen bij de hartslagmetingen, zoals het tijdstip van slapen, het type fysieke activiteit overdag, het tijdstip van de laatste maaltijd en telefoongebruik voor het slapengaan. Om deze factoren in kaart te brengen, vullen de proefpersonen dagelijks een korte vragenlijst in. Zo registreren we mogelijke storende variabelen die invloed kunnen hebben op de slaap en de hartslag.   
 
-**Onderzoekvraag en hypothese:**    
+**Onderzoekvraag en hypothese:**  
 Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap? De verwachting is dat proefpersonen met een lagere gemiddelde hartslag tijdens de slaap beter slapen. Daarnaast wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. Dit onderzoek is relevant omdat het inzichtelijk maakt hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewustere keuzes maken voor een betere rust en optimaal herstel.   
 
-**Gebruikte data:**   
+**Gebruikte data:**  
 Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De benodigde gegevens worden via een data-export uit de Fitbit-app gehaald. Dit bestand bevat alle relevante variabelen, waaronder de gemiddelde slaapkwaliteit en de gemiddelde hartslag tijdens de slaap. Via Google Forms registreren we de overige dagelijkse factoren met een vragenlijst. Met behulp van R-code analyseren we de data en genereren we een plot die de relatie tussen de slaapkwaliteit en de hartslag tijdens het slapen visualiseert.   
 
 
-# Dag 1: 
-## Datum:20/05/2026
+# Dag 1:  
+## Datum:20/05/2026  
 
 **Doel van de dag:**  
 Het intro voor de artikel klaarmaken
 
-**Motivatie:**   
+**Motivatie:**  
 Door nu een duidelijke inleiding te schrijven en te overleggen met de groep, weet iedereen meteen wat we precies gaan onderzoeken.
 
-**Uitgevoerde werkzaamheden:**      
+**Uitgevoerde werkzaamheden:**     
 * eerste versie met mijn groep gedeelt
 * we hebben besloten om de onderzoekvraag te veranderen.
 * Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap?
 
-**Resultaten:**   
+**Resultaten:**  
 het intro is bijna af, het moet iets langer zijn.
 
 **Analyse:**  
@@ -41,74 +41,75 @@ Het delen van de tekst in de groep ging erg goed. Iedereen gaf nuttige feedback.
 **Conclusie:**  
 De belangrijkste beslissing van vandaag is dat we de onderzoeksvraag hebben aangescherpt. Hierdoor kunnen we gerichter gaan zoeken naar data over hartslag en slaapkwaliteit.
 
-# Dag 2: 
-## Datum:21/05/2026 
+# Dag 2:  
+## Datum:21/05/2026  
 
 **Doel van de dag:**   
-beginnen met de Readme
+beginnen met de Readme  
 
 **Motivatie:**  
 Het is belangrijk dat anderen snel begrijpen waar ons onderzoek over gaat. In de README leggen we simpel uit wat ons doel is en wat we verwachten te vinden.
 
-**Uitgevoerde werkzaamheden:**   
-* Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.
-* Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.
+**Uitgevoerde werkzaamheden:**  
 
-**Resultaten:**    
-readme is bijna af, het mist nog informatie over de Github en structuur. 
+* Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.  
+* Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.  
 
-**Analyse:**
-Het schrijven van de Readme ging snel. Het uitzoeken van de juiste computergegevens kostte wel wat meer tijd. 
+**Resultaten:**  
+readme is bijna af, het mist nog informatie over de Github en structuur.  
 
-**Conclusie:**
- De basis van de Readme staat nu. De volgende stap is om de mappen op de computer netjes te ordenen en uileggen.
+**Analyse:**  
+Het schrijven van de Readme ging snel. Het uitzoeken van de juiste computergegevens kostte wel wat meer tijd.  
+
+**Conclusie:**  
+ De basis van de Readme staat nu. De volgende stap is om de mappen op de computer netjes te ordenen en uileggen.  
 
 # Dag 3:  
 ## Datum:22/05/2026  
 
-**Doel van de dag:**    
-het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.
+**Doel van de dag:**  
+het Readme afmaken, de github structuur aanpassen en de artikel klaarmaken.  
 
-**Motivatie:**    
-Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.
+**Motivatie:**  
+Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.  
 
-**Uitgevoerde werkzaamheden:**     
-* Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data. 
-* git_ignore toegevoegd.
-* Intro aangepast en is klaar.
-* Ik heb in Readme de Header *projectstructuur* toegevoegd.
-* dit bevat het uitleg over alle mappen die in de github staan.
+**Uitgevoerde werkzaamheden:**  
+
+* Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data.  
+* git_ignore toegevoegd.  
+* Intro aangepast en is klaar.  
+* Ik heb in Readme de Header *projectstructuur* toegevoegd.  
+* dit bevat het uitleg over alle mappen die in de github staan.  
  
-**Resultaten:**    
-Alles is gelukt voor vandaag: de mappen staan netjes op hun plek en de uitleg is helemaal klaar.
+**Resultaten:**  
+Alles is gelukt voor vandaag: de mappen staan netjes op hun plek en de uitleg is helemaal klaar.  
 
-**Analyse:**     
-Het maken van de mappen gaf direct veel overzicht. Het kostte even tijd om uit te zoeken welke computerbestanden we wel en niet moesten uploaden, maar het staat nu heel netjes.
+**Analyse:**  
+Het maken van de mappen gaf direct veel overzicht. Het kostte even tijd om uit te zoeken welke computerbestanden we wel en niet moesten uploaden, maar het staat nu heel netjes.  
 
-**Conclusie:**    
-Ons project heeft nu een perfecte start. Nu alle mappen netjes zijn opgeruimd en de uitleg klaar is, kunnen we gaan meten en grafieken maken in R.
+**Conclusie:**  
+Ons project heeft nu een perfecte start. Nu alle mappen netjes zijn opgeruimd en de uitleg klaar is, kunnen we gaan meten en grafieken maken in R.  
 
-# Dag 4:   
+# Dag 4:    
 ## Datum: 26/05/2026  
 
-**doel van de dag:**   
-Het logboek helemaal bijwerken en netjes maken.
+**doel van de dag:**  
+Het logboek helemaal bijwerken en netjes maken.  
 
-**Motivatie:**     
-Het doel is om duidelijk te maken wat ik precies gedaan heb. Een net logboek zorgt ervoor dat mijn groepje ook makkelijk kan zien hoever ik ben met mijn taken.
+**Motivatie:**  
+Het doel is om duidelijk te maken wat ik precies gedaan heb. Een net logboek zorgt ervoor dat mijn groepje ook makkelijk kan zien hoever ik ben met mijn taken.  
 
-**Uitgevoerde werkzaamheden:**    
-* Alle teksten van de afgelopen dagen nagekeken op spelfouten.
-* Voor elke dag een duidelijke motivatie opgeschreven.
-* Per dag een korte analyse en conclusie toegevoegd om te laten zien wat er goed ging.
+**Uitgevoerde werkzaamheden:**  
+
+* Alle teksten van de afgelopen dagen nagekeken op spelfouten.  
+* Voor elke dag een duidelijke motivatie opgeschreven.  
+* Per dag een korte analyse en conclusie toegevoegd om te laten zien wat er goed ging.  
 
 **Resultaten:**    
-Het logboek is voor nu helemaal compleet, overzichtelijk en klaar om zonder fouten te knitten naar een HTML-bestand.
+Het logboek is voor nu helemaal compleet, overzichtelijk en klaar om zonder fouten te knitten naar een HTML-bestand.  
 
-**Analyse:**    
-Het is fijn dat alles nu opgeschreven is, want zo kan ik niks meer vergeten en is het voor iedereen duidelijk.
+**Analyse:**  
+Het is fijn dat alles nu opgeschreven is, want zo kan ik niks meer vergeten en is het voor iedereen duidelijk.  
 
-**Conclusie:**   
+**Conclusie:**  
 Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken met de data en het schrijven van het artikel.
-
-
