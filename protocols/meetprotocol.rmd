@@ -30,6 +30,8 @@ Naam van de proefpersoon
 * De tijd waarop je voor het laatst naar een scherm hebt gekeken (zoals telefoon of computer).
 
 ### Link naar de Google Forms
-[Klik hier voor de Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSdu5ueiKrxmoItkctAfPo8y3DHmR7RH2bo1FQwmFwkfFW0zAQ/viewform?usp=dialog)
+[Klik hier voor de Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSdu5ueiKrxmoItkctAfPo8y3DHmR7RH2bo1FQwmFwkfFW0zAQ/viewform?usp=dialog)  
+
+
 ## 3. Resulataat:
 De proefpersonen zijn 3 volwassenen. Zij houden ongeveer een maand lang elke dag hun gegevens bij met de Google Forms en de Fitbit.
