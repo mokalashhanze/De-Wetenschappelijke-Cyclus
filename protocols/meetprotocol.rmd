@@ -1,0 +1,36 @@
+---
+title: "Meetprotocol Slaap- en Hartslagexperiment"
+
+output: html_document
+---
+
+# Methode en materiaal  
+
+## Benodigdheden  
+* Hartslagmeter (Fitbit Versa 4)
+* Bed
+* Wekker
+* Notitieschrift
+* Google Forms
+
+## Experiment  
+Voor dit experiment gaan de proefpersonen ongeveer 4 weken hun hartslag tijdens het slapen meten. Dit doen ze door de Fitbit Versa 4 te dragen. De proefpersonen dragen de Fitbit de hele dag en de hele nacht. Zo krijgen we een goed en compleet beeld van de hartslag en de beweging over de hele dag. De Fitbit mag alleen af als hij moet opladen of tijdens het douchen.  
+
+De Fitbit Versa 4 meet de hele tijd de hartslag per minuut. Ook meet het horloge de hartslag in rust, de stappen, de verbrande calorieën en hoe diep je slaapt (lichte slaap, diepe slaap en droomslaap).  
+
+De proefpersonen vullen elke ochtend meteen na het opstaan de lijst in op Google Forms. Hierin vullen zij de punten van de vorige dag en nacht in:
+Naam van de proefpersoon  
+
+* Naam van de proefpersoon
+* De tijd van de laatste maaltijd voor het slapen.
+* Hoe groot de maaltijd was (snack, kleine maaltijd, grote maaltijd).
+* De tijd van naar bed gaan.
+* De tijd van wakker worden.
+* Beweging en sport overdag (geen, weinig (wandelen), gemiddeld (lange wandeling, krachttraining), veel (hardlopen, wielrennen)).
+* De Fitbit-gegevens van de dag (stappen, hartslag, calorieën, slaap).
+* De tijd waarop je voor het laatst naar een scherm hebt gekeken (zoals telefoon of computer).
+
+### Link naar de Google Forms
+[Klik hier voor de Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSdu5ueiKrxmoItkctAfPo8y3DHmR7RH2bo1FQwmFwkfFW0zAQ/viewform?usp=dialog)
+
+De proefpersonen zijn 3 volwassenen. Zij houden ongeveer een maand lang elke dag hun gegevens bij met de Google Forms en de Fitbit.
