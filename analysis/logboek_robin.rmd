@@ -140,6 +140,44 @@ In de les analyseren we de githubs van klasgenoten en bespreken we de data die z
 - Python code opsplitsen in meer functies voor leesbaarheid en wijzigbaarheid
 - Data van Mohammed toevoegen aan analyses en vergelijken met mijn data
 
-## 2026-05-23 — Bespreken taken
 
-Vandaag hebben we in de klas besproken wie wat gaat doen. Ik heb een bestand aangemaakt en gedeeld met Lucas en Mohammed wa
+## 2026-06-01 — Bespreking in de klas
+
+Gisteren hebben we in de klas nog eens besproken wie wat gaat doen.
+Ik ga verder met het Python-bestand en met mijn slaap en hartslagdata en extra analyses maken met de nieuwe data van Lucas en Mohammed.
+We moesten ook even uitvogelen van wie welke data was, want er was verwarring over van wie welke data was omdat onze namen er niet bij stonden.
+Gelukkig had ik mijn data op mijn telefoon apart opgeschreven en zo konden we achterhalen van wie welke data was.
+Ik ga ook verder om elke dag de Google Form in te vullen en de Fitbit te dragen.
+
+
+## 2026-06-02 — Python-bestand afgemaakt
+
+Vandaag heb ik het Python-bestand afgemaakt en opgesplitst in functies. Ik heb data als calorieen en het Google formulier ook toegevoegd.
+Verder heb ik alle gecombineerde data bestanden in een mapje gezet en een apart mapje voor alleen de dagen met een slaapscore.
+Ik kon gister niet in slaap vallen en heb daardoor niet lang geslapen. Ik ben benieuwd of dat te zien is in de data.
+
+
+Een klein stuk uit de code is bijvoorbeeld:
+
+```python
+print(f"Saving results to {output_file}...")
+with open(output_file, 'w', newline='') as f:
+	fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+	writer = csv.DictWriter(f, fieldnames=fieldnames)
+	writer.writeheader()
+	writer.writerows(results)
+
+print(f"Saving sleep score results to {sleep_score_output_file}...")
+with open(sleep_score_output_file, 'w', newline='') as f:
+	fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+	writer = csv.DictWriter(f, fieldnames=fieldnames)
+	writer.writeheader()
+	writer.writerows(sleep_score_results)
+```
+
+## To do's
+
+- Stressmanagement score toevoegen aan de analyses
+- Eigen data vernieuwen met nieuwe export
+- Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
+- Extra analyses maken met de nieuwe data
