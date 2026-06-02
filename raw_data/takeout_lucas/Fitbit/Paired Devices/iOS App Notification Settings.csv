@@ -1,0 +1,11 @@
+user_id,tracker_id,mobile_app_name,is_app_enabled,show_partial_message,is_default_message_app,created_on,modified_on
+207653075,3083483666,net.whatsapp.WhatsApp,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.burbn.instagram,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.toyopagroup.picaboo,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.zhiliaoapp.musically,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.apple.Fitness,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.apple.Preferences,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.apple.Passbook,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.apple.ScreenTimeNotifications,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,org.reactjs.native.example.eitjedev,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z
+207653075,3083483666,com.apple.powerui.chargeawareness,false,false,false,2026-05-06T09:55:39.000Z,2026-05-06T09:55:39.000Z

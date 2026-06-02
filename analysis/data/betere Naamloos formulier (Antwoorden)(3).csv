@@ -4,11 +4,11 @@ Tijdstempel,Wat is de huidige datum,Hoelaat ben je gaan slapen?,Hoelaat ben je o
 5-9-2026 22:21:34,9-5-2026,12:59:59 AM,8:00:00 AM,"ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)",12:59:59 AM,9:59:59 PM,Snack,Lucas
 5-9-2026 22:50:50,7-5-2026,2:00:00 AM,9:59:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:00:00 AM,9:00:00 PM,Maatlijd - vol vet,Robin
 5-9-2026 22:51:53,9-5-2026,2:00:00 AM,9:59:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:59:59 AM,9:00:00 PM,Maatlijd - vol vet,Mohammed
-5-10-2026 13:23:49,9-5-2026,3:00:00 AM,11:00:00 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",2:00:00 AM,11:00:00 PM,Maaltijd - mager,Mohammed
+5-10-2026 13:23:49,9-5-2026,3:00:00 AM,11:00:00 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",2:00:00 AM,11:00:00 PM,Maaltijd - mager,Robin
 5-11-2026 0:31:59,10-5-2026,12:30:00 AM,8:00:00 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:30:00 AM,9:30:00 PM,Snack,Robin
 5-11-2026 0:34:01,11-5-2026,12:30:00 AM,7:44:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",11:00:00 PM,8:00:00 PM,Maaltijd - mager,Robin
 5-12-2026 13:05:34,10-5-2026,2:00:00 AM,11:00:00 AM,"ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)",12:59:59 AM,9:59:59 PM,Snack,Mohammed
-5-12-2026 13:06:22,11-5-2026,3:59:59 AM,9:59:59 AM,nee,3:00:00 AM,9:59:59 PM,Maaltijd - mager,Robin
+5-12-2026 13:06:22,11-5-2026,3:59:59 AM,9:59:59 AM,nee,3:00:00 AM,9:59:59 PM,Maaltijd - mager,Lucas
 5-13-2026 13:55:57,13-5-2026,12:59:59 AM,9:00:00 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:59:59 AM,11:29:59 PM,Maatlijd - vol vet,Mohammed
 5-14-2026 15:52:45,12-5-2026,3:00:00 AM,11:00:00 AM,nee,2:00:00 AM,11:00:00 PM,Maaltijd - mager,Mohammed
 5-14-2026 15:54:44,13-5-2026,3:59:59 AM,12:00:00 AM,nee,3:00:00 AM,9:59:59 AM,Snack,Lucas
@@ -26,7 +26,7 @@ Tijdstempel,Wat is de huidige datum,Hoelaat ben je gaan slapen?,Hoelaat ben je o
 5-21-2026 11:07:41,21-5-2026,11:00:00 PM,7:19:59 AM,nee,11:00:00 PM,8:00:00 PM,Maaltijd - mager,Lucas
 5-21-2026 11:10:12,11-5-2026,12:00:00 AM,8:29:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:00:00 AM,9:00:00 PM,Maatlijd - vol vet,Mohammed
 5-21-2026 11:11:13,12-5-2026,12:30:00 AM,7:44:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",9:59:59 PM,11:00:00 PM,Snack,Robin
-5-21-2026 11:12:48,13-5-2026,2:00:00 AM,7:44:59 AM,"ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)",2:00:00 AM,11:00:00 PM,Snack,Mohammed
+5-21-2026 11:12:48,13-5-2026,2:00:00 AM,7:44:59 AM,"ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)",2:00:00 AM,11:00:00 PM,Snack,Robin
 5-21-2026 11:14:13,14-5-2026,1:14:00 AM,9:59:59 AM,"ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)",12:14:00 AM,9:00:00 PM,Maaltijd - mager,Robin
 5-21-2026 11:15:29,15-5-2026,1:30:00 AM,11:00:00 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",1:30:00 AM,8:00:00 PM,Maatlijd - vol vet,Robin
 5-21-2026 11:16:22,18-5-2026,12:30:00 AM,9:59:59 AM,"ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)",12:30:00 AM,11:00:00 PM,Snack,Robin

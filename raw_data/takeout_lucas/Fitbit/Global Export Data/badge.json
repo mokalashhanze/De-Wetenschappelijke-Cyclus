@@ -1,0 +1,50 @@
+[{
+  "encodedId" : "228TMK",
+  "badgeType" : "DAILY_STEPS",
+  "value" : 15000,
+  "timesAchieved" : 1,
+  "dateTime" : "2026-05-18",
+  "name" : "Urban Boot (15.000 stappen op een dag)",
+  "shortName" : "Urban Boot",
+  "earnedMessage" : "Congrats on earning your first Urban Boot badge!",
+  "description" : "15.000 stappen op een dag",
+  "category" : "Dagelijkse stappen",
+  "shareText" : "Ik heb 15.000 stappen gezet en heb de Urban Boot-badge verdiend! #Fitbit"
+},{
+  "encodedId" : "228TQB",
+  "badgeType" : "DAILY_STEPS",
+  "value" : 10000,
+  "timesAchieved" : 5,
+  "dateTime" : "2026-05-18",
+  "name" : "Sneakers (10.000 stappen op een dag)",
+  "shortName" : "Sneakers",
+  "earnedMessage" : "Congrats on earning your first Sneakers badge!",
+  "description" : "10.000 stappen op een dag",
+  "category" : "Dagelijkse stappen",
+  "shareText" : "Ik heb 10.000 stappen gezet en heb de Sneakers-badge verdiend! #Fitbit"
+},{
+  "encodedId" : "228TQ4",
+  "badgeType" : "DAILY_STEPS",
+  "value" : 5000,
+  "timesAchieved" : 10,
+  "dateTime" : "2026-05-18",
+  "name" : "Bootschoen (5.000 stappen op een dag)",
+  "shortName" : "Bootschoen",
+  "earnedMessage" : "Congrats on earning your first Bootschoen badge!",
+  "description" : "5.000 stappen op een dag",
+  "category" : "Dagelijkse stappen",
+  "shareText" : "Ik heb 5.000 stappen gezet en heb de Bootschoen-badge verdiend! #Fitbit"
+},{
+  "encodedId" : "22B8LN",
+  "badgeType" : "LIFETIME_DISTANCE",
+  "value" : 42,
+  "unit" : "KILOMETERS",
+  "timesAchieved" : 1,
+  "dateTime" : "2026-05-11",
+  "name" : "Marathon (42 totaal aantal kilometers)",
+  "shortName" : "Marathon",
+  "earnedMessage" : "Whoa! You've earned the Marathon badge!",
+  "description" : "42 totaal aantal kilometers",
+  "category" : "Totaal afgelegde afstand",
+  "shareText" : "Ik heb 42 kilometer met mijn #Fitbit afgelegd en heb de Marathon-badge verdiend!"
+}]
