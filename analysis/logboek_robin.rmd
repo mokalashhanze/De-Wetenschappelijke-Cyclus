@@ -185,10 +185,12 @@ with open(sleep_score_output_file, 'w', newline='') as f:
 ## 2026-06-03 — REM, diepe slaap en stressmanagement score toegevoegd
 
 Vandaag heb ik de REM-slaap, diepe slaap en stressmanagement score toegevoegd aan de data. Ik ben benieuwd of deze variabelen ook invloed hebben op de slaapscore.
-
+Ik heb ook een extra python bestand gemaakt die de data van alle drie de personen samenvoegt zodat ik makkelijk vergelijkingen kan maken tussen de drie personen.
+Ik heb de losse bestanden laten staan zodat de analyses per persoon ook nog steeds makkelijk te doen zijn en de rmd's van anderen nog werken.
 ## To do's
 
 - Eigen data vernieuwen met nieuwe export
 - Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
 - Extra analyses maken met de nieuwe data
 - Discussie en conclusie schrijven
+

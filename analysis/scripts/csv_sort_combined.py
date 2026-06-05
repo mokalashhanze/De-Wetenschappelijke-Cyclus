@@ -234,7 +234,7 @@ output_dir_raw = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analy
 output_dir_filtered = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_filetered"
 
 output_file_raw = f"{output_dir_raw}/combined_raw.csv"
-sleep_score_output_file = f"{output_dir_filtered}/combined_sleep_score_data.csv"
+sleep_score_output_file = f"{output_dir_filtered}/combined_data_filtered.csv"
 
 fieldnames = ['naam', 'date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
 
