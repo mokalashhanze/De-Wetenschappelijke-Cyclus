@@ -10,12 +10,21 @@ def is_during_sleep(timestamp, sleep_intervals):
 def to_24_hour(time_text):
     if not time_text:
         return ''
-    return datetime.strptime(time_text, '%I:%M:%S %p').strftime('%H:%M')
+    # Verwijder eventuele spaties rondom de tekst
+    time_text = time_text.strip()
+    try:
+        # Probeert eerst het format met seconden: '09:59:59 PM' of '9:59:59 PM'
+        return datetime.strptime(time_text, '%I:%M:%S %p').strftime('%H:%M')
+    except ValueError:
+        try:
+            # Valt terug op format zonder seconden mocht dat voorkomen: '11:00:00 PM' -> '11:00 PM'
+            return datetime.strptime(time_text, '%I:%M %p').strftime('%H:%M')
+        except ValueError:
+            return time_text
 
 def read_sleep_data(sleep_file):
     print("Reading sleep data...")
     sleep_intervals = []
-    sleep_times = {}
     with open(sleep_file, 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -24,14 +33,8 @@ def read_sleep_data(sleep_file):
             start = datetime.fromisoformat(start_str)
             end = datetime.fromisoformat(end_str)
             sleep_intervals.append((start, end))
-            date = end.date()
-            if date not in sleep_times:
-                sleep_times[date] = {
-                    'start': start.strftime('%H:%M'),
-                    'end': end.strftime('%H:%M')
-                }
-    print(f"Loaded {len(sleep_intervals)} sleep periods")
-    return sleep_intervals, sleep_times
+    print(f"Loaded {len(sleep_intervals)} sleep periods for heart rate filtering")
+    return sleep_intervals
 
 def read_sleep_score_data(sleep_score_file):
     print("Reading sleep score data...")
@@ -149,7 +152,7 @@ def process_person(person):
         "heart_rate_2026-05-20.csv", "heart_rate_2026-05-21.csv",
     ]
 
-    sleep_intervals, sleep_times = read_sleep_data(sleep_file)
+    sleep_intervals = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
     sleep_scores = read_sleep_score_data(sleep_score_file)
     form_data = read_form_data(form_file, person)
@@ -184,11 +187,18 @@ def process_person(person):
         if date in daily_steps:
             avg_hr = sum(daily_data[date]['heart_rates']) / len(daily_data[date]['heart_rates'])
             form_row = form_data.get(date, {})
+            
             if form_row:
+                # Slaaptijden direct uit het formulier halen en omzetten naar 24-uurs format
+                sleep_start_time = to_24_hour(form_row['Hoelaat ben je gaan slapen?'])
+                sleep_end_time = to_24_hour(form_row['Hoelaat ben je opgestaan?'])
+                
                 phone_time = to_24_hour(form_row['Hoelaat heb je voor het laatst op je telefoon gezeten?'])
                 meal_time = to_24_hour(form_row['Wanneer heb je voor het laatst gegeten?'])
                 meal_type = form_row['Wat was het?']
             else:
+                sleep_start_time = ''
+                sleep_end_time = ''
                 phone_time = ''
                 meal_time = ''
                 meal_type = ''
@@ -199,8 +209,8 @@ def process_person(person):
                 'average_heart_rate': round(avg_hr, 2),
                 'min_heart_rate': daily_data[date]['min_hr'],
                 'max_heart_rate': daily_data[date]['max_hr'],
-                'start': sleep_times.get(date, {}).get('start', ''),
-                'end': sleep_times.get(date, {}).get('end', ''),
+                'start': sleep_start_time,  # Nu ingevuld vanuit het Google Formulier
+                'end': sleep_end_time,      # Nu ingevuld vanuit het Google Formulier
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': sleep_scores.get(date, ''),

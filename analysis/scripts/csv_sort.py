@@ -10,12 +10,18 @@ def is_during_sleep(timestamp, sleep_intervals):
 def to_24_hour(time_text):
     if not time_text:
         return ''
-    return datetime.strptime(time_text, '%I:%M:%S %p').strftime('%H:%M')
+    time_text = time_text.strip()
+    try:
+        return datetime.strptime(time_text, '%I:%M:%S %p').strftime('%H:%M')
+    except ValueError:
+        try:
+            return datetime.strptime(time_text, '%I:%M %p').strftime('%H:%M')
+        except ValueError:
+            return time_text
 
 def read_sleep_data(sleep_file):
     print("Reading sleep data...")
     sleep_intervals = []
-    sleep_times = {}
     with open(sleep_file, 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -24,14 +30,8 @@ def read_sleep_data(sleep_file):
             start = datetime.fromisoformat(start_str)
             end = datetime.fromisoformat(end_str)
             sleep_intervals.append((start, end))
-            date = end.date()
-            if date not in sleep_times:
-                sleep_times[date] = {
-                    'start': start.strftime('%H:%M'),
-                    'end': end.strftime('%H:%M')
-                }
-    print(f"Loaded {len(sleep_intervals)} sleep periods")
-    return sleep_intervals, sleep_times
+    print(f"Loaded {len(sleep_intervals)} sleep periods for heart rate filtering")
+    return sleep_intervals
 
 def read_sleep_score_data(sleep_score_file):
     print("Reading sleep score data...")
@@ -129,7 +129,6 @@ def read_calories_data(calories_file):
     return daily_calories
 
 
-
 def process_person(person):
     sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
     sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
@@ -146,26 +145,15 @@ def process_person(person):
         calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv"
 
     heart_rate_files = [
-        "heart_rate_2026-04-06.csv",
-        "heart_rate_2026-05-06.csv",
-        "heart_rate_2026-05-07.csv",
-        "heart_rate_2026-05-08.csv",
-        "heart_rate_2026-05-09.csv",
-        "heart_rate_2026-05-10.csv",
-        "heart_rate_2026-05-11.csv",
-        "heart_rate_2026-05-12.csv",
-        "heart_rate_2026-05-13.csv",
-        "heart_rate_2026-05-14.csv",
-        "heart_rate_2026-05-15.csv",
-        "heart_rate_2026-05-16.csv",
-        "heart_rate_2026-05-17.csv",
-        "heart_rate_2026-05-18.csv",
-        "heart_rate_2026-05-19.csv",
-        "heart_rate_2026-05-20.csv",
-        "heart_rate_2026-05-21.csv",
+        "heart_rate_2026-04-06.csv", "heart_rate_2026-05-06.csv", "heart_rate_2026-05-07.csv",
+        "heart_rate_2026-05-08.csv", "heart_rate_2026-05-09.csv", "heart_rate_2026-05-10.csv",
+        "heart_rate_2026-05-11.csv", "heart_rate_2026-05-12.csv", "heart_rate_2026-05-13.csv",
+        "heart_rate_2026-05-14.csv", "heart_rate_2026-05-15.csv", "heart_rate_2026-05-16.csv",
+        "heart_rate_2026-05-17.csv", "heart_rate_2026-05-18.csv", "heart_rate_2026-05-19.csv",
+        "heart_rate_2026-05-20.csv", "heart_rate_2026-05-21.csv",
     ]
 
-    sleep_intervals, sleep_times = read_sleep_data(sleep_file)
+    sleep_intervals = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
     sleep_scores = read_sleep_score_data(sleep_score_file)
     form_data = read_form_data(form_file, person)
@@ -202,20 +190,27 @@ def process_person(person):
             avg_hr = sum(daily_data[date]['heart_rates']) / len(daily_data[date]['heart_rates'])
             form_row = form_data.get(date, {})
             if form_row:
+                # Slaaptijden direct laden uit Google Formulier en parsen naar 24-uurs format
+                sleep_start_time = to_24_hour(form_row['Hoelaat ben je gaan slapen?'])
+                sleep_end_time = to_24_hour(form_row['Hoelaat ben je opgestaan?'])
+                
                 phone_time = to_24_hour(form_row['Hoelaat heb je voor het laatst op je telefoon gezeten?'])
                 meal_time = to_24_hour(form_row['Wanneer heb je voor het laatst gegeten?'])
                 meal_type = form_row['Wat was het?']
             else:
+                sleep_start_time = ''
+                sleep_end_time = ''
                 phone_time = ''
                 meal_time = ''
                 meal_type = ''
-            results.append({
+                
+            row_data = {
                 'date': date,
                 'average_heart_rate': round(avg_hr, 2),
                 'min_heart_rate': daily_data[date]['min_hr'],
                 'max_heart_rate': daily_data[date]['max_hr'],
-                'start': sleep_times.get(date, {}).get('start', ''),
-                'end': sleep_times.get(date, {}).get('end', ''),
+                'start': sleep_start_time,  # Ingevuld vanuit formulier
+                'end': sleep_end_time,      # Ingevuld vanuit formulier
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': sleep_scores.get(date, ''),
@@ -224,24 +219,11 @@ def process_person(person):
                 'phone_last_used': phone_time,
                 'last_food_time': meal_time,
                 'last_food': meal_type,
-            })
+            }
+            
+            results.append(row_data)
             if date in sleep_scores:
-                sleep_score_results.append({
-                    'date': date,
-                    'average_heart_rate': round(avg_hr, 2),
-                    'min_heart_rate': daily_data[date]['min_hr'],
-                    'max_heart_rate': daily_data[date]['max_hr'],
-                    'start': sleep_times.get(date, {}).get('start', ''),
-                    'end': sleep_times.get(date, {}).get('end', ''),
-                    'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
-                    'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
-                    'sleep_score': sleep_scores.get(date, ''),
-                    'calories_burned': round(daily_calories.get(date, 0), 2),
-                    'total_steps': daily_steps[date],
-                    'phone_last_used': phone_time,
-                    'last_food_time': meal_time,
-                    'last_food': meal_type,
-                })
+                sleep_score_results.append(row_data)
 
     print(f"Saving results to {output_file}...")
     with open(output_file, 'w', newline='') as f:
@@ -257,9 +239,10 @@ def process_person(person):
         writer.writeheader()
         writer.writerows(sleep_score_results)
 
-    print(f"Done. Created {len(results)} daily datasets.")
+    print(f"Done for {person}. Created daily datasets.")
 
 
 person_names = ['robin', 'mohammed', 'lucas']
 for person in person_names:
+    print(f"\n--- Processing {person.upper()} ---")
     process_person(person)
