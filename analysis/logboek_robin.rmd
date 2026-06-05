@@ -187,10 +187,20 @@ with open(sleep_score_output_file, 'w', newline='') as f:
 Vandaag heb ik de REM-slaap, diepe slaap en stressmanagement score toegevoegd aan de data. Ik ben benieuwd of deze variabelen ook invloed hebben op de slaapscore.
 Ik heb ook een extra python bestand gemaakt die de data van alle drie de personen samenvoegt zodat ik makkelijk vergelijkingen kan maken tussen de drie personen.
 Ik heb de losse bestanden laten staan zodat de analyses per persoon ook nog steeds makkelijk te doen zijn en de rmd's van anderen nog werken.
+
+Ik heb een rmd-bestand gemaakt waarin ik de data van de drie proefpersonen vergelijk met elkaar en ook calorieen verbrand met slaapscore vergelijk.
+Verder heb ik de starttijd van de slaap aangepast zodat we de Google Form data gebruiken in plaats van de Fitbit data, want deze was niet accuraat.
+Ook heb ik de afgelopen dagen mijn data bijgehouden en dit vandaag ingevuld in de google form.
+Ik realiseer me echter dat iemand minder lang kan slapen en daardoor de slaapscore automatisch omlaag gaat, ongeacht de kwaliteit van de slaap.
+Ik ga daarom kijken of er een manier is om de slaapscore te corrigeren voor de duur van de slaap, zodat we beter kunnen vergelijken tussen dagen met verschillende slaapduur.
+
+Ik heb een manier gevonden om de slaapscore te corrigeren voor de duur van de slaap, door de slaapscore te delen door het aantal uren slaap.
+Ik heb extra analyses gemaakt met deze gecorrigeerde slaapscore en de resultaten vergeleken met de oorspronkelijke slaapscore.
+
+
 ## To do's
 
 - Eigen data vernieuwen met nieuwe export
-- Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
 - Extra analyses maken met de nieuwe data
 - Discussie en conclusie schrijven
 
