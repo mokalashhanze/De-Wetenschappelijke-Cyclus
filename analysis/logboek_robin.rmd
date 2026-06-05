@@ -225,6 +225,10 @@ def calculate_corrected_score(sleep_score, sleep_duration_hours):
     return round(float(sleep_score) / duration_factor, 2)
 ```
 
+Ik heb ontdekt dat de Fitbit niet accuraat de start en eindtijd van de slaap meet, en dit wordt meegerekend in de slaapscore.
+Daarom denk ik dat het misschien beter is om de gemiddelde hartslag tijdens slaap te gebruiken in plaats van de slaapscore.
+Ik heb het python bestand aangepast zodat het de gemiddelde hartslag tijdens slaap berekent en mijn RMD bestand aangepast met gemiddelde slaap hartslag analyses.
+
 
 ## To do's
 
