@@ -37,16 +37,13 @@ tijd_naar_minuten <- function(tijd_str) {
 min_start <- tijd_naar_minuten(df_all$start)
 min_end   <- tijd_naar_minuten(df_all$end)
 
-# Slaapduur in uren berekenen (rekening houdend met de nachtwisseling)
+# Slaapduur in uren berekenen
 df_all$slaapduur_uren <- ifelse(min_end >= min_start, 
                                 (min_end - min_start) / 60, 
                                 ((1440 - min_start) + min_end) / 60)
 
-# Gecorrigeerde slaapscore berekenen: Slaapscore / Slaapduur (in uren)
+# Gecorrigeerde slaapscore berekenen: Slaapscore / Slaapduur
 df_all$gecorrigeerde_slaapscore <- df_all$sleep_score / df_all$slaapduur_uren
-
-# Verwijder eventuele foutieve berekeningen door missende tijden
-df_all <- df_all[complete.cases(df_all$gecorrigeerde_slaapscore), ]
 ```
 
 ## 3. Statistieken
