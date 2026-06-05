@@ -181,3 +181,14 @@ with open(sleep_score_output_file, 'w', newline='') as f:
 - Eigen data vernieuwen met nieuwe export
 - Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
 - Extra analyses maken met de nieuwe data
+
+## 2026-06-03 — REM, diepe slaap en stressmanagement score toegevoegd
+
+Vandaag heb ik de REM-slaap, diepe slaap en stressmanagement score toegevoegd aan de data. Ik ben benieuwd of deze variabelen ook invloed hebben op de slaapscore.
+
+## To do's
+
+- Eigen data vernieuwen met nieuwe export
+- Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
+- Extra analyses maken met de nieuwe data
+- Discussie en conclusie schrijven
