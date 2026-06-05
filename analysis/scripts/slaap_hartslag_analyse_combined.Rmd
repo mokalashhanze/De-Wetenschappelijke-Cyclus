@@ -15,7 +15,7 @@ library(ggplot2)
 ## 2. Data inladen
 
 ```{r}
-df_all <- read.csv("analysis/data/combined_filetered/combined_data_filtered.csv")
+df_all <- read.csv("analysis/data/combined_data/combined_data.csv")
 ```
 
 ---
@@ -90,6 +90,34 @@ ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = na
   theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
 ```
 
+## 4. Correlatie Gemiddelde hartslag slaap vs hartslag overdag
+
+```{r}
+ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag (Individuele Trends)",
+       x = "Gemiddelde hartslag (bpm)",
+       y = "Gemiddelde Hartslag Slaap") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is hier overbodig door de titels boven de panelen
+```
+
+```{r}
+ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag (Directe Vergelijking)",
+       x = "Gemiddelde hartslag (bpm)",
+       y = "Gemiddelde Hartslag Slaap",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
+
 
 ## 5. Correlatie slaapscore vs stappen
 
@@ -118,6 +146,8 @@ ggplot(df_all, aes(x = total_steps, y = sleep_score, color = naam)) +
   theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
 ```
 
+
+
 ## Correlatie gecorrigeerde slaapscore vs stappen
 
 ```{r}
@@ -144,6 +174,35 @@ ggplot(df_all, aes(x = total_steps, y = corrected_sleep_score, color = naam)) +
   theme_minimal() +
   theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
 ```
+
+
+## Correlatie gemiddelde hartslag slaap vs stappen
+
+```{r}
+ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag (Individuele Trends)",
+       x = "Stappen per dag",
+       y = "Gemiddelde Hartslag Slaap") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+```
+```{r}
+ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag (Directe Vergelijking)",
+       x = "Stappen per dag",
+       y = "Gemiddelde Hartslag Slaap",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
+
 
 ## 5. Correlatie slaapscore vs calorieën
 
