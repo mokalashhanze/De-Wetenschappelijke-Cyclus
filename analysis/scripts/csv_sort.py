@@ -45,6 +45,28 @@ def read_sleep_score_data(sleep_score_file):
     print(f"Loaded {len(sleep_scores)} sleep scores")
     return sleep_scores
 
+def read_sleep_stage_data(sleep_stage_file):
+    print("Reading sleep stage data...")
+    sleep_stages = {}
+    with open(sleep_stage_file, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            stage_type = row['sleep_stage_type'].strip().upper()
+            if stage_type not in {'REM', 'DEEP'}:
+                continue
+            start = datetime.fromisoformat(row['sleep_stage_start'].replace(' ', 'T').replace('+0000', '+00:00'))
+            end = datetime.fromisoformat(row['sleep_stage_end'].replace(' ', 'T').replace('+0000', '+00:00'))
+            date = end.date()
+            if date not in sleep_stages:
+                sleep_stages[date] = {'rem_minutes': 0.0, 'deep_minutes': 0.0}
+            duration_minutes = (end - start).total_seconds() / 60
+            if stage_type == 'REM':
+                sleep_stages[date]['rem_minutes'] += duration_minutes
+            else:
+                sleep_stages[date]['deep_minutes'] += duration_minutes
+    print(f"Loaded sleep stage totals for {len(sleep_stages)} days")
+    return sleep_stages
+
 def read_form_data(form_file, person):
     print("Reading form data...")
     form_data = {}
@@ -106,8 +128,11 @@ def read_calories_data(calories_file):
     print(f"Loaded calories for {len(daily_calories)} days")
     return daily_calories
 
+
+
 def process_person(person):
     sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
+    sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
     sleep_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Sleep Score/sleep_score.csv"
     steps_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
     output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_raw"
@@ -141,6 +166,7 @@ def process_person(person):
     ]
 
     sleep_intervals, sleep_times = read_sleep_data(sleep_file)
+    sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
     sleep_scores = read_sleep_score_data(sleep_score_file)
     form_data = read_form_data(form_file, person)
     heart_rate_data = read_heart_rate_data(heart_rate_dir, heart_rate_files)
@@ -190,6 +216,8 @@ def process_person(person):
                 'max_heart_rate': daily_data[date]['max_hr'],
                 'start': sleep_times.get(date, {}).get('start', ''),
                 'end': sleep_times.get(date, {}).get('end', ''),
+                'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
+                'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': sleep_scores.get(date, ''),
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
@@ -205,6 +233,8 @@ def process_person(person):
                     'max_heart_rate': daily_data[date]['max_hr'],
                     'start': sleep_times.get(date, {}).get('start', ''),
                     'end': sleep_times.get(date, {}).get('end', ''),
+                    'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
+                    'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                     'sleep_score': sleep_scores.get(date, ''),
                     'calories_burned': round(daily_calories.get(date, 0), 2),
                     'total_steps': daily_steps[date],
@@ -215,14 +245,14 @@ def process_person(person):
 
     print(f"Saving results to {output_file}...")
     with open(output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(results)
 
     print(f"Saving sleep score results to {sleep_score_output_file}...")
     with open(sleep_score_output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(sleep_score_results)
