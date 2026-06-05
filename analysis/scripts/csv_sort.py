@@ -19,65 +19,113 @@ def to_24_hour(time_text):
         except ValueError:
             return time_text
 
+def calculate_corrected_score(sleep_score, sleep_duration_hours):
+    """
+    Berekent de gecorrigeerde slaapscore:
+    - Nachten korter dan 6 uur worden gecorrigeerd naar 6 uur.
+    - Nachten langer dan 9 uur worden gecorrigeerd naar 9 uur.
+    - Alles daartussen gebruikt de slaapduur.
+    """
+    if sleep_score == '' or sleep_duration_hours == '' or sleep_duration_hours <= 0:
+        return ''
+    
+    actual_hours = float(sleep_duration_hours)
+    
+    if actual_hours < 6.0:
+        effective_hours = 6.0
+    elif actual_hours > 9.0:
+        effective_hours = 9.0
+    else:
+        effective_hours = actual_hours
+    
+    duration_factor = effective_hours / 8.0
+    
+    return round(float(sleep_score) / duration_factor, 2)
+
+def calculate_sleep_duration(start_str, end_str):
+    if not start_str or not end_str:
+        return ''
+    try:
+        t_start = datetime.strptime(start_str, '%H:%M')
+        t_end = datetime.strptime(end_str, '%H:%M')
+        diff_minutes = (t_end - t_start).total_seconds() / 60.0
+        if diff_minutes < 0:
+            diff_minutes += 1440  # 24 uur * 60 minuten bij nachtwisseling
+        return round(diff_minutes / 60.0, 2)
+    except ValueError:
+        return ''
+
 def read_sleep_data(sleep_file):
     print("Reading sleep data...")
     sleep_intervals = []
-    with open(sleep_file, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            start_str = row['sleep_start'].replace(' ', 'T').replace('+0000', '+00:00')
-            end_str = row['sleep_end'].replace(' ', 'T').replace('+0000', '+00:00')
-            start = datetime.fromisoformat(start_str)
-            end = datetime.fromisoformat(end_str)
-            sleep_intervals.append((start, end))
+    try:
+        with open(sleep_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                start_str = row['sleep_start'].replace(' ', 'T').replace('+0000', '+00:00')
+                end_str = row['sleep_end'].replace(' ', 'T').replace('+0000', '+00:00')
+                start = datetime.fromisoformat(start_str)
+                end = datetime.fromisoformat(end_str)
+                sleep_intervals.append((start, end))
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
     print(f"Loaded {len(sleep_intervals)} sleep periods for heart rate filtering")
     return sleep_intervals
 
 def read_sleep_score_data(sleep_score_file):
     print("Reading sleep score data...")
     sleep_scores = {}
-    with open(sleep_score_file, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
-            date = timestamp.date()
-            sleep_scores[date] = int(row['overall_score'])
+    try:
+        with open(sleep_score_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
+                date = timestamp.date()
+                sleep_scores[date] = int(row['overall_score'])
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
     print(f"Loaded {len(sleep_scores)} sleep scores")
     return sleep_scores
 
 def read_sleep_stage_data(sleep_stage_file):
     print("Reading sleep stage data...")
     sleep_stages = {}
-    with open(sleep_stage_file, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            stage_type = row['sleep_stage_type'].strip().upper()
-            if stage_type not in {'REM', 'DEEP'}:
-                continue
-            start = datetime.fromisoformat(row['sleep_stage_start'].replace(' ', 'T').replace('+0000', '+00:00'))
-            end = datetime.fromisoformat(row['sleep_stage_end'].replace(' ', 'T').replace('+0000', '+00:00'))
-            date = end.date()
-            if date not in sleep_stages:
-                sleep_stages[date] = {'rem_minutes': 0.0, 'deep_minutes': 0.0}
-            duration_minutes = (end - start).total_seconds() / 60
-            if stage_type == 'REM':
-                sleep_stages[date]['rem_minutes'] += duration_minutes
-            else:
-                sleep_stages[date]['deep_minutes'] += duration_minutes
+    try:
+        with open(sleep_stage_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                stage_type = row['sleep_stage_type'].strip().upper()
+                if stage_type not in {'REM', 'DEEP'}:
+                    continue
+                start = datetime.fromisoformat(row['sleep_stage_start'].replace(' ', 'T').replace('+0000', '+00:00'))
+                end = datetime.fromisoformat(row['sleep_stage_end'].replace(' ', 'T').replace('+0000', '+00:00'))
+                date = end.date()
+                if date not in sleep_stages:
+                    sleep_stages[date] = {'rem_minutes': 0.0, 'deep_minutes': 0.0}
+                duration_minutes = (end - start).total_seconds() / 60
+                if stage_type == 'REM':
+                    sleep_stages[date]['rem_minutes'] += duration_minutes
+                else:
+                    sleep_stages[date]['deep_minutes'] += duration_minutes
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
     print(f"Loaded sleep stage totals for {len(sleep_stages)} days")
     return sleep_stages
 
 def read_form_data(form_file, person):
     print("Reading form data...")
     form_data = {}
-    with open(form_file, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row['Naam'].strip().lower() != person:
-                continue
-            date = datetime.strptime(row['Wat is de huidige datum'], '%d-%m-%Y').date()
-            if date not in form_data:
-                form_data[date] = row
+    try:
+        with open(form_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['Naam'].strip().lower() != person:
+                    continue
+                date = datetime.strptime(row['Wat is de huidige datum'], '%d-%m-%Y').date()
+                if date not in form_data:
+                    form_data[date] = row
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
     print(f"Loaded {len(form_data)} form rows")
     return form_data
 
@@ -93,7 +141,7 @@ def read_heart_rate_data(heart_rate_dir, heart_rate_files):
                     timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
                     bpm = float(row['beats per minute'])
                     heart_rate_data.append((timestamp, bpm))
-        except FileNotFoundError:
+        except (FileNotFoundError, KeyError, ValueError):
             pass
     print(f"Loaded {len(heart_rate_data)} heart rate measurements")
     return heart_rate_data
@@ -101,12 +149,15 @@ def read_heart_rate_data(heart_rate_dir, heart_rate_files):
 def read_steps_data(steps_file):
     print("Reading steps data...")
     steps_data = []
-    with open(steps_file, 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
-            steps = int(row['steps'])
-            steps_data.append((timestamp, steps))
+    try:
+        with open(steps_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
+                steps = int(row['steps'])
+                steps_data.append((timestamp, steps))
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
     print(f"Loaded {len(steps_data)} step measurements")
     return steps_data
 
@@ -123,7 +174,7 @@ def read_calories_data(calories_file):
                 if date not in daily_calories:
                     daily_calories[date] = 0
                 daily_calories[date] += calories
-    except FileNotFoundError:
+    except (FileNotFoundError, KeyError, ValueError):
         pass
     print(f"Loaded calories for {len(daily_calories)} days")
     return daily_calories
@@ -164,8 +215,6 @@ def process_person(person):
     print("Filtering out measurements during sleep...")
     awake_heart_rate = [(ts, bpm) for ts, bpm in heart_rate_data
                         if not is_during_sleep(ts, sleep_intervals)]
-    print(f"Measurements during sleep: {len(heart_rate_data) - len(awake_heart_rate)}")
-    print(f"Measurements while awake: {len(awake_heart_rate)}")
 
     daily_data = {}
     for timestamp, bpm in awake_heart_rate:
@@ -190,10 +239,8 @@ def process_person(person):
             avg_hr = sum(daily_data[date]['heart_rates']) / len(daily_data[date]['heart_rates'])
             form_row = form_data.get(date, {})
             if form_row:
-                # Slaaptijden direct laden uit Google Formulier en parsen naar 24-uurs format
                 sleep_start_time = to_24_hour(form_row['Hoelaat ben je gaan slapen?'])
                 sleep_end_time = to_24_hour(form_row['Hoelaat ben je opgestaan?'])
-                
                 phone_time = to_24_hour(form_row['Hoelaat heb je voor het laatst op je telefoon gezeten?'])
                 meal_time = to_24_hour(form_row['Wanneer heb je voor het laatst gegeten?'])
                 meal_type = form_row['Wat was het?']
@@ -203,17 +250,23 @@ def process_person(person):
                 phone_time = ''
                 meal_time = ''
                 meal_type = ''
+            
+            sleep_duration_hours = calculate_sleep_duration(sleep_start_time, sleep_end_time)
+            sleep_score_val = sleep_scores.get(date, '')
+            corrected_sleep_score = calculate_corrected_score(sleep_score_val, sleep_duration_hours)
                 
             row_data = {
                 'date': date,
                 'average_heart_rate': round(avg_hr, 2),
                 'min_heart_rate': daily_data[date]['min_hr'],
                 'max_heart_rate': daily_data[date]['max_hr'],
-                'start': sleep_start_time,  # Ingevuld vanuit formulier
-                'end': sleep_end_time,      # Ingevuld vanuit formulier
+                'start': sleep_start_time,
+                'end': sleep_end_time,
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
-                'sleep_score': sleep_scores.get(date, ''),
+                'sleep_score': sleep_score_val,
+                'sleep_duration_hours': sleep_duration_hours,
+                'corrected_sleep_score': corrected_sleep_score,
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
                 'phone_last_used': phone_time,
@@ -222,19 +275,19 @@ def process_person(person):
             }
             
             results.append(row_data)
-            if date in sleep_scores:
+            if date in sleep_scores and corrected_sleep_score != '':
                 sleep_score_results.append(row_data)
 
+    fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'sleep_duration_hours', 'corrected_sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+    
     print(f"Saving results to {output_file}...")
     with open(output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(results)
 
     print(f"Saving sleep score results to {sleep_score_output_file}...")
     with open(sleep_score_output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(sleep_score_results)

@@ -197,10 +197,38 @@ Ik ga daarom kijken of er een manier is om de slaapscore te corrigeren voor de d
 Ik heb een manier gevonden om de slaapscore te corrigeren voor de duur van de slaap, door de slaapscore te delen door het aantal uren slaap.
 Ik heb extra analyses gemaakt met deze gecorrigeerde slaapscore en de resultaten vergeleken met de oorspronkelijke slaapscore.
 
+Hier is een stukje code waarin ik de gecorrigeerde slaapscore toevoeg:
+
+```python
+def calculate_corrected_score(sleep_score, sleep_duration_hours):
+    """
+    Berekent de gecorrigeerde slaapscore:
+    - Nachten korter dan 6 uur worden gecorrigeerd naar 6 uur.
+    - Nachten langer dan 9 uur worden gecorrigeerd naar 9 uur.
+    - Alles daartussen gebruikt de slaapduur.
+    """
+    if sleep_score == '' or sleep_duration_hours == '' or sleep_duration_hours <= 0:
+        return ''
+    
+    actual_hours = float(sleep_duration_hours)
+    
+    # 1. Begrens de duur: niet korter dan 6, niet langer dan 9
+    if actual_hours < 6.0:
+        effective_hours = 6.0
+    elif actual_hours > 9.0:
+        effective_hours = 9.0
+    else:
+        effective_hours = actual_hours
+    
+    duration_factor = effective_hours / 8.0
+    
+    return round(float(sleep_score) / duration_factor, 2)
+```
+
 
 ## To do's
 
 - Eigen data vernieuwen met nieuwe export
 - Extra analyses maken met de nieuwe data
 - Discussie en conclusie schrijven
-
+- Rusthartslag toevoegen aan de csv-bestanden 
