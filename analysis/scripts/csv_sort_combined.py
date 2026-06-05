@@ -129,16 +129,11 @@ def read_calories_data(calories_file):
     return daily_calories
 
 
-
 def process_person(person):
     sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
     sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
     sleep_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Sleep Score/sleep_score.csv"
     steps_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
-    output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_raw"
-    sleep_score_output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_filetered"
-    output_file = f"{output_dir}/combined_data_{person}.csv"
-    sleep_score_output_file = f"{sleep_score_output_dir}/combined_data_{person}.csv"
     heart_rate_dir = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData"
     form_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/betere Naamloos formulier (Antwoorden)(3).csv"
     calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned.csv"
@@ -146,23 +141,12 @@ def process_person(person):
         calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv"
 
     heart_rate_files = [
-        "heart_rate_2026-04-06.csv",
-        "heart_rate_2026-05-06.csv",
-        "heart_rate_2026-05-07.csv",
-        "heart_rate_2026-05-08.csv",
-        "heart_rate_2026-05-09.csv",
-        "heart_rate_2026-05-10.csv",
-        "heart_rate_2026-05-11.csv",
-        "heart_rate_2026-05-12.csv",
-        "heart_rate_2026-05-13.csv",
-        "heart_rate_2026-05-14.csv",
-        "heart_rate_2026-05-15.csv",
-        "heart_rate_2026-05-16.csv",
-        "heart_rate_2026-05-17.csv",
-        "heart_rate_2026-05-18.csv",
-        "heart_rate_2026-05-19.csv",
-        "heart_rate_2026-05-20.csv",
-        "heart_rate_2026-05-21.csv",
+        "heart_rate_2026-04-06.csv", "heart_rate_2026-05-06.csv", "heart_rate_2026-05-07.csv",
+        "heart_rate_2026-05-08.csv", "heart_rate_2026-05-09.csv", "heart_rate_2026-05-10.csv",
+        "heart_rate_2026-05-11.csv", "heart_rate_2026-05-12.csv", "heart_rate_2026-05-13.csv",
+        "heart_rate_2026-05-14.csv", "heart_rate_2026-05-15.csv", "heart_rate_2026-05-16.csv",
+        "heart_rate_2026-05-17.csv", "heart_rate_2026-05-18.csv", "heart_rate_2026-05-19.csv",
+        "heart_rate_2026-05-20.csv", "heart_rate_2026-05-21.csv",
     ]
 
     sleep_intervals, sleep_times = read_sleep_data(sleep_file)
@@ -173,11 +157,9 @@ def process_person(person):
     steps_data = read_steps_data(steps_file)
     daily_calories = read_calories_data(calories_file)
 
-    print("Filtering out measurements during sleep...")
+    print(f"Filtering out measurements during sleep for {person}...")
     awake_heart_rate = [(ts, bpm) for ts, bpm in heart_rate_data
                         if not is_during_sleep(ts, sleep_intervals)]
-    print(f"Measurements during sleep: {len(heart_rate_data) - len(awake_heart_rate)}")
-    print(f"Measurements while awake: {len(awake_heart_rate)}")
 
     daily_data = {}
     for timestamp, bpm in awake_heart_rate:
@@ -195,8 +177,9 @@ def process_person(person):
             daily_steps[date] = 0
         daily_steps[date] += steps
 
-    results = []
-    sleep_score_results = []
+    person_results = []
+    person_sleep_score_results = []
+    
     for date in sorted(daily_data.keys()):
         if date in daily_steps:
             avg_hr = sum(daily_data[date]['heart_rates']) / len(daily_data[date]['heart_rates'])
@@ -209,7 +192,9 @@ def process_person(person):
                 phone_time = ''
                 meal_time = ''
                 meal_type = ''
-            results.append({
+                
+            row_data = {
+                'naam': person.capitalize(),
                 'date': date,
                 'average_heart_rate': round(avg_hr, 2),
                 'min_heart_rate': daily_data[date]['min_hr'],
@@ -224,42 +209,45 @@ def process_person(person):
                 'phone_last_used': phone_time,
                 'last_food_time': meal_time,
                 'last_food': meal_type,
-            })
+            }
+            
+            person_results.append(row_data)
             if date in sleep_scores:
-                sleep_score_results.append({
-                    'date': date,
-                    'average_heart_rate': round(avg_hr, 2),
-                    'min_heart_rate': daily_data[date]['min_hr'],
-                    'max_heart_rate': daily_data[date]['max_hr'],
-                    'start': sleep_times.get(date, {}).get('start', ''),
-                    'end': sleep_times.get(date, {}).get('end', ''),
-                    'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
-                    'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
-                    'sleep_score': sleep_scores.get(date, ''),
-                    'calories_burned': round(daily_calories.get(date, 0), 2),
-                    'total_steps': daily_steps[date],
-                    'phone_last_used': phone_time,
-                    'last_food_time': meal_time,
-                    'last_food': meal_type,
-                })
+                person_sleep_score_results.append(row_data)
 
-    print(f"Saving results to {output_file}...")
-    with open(output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(results)
+    return person_results, person_sleep_score_results
 
-    print(f"Saving sleep score results to {sleep_score_output_file}...")
-    with open(sleep_score_output_file, 'w', newline='') as f:
-        fieldnames = ['date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(sleep_score_results)
 
-    print(f"Done. Created {len(results)} daily datasets.")
-
+# Centraliseer dataverzameling voor alle personen
+all_results = []
+all_sleep_score_results = []
 
 person_names = ['robin', 'mohammed', 'lucas']
 for person in person_names:
-    process_person(person)
+    print(f"\n--- Processing {person.upper()} ---")
+    p_res, p_ss_res = process_person(person)
+    all_results.extend(p_res)
+    all_sleep_score_results.extend(p_ss_res)
+
+# Bestemmingsmappen instellen
+output_dir_raw = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_raw"
+output_dir_filtered = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_filetered"
+
+output_file_raw = f"{output_dir_raw}/combined_raw.csv"
+sleep_score_output_file = f"{output_dir_filtered}/combined_sleep_score_data.csv"
+
+fieldnames = ['naam', 'date', 'average_heart_rate', 'min_heart_rate', 'max_heart_rate', 'start', 'end', 'rem_sleep_minutes', 'deep_sleep_minutes', 'sleep_score', 'calories_burned', 'total_steps', 'phone_last_used', 'last_food_time', 'last_food']
+
+print(f"\nSaving merged raw data to {output_file_raw}...")
+with open(output_file_raw, 'w', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(all_results)
+
+print(f"Saving merged sleep score data to {sleep_score_output_file}...")
+with open(sleep_score_output_file, 'w', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(all_sleep_score_results)
+
+print(f"\nDone. Combined dataset contains {len(all_results)} total rows.")
