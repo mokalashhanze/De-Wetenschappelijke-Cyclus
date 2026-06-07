@@ -116,15 +116,15 @@ Het is fijn dat alles nu opgeschreven is, want zo kan ik niks meer vergeten en i
 Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken met de data en het schrijven van het artikel.
 
 # Dag 5:
-## Datum: 05/06/2026
+## Datum: 05/06/2026 
 
-**Doel van de dag:**
+**Doel van de dag:**  
 Een afspraak houden met mijn partners om de taken goed te verdelen.
 
-**Motivatie:**
-Als we de taken goed verdelen, weet iedereen precies wat hij moet doen. Zo kunnen we sneller en beter samenwerken aan het project.
+**Motivatie:**  
+Als we de taken goed verdelen, weet iedereen precies wat hij moet doen. Zo kunnen we sneller en beter samenwerken aan het project.  
 
-**Uitgevoerde werkzaamheden:**
+**Uitgevoerde werkzaamheden:**  
 * Een afspraak gehad met mijn projectpartners Robin en Lucas.
 * Samen de taken voor het slaap- en hartslagexperiment verdeeld.
 * Mijn gekregen taak genoteerd: ik ga de R-code schrijven voor de factoren eten en telefoongebruik.
@@ -133,7 +133,7 @@ Als we de taken goed verdelen, weet iedereen precies wat hij moet doen. Zo kunne
 **Resultaten:**
 De taakverdeling is helemaal helder. Ik weet precies welke codes ik moet gaan maken en het meetprotocol is nu compleet en up-to-date.
 
-**Analyse:**
+**Analyse:**  
 Het was goed om samen te komen. Door de taken te splitsen hoeft niet iedereen hetzelfde werk te doen en vullen we elkaar goed aan.
 
 **Conclusie:**
@@ -146,21 +146,21 @@ De afspraak was succesvol. We hebben een duidelijke planning en ik kan nu zelfst
 De R-code voor de grafieken en statistieken afmaken en foutloos laten werken.
 
 **Motivatie:**
-Ik wil duidelijke grafieken hebben voor ons verslag. Zo kunnen we makkelijk zien hoe eten en telefoongebruik onze slaap score beïnvloeden.
+Ik wil duidelijke grafieken hebben voor ons verslag. Zo kunnen we makkelijk zien hoe eten en telefoongebruik onze slaap score beïnvloeden.  
 
 **Uitgevoerde werkzaamheden:**
-* De data van Robin, Lucas en Mohammed klaargemaakt in R.
-* Schrijffouten in de maaltijden automatisch laten herstellen door de computer.
-* De tijd van telefoongebruik omgezet naar logische uren voor het slapengaan.
-* Eén grote grafiek gemaakt voor het eten en één grote grafiek voor de schermtijd.
+* De data van Robin, Lucas en Mohammed klaargemaakt in R.  
+* Schrijffouten in de maaltijden automatisch laten herstellen door de computer.  
+* De tijd van telefoongebruik omgezet naar logische uren voor het slapengaan.  
+* Eén grote grafiek gemaakt voor het eten en één grote grafiek voor de schermtijd.  
 * Ieder groepslid een eigen vaste kleur gegeven (Robin is rood, Lucas is groen en ik ben blauw).
 * Foutmeldingen met missende haakjes en plusjes in RStudio opgelost.
 
-**Resultaten:**
+**Resultaten:**  
 De code werkt nu helemaal zonder fouten. De grafieken zijn klaar en laten de resultaten van ons alle drie netjes naast elkaar zien.
 
-**Analyse:**
+**Analyse:**  
 Het was even puzzelen met de tijdnotaties en de foutbalken in R, maar door de code korter te maken is het nu heel overzichtelijk.
 
-**Conclusie:**
+**Conclusie:**  
 Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst.
