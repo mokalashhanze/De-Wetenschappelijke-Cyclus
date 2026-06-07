@@ -181,3 +181,58 @@ with open(sleep_score_output_file, 'w', newline='') as f:
 - Eigen data vernieuwen met nieuwe export
 - Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
 - Extra analyses maken met de nieuwe data
+
+## 2026-06-03 — REM, diepe slaap en stressmanagement score toegevoegd
+
+Vandaag heb ik de REM-slaap, diepe slaap en stressmanagement score toegevoegd aan de data. Ik ben benieuwd of deze variabelen ook invloed hebben op de slaapscore.
+Ik heb ook een extra python bestand gemaakt die de data van alle drie de personen samenvoegt zodat ik makkelijk vergelijkingen kan maken tussen de drie personen.
+Ik heb de losse bestanden laten staan zodat de analyses per persoon ook nog steeds makkelijk te doen zijn en de rmd's van anderen nog werken.
+
+Ik heb een rmd-bestand gemaakt waarin ik de data van de drie proefpersonen vergelijk met elkaar en ook calorieen verbrand met slaapscore vergelijk.
+Verder heb ik de starttijd van de slaap aangepast zodat we de Google Form data gebruiken in plaats van de Fitbit data, want deze was niet accuraat.
+Ook heb ik de afgelopen dagen mijn data bijgehouden en dit vandaag ingevuld in de google form.
+Ik realiseer me echter dat iemand minder lang kan slapen en daardoor de slaapscore automatisch omlaag gaat, ongeacht de kwaliteit van de slaap.
+Ik ga daarom kijken of er een manier is om de slaapscore te corrigeren voor de duur van de slaap, zodat we beter kunnen vergelijken tussen dagen met verschillende slaapduur.
+
+Ik heb een manier gevonden om de slaapscore te corrigeren voor de duur van de slaap, door de slaapscore te delen door het aantal uren slaap.
+Ik heb extra analyses gemaakt met deze gecorrigeerde slaapscore en de resultaten vergeleken met de oorspronkelijke slaapscore.
+
+Hier is een stukje code waarin ik de gecorrigeerde slaapscore toevoeg:
+
+```python
+def calculate_corrected_score(sleep_score, sleep_duration_hours):
+    """
+    Berekent de gecorrigeerde slaapscore:
+    - Nachten korter dan 6 uur worden gecorrigeerd naar 6 uur.
+    - Nachten langer dan 9 uur worden gecorrigeerd naar 9 uur.
+    - Alles daartussen gebruikt de slaapduur.
+    """
+    if sleep_score == '' or sleep_duration_hours == '' or sleep_duration_hours <= 0:
+        return ''
+    
+    actual_hours = float(sleep_duration_hours)
+    
+    # 1. Begrens de duur: niet korter dan 6, niet langer dan 9
+    if actual_hours < 6.0:
+        effective_hours = 6.0
+    elif actual_hours > 9.0:
+        effective_hours = 9.0
+    else:
+        effective_hours = actual_hours
+    
+    duration_factor = effective_hours / 8.0
+    
+    return round(float(sleep_score) / duration_factor, 2)
+```
+
+Ik heb ontdekt dat de Fitbit niet accuraat de start en eindtijd van de slaap meet, en dit wordt meegerekend in de slaapscore.
+Daarom denk ik dat het misschien beter is om de gemiddelde hartslag tijdens slaap te gebruiken in plaats van de slaapscore.
+Ik heb het python bestand aangepast zodat het de gemiddelde hartslag tijdens slaap berekent en mijn RMD bestand aangepast met gemiddelde slaap hartslag analyses.
+
+
+## To do's
+
+- Eigen data vernieuwen met nieuwe export
+- Extra analyses maken met de nieuwe data
+- Discussie en conclusie schrijven
+- Rusthartslag toevoegen aan de csv-bestanden 
