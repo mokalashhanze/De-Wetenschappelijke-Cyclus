@@ -1,0 +1,301 @@
+---
+title: "Verbrande calorieën en slaapscore / hartslag"
+author: "Lucas"
+output: html_document
+---
+
+## 1. Libraries laden
+
+```{r libraries}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+```
+
+---
+
+## 2. Data inladen & voorbereiden
+
+```{r data-laden}
+data <- read.csv("C:\\Users\\Lucas\\Downloads\\combined_data.csv")
+data$date <- as.Date(data$date)
+
+analyse_cols <- c("naam", "date", "calories_burned",
+                  "sleep_score", "average_sleep_heart_rate", "min_heart_rate")
+analyse_data <- data[complete.cases(data[, analyse_cols]), analyse_cols]
+
+cat("Bruikbare datapunten: n =", nrow(analyse_data), "\n")
+cat("Personen:", paste(unique(analyse_data$naam), collapse = ", "), "\n")
+```
+
+---
+
+## 3. Statistieken
+
+```{r statistieken}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    gem_calorieen      = round(mean(calories_burned), 0),
+    sd_calorieen       = round(sd(calories_burned), 0),
+    gem_slaapscore     = round(mean(sleep_score), 2),
+    sd_slaapscore      = round(sd(sleep_score), 2),
+    gem_slaap_hr       = round(mean(average_sleep_heart_rate), 2),
+    sd_slaap_hr        = round(sd(average_sleep_heart_rate), 2),
+    gem_min_hr         = round(mean(min_heart_rate), 2),
+    sd_min_hr          = round(sd(min_heart_rate), 2)
+  ) %>%
+  print()
+```
+
+---
+
+## 4. Kleuren instellen
+
+```{r kleuren}
+person_colors <- c(
+  "Robin"    = "#E05252",
+  "Mohammed" = "#5285E0",
+  "Lucas"    = "#52C452"
+)
+```
+
+---
+
+## 5. Analyse A — Verbrande calorieën vs Slaapscore
+
+### Correlatie
+
+```{r cor-slaapscore}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(sleep_score ~ calories_burned))$r.squared, 3),
+    p  = round(cor.test(calories_burned, sleep_score)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-score-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = calories_burned, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Verbrande calorieën vs Slaapscore",
+    x     = "Verbrande calorieën per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = calories_burned, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Verbrande calorieën vs Slaapscore",
+    x     = "Verbrande calorieën per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = calories_burned, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Verbrande calorieën vs Slaapscore",
+    x     = "Verbrande calorieën per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-score-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = calories_burned, y = sleep_score,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Verbrande calorieën vs Slaapscore",
+    x     = "Verbrande calorieën per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 6. Analyse B — Verbrande calorieën vs Gemiddelde hartslag tijdens slaap
+
+### Correlatie
+
+```{r cor-slaap-hr}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(average_sleep_heart_rate ~ calories_burned))$r.squared, 3),
+    p  = round(cor.test(calories_burned, average_sleep_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-hr-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = calories_burned, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Verbrande calorieën vs Gem. hartslag tijdens slaap",
+    x     = "Verbrande calorieën per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-hr-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = calories_burned, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Verbrande calorieën vs Gem. hartslag tijdens slaap",
+    x     = "Verbrande calorieën per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-hr-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = calories_burned, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Verbrande calorieën vs Gem. hartslag tijdens slaap",
+    x     = "Verbrande calorieën per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-hr-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = calories_burned, y = average_sleep_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Verbrande calorieën vs Gem. hartslag tijdens slaap",
+    x     = "Verbrande calorieën per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 7. Analyse C — Verbrande calorieën vs Minimale hartslag (nacht)
+
+### Correlatie
+
+```{r cor-min-hr}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(min_heart_rate ~ calories_burned))$r.squared, 3),
+    p  = round(cor.test(calories_burned, min_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-min-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = calories_burned, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Verbrande calorieën vs Minimale hartslag (nacht)",
+    x     = "Verbrande calorieën per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = calories_burned, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Verbrande calorieën vs Minimale hartslag (nacht)",
+    x     = "Verbrande calorieën per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = calories_burned, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Verbrande calorieën vs Minimale hartslag (nacht)",
+    x     = "Verbrande calorieën per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-min-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = calories_burned, y = min_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Verbrande calorieën vs Minimale hartslag (nacht)",
+    x     = "Verbrande calorieën per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
