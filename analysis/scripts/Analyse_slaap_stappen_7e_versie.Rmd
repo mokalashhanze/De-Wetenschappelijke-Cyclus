@@ -1,0 +1,302 @@
+---
+title: "Vergelijking stappen met slaap"
+author: "Lucas"
+output: html_document
+---
+
+## 1. Libraries laden
+
+```{r libraries}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+```
+
+---
+
+## 2. Data inladen & voorbereiden
+
+```{r data-laden}
+data <- read.csv("C:\\Users\\Lucas\\Downloads\\combined_data.csv")
+data$date <- as.Date(data$date)
+
+# Slaap-relevante kolommen filteren
+slaap_cols <- c("naam", "date", "total_steps",
+                "average_sleep_heart_rate", "min_heart_rate",
+                "sleep_score", "corrected_sleep_score",
+                "sleep_duration_hours", "rem_sleep_minutes", "deep_sleep_minutes")
+slaap_data <- data[complete.cases(data[, slaap_cols]), slaap_cols]
+
+cat("Bruikbare datapunten: n =", nrow(slaap_data), "\n")
+cat("Personen:", paste(unique(slaap_data$naam), collapse = ", "), "\n")
+```
+
+---
+
+## 3. Statistieken
+
+```{r statistieken}
+slaap_data %>%
+  group_by(naam) %>%
+  summarise(
+    gem_stappen        = round(mean(total_steps), 0),
+    gem_slaap_hr       = round(mean(average_sleep_heart_rate), 2),
+    gem_min_hr         = round(mean(min_heart_rate), 2),
+    gem_slaapscore     = round(mean(sleep_score), 2),
+    gem_slaapduur_uur  = round(mean(sleep_duration_hours), 2),
+    gem_rem_min        = round(mean(rem_sleep_minutes), 1),
+    gem_diepe_slaap    = round(mean(deep_sleep_minutes), 1)
+  ) %>%
+  print()
+```
+
+---
+
+## 4. Kleuren instellen
+
+```{r kleuren}
+person_colors <- c(
+  "Robin"    = "#E05252",
+  "Mohammed" = "#5285E0",
+  "Lucas"    = "#52C452"
+)
+```
+
+---
+
+## 5. Analyse A — Stappen vs Gemiddelde Hartslagfrequentie tijdens slaap
+```{r cor-slaap-hr}
+slaap_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(average_sleep_heart_rate ~ total_steps))$r.squared, 3),
+    p  = round(cor.test(total_steps, average_sleep_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-slaap-hr-robin, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Robin"),
+       aes(x = total_steps, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Stappen vs Hartslag tijdens slaap",
+    x     = "Stappen per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-slaap-hr-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Mohammed"),
+       aes(x = total_steps, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Stappen vs Hartslag tijdens slaap",
+    x     = "Stappen per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-slaap-hr-lucas, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Lucas"),
+       aes(x = total_steps, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Stappen vs Hartslag tijdens slaap",
+    x     = "Stappen per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-slaap-hr-combined, fig.width=8, fig.height=5}
+ggplot(slaap_data, aes(x = total_steps, y = average_sleep_heart_rate,
+                        color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Stappen vs Hartslag tijdens slaap",
+    x     = "Stappen per dag",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 6. Analyse B — Stappen vs Minimale Hartslag (nacht)
+
+> **Vraag:** Bereikt het hart een lagere rustpuls 's nachts op dagen met meer beweging?
+
+### Correlatie
+
+```{r cor-min-hr}
+slaap_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(min_heart_rate ~ total_steps))$r.squared, 3),
+    p  = round(cor.test(total_steps, min_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-min-hr-robin, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Robin"),
+       aes(x = total_steps, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Stappen vs Minimale hartslag (nacht)",
+    x     = "Stappen per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-hr-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Mohammed"),
+       aes(x = total_steps, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Stappen vs Minimale hartslag (nacht)",
+    x     = "Stappen per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-hr-lucas, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Lucas"),
+       aes(x = total_steps, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Stappen vs Minimale hartslag (nacht)",
+    x     = "Stappen per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-min-hr-combined, fig.width=8, fig.height=5}
+ggplot(slaap_data, aes(x = total_steps, y = min_heart_rate,
+                        color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Stappen vs Minimale hartslag (nacht)",
+    x     = "Stappen per dag",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 7. Analyse C — Stappen vs Slaapscore
+
+```{r cor-slaapscore}
+slaap_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(sleep_score ~ total_steps))$r.squared, 3),
+    p  = round(cor.test(total_steps, sleep_score)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-score-robin, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Robin"),
+       aes(x = total_steps, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — Stappen vs Slaapscore",
+    x     = "Stappen per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Mohammed"),
+       aes(x = total_steps, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — Stappen vs Slaapscore",
+    x     = "Stappen per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-lucas, fig.width=8, fig.height=5}
+ggplot(filter(slaap_data, naam == "Lucas"),
+       aes(x = total_steps, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — Stappen vs Slaapscore",
+    x     = "Stappen per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-score-combined, fig.width=8, fig.height=5}
+ggplot(slaap_data, aes(x = total_steps, y = sleep_score,
+                        color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — Stappen vs Slaapscore",
+    x     = "Stappen per dag",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+
