@@ -1,0 +1,301 @@
+---
+title: "Verhouding REM-slaap met slaapscore / hartslag"
+author: "Lucas"
+output: html_document
+---
+
+## 1. Libraries laden
+
+```{r libraries}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+```
+
+---
+
+## 2. Data inladen & voorbereiden
+
+```{r data-laden}
+data <- read.csv("C:\\Users\\Lucas\\Downloads\\combined_data.csv")
+data$date <- as.Date(data$date)
+
+analyse_cols <- c("naam", "date", "rem_sleep_minutes",
+                  "sleep_score", "average_sleep_heart_rate", "min_heart_rate")
+analyse_data <- data[complete.cases(data[, analyse_cols]), analyse_cols]
+
+cat("Bruikbare datapunten: n =", nrow(analyse_data), "\n")
+cat("Personen:", paste(unique(analyse_data$naam), collapse = ", "), "\n")
+```
+
+---
+
+## 3. Statistieken
+
+```{r statistieken}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    gem_rem_min        = round(mean(rem_sleep_minutes), 1),
+    sd_rem_min         = round(sd(rem_sleep_minutes), 1),
+    gem_slaapscore     = round(mean(sleep_score), 2),
+    sd_slaapscore      = round(sd(sleep_score), 2),
+    gem_slaap_hr       = round(mean(average_sleep_heart_rate), 2),
+    sd_slaap_hr        = round(sd(average_sleep_heart_rate), 2),
+    gem_min_hr         = round(mean(min_heart_rate), 2),
+    sd_min_hr          = round(sd(min_heart_rate), 2)
+  ) %>%
+  print()
+```
+
+---
+
+## 4. Kleuren instellen
+
+```{r kleuren}
+person_colors <- c(
+  "Robin"    = "#E05252",
+  "Mohammed" = "#5285E0",
+  "Lucas"    = "#52C452"
+)
+```
+
+---
+
+## 5. Analyse A — REM-slaap vs Slaapscore
+
+### Correlatie
+
+```{r cor-slaapscore}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(sleep_score ~ rem_sleep_minutes))$r.squared, 3),
+    p  = round(cor.test(rem_sleep_minutes, sleep_score)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-score-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = rem_sleep_minutes, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — REM-slaap vs Slaapscore",
+    x     = "REM-slaap (minuten)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = rem_sleep_minutes, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — REM-slaap vs Slaapscore",
+    x     = "REM-slaap (minuten)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-score-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = rem_sleep_minutes, y = sleep_score)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — REM-slaap vs Slaapscore",
+    x     = "REM-slaap (minuten)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-score-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = rem_sleep_minutes, y = sleep_score,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — REM-slaap vs Slaapscore",
+    x     = "REM-slaap (minuten)",
+    y     = "Slaapscore"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 6. Analyse B — REM-slaap vs Gemiddelde hartslag tijdens slaap
+
+### Correlatie
+
+```{r cor-slaap-hr}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(average_sleep_heart_rate ~ rem_sleep_minutes))$r.squared, 3),
+    p  = round(cor.test(rem_sleep_minutes, average_sleep_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-hr-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = rem_sleep_minutes, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — REM-slaap vs Gem. hartslag tijdens slaap",
+    x     = "REM-slaap (minuten)",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-hr-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = rem_sleep_minutes, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — REM-slaap vs Gem. hartslag tijdens slaap",
+    x     = "REM-slaap (minuten)",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-hr-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = rem_sleep_minutes, y = average_sleep_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — REM-slaap vs Gem. hartslag tijdens slaap",
+    x     = "REM-slaap (minuten)",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-hr-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = rem_sleep_minutes, y = average_sleep_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — REM-slaap vs Gem. hartslag tijdens slaap",
+    x     = "REM-slaap (minuten)",
+    y     = "Gem. hartslag tijdens slaap (bpm)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## 7. Analyse C — REM-slaap vs Minimale hartslag (nacht)
+
+### Correlatie
+
+```{r cor-min-hr}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(min_heart_rate ~ rem_sleep_minutes))$r.squared, 3),
+    p  = round(cor.test(rem_sleep_minutes, min_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — per persoon
+
+```{r plot-min-robin, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Robin"),
+       aes(x = rem_sleep_minutes, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Robin"],
+             fill = person_colors["Robin"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Robin"], fill = person_colors["Robin"]) +
+  labs(
+    title = "Robin — REM-slaap vs Minimale hartslag (nacht)",
+    x     = "REM-slaap (minuten)",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-mohammed, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Mohammed"),
+       aes(x = rem_sleep_minutes, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Mohammed"],
+             fill = person_colors["Mohammed"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Mohammed"], fill = person_colors["Mohammed"]) +
+  labs(
+    title = "Mohammed — REM-slaap vs Minimale hartslag (nacht)",
+    x     = "REM-slaap (minuten)",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+```{r plot-min-lucas, fig.width=8, fig.height=5}
+ggplot(filter(analyse_data, naam == "Lucas"),
+       aes(x = rem_sleep_minutes, y = min_heart_rate)) +
+  geom_point(size = 3.5, alpha = 0.8, color = person_colors["Lucas"],
+             fill = person_colors["Lucas"]) +
+  geom_smooth(method = "lm", alpha = 0.15,
+              color = person_colors["Lucas"], fill = person_colors["Lucas"]) +
+  labs(
+    title = "Lucas — REM-slaap vs Minimale hartslag (nacht)",
+    x     = "REM-slaap (minuten)",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-min-combined, fig.width=8, fig.height=5}
+ggplot(analyse_data, aes(x = rem_sleep_minutes, y = min_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8) +
+  geom_smooth(method = "lm", alpha = 0.15) +
+  scale_color_manual(values = person_colors, name = "Persoon") +
+  scale_fill_manual(values  = person_colors, name = "Persoon") +
+  labs(
+    title = "Alle personen — REM-slaap vs Minimale hartslag (nacht)",
+    x     = "REM-slaap (minuten)",
+    y     = "Minimale hartslag (bpm)"
+  ) +
+  theme_minimal()
+```
