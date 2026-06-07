@@ -3,78 +3,90 @@ title: "eten en scherm gebruik vs slaapscore — Analyse"
 author: "mohammed"
 output: html_document
 ---
-```{r data-laden, message=FALSE, warning=FALSE}
+
+# 1. Libraries laden
+
+```{r libraries}
 library(ggplot2)
 library(lubridate)
 library(dplyr)
 library(readr)
-
-# 1. Lees de 3 losse bestanden in uit de map 'combined_all'
-robin_df    <- read_csv("../data/combined_all/combined_data_robin.csv")
-lucas_df    <- read_csv("../data/combined_all/combined_data_lucas.csv")
-mohammed_df <- read_csv("../data/combined_all/combined_data_mohammed.csv")
-
-# 2. Voeg de kolom 'proefpersoon' handmatig toe aan elk bestand
-robin_df\$proefpersoon    <- "Robin"
-lucas_df\$proefpersoon    <- "Lucas"
-mohammed_df\$proefpersoon <- "Mohammed"
-
-# 3. Voeg de drie tabellen samen onder elkaar
-df <- bind_rows(robin_df, lucas_df, mohammed_df)
-
-# 4. Zorg dat R de datumkolom ook echt als datum herkent
-df\(date <- as.Date(df\)date)
-
-# 5. Schoonmaak: herstel de typefouten in de maaltijden
-df\(last_food <- gsub("Maartijd - mager", "Maaltijd - mager", df\)last_food)
-df\(last_food <- gsub("Maatlijd - vol vet", "Maaltijd - vol vet", df\)last_food)
-df\(last_food <- gsub("Maaltijd - vol vet", "Maaltijd - vol vet", df\)last_food)
-
-# 6. Sorteer de maaltijden voor de X-as
-df\(last_food <- factor(df\)last_food, levels = c("Snack", "Maaltijd - mager", "Maaltijd - vol vet"))
 ```
 
+# 2. bestanden lezen 
+``` {r bestanden lezen}
+bestanden <- c(
+  "../data/combined_all/combined_data_robin.csv",
+  "../data/combined_all/combined_data_lucas.csv",
+  "../data/combined_all/combined_data_mohammed.csv"
+)
+
+df <- read_csv(bestanden, id = "bestandsnaam") %>%
+  mutate(
+    proefpersoon = case_when(
+      grepl("robin", bestandsnaam) ~ "Robin",
+      grepl("lucas", bestandsnaam) ~ "Lucas",
+      grepl("mohammed", bestandsnaam) ~ "Mohammed"
+    ),
+    date = as.Date(date),
+    last_food = case_when(
+      grepl("mager", last_food) ~ "Maaltijd - mager",
+      grepl("vet", last_food) ~ "Maaltijd - vd vet",
+      grepl("Snack", last_food) ~ "Snack",
+    ),
+    last_food = factor(last_food, levels = c("Snack", "Maaltijd - mager", "Maaltijd - vd vet"))
+  ) %>%
+  filter(!is.na(last_food))
+```
+
+# 2. Resultaten en Grafieken
+
+## Invloed van Eten op Slaapscore
 
 ```{r plot-eten-per-persoon, message=FALSE, warning=FALSE}
-# Maak de boxplot gesplitst per persoon via facet_wrap
-ggplot(df, aes(x = last_food, y = sleep_score, fill = last_food)) +
-  geom_boxplot(alpha = 0.7, show.legend = FALSE, na.rm = TRUE) +
-  geom_jitter(width = 0.1, alpha = 0.6, size = 2, na.rm = TRUE) +
-  
-  # Splitst de grafiek in 3 vensters op basis van de kolom 'proefpersoon'
+ggplot(df, aes(x = last_food, y = sleep_score, fill = proefpersoon)) +
+  geom_boxplot(alpha = 0.7, na.rm = TRUE) +
+  geom_jitter(width = 0.1, alpha = 0.5, size = 2, na.rm = TRUE, show.legend = FALSE) +
   facet_wrap(~ proefpersoon, ncol = 3) + 
-  
+  scale_fill_manual(values = c("Robin" = "#F8766D", "Lucas" = "#00BA38", "Mohammed" = "#619CFF")) +
   labs(
-    title = "Slaapscore per maaltijdgrootte (Robin vs. Lucas vs. Mohammed)",
+    title = "Slaapscore per maaltijdgrootte per persoon",
     x = "Type laatste maaltijd",
-    y = "Slaapscore"
+    y = "Slaapscore",
+    fill = "Proefpersoon"
   ) +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "right"
+  )
 ```
 
+## Invloed van Schermtijd op Slaapscore
+
 ```{r plot-scherm-per-persoon, message=FALSE, warning=FALSE}
-# Bereken de minuten tussen telefoongebruik en slapengaan
-df\(time_phone <- hm(df\)phone_last_used)
-df\(time_start <- hm(df\)start)
-df\$minuten_tot_slaap <- as.numeric(df\(time_start - df\)time_phone) / 60
+df_scherm <- df %>%
+  mutate(
+    tijd_telefoon = as.POSIXct(paste("2026-01-01", phone_last_used), format="%Y-%m-%d %H:%M"),
+    tijd_slaap    = as.POSIXct(paste("2026-01-01", start), format="%Y-%m-%d %H:%M"),
+    uren_tot_slaap = as.numeric(difftime(tijd_telefoon, tijd_slaap, units = "hours")),
+    uren_tot_slaap = ifelse(uren_tot_slaap > 12, uren_tot_slaap - 24, uren_tot_slaap),
+    uren_tot_slaap = ifelse(uren_tot_slaap < -12, uren_tot_slaap + 24, uren_tot_slaap),
+    uren_tot_slaap = ifelse(uren_tot_slaap > 0, -uren_tot_slaap, uren_tot_slaap)
+  )
 
-# Correctie voor de datumgrens (middernacht)
-df\(minuten_tot_slaap <- ifelse(df\)minuten_tot_slaap < -1200, df\(minuten_tot_slaap + 1440, df\)minuten_tot_slaap)
-df\(minuten_tot_slaap <- ifelse(df\)minuten_tot_slaap > 1200, df\(minuten_tot_slaap - 1440, df\)minuten_tot_slaap)
-
-# Maak de scatterplot gesplitst per persoon via facet_wrap
-ggplot(df, aes(x = minuten_tot_slaap, y = sleep_score)) +
-  geom_point(aes(color = proefpersoon), size = 3, alpha = 0.8, show.legend = FALSE, na.rm = TRUE) +
-  geom_smooth(method = "lm", color = "red", linetype = "dashed", se = FALSE, na.rm = TRUE) +
-  
-  # Splitst de grafiek in 3 vensters
+ggplot(df_scherm, aes(x = abs(uren_tot_slaap), y = sleep_score, color = proefpersoon)) +
+  geom_point(size = 3, alpha = 0.8, na.rm = TRUE) +
+  geom_smooth(method = "lm", linetype = "dashed", se = FALSE, na.rm = TRUE) +
   facet_wrap(~ proefpersoon, ncol = 3) + 
-  
+  scale_color_manual(values = c("Robin" = "#F8766D", "Lucas" = "#00BA38", "Mohammed" = "#619CFF")) +
+  scale_x_reverse(limits = c(6, 0)) +
   labs(
     title = "Invloed van schermtijd op slaapscore per persoon",
-    x = "Aantal minuten tussen telefoongebruik en slapen",
-    y = "Slaapscore"
+    x = "Aantal uren van telefoongebruik voor het slapen",
+    y = "Slaapscore",
+    color = "Proefpersoon"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(legend.position = "right")
 ```
