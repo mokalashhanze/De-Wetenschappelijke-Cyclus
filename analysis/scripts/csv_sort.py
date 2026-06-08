@@ -182,9 +182,11 @@ fieldnames = [
     'average_heart_rate',
     'average_sleep_heart_rate',
     'min_heart_rate', 'max_heart_rate',
-    'start', 'end',
+    'start', 'end', 'sleep_duration_hours',
+    'time_between_last_food_and_sleep_hours',
+    'time_between_phone_used_and_sleep_hours',
     'rem_sleep_minutes', 'deep_sleep_minutes',
-    'sleep_score', 'fitbit_sleep_duration_hours', 'corrected_sleep_score',
+    'sleep_score', 'corrected_sleep_score',
     'stress_management_score',
     'calories_burned', 'total_steps',
     'phone_last_used', 'last_food_time', 'last_food'
@@ -200,10 +202,11 @@ def process_person(person):
     output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data"
     form_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/betere Naamloos formulier (Antwoorden)(3).csv"
     calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned.csv"
+    heart_rate_files = ["heart_rate_2026-04-06.csv"] \
+        + [f"heart_rate_2026-05-{i:02d}.csv" for i in range(6, 32)] \
+        + [f"heart_rate_2026-06-{i:02d}.csv" for i in range(1, 8)]
     if person == 'lucas':
         calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv"
-
-    heart_rate_files = ["heart_rate_2026-04-06.csv"] + [f"heart_rate_2026-05-{i:02d}.csv" for i in range(6, 22)]
 
     sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
@@ -262,6 +265,8 @@ def process_person(person):
             fitbit_sleep_duration_hours = fitbit_sleep_durations.get(date, '')
             raw_score = sleep_scores.get(date, '')
             corr_score = calculate_corrected_score(raw_score, fitbit_sleep_duration_hours)
+            food_to_sleep = calculate_sleep_duration(meal_time, sleep_start_time)
+            phone_to_sleep = calculate_sleep_duration(phone_time, sleep_start_time)
 
             row_data = {
                 'naam': person.capitalize(),
@@ -272,10 +277,12 @@ def process_person(person):
                 'max_heart_rate': daily_data[date]['max_hr'],
                 'start': sleep_start_time,
                 'end': sleep_end_time,
+                'sleep_duration_hours': calculate_sleep_duration(sleep_start_time, sleep_end_time),
+                'time_between_last_food_and_sleep_hours': food_to_sleep,
+                'time_between_phone_used_and_sleep_hours': phone_to_sleep,
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': raw_score,
-                'fitbit_sleep_duration_hours': fitbit_sleep_duration_hours,
                 'corrected_sleep_score': corr_score,
                 'stress_management_score': stress_scores.get(date, ''),
                 'calories_burned': round(daily_calories.get(date, 0), 2),

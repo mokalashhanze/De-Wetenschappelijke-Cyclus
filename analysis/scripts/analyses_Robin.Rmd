@@ -34,32 +34,40 @@ cat("\n--- Gemiddelde Stappen per persoon ---\n")
 aggregate(total_steps ~ naam, data = df_all, FUN = mean)
 ```
 
-## 4. Correlatie slaapscore vs hartslag
+## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore
 
 ```{r}
-ggplot(df_all, aes(x = average_heart_rate, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Gemiddelde Hartslag (Individuele Trends)",
-       x = "Gemiddelde hartslag (bpm)",
-       y = "Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is hier overbodig door de titels boven de panelen
+df_all$last_food <- as.factor(df_all$last_food)
 ```
 
 ```{r}
-ggplot(df_all, aes(x = average_heart_rate, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Gemiddelde Hartslag (Directe Vergelijking)",
-       x = "Gemiddelde hartslag (bpm)",
-       y = "Slaapscore",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+model_sleep <- lm(corrected_sleep_score ~ sleep_duration_hours + 
+                    rem_sleep_minutes + 
+                    deep_sleep_minutes + 
+                    stress_management_score + 
+                    calories_burned + 
+                    time_between_phone_used_and_sleep_hours + 
+                    time_between_last_food_and_sleep_hours + 
+                    last_food, 
+                  data = df_all)
+
+summary(model_sleep)
+```
+
+## Meervoudige Lineaire Regressie — Gemiddelde Slaaphartslag
+
+```{r}
+model_hr <- lm(average_sleep_heart_rate ~ sleep_duration_hours + 
+                 rem_sleep_minutes + 
+                 deep_sleep_minutes + 
+                 stress_management_score + 
+                 calories_burned + 
+                 time_between_phone_used_and_sleep_hours + 
+                 time_between_last_food_and_sleep_hours + 
+                 last_food, 
+               data = df_all)
+
+summary(model_hr)
 ```
 
 ## 4. Correlatie gecorrigeerde slaapscore vs hartslag
@@ -119,34 +127,6 @@ ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color =
 ```
 
 
-## 5. Correlatie slaapscore vs stappen
-
-```{r}
-ggplot(df_all, aes(x = total_steps, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Stappen per dag (Individuele Trends)",
-       x = "Stappen per dag",
-       y = "Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-```{r}
-ggplot(df_all, aes(x = total_steps, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Stappen per dag (Directe Vergelijking)",
-       x = "Stappen per dag",
-       y = "Slaapscore",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
-
-
 
 ## Correlatie gecorrigeerde slaapscore vs stappen
 
@@ -198,34 +178,6 @@ ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam))
   labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag (Directe Vergelijking)",
        x = "Stappen per dag",
        y = "Gemiddelde Hartslag Slaap",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
-
-
-## 5. Correlatie slaapscore vs calorieën
-
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Verbrande Calorieën (Individuele Trends)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Verbrande Calorieën (Directe Vergelijking)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Slaapscore",
        color = "Persoon") +
   theme_minimal() +
   theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
