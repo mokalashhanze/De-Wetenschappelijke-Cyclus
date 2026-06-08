@@ -6,7 +6,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 RAW_DATA_DIR = ROOT_DIR / "raw_data"
 ANALYSIS_DIR = ROOT_DIR / "analysis"
 COMBINED_DATA_DIR = ANALYSIS_DIR / "data" / "combined_data"
-FORM_FILE = ANALYSIS_DIR / "data" / "betere Naamloos formulier (Antwoorden)(3).csv"
+FORM_FILE = ANALYSIS_DIR / "data" / "vragen_forum"
 
 def is_during_sleep(timestamp, sleep_intervals):
     for start, end in sleep_intervals:

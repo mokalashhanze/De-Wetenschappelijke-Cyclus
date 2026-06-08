@@ -1514,5 +1514,351 @@
       }
     },
     "timestamp": "2026-05-20T22:22:30.752Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779315754
+        }
+      }
+    },
+    "timestamp": "2026-05-24T08:20:11.909Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779610358
+        }
+      }
+    },
+    "timestamp": "2026-05-24T08:35:44.961Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1779617970,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-24T10:36:40.633Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779611746
+        }
+      }
+    },
+    "timestamp": "2026-05-24T13:10:10.152Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1779773070,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-26T06:32:21.015Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779775320
+        }
+      }
+    },
+    "timestamp": "2026-05-26T07:02:36.357Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1779773070
+        }
+      }
+    },
+    "timestamp": "2026-05-26T22:06:59.831Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779778958
+        }
+      }
+    },
+    "timestamp": "2026-05-26T23:38:36.183Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-27T23:06:51.299Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779838717
+        }
+      }
+    },
+    "timestamp": "2026-05-27T23:06:51.667Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1779963810,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-28T10:40:49.449Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779923213
+        }
+      }
+    },
+    "timestamp": "2026-05-28T14:33:54.982Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1779963810
+        }
+      }
+    },
+    "timestamp": "2026-05-28T23:04:05.852Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779978840
+        }
+      }
+    },
+    "timestamp": "2026-05-28T23:04:06.461Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1780046250,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-29T10:39:38.095Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780009447
+        }
+      }
+    },
+    "timestamp": "2026-05-29T12:44:07.994Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780058654
+        }
+      }
+    },
+    "timestamp": "2026-06-03T23:32:00.748Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1780046250
+        }
+      }
+    },
+    "timestamp": "2026-06-03T23:32:01.956Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1780564290,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-04T10:50:49.402Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780529521
+        }
+      }
+    },
+    "timestamp": "2026-06-04T11:05:49.911Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1780564290,
+          "oldEndTimestampSec": 1780564290
+        }
+      }
+    },
+    "timestamp": "2026-06-04T16:34:23.693Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1780564290
+        }
+      }
+    },
+    "timestamp": "2026-06-04T23:01:04.978Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780571154
+        }
+      }
+    },
+    "timestamp": "2026-06-04T23:01:05.384Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1780636530,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-05T05:53:30.914Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780614068
+        }
+      }
+    },
+    "timestamp": "2026-06-05T06:08:37.922Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1780636530
+        }
+      }
+    },
+    "timestamp": "2026-06-05T22:09:30.947Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780639721
+        }
+      }
+    },
+    "timestamp": "2026-06-05T22:54:46.167Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 1780738530,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-06T10:59:49.593Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780700087
+        }
+      }
+    },
+    "timestamp": "2026-06-06T13:05:24.566Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 1780738530
+        }
+      }
+    },
+    "timestamp": "2026-06-06T22:08:00.428Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780751129
+        }
+      }
+    },
+    "timestamp": "2026-06-06T23:28:21.298Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-07T23:05:13.206Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780788505
+        }
+      }
+    },
+    "timestamp": "2026-06-07T23:05:14.741Z"
   }
 ]

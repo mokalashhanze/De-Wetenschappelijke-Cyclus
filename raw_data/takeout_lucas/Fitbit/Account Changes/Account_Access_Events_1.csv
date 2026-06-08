@@ -1,0 +1,4 @@
+timestamp,event_name,email,location,ip,outcome,reason,application,device_info
+Fri May 22 11:24:48 UTC 2026,Login,destructiond07@gmail.com,"Utrecht, UT, Netherlands",145.97.208.138,FAIL,PASSWORD_LOGIN_DENIED_FOR_GOOGLE_ACCOUNTS,Fitbit Accounts,"os_name: Windows,os_version: 10,browser_name: Edge,browser_version: 148.0.0.0,device_name: Windows"
+Fri May 22 11:24:43 UTC 2026,Login,destructiond07@gmail.com,"Utrecht, UT, Netherlands",145.97.208.138,FAIL,PASSWORD_LOGIN_DENIED_FOR_GOOGLE_ACCOUNTS,Fitbit Accounts,"os_name: Windows,os_version: 10,browser_name: Edge,browser_version: 148.0.0.0,device_name: Windows"
+Fri May 22 11:24:36 UTC 2026,Login,destructiond07@gmail.com,"Utrecht, UT, Netherlands",145.97.208.138,FAIL,PASSWORD_LOGIN_DENIED_FOR_GOOGLE_ACCOUNTS,Fitbit Accounts,"os_name: Windows,os_version: 10,browser_name: Edge,browser_version: 148.0.0.0,device_name: Windows"
