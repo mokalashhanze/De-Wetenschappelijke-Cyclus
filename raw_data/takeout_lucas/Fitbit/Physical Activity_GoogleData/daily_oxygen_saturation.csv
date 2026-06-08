@@ -1,9 +1,0 @@
-timestamp,average percentage,lower bound percentage,upper bound percentage,baseline percentage,standard deviation percentage,data source
-2026-05-09T00:00:00Z,96.7,95.0,98.6,0.0,0.0,Versa 4
-2026-05-10T00:00:00Z,94.3,91.5,97.7,0.0,0.0,Versa 4
-2026-05-11T00:00:00Z,95.3,93.0,97.7,0.0,0.0,Versa 4
-2026-05-12T00:00:00Z,94.0,91.0,98.1,0.0,0.0,Versa 4
-2026-05-15T00:00:00Z,95.1,90.7,97.5,0.0,0.0,Versa 4
-2026-05-17T00:00:00Z,96.2,93.1,100.0,0.0,0.0,Versa 4
-2026-05-18T00:00:00Z,95.8,94.6,96.9,0.0,0.0,Versa 4
-2026-05-19T00:00:00Z,94.6,91.7,97.6,95.3,0.9,Versa 4
