@@ -17,13 +17,18 @@ Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De
 Hieronder vind je een overzicht van de mappen en bestanden in deze repository:
 
 * **analysis/**: De hoofdmap voor de analyses.
-  * **data/**: Bevat de gecombineerde databestanden (`combined_data_mohammed.csv` en `combined_data_robin.csv`).
-  * **scripts/**: Bevat alle codebestanden voor de verwerking en analyse:
-    * `csv_sort.py`: Python-script voor het sorteren van data.
-    * `slaap_hartslag_analyse.Rmd`: R-Markdown script voor de analyse.
-    * `slaap_hartslag_analyse.html`: De gegenereerde rapportage van de analyse.
-  * `logboek_mohammed.rmd`: Het persoonlijke logboek van Mohammed.
-  * `logboek_robin.rmd`: Het persoonlijke logboek van Robin.
-* **protocols/**: Bevat het meetprotocol (`meetprotocol.md`) met de afspraken en methodologie.
-* **raw_data/**: De basismap voor onbewerkte exports.
-  * **takeout_mohammed/Fitbit** & **takeout_robin/Fitbit**: Mappen met de originele Fitbit-data per persoon.
+    * **data/**: Bevat de map met samengevoegde gegevens per persoon.
+        * **combined_filetered/**: Bevat de gecombineerde databestanden (`combined_data_lucas.csv`, `combined_data_mohammed.csv` en `combined_data_robin.csv`).
+    * **scripts/**: Bevat alle codebestanden voor de verwerking en analyse:
+        * `csv_sort.py` / `csv_sort_combined.py`: Python-scripts voor het sorteren van data.
+        * `analysis_eten_en_scherm_vs_slaapscore.Rmd`: R-Markdown script voor de analyse van maaltijden en schermtijd.
+        * `LucasLogboek.Rmd`: Het persoonlijke logboek van Lucas.
+        * `logboek_mohammed.Rmd`: Het persoonlijke logboek van Mohammed.
+        * `logboek_robin.Rmd`: Het persoonlijke logboek van Robin.
+* **docs/**: Documenten voor de onderbouwing van het onderzoek (zoals `Intro.md` en `Paper_Onderzoek.Rmd`).
+* **protocols/**: Bevat het meetprotocol (`meetprotocol.md`) met de methodologie en afspraken.
+* **raw_data/**: De basismappen met de originele Fitbit-exports per persoon (`takeout_lucas`, `takeout_mohammed` en `takeout_robin`).
+
+### Proefpesonen: 
+
+Dit onderzoek is uitgevoerd met een vaste groep van 3 volwassen proefpersonen: Lucas, Mohammed en Robin. Gedurende het experiment hebben zij allemaal dezelfde materialen gebruikt (de Fitbit Versa 4) en elke ochtend dezelfde vragenlijst ingevuld. Omdat de data van deze drie personen op exact dezelfde manier is verzameld, kunnen de individuele resultaten en gewoonten aan het einde van het onderzoek betrouwbaar met elkaar worden vergeleken.
