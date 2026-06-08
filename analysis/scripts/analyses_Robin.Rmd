@@ -352,7 +352,7 @@ ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, co
   theme(legend.position = "right")
 ```
 
-**Observatie:** Ook hier is geen duidelijke, consistente samenhang zichtbaar. Sommige personen laten een kleine trend zien, maar de combinatie van lage aantallen en variatie tussen personen maakt echte conclusies niet mogelijk.
+**Observatie:** Ook hier is geen duidelijke, consistente samenhang zichtbaar. Sommige personen laten een kleine trend zien, maar de combinatie van lage aantallen en variatie tussen nachten maakt echte conclusies niet mogelijk.
 
 
 ## Statistische waarden berekenen (power, minimale detecteerbare correlatie en benodigde n)
@@ -361,6 +361,7 @@ ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, co
 ```{r}
 library(pwr)
 r <- cor(df_all$average_heart_rate, df_all$corrected_sleep_score, use="pairwise.complete.obs")
+n <- 87
 cat("Geobserveerde correlatie r:", round(r,3), "\n")
 ```
 |r| is ongeveer 0.15, wat een zwakke negatieve correlatie is.

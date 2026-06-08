@@ -284,6 +284,9 @@ def process_person(person):
             fitbit_sleep_duration_hours = fitbit_sleep_durations.get(date, '')
             raw_score = sleep_scores.get(date, '')
             resting_hr = resting_heart_rates.get(date, '')
+            stress_management_score = stress_scores.get(date, '')
+            if stress_management_score == 0:
+                stress_management_score = ''
             corr_score = calculate_corrected_score(raw_score, fitbit_sleep_duration_hours)
             food_to_sleep = calculate_sleep_duration(meal_time, sleep_start_time)
             phone_to_sleep = calculate_sleep_duration(phone_time, sleep_start_time)
@@ -305,7 +308,7 @@ def process_person(person):
                 'sleep_score': raw_score,
                 'resting_heart_rate': resting_hr,
                 'corrected_sleep_score': corr_score,
-                'stress_management_score': stress_scores.get(date, ''),
+                'stress_management_score': stress_management_score,
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
                 'phone_last_used': phone_time,
