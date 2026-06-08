@@ -77,6 +77,22 @@ def read_sleep_score_data(sleep_score_file):
         pass
     return sleep_scores
 
+def read_stress_score_data(stress_score_file):
+    print("Reading stress score data...")
+    stress_scores = {}
+    try:
+        with open(stress_score_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                date = datetime.fromisoformat(row['DATE']).date()
+                score_text = row['STRESS_SCORE'].strip()
+                if score_text == '':
+                    continue
+                stress_scores[date] = int(score_text)
+    except (FileNotFoundError, KeyError, ValueError):
+        pass
+    return stress_scores
+
 def read_sleep_stage_data(sleep_stage_file):
     print("Reading sleep stage data...")
     sleep_stages = {}
@@ -169,6 +185,7 @@ fieldnames = [
     'start', 'end',
     'rem_sleep_minutes', 'deep_sleep_minutes',
     'sleep_score', 'fitbit_sleep_duration_hours', 'corrected_sleep_score',
+    'stress_management_score',
     'calories_burned', 'total_steps',
     'phone_last_used', 'last_food_time', 'last_food'
 ]
@@ -177,6 +194,7 @@ def process_person(person):
     sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
     sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
     sleep_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Sleep Score/sleep_score.csv"
+    stress_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Stress Score/Stress Score.csv"
     steps_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
     heart_rate_dir = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData"
     output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data"
@@ -190,6 +208,7 @@ def process_person(person):
     sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
     sleep_scores = read_sleep_score_data(sleep_score_file)
+    stress_scores = read_stress_score_data(stress_score_file)
     form_data = read_form_data(form_file, person)
     heart_rate_data = read_heart_rate_data(heart_rate_dir, heart_rate_files)
     steps_data = read_steps_data(steps_file)
@@ -258,6 +277,7 @@ def process_person(person):
                 'sleep_score': raw_score,
                 'fitbit_sleep_duration_hours': fitbit_sleep_duration_hours,
                 'corrected_sleep_score': corr_score,
+                'stress_management_score': stress_scores.get(date, ''),
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
                 'phone_last_used': phone_time,
