@@ -14,13 +14,20 @@ Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed
 
 
 # 1. analysis en resultaten van plotten(eten en schermgerbuik vs hartslag):
-Uit ons onderzoek blijkt heel duidelijk dat dagelijkse gewoonten, zoals eten en telefoongebruik, voor iedereen een ander effect hebben op de slaapkwaliteit. Dankzij de data van de Fitbit-smartwatches en de dagelijkse vragenlijsten hebben we deze persoonlijke verschillen mooi in kaart kunnen brengen. 
 
-Als we kijken naar de invloed van schermtijd, zien we drie verschillende verhalen. Voor Lucas maakt het eigenlijk niks uit hoelang hij voor het slapen op zijn telefoon zit; zijn trendlijn loopt plat en zijn slaapscore blijft altijd rond de 80. Bij Mohammed zien we een verrassend resultaat: zijn stippellijn stijgt juist heel erg richting de 0 uur. Dat betekent dat hij gemiddeld beter slaapt als hij vlak voor bedtijd nog op zijn telefoon kijkt. Bij Robin is het precies andersom. Zijn lijn daalt richting de 0 uur, wat bewijst dat hij een veel betere nachtrust krijgt als hij zijn telefoon een paar uur voor het slapengaan al weglegt.  
+### Conclusie en Discussie:
 
-Bij de maaltijden zien we ook duidelijke patronen. Zowel Robin als Lucas slapen het allerbeste na een lichte, magere maaltijd. Een vette hap vlak voor het slapen zorgt bij Robin juist voor een flinke dip, waarbij zijn slaapscore onder de 60 zakt. Vet eten vlak voor bedtijd is voor zijn lichaam dus erg ongunstig. Bij Mohammed schommelt de slaapscore na een magere maaltijd heel erg per nacht, maar hij haalt juist een stabiele en goede score na een kleine snack.  
+**Wat zien we in de grafieken?**
+Als we naar de plots kijken, vallen de grote verschillen tussen ons drieën direct op [1]. Robin heeft in de nacht standaard een veel lagere hartslag (rond de 53 bpm) dan Lucas en Mohammed (die rond de 64 bpm zitten). 
 
-Al deze gewoonten hebben tot slot ook een directe invloed op je hartslag tijdens het slapen. Als je vlak voor het slapengaan nog een zware of vette maaltijd eet, moet je maag de hele nacht heel hard werken om dat voedsel te verteren. Ook het blauwe licht en de prikkels van een telefoonscherm zorgen voor actie in je hoofd. Hierdoor kan je lichaam niet goed ontspannen. Je merkt dit doordat je gemiddelde hartslag in de nacht hoger blijft en je minder diepe slaap krijgt. Je Fitbit registreert deze onrustige hartslag en vertaalt dit direct naar een lagere slaapscore. Om goed te herstellen, is het voor de meeste proefpersonen dus beter om rustig aan te doen met schermen en zwaar eten in de avond.
+* **Bij de eten-timing** zie ik dat alleen bij Mohammed de hartslag lager wordt als er meer uren tussen de maaltijd en het slapen zitten. Bij Robin en Lucas loopt de lijn juist een klein beetje omhoog.
+* **Bij de scherm-timing** valt op dat Mohammed en Lucas hun telefoon bijna altijd direct voor het slapen wegleggen. Robin heeft een paar grote uitschieters (tot wel 15 uur voor het slapen). Mijn mening is dat deze paar losse uitschieters de trendlijn bij Robin en Lucas een beetje vertekend omhoog trekken.
+
+**Niet statistisch significant**
+Hoewel de lijnen in de grafieken een richting op bewegen, laat de statistiek zien dat dit effect **niet statistisch significant** is. De p-waarden zijn groter dan 0.05. Dit betekent dat het aantal uren tussen het eten of telefoongebruik en het slapengaan in ons onderzoek **niet officieel bewijzen** dat de hartslag hierdoor verandert. De verbanden die we in de grafiek zien, kunnen dus ook door toeval komen.
+
+**Alleen effect bij het type eten**
+Het enige moment waarop er wel echt een duidelijk verschil te zien is, is bij het **type eten** uit de boxplot. Het eten van een zware, vette maaltijd zorgt er wel duidelijk voor dat het lichaam 's nachts harder moet werken. Hierdoor gaat de gemiddelde hartslag tijdens de slaap omhoog vergeleken met een lichte snack of een magere maaltijd.
 
 # 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
 
