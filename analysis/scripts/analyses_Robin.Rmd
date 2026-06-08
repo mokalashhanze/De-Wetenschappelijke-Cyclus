@@ -78,10 +78,6 @@ aggregate(total_steps ~ naam, data = df_all, FUN = mean)
 ```
 
 ## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore
-
-```{r}
-df_all$last_food <- as.factor(df_all$last_food)
-```
 ```{r}
 model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
                     resting_heart_rate +
@@ -92,7 +88,8 @@ model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
                     time_between_last_food_and_sleep_hours + 
-                    last_food, 
+                    last_food +
+                    naam,
                   data = df_all)
 
 summary(model_sleep)
@@ -112,7 +109,8 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
                  time_between_last_food_and_sleep_hours + 
-                 last_food, 
+                    last_food +
+                    naam,
                data = df_all)
 
 summary(model_hr)
@@ -127,13 +125,81 @@ Interpretatie:
 - De significante uitkomst voor `resting_heart_rate` ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
 - Voor de meeste andere voorspellers blijft het bewijs beperkt, waarschijnlijk door een combinatie van kleine steekproef, natuurlijke variatie tussen nachten/personen en overlap tussen voorspellers.
 - Dat een snack als laatste maaltijd geassocieerd is met een lagere gemiddelde slaaphartslag kan wijzen op een mogelijk gunstig effect van een lichte maaltijd, maar de betrouwbaarheid hiervan is beperkt en heeft verder onderzoek nodig.
+- Wellicht dat iemand met een lagere rusthartslag ook een lagere gemiddelde hartslag tijdens slaap heeft. Ik voeg de naam als factor toe in het model, zodat er rekening wordt gehouden met verschillen tussen personen.
 
-## Verschil tussen de twee modellen
+Naam als factor toevoegen zodat het model rekening houdt met verschillen tussen personen:
+```{r}
+df_all$last_food <- as.factor(df_all$last_food)
+df_all$naam <- as.factor(df_all$naam)
+```
+```{r}
+model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
+                    resting_heart_rate +
+                    sleep_duration_hours + 
+                    rem_sleep_minutes + 
+                    deep_sleep_minutes + 
+                    stress_management_score + 
+                    calories_burned + 
+                    time_between_phone_used_and_sleep_hours + 
+                    time_between_last_food_and_sleep_hours + 
+                    last_food +
+                    naam,
+                  data = df_all)
 
-- Richting en grootte verschillen soms: bijvoorbeeld `calories_burned` heeft in het slaapscore-model een negatieve coëfficiënt (≈ -0.0058, p≈0.07) en komt daarmee het dichtst bij significantie — dit suggereert een zwak negatief verband, maar is niet overtuigend.
-- `deep_sleep_minutes` heeft in beide modellen een kleine negatieve coëfficiënt (iets sterker bij hartslag), wat consistent kan zijn in richting maar statistisch niet bevestigend.
-- `time_between_phone_used_and_sleep_hours` heeft een negatieve coëfficiënt voor hartslag en een positieve voor slaapscore; dat is niet tegenstrijdig als je bedenkt dat meer uren tussen telefoongebruik en slaap (dus eerder stoppen met telefoon) wél kan samenhangen met een lagere nachtelijke hartslag en een iets hogere slaapscore — maar beide effecten zijn niet-significant.
-- Het belangrijkste verschil: in het model voor gemiddelde slaaphartslag is `resting_heart_rate` wél significant (p < 0.001), terwijl in het model voor gecorrigeerde slaapscore geen duidelijke significante hartslagvoorspeller zichtbaar is.
+summary(model_sleep)
+```
+
+## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore + Naam als factor
+
+```{r}
+df_all$last_food <- as.factor(df_all$last_food)
+```
+```{r}
+model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
+                    resting_heart_rate +
+                    sleep_duration_hours + 
+                    rem_sleep_minutes + 
+                    deep_sleep_minutes + 
+                    stress_management_score + 
+                    calories_burned + 
+                    time_between_phone_used_and_sleep_hours + 
+                    time_between_last_food_and_sleep_hours + 
+                    last_food +
+                    naam,
+                  data = df_all)
+
+summary(model_sleep)
+```
+
+## Meervoudige Lineaire Regressie — Gemiddelde Slaaphartslag + Naam als factor
+
+```{r}
+model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
+                    resting_heart_rate +
+                    sleep_duration_hours + 
+                    rem_sleep_minutes + 
+                    deep_sleep_minutes + 
+                    stress_management_score + 
+                    calories_burned + 
+                    time_between_phone_used_and_sleep_hours + 
+                    time_between_last_food_and_sleep_hours + 
+                    last_food +
+                    naam,
+               data = df_all)
+
+summary(model_hr)
+```
+
+De variabelen met de laagste p-waarden in dit model (dus die het dichtst bij statistische significantie komen) zijn `calories_burned` (p ≈ 0.11).
+Helaas is geen enkele variabele in dit model statistisch significant (p < 0.05), wat betekent dat er in deze dataset geen sterk bewijs is voor een effect van deze variabelen op de gemiddelde hartslag tijdens slaap, als er rekening is gehouden met verschillen tussen personen.
+
+Waarom dat waarschijnlijk zo is:
+- De p-waarden zijn allemaal groter dan 0.05, dus er is geen goed statistisch bewijs voor een effect in deze dataset. De reden dat `calories_burned` relatief laag staat, kan komen door een relatie met hartslag of doordat die variabele minder ruis heeft dan andere metingen.
+- Mogelijke oorzaken voor lage significantie zijn onder anderen: Een kleine steekproef, veel natuurlijke variatie tussen nachten en personen, meetfouten in Fitbit-data, veel andere factoren die niet gemeten zijn die de slaapkwaliteit ook kunnen beinvloeden en correlatie tussen voorspellers die het moeilijk maakt om individuele effecten precies te schatten.
+- Wellicht met meer data zouden sommige van deze factoren wel significant kunnen worden, maar op dit moment is er geen sterk bewijs voor een duidelijk effect van deze variabelen op de gemiddelde hartslag tijdens slaap in deze dataset.
+- Het toevoegen van naam als factor laat zien dat er grote verschillen tussen personen zijn, en dat de individuele variabelen niet sterk genoeg zijn om deze verschillen te verklaren.
+
+
 
 
 ## R² per variabele
@@ -200,7 +266,8 @@ ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = na
 **Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de gecorrigeerde slaapscore.
 Individuele grafieken laten verschillende richtingen en steilheden zien, en de gecombineerde plot toont veel overlap tussen personen.
 Waarschijnlijk is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit dan de gecorrigeerde slaapscore, gezien de onaccuraatheid van de slaapscore en de sterke invloed van slaapduur op die score.
-Vanaf nu zal ik me daarom meer richten op de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit in plaats van de gecorrigeerde slaapscore.
+
+Vanwege de onbetrouwbaarheid van de gecorrigeerde slaapscore zal ik alleen de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit nemen in plaats van de gecorrigeerde slaapscore.
 
 ## Correlatie gemiddelde hartslag slaap vs hartslag overdag
 
@@ -262,7 +329,7 @@ ggplot(df_all, aes(x = resting_heart_rate, y = average_sleep_heart_rate, color =
 ```
 
 **Observatie:** Er is een duidelijke, grotendeels positieve samenhang tussen rusthartslag en gemiddelde hartslag tijdens slaap: nachten met een hogere rusthartslag gaan meestal gepaard met een hogere gemiddelde slaaphartslag.
-Deze trend is redelijk consistent tussen personen en de p waarde van deze relatie is zeer laag (p < 0.001), wat wijst op een significante relatie in deze dataset.
+Deze trend is redelijk consistent tussen personen, maar vanwege de beperkte steekproef en variatie tussen nachten is het niet mogelijk om sterke conclusies te trekken zonder aanvullende data.
 
 
 ## Correlatie gemiddelde hartslag slaap vs stappen
@@ -397,10 +464,8 @@ Onze dataset heeft ongeveer 87 dagen aan data, wat duidelijk te weinig is om een
 - De gecorrigeerde slaapscore lijkt minder betrouwbaar als indicator in deze dataset (sterke invloed van slaapduur en meer ruis); gemiddelde slaaphartslag is hier nuttiger om slaapkwaliteit te meten.
 - Stappen, verbrande calorieën en stressmanagement laten geen consistente, sterke verbanden zien met slaaphartslag of gecorrigeerde slaapscore in deze steekproef.
 
-- Voor het model met gemiddelde slaaphartslag is `resting_heart_rate` wel significant (p ≈ 0.000029). Voor dit specifieke verband kunnen we de nulhypothese van geen effect verwerpen.
-  Onze hypothese dat een hogere rusthartslag samenhangt met een hogere slaaphartslag wordt ondersteund door deze data.
-- Tegelijk blijven de meeste andere effecten niet-significant (p > 0.05), dus voor die verbanden kunnen we de nulhypothese nog niet verwerpen.
-- We hebben meer data nodig om kleinere of zwakkere effecten betrouwbaarder te kunnen aantonen.
+- In geen van de gevallen was er een p‑waarde < 0.05. Dit betekent dat we geen wetenschappelijke conclusies kunnen trekken uit deze dataset: de nulhypothese (dat er geen effect is, en dat de gemiddelde hartslag tijdens slaap niet lager is bij een lagere hartslag overdag) kan niet verworpen worden.
+- We hebben meer data nodig en wellicht zouden sommige van de factoren dan wel significant worden.
 
 - voor dit project hebben we ongeveer 87 dagen aan data, wat duidelijk te weinig is om een statistisch significant effect te detecteren bij deze zwakke correlaties.
 - Om een significant effect te detecteren bij een correlatie van r = 0.15, zouden we ongeveer 345 dagen aan data nodig hebben. Wellicht dan zouden we een significant effect kunnen vinden,
