@@ -1171,5 +1171,227 @@
       }
     },
     "timestamp": "2026-05-15T00:11:34.598Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1778803882
+        }
+      }
+    },
+    "timestamp": "2026-05-22T05:54:32.145Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-27T14:44:47.219Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779737807
+        }
+      }
+    },
+    "timestamp": "2026-05-27T14:44:49.297Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-27T18:39:36.752Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-05-28T13:40:53.849Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1779893084
+        }
+      }
+    },
+    "timestamp": "2026-05-28T13:40:54.592Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780039027
+        }
+      }
+    },
+    "timestamp": "2026-06-02T14:40:34.912Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-02T14:40:35.455Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-02T15:20:19.714Z"
+  },
+  {
+    "event": {
+      "autoWake": {
+        "stateChanged": {
+          "state": "ON"
+        }
+      }
+    },
+    "timestamp": "2026-06-04T11:12:06.144Z"
+  },
+  {
+    "event": {
+      "arSettings": {
+        "arSetting": [ {
+          "exerciseType": "WALK",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "RUN",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "CYCLE",
+          "isAutoStartOn": true,
+          "isGpsEnabled": true
+        }, {
+          "exerciseType": "ROW",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "ELLIPTICAL",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        }, {
+          "exerciseType": "SPINNING",
+          "isAutoStartOn": true,
+          "isGpsEnabled": false
+        } ]
+      }
+    },
+    "timestamp": "2026-06-04T11:12:06.874Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-04T16:17:55.387Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-05T13:43:55.713Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780571532
+        }
+      }
+    },
+    "timestamp": "2026-06-05T13:59:00.302Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-05T23:47:52.27Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780667939
+        }
+      }
+    },
+    "timestamp": "2026-06-05T23:47:53.075Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-06T08:12:28.583Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "readiness": {
+          "oldTimestampSec": 1780703271
+        }
+      }
+    },
+    "timestamp": "2026-06-06T08:12:28.975Z"
+  },
+  {
+    "event": {
+      "dataProvider": {
+        "sleep": {
+          "newEndTimestampSec": 0,
+          "oldEndTimestampSec": 0
+        }
+      }
+    },
+    "timestamp": "2026-06-06T08:27:28.88Z"
   }
 ]

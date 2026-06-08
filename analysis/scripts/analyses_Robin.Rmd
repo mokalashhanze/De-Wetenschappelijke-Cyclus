@@ -257,6 +257,118 @@ ggplot(df_all, aes(x = calories_burned, y = corrected_sleep_score, color = naam)
   theme_minimal() +
   theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
 ```
+
+## 6. Correlatie stressmanagementscore vs slaapscore
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Slaapscore vs Stressmanagementscore (Individuele Trends)",
+       x = "Stressmanagementscore",
+       y = "Slaapscore") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+```
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Slaapscore vs Stressmanagementscore (Directe Vergelijking)",
+       x = "Stressmanagementscore",
+       y = "Slaapscore",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
+
+## Correlatie stressmanagementscore vs gecorrigeerde slaapscore
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = corrected_sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gecorrigeerde Slaapscore vs Stressmanagementscore (Individuele Trends)",
+       x = "Stressmanagementscore",
+       y = "Gecorrigeerde Slaapscore") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+```
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = corrected_sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gecorrigeerde Slaapscore vs Stressmanagementscore (Directe Vergelijking)",
+       x = "Stressmanagementscore",
+       y = "Gecorrigeerde Slaapscore",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
+
+## Correlatie gemiddelde hartslag slaap vs calorieën
+
+```{r}
+ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Individuele Trends)",
+       x = "Verbrande calorieën (kcal)",
+       y = "Gemiddelde Hartslag Slaap") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+```
+
+```{r}
+ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Directe Vergelijking)",
+       x = "Verbrande calorieën (kcal)",
+       y = "Gemiddelde Hartslag Slaap",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
+
+## Correlatie gemiddelde hartslag slaap vs stressmanagementscore
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
+  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore (Individuele Trends)",
+       x = "Stressmanagementscore",
+       y = "Gemiddelde Hartslag Slaap") +
+  theme_minimal() +
+  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+```
+
+```{r}
+ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
+  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore (Directe Vergelijking)",
+       x = "Stressmanagementscore",
+       y = "Gemiddelde Hartslag Slaap",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+```
 ---
 
 

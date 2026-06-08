@@ -76,5 +76,83 @@
       "event": "CHARGER_OUT"
     },
     "timestamp": "2026-05-08T10:55:47.224Z"
+  },
+  {
+    "event": {
+      "batteryAccounting": {
+        "coldChargeCount": 0,
+        "hotChargeCount": 0,
+        "lastChargeDurationSec": 4934,
+        "lastCycleDurationSec": 650772,
+        "totalCycleCount": 2
+      },
+      "event": "BATTERY_ACCOUNTING"
+    },
+    "timestamp": "2026-05-26T11:24:00.892Z"
+  },
+  {
+    "event": {
+      "batteryChargeDcr": {
+        "dcr": 806,
+        "socStart": 45,
+        "vbatEnd": 4051,
+        "vbatMiddle": 3952,
+        "vbatStart": 4063
+      },
+      "event": "BATTERY_CHARGE_DCR"
+    },
+    "timestamp": "2026-05-26T11:46:37.354Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-26T13:27:41.639Z"
+  },
+  {
+    "event": {
+      "batteryAccounting": {
+        "coldChargeCount": 0,
+        "hotChargeCount": 0,
+        "lastChargeDurationSec": 7088,
+        "lastCycleDurationSec": 747399,
+        "totalCycleCount": 3
+      },
+      "event": "BATTERY_ACCOUNTING"
+    },
+    "timestamp": "2026-06-04T11:24:00.416Z"
+  },
+  {
+    "event": {
+      "batteryChargeDcr": {
+        "dcr": 893,
+        "socStart": 45,
+        "vbatEnd": 4079,
+        "vbatMiddle": 3973,
+        "vbatStart": 4095
+      },
+      "event": "BATTERY_CHARGE_DCR"
+    },
+    "timestamp": "2026-06-04T11:44:22.527Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 69,
+        "percentageRt": 69,
+        "powerGood": false,
+        "voltage": 4284
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-04T12:02:25.587Z"
   }
 ]
