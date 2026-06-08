@@ -1,4 +1,4 @@
----
+
 title: "Slaapscore vs Hartslag — Analyse"
 author: "Robin Offringa"
 output: html_document
@@ -58,7 +58,7 @@ library(ggplot2)
 ## 2. Data inladen
 
 ```{r}
-df_all <- read.csv("analysis/data/combined_data/combined_data.csv")
+df_all <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv")
 ```
 
 ---
@@ -83,7 +83,9 @@ aggregate(total_steps ~ naam, data = df_all, FUN = mean)
 df_all$last_food <- as.factor(df_all$last_food)
 ```
 ```{r}
-model_sleep <- lm(corrected_sleep_score ~ sleep_duration_hours + 
+model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
+                    resting_heart_rate +
+                    sleep_duration_hours + 
                     rem_sleep_minutes + 
                     deep_sleep_minutes + 
                     stress_management_score + 
@@ -101,12 +103,14 @@ summary(model_sleep)
 Omdat de slaaptijden van de Fitbit niet accuraat zijn, kijken we hier naar de gemiddelde hartslag tijdens slaap, in plaats van de slaapscore.
 
 ```{r}
-model_hr <- lm(average_sleep_heart_rate ~ sleep_duration_hours + 
-                 rem_sleep_minutes + 
-                 deep_sleep_minutes + 
-                 stress_management_score + 
-                 calories_burned + 
-                 time_between_phone_used_and_sleep_hours + 
+model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
+                    resting_heart_rate +
+                    sleep_duration_hours + 
+                    rem_sleep_minutes + 
+                    deep_sleep_minutes + 
+                    stress_management_score + 
+                    calories_burned + 
+                    time_between_phone_used_and_sleep_hours + 
                  time_between_last_food_and_sleep_hours + 
                  last_food, 
                data = df_all)
@@ -128,7 +132,7 @@ Waarom dat waarschijnlijk zo is:
 - `time_between_phone_used_and_sleep_hours` heeft een negatieve coëfficiënt voor hartslag en een positieve voor slaapscore; dat is niet tegenstrijdig als je bedenkt dat meer uren tussen telefoongebruik en slaap (dus eerder stoppen met telefoon) wél kan samenhangen met een lagere nachtelijke hartslag en een iets hogere slaapscore — maar beide effecten zijn niet-significant.
 
 Praktische aanbeveling voor de tekst in je paper: rapporteer deze richtingen en relatieve groottes als observaties ("indicatief"), vermeld duidelijk dat geen enkel effect statistisch significant was, en adviseer meer data of gerichte vervolgstudies om deze patronen verder te testen.
-```
+
 
 ## R² per variabele
 
@@ -157,91 +161,106 @@ r2_overview <- data.frame(
 r2_overview
 ```
 
+Voor de gecorrigeerde slaapscore verklaart geen enkele losse variabele veel: hoogste R2 is last_food ≈ 0.045 (4.5%).
+De andere R2 liggen rond 0–3.8% (bijv. stress_management_score ≈ 3.8%, calories_burned ≈ 2.5%).
 
-## 4. Correlatie gecorrigeerde slaapscore vs hartslag
+Voor de gemiddelde slaaphartslag zijn de R2‑waarden over het algemeen hoger: last_food is het grootst met ≈ 0.11 (11%), daarna deep_sleep_minutes ≈ 5.5%, stress_management_score ≈ 5.4% en sleep_duration_hours ≈ 4.9%.
+Sommige variabelen verklaren bijna niets (bv. calories_burned ≈ 0.27%).
+
+## Correlatie gecorrigeerde slaapscore vs hartslag overdag
 
 ```{r}
 ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag (Individuele Trends)",
+  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag",
        x = "Gemiddelde hartslag (bpm)",
        y = "Gecorrigeerde Slaapscore") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is hier overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
 
 ```{r}
 ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag (Directe Vergelijking)",
+  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag",
        x = "Gemiddelde hartslag (bpm)",
        y = "Gecorrigeerde Slaapscore",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
 
-## 4. Correlatie Gemiddelde hartslag slaap vs hartslag overdag
+**Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de gecorrigeerde slaapscore.
+Individuele grafieken laten verschillende richtingen en steilheden zien, en de gecombineerde plot toont veel overlap tussen personen.
+Waarschijnlijk is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit dan de gecorrigeerde slaapscore, gezien de onaccuraatheid van de slaapscore en de sterke invloed van slaapduur op die score.
+Vanaf nu zal ik me daarom meer richten op de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit in plaats van de gecorrigeerde slaapscore.
+
+## Correlatie gemiddelde hartslag slaap vs hartslag overdag
 
 ```{r}
 ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag (Individuele Trends)",
+  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag",
        x = "Gemiddelde hartslag (bpm)",
        y = "Gemiddelde Hartslag Slaap") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is hier overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
 
 ```{r}
 ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag (Directe Vergelijking)",
+  labs(title = "Gemiddelde Hartslag slaap vs Hartslag overdag",
        x = "Gemiddelde hartslag (bpm)",
        y = "Gemiddelde Hartslag Slaap",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
 
+**Observatie:** Voor de relatie tussen gemiddelde hartslag en hartslag tijdens slaap is over het algemeen een positieve samenhang: personen met hogere hartslag overdag hebben vaak ook hogere hartslag tijdens slaap.
+De individuele lijnen zijn relatief consistenter dan bij slaapscore, wat wijst op een sterkere relatie tussen deze twee hartslagmetingen. Toch blijft er variatie tussen personen en nachten.
 
-
-## Correlatie gecorrigeerde slaapscore vs stappen
+## Correlatie gemiddelde hartslag slaap vs rusthartslag
 
 ```{r}
-ggplot(df_all, aes(x = total_steps, y = corrected_sleep_score, color = naam)) +
+ggplot(df_all, aes(x = resting_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Stappen per dag (Individuele Trends)",
-       x = "Stappen per dag",
-       y = "Gecorrigeerde Slaapscore") +
+  labs(title = "Gemiddelde Hartslag slaap vs Rusthartslag ( Trends)",
+       x = "Rusthartslag (bpm)",
+       y = "Gemiddelde Hartslag Slaap") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
+
 ```{r}
-ggplot(df_all, aes(x = total_steps, y = corrected_sleep_score, color = naam)) +
+ggplot(df_all, aes(x = resting_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Stappen per dag (Directe Vergelijking)",
-       x = "Stappen per dag",
-       y = "Gecorrigeerde Slaapscore",
+  labs(title = "Gemiddelde Hartslag slaap vs Rusthartslag",
+       x = "Rusthartslag (bpm)",
+       y = "Gemiddelde Hartslag Slaap",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
+
+**Observatie:** Er is een duidelijke, grotendeels positieve samenhang tussen rusthartslag en gemiddelde hartslag tijdens slaap: nachten met een hogere rusthartslag gaan meestal gepaard met een hogere gemiddelde slaaphartslag.
+Deze trend is redelijk consistent tussen personen, maar vanwege de beperkte steekproef en variatie tussen nachten is het niet mogelijk om sterke conclusies te trekken zonder aanvullende data.
 
 
 ## Correlatie gemiddelde hartslag slaap vs stappen
@@ -249,219 +268,137 @@ ggplot(df_all, aes(x = total_steps, y = corrected_sleep_score, color = naam)) +
 ```{r}
 ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag (Individuele Trends)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag",
        x = "Stappen per dag",
        y = "Gemiddelde Hartslag Slaap") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
+
 ```{r}
 ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag (Directe Vergelijking)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Stappen per dag",
        x = "Stappen per dag",
        y = "Gemiddelde Hartslag Slaap",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
 
-## Correlatie gecorrigeerde slaapscore vs calorieën
+**Observatie:** Er is geen duidelijke, consistente samenhang tussen stappen en gemiddelde slaaphartslag.
+Sommige personen tonen kleine trends, maar over het galgemeen is de spreiding groot en zijn patronen niet te zien bij alle personen.
 
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = corrected_sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Verbrande Calorieën (Individuele Trends)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Gecorrigeerde Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = corrected_sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Verbrande Calorieën (Directe Vergelijking)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Gecorrigeerde Slaapscore",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
-
-## Correlatie gemiddelde hartslag slaap vs calorieën
+## 9. Correlatie gemiddelde hartslag slaap vs calorieën
 
 ```{r}
 ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Individuele Trends)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën",
        x = "Verbrande calorieën (kcal)",
        y = "Gemiddelde Hartslag Slaap") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
+
 ```{r}
 ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Directe Vergelijking)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën",
        x = "Verbrande calorieën (kcal)",
        y = "Gemiddelde Hartslag Slaap",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
 
-## 6. Correlatie stressmanagementscore vs slaapscore
-
-```{r}
-ggplot(df_all, aes(x = stress_management_score, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Stressmanagementscore (Individuele Trends)",
-       x = "Stressmanagementscore",
-       y = "Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-
-```{r}
-ggplot(df_all, aes(x = stress_management_score, y = sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Slaapscore vs Stressmanagementscore (Directe Vergelijking)",
-       x = "Stressmanagementscore",
-       y = "Slaapscore",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
-
-## Correlatie stressmanagementscore vs gecorrigeerde slaapscore
-
-```{r}
-ggplot(df_all, aes(x = stress_management_score, y = corrected_sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Stressmanagementscore (Individuele Trends)",
-       x = "Stressmanagementscore",
-       y = "Gecorrigeerde Slaapscore") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-
-```{r}
-ggplot(df_all, aes(x = stress_management_score, y = corrected_sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Stressmanagementscore (Directe Vergelijking)",
-       x = "Stressmanagementscore",
-       y = "Gecorrigeerde Slaapscore",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
-
-## Correlatie gemiddelde hartslag slaap vs calorieën
-
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Individuele Trends)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Gemiddelde Hartslag Slaap") +
-  theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
-```
-
-```{r}
-ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
-  scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Verbrande Calorieën (Directe Vergelijking)",
-       x = "Verbrande calorieën (kcal)",
-       y = "Gemiddelde Hartslag Slaap",
-       color = "Persoon") +
-  theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
-```
+**Observatie:** De relatie tussen verbrande calorieën en gemiddelde slaaphartslag is verschillend. Sommige personen laten een lichte positieve trend zien (meer calorieën geassocieerd met iets hogere slaaphartslag), maar overall is de spreiding groot en de patronen verschillen per persoon. Dit resultaat heeft meer data nodig voor betrouwbare conclusies.
 
 ## Correlatie gemiddelde hartslag slaap vs stressmanagementscore
 
 ```{r}
 ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) + # se = TRUE voor de grijze vlakken
-  facet_wrap(~ naam) + # Dit zet ze netjes naast elkaar
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore (Individuele Trends)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore",
        x = "Stressmanagementscore",
        y = "Gemiddelde Hartslag Slaap") +
   theme_minimal() +
-  theme(legend.position = "none") # Legenda is overbodig door de titels boven de panelen
+  theme(legend.position = "none")
 ```
 
 ```{r}
 ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) + # se = FALSE haalt de chaos van de grijze vlakken weg
+  geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("Robin" = "steelblue", "Mohammed" = "darkorange", "Lucas" = "forestgreen")) +
-  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore (Directe Vergelijking)",
+  labs(title = "Gemiddelde Hartslag Slaap vs Stressmanagementscore",
        x = "Stressmanagementscore",
        y = "Gemiddelde Hartslag Slaap",
        color = "Persoon") +
   theme_minimal() +
-  theme(legend.position = "right") # Legenda aan de rechterkant om de kleuren te onderscheiden
+  theme(legend.position = "right")
 ```
----
+
+**Observatie:** Ook hier is geen duidelijke, consistente samenhang zichtbaar. Sommige personen laten een kleine trend zien, maar de combinatie van lage aantallen en variatie tussen personen maakt echte conclusies niet mogelijk.
 
 
-## 12. Vergelijking — Gemiddelde slaapscore per persoon
+## Statistische waarden berekenen (power, minimale detecteerbare correlatie en benodigde n)
 
+### bereken de correlatie tussen gemiddelde hartslag en gecorrigeerde slaapscore
 ```{r}
-# Bereken het gemiddelde per persoon
-scores_agg <- aggregate(sleep_score ~ naam, data = df_all, FUN = mean)
-
-barplot(scores_agg$sleep_score,
-        names.arg = scores_agg$naam,
-        col       = c("forestgreen", "darkorange", "steelblue"), # Volgorde: Lucas, Mohammed, Robin
-        main      = "Gemiddelde slaapscore per persoon",
-        ylab      = "Slaapscore",
-        ylim      = c(0, 100))
+library(pwr)
+r <- cor(df_all$average_heart_rate, df_all$corrected_sleep_score, use="pairwise.complete.obs")
+cat("Geobserveerde correlatie r:", round(r,3), "\n")
 ```
-
-## 13. Vergelijking — Gemiddelde hartslag per persoon
-
+|r| is ongeveer 0.15, wat een zwakke negatieve correlatie is.
+nu kunnen we berekenen hoeveel dagen (n) we nodig zouden hebben om een effect te detecteren met genoeg power.
+### bereken power bij n = 87 voor de geobserveerde r
 ```{r}
-hr_agg <- aggregate(average_heart_rate ~ naam, data = df_all, FUN = mean)
-
-barplot(hr_agg$average_heart_rate,
-        names.arg = hr_agg$naam,
-        col       = c("forestgreen", "darkorange", "steelblue"), # Volgorde: Lucas, Mohammed, Robin
-        main      = "Gemiddelde hartslag per persoon",
-        ylab      = "Hartslag (bpm)",
-        ylim      = c(0, 120))
+power_obs <- pwr.r.test(n = n, r = r, sig.level = 0.05)$power
+cat("Power bij n=", n, " en r=", round(r,3), ":", round(power_obs,3), "\n")
 ```
+De power bij n=87 en r=-0.15 is ongeveer 0.28, wat betekent dat we maar 28% kans hebben om een echt effect van deze grootte te detecteren met deze steekproefgrootte.
+### bereken de minimale |r| die gedetecteerd wordt met power = 0.8 en n = 87
+```{r}
+min_r <- pwr.r.test(n = n, power = 0.8, sig.level = 0.05)$r
+cat("Minimale detecteerbare |r| bij n=", n, " en power=0.8: ", round(abs(min_r),3), "\n")
+```
+De minimale |r| die we kunnen detecteren met n=87 en power=0.8 is ongeveer 0.29, wat betekent dat minstens een redelijk sterke correlatie nodig is om een significant effect te tonen met deze data.
+Onze waarde van r=-0.15 ligt onder deze drempel, wat verklaart waarom we geen significant effect hebben gevonden.
+```{r}
+pwr.r.test(r = 0.15, sig.level = 0.05, power = 0.8)
+pwr.r.test(r = .13, sig.level = 0.05, power = 0.8)
+```
+Voor r = 0.15 is n ≈ 345 nodig, wat betekent dat we ongeveer 345 dagen aan data nodig zouden hebben om een significant effect te detecteren met power=0.8.
+Voor een nog zwakkere correlatie van r = 0.13 is n ≈ 460 nodig om een significant effect te detecteren met power=0.8.
+Onze dataset heeft ongeveer 87 dagen aan data, wat duidelijk te weinig is om een statistisch significant effect te detecteren bij deze zwakke correlaties.
+
+
+## Conclusie en belangrijkste resultaten
+
+- De rusthartslag hangt duidelijk samen met de gemiddelde hartslag tijdens slaap: nachten met een hogere rusthartslag hebben meestal ook een hogere gemiddelde slaaphartslag.
+- Gemiddelde hartslag overdag correleert ook met de slaaphartslag, maar de samenhang met de gecorrigeerde slaapscore is zwak en inconsistent.
+- De gecorrigeerde slaapscore lijkt minder betrouwbaar als indicator in deze dataset (sterke invloed van slaapduur en meer ruis); gemiddelde slaaphartslag is hier nuttiger om slaapkwaliteit te meten.
+- Stappen, verbrande calorieën en stressmanagement laten geen consistente, sterke verbanden zien met slaaphartslag of gecorrigeerde slaapscore in deze steekproef.
+
+- In geen van de gevallen was er een p‑waarde < 0.05. Dit betekent dat we geen wetenschappelijke conclusies kunnen trekken uit deze dataset: de nulhypothese (dat er geen effect is, en dat de gemiddelde hartslag tijdens slaap niet lager is bij een lagere hartslag overdag) kan niet verworpen worden.
+- We hebben meer data nodig en wellicht zouden sommige van de factoren dan wel significant worden.
+
+- voor dit project hebben we ongeveer 87 dagen aan data, wat duidelijk te weinig is om een statistisch significant effect te detecteren bij deze zwakke correlaties.
+- Om een significant effect te detecteren bij een correlatie van r = 0.15, zouden we ongeveer 345 dagen aan data nodig hebben. Wellicht dan zouden we een significant effect kunnen vinden,
+  maar aangezien de correlatie zwak is, is het ook mogelijk dat er geen echt effect is of dat andere factoren een grotere rol spelen in slaapkwaliteit dan de gemiddelde hartslag overdag.
+
+

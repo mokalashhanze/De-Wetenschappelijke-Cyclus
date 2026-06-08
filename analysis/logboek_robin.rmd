@@ -21,7 +21,7 @@ Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eet
 
 - Data: Fitbit-export met afgeleide output in `analysis/data/combined_data_robin.csv`
 - Tijdspanne: vier weken per proefpersoon
-- Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en eenvoudige regressies met slaapscore als uitkomst
+- Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en regressies met slaapscore als uitkomst
 
 ## 2026-05-20 — Opsplitsing naar Rmd en correlatie stappen en hartslag analyse
 
@@ -248,3 +248,6 @@ Ik heb pathlib gebruikt om de paden naar de bestanden te maken zodat het werkt a
 
 Lucas heeft de geupdate vragen forum geupload, maar dingen hiervan klopten niet dus ik heb dit gefixt.
 Ik moest ook het csv_sort.py bestand aanpassen zodat het de nieuwe format van de tijdstippen in het forum kan lezen.
+
+Ik heb code toegevoegd om de R2 waarden te berekenen voor de regressies en deze toegevoegd aan mijn rmd bestand.
+Ik heb analyses gemaakt van mijn grafieken en kwam erachter dat de slaapscore geen goede indicator is voor slaapkwaliteit en dat de gemiddelde hartslag tijdens slaap een betere indicator is.
