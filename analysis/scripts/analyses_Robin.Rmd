@@ -10,7 +10,8 @@ output: html_document
 
 ## Inleiding
 
-In deze analyse kijk ik naar de samenhang tussen slaap, hartslag, stappen, calorieën en stressmanagement. Ik gebruik daarbij simpele grafieken en lineaire regressie om patronen te vergelijken tussen personen en binnen personen.
+In deze analyse kijk ik naar de samenhang tussen de slaapscore en de gemiddelde hartslag van slaap met de gemiddelde hartslag overdag, de gemiddelde rusthartslag overdag stappen, calorieën en stressmanagement.
+Ik gebruik daarbij grafieken en lineaire regressiemodellen om patronen te vergelijken tussen personen en binnen personen.
 Ook bereken ik van alle gebruikte variabelen de p waarden en de R²-waarden van de regressies, zodat we kunnen zien welke factoren het meest samenhangen met slaapkwaliteit en hartslag tijdens slaap.
 
 ## Toelichting analysekeuzes
@@ -237,7 +238,7 @@ Sommige variabelen verklaren bijna niets (bv. calories_burned ≈ 0.27%).
 
 ## Correlatie gecorrigeerde slaapscore vs hartslag overdag
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
@@ -271,7 +272,7 @@ Vanwege de onbetrouwbaarheid van de gecorrigeerde slaapscore zal ik alleen de ge
 
 ## Correlatie gemiddelde hartslag slaap vs hartslag overdag
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = average_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
@@ -302,7 +303,7 @@ De individuele lijnen zijn relatief consistenter dan bij slaapscore, wat wijst o
 
 ## Correlatie gemiddelde hartslag slaap vs rusthartslag
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = resting_heart_rate, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
@@ -334,7 +335,7 @@ Deze trend is redelijk consistent tussen personen, maar vanwege de beperkte stee
 
 ## Correlatie gemiddelde hartslag slaap vs stappen
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
@@ -365,7 +366,7 @@ Sommige personen tonen kleine trends, maar over het galgemeen is de spreiding gr
 
 ## 9. Correlatie gemiddelde hartslag slaap vs calorieën
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
@@ -395,7 +396,7 @@ ggplot(df_all, aes(x = calories_burned, y = average_sleep_heart_rate, color = na
 
 ## Correlatie gemiddelde hartslag slaap vs stressmanagementscore
 
-```{r}
+```{r fig.width=12, fig.height=4}
 ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = TRUE) +
