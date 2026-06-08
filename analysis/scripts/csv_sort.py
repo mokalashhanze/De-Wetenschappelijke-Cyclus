@@ -6,7 +6,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 RAW_DATA_DIR = ROOT_DIR / "raw_data"
 ANALYSIS_DIR = ROOT_DIR / "analysis"
 COMBINED_DATA_DIR = ANALYSIS_DIR / "data" / "combined_data"
-FORM_FILE = ANALYSIS_DIR / "data" / "vragen_forum"
+FORM_FILE = ANALYSIS_DIR / "data" / "vragen_forum.csv"
 
 def is_during_sleep(timestamp, sleep_intervals):
     for start, end in sleep_intervals:
@@ -18,13 +18,12 @@ def to_24_hour(time_text):
     if not time_text:
         return ''
     time_text = time_text.strip()
-    try:
-        return datetime.strptime(time_text, '%I:%M:%S %p').strftime('%H:%M')
-    except ValueError:
+    for time_format in ('%I:%M:%S %p', '%I:%M %p', '%H:%M:%S', '%H:%M'):
         try:
-            return datetime.strptime(time_text, '%I:%M %p').strftime('%H:%M')
+            return datetime.strptime(time_text, time_format).strftime('%H:%M')
         except ValueError:
-            return time_text
+            continue
+    return time_text
 
 def calculate_corrected_score(sleep_score, fitbit_sleep_duration_hours):
     if sleep_score == '' or fitbit_sleep_duration_hours == '' or fitbit_sleep_duration_hours <= 0:
@@ -205,7 +204,10 @@ def process_person(person):
     sleep_stage_file = person_dir / "Health Fitness Data_GoogleData" / "UserSleepStages_2026-05-06.csv"
     sleep_score_file = person_dir / "Sleep Score" / "sleep_score.csv"
     stress_score_file = person_dir / "Stress Score" / "Stress Score.csv"
-    steps_file = person_dir / "Physical Activity_GoogleData" / "steps_2026-05-01.csv"
+    steps_files = [
+        person_dir / "Physical Activity_GoogleData" / "steps_2026-05-01.csv",
+        person_dir / "Physical Activity_GoogleData" / "steps_2026-06-01.csv",
+    ]
     heart_rate_dir = person_dir / "Physical Activity_GoogleData"
     output_dir = COMBINED_DATA_DIR
     form_file = FORM_FILE
@@ -223,7 +225,9 @@ def process_person(person):
     stress_scores = read_stress_score_data(stress_score_file)
     form_data = read_form_data(form_file, person)
     heart_rate_data = read_heart_rate_data(heart_rate_dir, heart_rate_files)
-    steps_data = read_steps_data(steps_file)
+    steps_data = []
+    for steps_file in steps_files:
+        steps_data += read_steps_data(steps_file)
     daily_calories = {}
     for calories_file in calories_files:
         daily_calories.update(read_calories_data(calories_file))
