@@ -158,12 +158,25 @@ def read_calories_data(calories_file):
         pass
     return daily_calories
 
+fieldnames = [
+    'naam', 'date',
+    'average_heart_rate',
+    'average_sleep_heart_rate',
+    'min_heart_rate', 'max_heart_rate',
+    'start', 'end',
+    'rem_sleep_minutes', 'deep_sleep_minutes',
+    'sleep_score', 'sleep_duration_hours', 'corrected_sleep_score',
+    'calories_burned', 'total_steps',
+    'phone_last_used', 'last_food_time', 'last_food'
+]
+
 def process_person(person):
     sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
     sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
     sleep_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Sleep Score/sleep_score.csv"
     steps_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
     heart_rate_dir = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData"
+    output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data"
     form_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/betere Naamloos formulier (Antwoorden)(3).csv"
     calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned.csv"
     if person == 'lucas':
@@ -201,7 +214,6 @@ def process_person(person):
         daily_steps[timestamp.date()] = daily_steps.get(timestamp.date(), 0) + steps
 
     person_results = []
-    person_sleep_score_results = []
 
     for date in sorted(daily_data.keys()):
         if date in daily_steps:
@@ -212,10 +224,20 @@ def process_person(person):
             )
 
             form_row = form_data.get(date, {})
-            duration = calculate_sleep_duration(
-                sleep_times.get(date, {}).get('start', ''),
-                sleep_times.get(date, {}).get('end', '')
-            )
+            if form_row:
+                sleep_start_time = to_24_hour(form_row['Hoelaat ben je gaan slapen?'])
+                sleep_end_time = to_24_hour(form_row['Hoelaat ben je opgestaan?'])
+                phone_time = to_24_hour(form_row['Hoelaat heb je voor het laatst op je telefoon gezeten?'])
+                meal_time = to_24_hour(form_row['Wanneer heb je voor het laatst gegeten?'])
+                meal_type = form_row['Wat was het?']
+            else:
+                sleep_start_time = ''
+                sleep_end_time = ''
+                phone_time = ''
+                meal_time = ''
+                meal_type = ''
+
+            duration = calculate_sleep_duration(sleep_start_time, sleep_end_time)
             raw_score = sleep_scores.get(date, '')
             corr_score = calculate_corrected_score(raw_score, duration)
 
@@ -226,8 +248,8 @@ def process_person(person):
                 'average_sleep_heart_rate': avg_sleep_hr,
                 'min_heart_rate': daily_data[date]['min_hr'],
                 'max_heart_rate': daily_data[date]['max_hr'],
-                'start': sleep_times.get(date, {}).get('start', ''),
-                'end': sleep_times.get(date, {}).get('end', ''),
+                'start': sleep_start_time,
+                'end': sleep_end_time,
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': raw_score,
@@ -235,44 +257,30 @@ def process_person(person):
                 'corrected_sleep_score': corr_score,
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
-                'phone_last_used': to_24_hour(form_row.get('Hoelaat heb je voor het laatst op je telefoon gezeten?', '')),
-                'last_food_time': to_24_hour(form_row.get('Wanneer heb je voor het laatst gegeten?', '')),
-                'last_food': form_row.get('Wat was het?', '')
+                'phone_last_used': phone_time,
+                'last_food_time': meal_time,
+                'last_food': meal_type
             }
 
             person_results.append(row_data)
-            if date in sleep_scores:
-                person_sleep_score_results.append(row_data)
 
-    return person_results, person_sleep_score_results
+    output_file = f"{output_dir}/combined_data_{person}.csv"
+
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(person_results)
+
+    return person_results
 
 all_results, all_sleep_score_results = [], []
 for person in ['robin', 'mohammed', 'lucas']:
-    p_res, p_ss_res = process_person(person)
+    p_res = process_person(person)
     all_results.extend(p_res)
-    all_sleep_score_results.extend(p_ss_res)
 
 output_file_raw = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv"
-sleep_score_output_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data_filtered/combined_data_filtered.csv"
-
-fieldnames = [
-    'naam', 'date',
-    'average_heart_rate',
-    'average_sleep_heart_rate',
-    'min_heart_rate', 'max_heart_rate',
-    'start', 'end',
-    'rem_sleep_minutes', 'deep_sleep_minutes',
-    'sleep_score', 'sleep_duration_hours', 'corrected_sleep_score',
-    'calories_burned', 'total_steps',
-    'phone_last_used', 'last_food_time', 'last_food'
-]
 
 with open(output_file_raw, 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(all_results)
-
-with open(sleep_score_output_file, 'w', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(all_sleep_score_results)
