@@ -118,20 +118,22 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
 summary(model_hr)
 ```
 
-De variabelen met de laagste p-waarden in dit model (dus die het dichtst bij statistische significantie komen) zijn `calories_burned` en daarna slaapfase-variabelen zoals `rem_sleep_minutes` en `deep_sleep_minutes`.
+In dit model is `resting_heart_rate` statistisch significant geassocieerd met `average_sleep_heart_rate` (p ≈ 0.000029). Dit betekent dat rusthartslag in deze dataset een duidelijke voorspeller is van de gemiddelde hartslag tijdens slaap.
 
-Waarom dat waarschijnlijk zo is:
-- De p-waarden zijn allemaal groter dan 0.05, dus er is geen goed statistisch bewijs voor een effect in deze dataset. De reden dat `calories_burned` relatief laag staat, kan komen door een relatie met hartslag of doordat die variabele minder ruis heeft dan andere metingen.
-- Mogelijke oorzaken voor lage significantie zijn onder anderen: Een kleine steekproef, veel natuurlijke variatie tussen nachten en personen, meetfouten in Fitbit-data, veel andere factoren die niet gemeten zijn die de slaapkwaliteit ook kunnen beinvloeden en correlatie tussen voorspellers die het moeilijk maakt om individuele effecten precies te schatten.
-- Wellicht met meer data of een grotere steekproef zouden sommige van deze factoren wel significant kunnen worden, maar op dit moment is er geen sterk bewijs voor een duidelijk effect van deze variabelen op de gemiddelde hartslag tijdens slaap in deze dataset.
+Daarnaast is ook `last_foodSnack` significant (p ≈ 0.035). Deze waarde is wel een stuk hoger dan de andere p-waarde, dus minder betrouwbaar.
+De overige variabelen in dit model hebben p-waarden > 0.05 en zijn in deze steekproef niet statistisch significant.
+
+Interpretatie:
+- De significante uitkomst voor `resting_heart_rate` ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
+- Voor de meeste andere voorspellers blijft het bewijs beperkt, waarschijnlijk door een combinatie van kleine steekproef, natuurlijke variatie tussen nachten/personen en overlap tussen voorspellers.
+- Dat een snack als laatste maaltijd geassocieerd is met een lagere gemiddelde slaaphartslag kan wijzen op een mogelijk gunstig effect van een lichte maaltijd, maar de betrouwbaarheid hiervan is beperkt en heeft verder onderzoek nodig.
 
 ## Verschil tussen de twee modellen
 
 - Richting en grootte verschillen soms: bijvoorbeeld `calories_burned` heeft in het slaapscore-model een negatieve coëfficiënt (≈ -0.0058, p≈0.07) en komt daarmee het dichtst bij significantie — dit suggereert een zwak negatief verband, maar is niet overtuigend.
 - `deep_sleep_minutes` heeft in beide modellen een kleine negatieve coëfficiënt (iets sterker bij hartslag), wat consistent kan zijn in richting maar statistisch niet bevestigend.
 - `time_between_phone_used_and_sleep_hours` heeft een negatieve coëfficiënt voor hartslag en een positieve voor slaapscore; dat is niet tegenstrijdig als je bedenkt dat meer uren tussen telefoongebruik en slaap (dus eerder stoppen met telefoon) wél kan samenhangen met een lagere nachtelijke hartslag en een iets hogere slaapscore — maar beide effecten zijn niet-significant.
-
-Praktische aanbeveling voor de tekst in je paper: rapporteer deze richtingen en relatieve groottes als observaties ("indicatief"), vermeld duidelijk dat geen enkel effect statistisch significant was, en adviseer meer data of gerichte vervolgstudies om deze patronen verder te testen.
+- Het belangrijkste verschil: in het model voor gemiddelde slaaphartslag is `resting_heart_rate` wél significant (p < 0.001), terwijl in het model voor gecorrigeerde slaapscore geen duidelijke significante hartslagvoorspeller zichtbaar is.
 
 
 ## R² per variabele
@@ -260,7 +262,7 @@ ggplot(df_all, aes(x = resting_heart_rate, y = average_sleep_heart_rate, color =
 ```
 
 **Observatie:** Er is een duidelijke, grotendeels positieve samenhang tussen rusthartslag en gemiddelde hartslag tijdens slaap: nachten met een hogere rusthartslag gaan meestal gepaard met een hogere gemiddelde slaaphartslag.
-Deze trend is redelijk consistent tussen personen, maar vanwege de beperkte steekproef en variatie tussen nachten is het niet mogelijk om sterke conclusies te trekken zonder aanvullende data.
+Deze trend is redelijk consistent tussen personen en de p waarde van deze relatie is zeer laag (p < 0.001), wat wijst op een significante relatie in deze dataset.
 
 
 ## Correlatie gemiddelde hartslag slaap vs stappen
@@ -395,8 +397,10 @@ Onze dataset heeft ongeveer 87 dagen aan data, wat duidelijk te weinig is om een
 - De gecorrigeerde slaapscore lijkt minder betrouwbaar als indicator in deze dataset (sterke invloed van slaapduur en meer ruis); gemiddelde slaaphartslag is hier nuttiger om slaapkwaliteit te meten.
 - Stappen, verbrande calorieën en stressmanagement laten geen consistente, sterke verbanden zien met slaaphartslag of gecorrigeerde slaapscore in deze steekproef.
 
-- In geen van de gevallen was er een p‑waarde < 0.05. Dit betekent dat we geen wetenschappelijke conclusies kunnen trekken uit deze dataset: de nulhypothese (dat er geen effect is, en dat de gemiddelde hartslag tijdens slaap niet lager is bij een lagere hartslag overdag) kan niet verworpen worden.
-- We hebben meer data nodig en wellicht zouden sommige van de factoren dan wel significant worden.
+- Voor het model met gemiddelde slaaphartslag is `resting_heart_rate` wel significant (p ≈ 0.000029). Voor dit specifieke verband kunnen we de nulhypothese van geen effect verwerpen.
+  Onze hypothese dat een hogere rusthartslag samenhangt met een hogere slaaphartslag wordt ondersteund door deze data.
+- Tegelijk blijven de meeste andere effecten niet-significant (p > 0.05), dus voor die verbanden kunnen we de nulhypothese nog niet verwerpen.
+- We hebben meer data nodig om kleinere of zwakkere effecten betrouwbaarder te kunnen aantonen.
 
 - voor dit project hebben we ongeveer 87 dagen aan data, wat duidelijk te weinig is om een statistisch significant effect te detecteren bij deze zwakke correlaties.
 - Om een significant effect te detecteren bij een correlatie van r = 0.15, zouden we ongeveer 345 dagen aan data nodig hebben. Wellicht dan zouden we een significant effect kunnen vinden,
