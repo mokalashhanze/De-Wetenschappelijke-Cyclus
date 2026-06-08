@@ -6,7 +6,7 @@ output: html_document
 
 # 1. Libraries laden
 
-```{r libraries, message=FALSE, warning=FALSE}
+```{r libraries}
 library(ggplot2)
 library(lubridate)
 library(dplyr)
@@ -18,7 +18,7 @@ library(tidyr)
 
 ```{r data-laden, message=FALSE, warning=FALSE}
 data <- read_csv("../data/combined_data/combined_data.csv")
-data\(date <- as.Date(data\)date)
+data$date <- as.Date(data$date)
 data <- drop_na(data, last_food, time_between_phone_used_and_sleep_hours, time_between_last_food_and_sleep_hours, average_sleep_heart_rate)
 ```
 
@@ -55,8 +55,8 @@ groeps_kleuren <- c("Robin" = "#F8766D",
 analyse_data %>%
   group_by(naam) %>%
   summarise(
-    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_last_food_and_sleep_hours))\$r.squared, 3),
-    p  = round(cor.test(time_between_last_food_and_sleep_hours, average_sleep_heart_rate)\$p.value, 3)
+    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_last_food_and_sleep_hours))$r.squared, 3),
+    p  = round(cor.test(time_between_last_food_and_sleep_hours, average_sleep_heart_rate)$p.value, 3)
   ) %>%
   print()
 ```
@@ -86,8 +86,8 @@ ggplot(data, aes(x = time_between_last_food_and_sleep_hours, y = average_sleep_h
 analyse_data %>%
   group_by(naam) %>%
   summarise(
-    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_phone_used_and_sleep_hours))\$r.squared, 3),
-    p  = round(cor.test(time_between_phone_used_and_sleep_hours, average_sleep_heart_rate)\$p.value, 3)
+    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_phone_used_and_sleep_hours))$r.squared, 3),
+    p  = round(cor.test(time_between_phone_used_and_sleep_hours, average_sleep_heart_rate)$p.value, 3)
   ) %>%
   print()
 ```
