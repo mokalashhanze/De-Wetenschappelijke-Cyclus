@@ -17,7 +17,7 @@ library(tidyr)
 # 2. Data inladen & voorbereiden
 
 ```{r data-laden, message=FALSE, warning=FALSE}
-data <- read_csv("../data/combined_data/combined_data.csv")
+data <- read_csv("combined_data.csv")
 data$date <- as.Date(data$date)
 data <- drop_na(data, last_food, time_between_phone_used_and_sleep_hours, time_between_last_food_and_sleep_hours, average_sleep_heart_rate)
 ```
