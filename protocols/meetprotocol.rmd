@@ -1,37 +1,75 @@
 ---
-title: "Meetprotocol Slaap- en Hartslagexperiment"
+title: "Meetprotocol: Slaap- en Hartslagexperiment"
 output: html_document
 ---
 
-# Methode en materiaal:   
+# 1. Wat gaan we onderzoeken?
+We gaan onderzoeken hoe ons gedrag invloed heeft op onze slaap en hartslag. We kijken naar wat we overdag en 's avonds doen (zoals sporten, eten en op schermen kijken) en hoe we daarna slapen.
 
-## 1. Benodigdheden:  
-* Hartslagmeter (Fitbit Versa 4)
-* Bed
-* Wekker
-* Notitieschrift
-* Google Forms
+---
 
-## 2. Experiment  
-Voor dit experiment gaan de proefpersonen ongeveer 4 weken hun hartslag tijdens het slapen meten. Dit doen ze door de Fitbit Versa 4 te dragen. De proefpersonen dragen de Fitbit de hele dag en de hele nacht. Zo krijgen we een goed en compleet beeld van de hartslag en de beweging over de hele dag. De Fitbit mag alleen af als hij moet opladen of tijdens het douchen.  
+# 2. De proefpersonen (Deelnemers)
+* Er doen precies **3 vaste personen** mee aan dit onderzoek.
+* Iedereen doet **4 weken (28 dagen)** lang elke dag mee.
+* De gegevens van deze 3 personen worden veilig en anoniem bewaard.
 
-De Fitbit Versa 4 meet de hele tijd de hartslag per minuut. Ook meet het horloge de hartslag in rust, de stappen, de verbrande calorieën en hoe diep je slaapt (lichte slaap, diepe slaap en droomslaap).  
+---
 
-De proefpersonen vullen elke ochtend meteen na het opstaan de lijst in op Google Forms. Hierin vullen zij de punten van de vorige dag en nacht in:
-Naam van de proefpersoon  
+# 3. Wat hebben we nodig?
+* **Fitbit Versa 4**: Een slim horloge dat de hartslag, stappen en slaap meet.
+* **Google Forms**: Een online vragenlijst die de proefpersonen invullen.
+* **Excel**: Een computerprogramma om aan het einde alle cijfers in te verzamelen.
 
-* Naam van de proefpersoon
-* De tijd van de laatste maaltijd voor het slapen.
-* Hoe groot de maaltijd was (snack, kleine maaltijd, grote maaltijd).
-* De tijd van naar bed gaan.
-* De tijd van wakker worden.
-* Beweging en sport overdag (geen, weinig (wandelen), gemiddeld (lange wandeling, krachttraining), veel (hardlopen, wielrennen)).
-* De Fitbit-gegevens van de dag (stappen, hartslag, calorieën, slaap).
-* De tijd waarop je voor het laatst naar een scherm hebt gekeken (zoals telefoon of computer).
+---
 
-### Link naar de Google Forms
-[Klik hier voor de Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSdu5ueiKrxmoItkctAfPo8y3DHmR7RH2bo1FQwmFwkfFW0zAQ/viewform?usp=dialog)  
+# 4. Wat moeten de proefpersonen doen?
 
+## 4.1 Het horloge dragen
+* Draag het horloge om de pols waar je **niet** mee schrijft.
+* Zorg dat het horloge niet te los zit, zodat de sensor aan de achterkant je hartslag goed kan meten.
+* Houd het horloge **altijd om**, ook in bed. Je mag het alleen afdoen om te douchen of om op te laden.
 
-## 3. Resultaat:
-De proefpersonen zijn 3 volwassenen. Zij houden ongeveer een maand lang elke dag hun gegevens bij met de Google Forms en de Fitbit.
+## 4.2 Elke ochtend invullen
+* **Heel belangrijk**: Vul de online vragenlijst (Google Forms) **elke ochtend binnen 15 minuten na het opstaan** in. Als je langer wacht, vergeet je hoe laat je gisteravond precies hebt gegeten of op je telefoon hebt gekeken.
+
+---
+
+# 5. De Google Forms (De vragen en keuzes)
+
+De online vragenlijst heeft precies deze vragen en keuzes:
+
+### Deel 1: Tijd en Datum
+1. **Wat is de huidige datum?**
+   * *Antwoord*: Klik de dag van vandaag aan (dag/maand/jaar).
+2. **Hoe laat ben je gaan slapen?**
+   * *Antwoord*: Vul de tijd in (bijvoorbeeld 23:15).
+3. **Hoe laat ben je opgestaan?**
+   * *Antwoord*: Vul de tijd in (bijvoorbeeld 07:30).
+
+### Deel 2: Sporten, schermen en eten
+4. **Heb je een fysieke activiteit gedaan?**
+   * *Kies één antwoord*:
+     * nee
+     * ja, lichte inspanning (korte wandeling, kort stuk gefietst, etc.)
+     * ja, gemiddelde inspanning (krachttraining, lange wandeling, etc.)
+     * ja, zware inspanning (hardlopen, racefietsen, mountainbiken, etc.)
+5. **Hoe laat heb je voor het laatst op je telefoon gezeten?**
+   * *Antwoord*: Vul de tijd in. *(Let op: dit telt ook voor de TV of laptop!)*
+6. **Wanneer heb je voor het laatst gegeten?**
+   * *Antwoord*: Vul de tijd in van je laatste hap eten.
+
+### Deel 3: Soort eten en je naam
+7. **Wat was het?**
+   * *Kies één antwoord*:
+     * Snack
+     * Maaltijd - mager
+     * Maaltijd - vol vet
+8. **Naam**
+   * *Antwoord*: Typ hier je eigen naam.
+
+---
+
+# 6. Wat doen we daarna met de cijfers?
+Als de 4 weken voorbij zijn, halen we alle antwoorden uit Google Forms. Ook schrijven we de cijfers uit de Fitbit-app op (zoals de slaapscore en hoe laag de hartslag 's nachts was). 
+
+Daarna gaan we kijken of er duidelijke verschillen zijn. Bijvoorbeeld: slaap je slechter als je vlak voor bedtijd nog vet hebt gegeten? Of klopt je hart rustiger 's nachts als je overdag veel hebt gewandeld?
