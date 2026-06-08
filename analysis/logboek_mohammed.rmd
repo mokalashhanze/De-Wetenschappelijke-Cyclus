@@ -137,8 +137,29 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 **Conclusie:** De afspraak was succesvol. We hebben een duidelijke planning en ik kan nu zelfstandig aan de slag met mijn R-codes.  
 
 ---
+# dag 6:
+## Datum: 07/06/2026
 
-# Dag 6:
+**Doel van de dag:** het meetprotocol helemaal afmaken 
+
+**Motivatie:** Ik wil dat ons plan heel simpel is zodat iedereen snapt wat hij moet doen. Ook moeten de cijfers uit de vragenlijst en de Fitbit straks goed samenwerken in R.
+
+**Uitgevoerde werkzaamheden:**
+
+* Het plan opnieuw opgeschreven in RStudio met makkelijke woorden en duidelijke kopjes.
+* Opgeschreven dat we het onderzoek met 3 vaste personen doen (Robin, Lucas en Mohammed) voor 4 weken lang.
+* De online vragenlijst (Google Forms) verbeterd met duidelijke keuzes voor het eten (snack, mager en vol vet).
+* Opgeschreven dat we aan het einde alle cijfers van de Fitbits gaan downloaden met de website Fitbit Takeout.
+* Vastgelegd dat we alle cijfers samen in het programma RStudio gaan stoppen om ze te onderzoeken.
+
+**Resultaten:** Het plan is nu helemaal af en staat in een net bestand. De online vragenlijst is klaar om vanaf morgen elke ochtend ingevuld te worden.
+
+**Analyse:** Door alles in gewone taal op te schrijven, kan niemand meer fouten maken bij het invullen. Het downloaden via Fitbit Takeout zorgt ervoor dat we straks heel veel goede cijfers hebben voor onze code.
+
+**Conclusie:** De voorbereiding is nu helemaal klaar. De vragenlijst en het plan passen nu perfect bij de code en de grafieken die we op dag 7 gaan maken.
+
+---
+# Dag 7:
 
 ## Datum: 08/06/2026
 
