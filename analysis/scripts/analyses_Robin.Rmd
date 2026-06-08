@@ -98,6 +98,8 @@ summary(model_sleep)
 
 ## Meervoudige Lineaire Regressie — Gemiddelde Slaaphartslag
 
+Omdat de slaaptijden van de Fitbit niet accuraat zijn, kijken we hier naar de gemiddelde hartslag tijdens slaap, in plaats van de slaapscore.
+
 ```{r}
 model_hr <- lm(average_sleep_heart_rate ~ sleep_duration_hours + 
                  rem_sleep_minutes + 
@@ -118,6 +120,14 @@ Waarom dat waarschijnlijk zo is:
 - De p-waarden zijn allemaal groter dan 0.05, dus er is geen goed statistisch bewijs voor een effect in deze dataset. De reden dat `calories_burned` relatief laag staat, kan komen door een relatie met hartslag of doordat die variabele minder ruis heeft dan andere metingen.
 - Mogelijke oorzaken voor lage significantie zijn onder anderen: Een kleine steekproef, veel natuurlijke variatie tussen nachten en personen, meetfouten in Fitbit-data, veel andere factoren die niet gemeten zijn die de slaapkwaliteit ook kunnen beinvloeden en correlatie tussen voorspellers die het moeilijk maakt om individuele effecten precies te schatten.
 - Wellicht met meer data of een grotere steekproef zouden sommige van deze factoren wel significant kunnen worden, maar op dit moment is er geen sterk bewijs voor een duidelijk effect van deze variabelen op de gemiddelde hartslag tijdens slaap in deze dataset.
+
+## Verschil tussen de twee modellen
+
+- Richting en grootte verschillen soms: bijvoorbeeld `calories_burned` heeft in het slaapscore-model een negatieve coëfficiënt (≈ -0.0058, p≈0.07) en komt daarmee het dichtst bij significantie — dit suggereert een zwak negatief verband, maar is niet overtuigend.
+- `deep_sleep_minutes` heeft in beide modellen een kleine negatieve coëfficiënt (iets sterker bij hartslag), wat consistent kan zijn in richting maar statistisch niet bevestigend.
+- `time_between_phone_used_and_sleep_hours` heeft een negatieve coëfficiënt voor hartslag en een positieve voor slaapscore; dat is niet tegenstrijdig als je bedenkt dat meer uren tussen telefoongebruik en slaap (dus eerder stoppen met telefoon) wél kan samenhangen met een lagere nachtelijke hartslag en een iets hogere slaapscore — maar beide effecten zijn niet-significant.
+
+Praktische aanbeveling voor de tekst in je paper: rapporteer deze richtingen en relatieve groottes als observaties ("indicatief"), vermeld duidelijk dat geen enkel effect statistisch significant was, en adviseer meer data of gerichte vervolgstudies om deze patronen verder te testen.
 ```
 
 ## R² per variabele
