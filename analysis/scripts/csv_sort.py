@@ -1,5 +1,12 @@
 import csv
+from pathlib import Path
 from datetime import datetime
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+RAW_DATA_DIR = ROOT_DIR / "raw_data"
+ANALYSIS_DIR = ROOT_DIR / "analysis"
+COMBINED_DATA_DIR = ANALYSIS_DIR / "data" / "combined_data"
+FORM_FILE = ANALYSIS_DIR / "data" / "betere Naamloos formulier (Antwoorden)(3).csv"
 
 def is_during_sleep(timestamp, sleep_intervals):
     for start, end in sleep_intervals:
@@ -193,25 +200,22 @@ fieldnames = [
 ]
 
 def process_person(person):
-    sleep_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleeps_2026-05-06.csv"
-    sleep_stage_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Health Fitness Data_GoogleData/UserSleepStages_2026-05-06.csv"
-    sleep_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Sleep Score/sleep_score.csv"
-    stress_score_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Stress Score/Stress Score.csv"
-    steps_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/steps_2026-05-01.csv"
-    heart_rate_dir = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData"
-    output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data"
-    form_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/betere Naamloos formulier (Antwoorden)(3).csv"
+    person_dir = RAW_DATA_DIR / f"takeout_{person}" / "Fitbit"
+    sleep_file = person_dir / "Health Fitness Data_GoogleData" / "UserSleeps_2026-05-06.csv"
+    sleep_stage_file = person_dir / "Health Fitness Data_GoogleData" / "UserSleepStages_2026-05-06.csv"
+    sleep_score_file = person_dir / "Sleep Score" / "sleep_score.csv"
+    stress_score_file = person_dir / "Stress Score" / "Stress Score.csv"
+    steps_file = person_dir / "Physical Activity_GoogleData" / "steps_2026-05-01.csv"
+    heart_rate_dir = person_dir / "Physical Activity_GoogleData"
+    output_dir = COMBINED_DATA_DIR
+    form_file = FORM_FILE
     calories_files = [
-        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv",
-        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-06-01.csv",
+        person_dir / "Physical Activity_GoogleData" / "active_energy_burned_2026-05-01.csv",
+        person_dir / "Physical Activity_GoogleData" / "active_energy_burned_2026-06-01.csv",
     ]
     heart_rate_files = ["heart_rate_2026-04-06.csv"] \
         + [f"heart_rate_2026-05-{i:02d}.csv" for i in range(6, 32)] \
         + [f"heart_rate_2026-06-{i:02d}.csv" for i in range(1, 8)]
-    calories_files = [
-        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv",
-        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-06-01.csv",
-    ]
 
     sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
@@ -301,7 +305,7 @@ def process_person(person):
 
             person_results.append(row_data)
 
-    output_file = f"{output_dir}/combined_data_{person}.csv"
+    output_file = output_dir / f"combined_data_{person}.csv"
 
     with open(output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -315,9 +319,9 @@ for person in ['robin', 'mohammed', 'lucas']:
     p_res = process_person(person)
     all_results.extend(p_res)
 
-output_file_raw = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv"
+output_file_combined = COMBINED_DATA_DIR / "combined_data.csv"
 
-with open(output_file_raw, 'w', newline='') as f:
+with open(output_file_combined, 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(all_results)

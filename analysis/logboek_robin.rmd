@@ -244,4 +244,4 @@ Verder heb ik het python bestand verbeterd en een stressmanagement score aan de 
 Ook heb ik een meervoudig lineair model gemaakt met alle variabelen samen en gekeken welke variabelen een p waarde kleiner dan 0.05 hebben en welke variabelen de meeste variantie verklaren in slaapscore en gemiddelde hartslag tijdens slaap.
 Verder heb ik een uitleg in mijn rmd bestand gezet over mijn keuze voor de analyses.
 Het pythonbestand las maar tot en met mei, ik heb dit aangepast zodat het ook de data van juni meeleest.
-
+Ik heb pathlib gebruikt om de paden naar de bestanden te maken zodat het werkt als iemand anders de github clonet.
