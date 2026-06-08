@@ -4,6 +4,49 @@ author: "Robin Offringa"
 output: html_document
 ---
 
+
+
+
+
+## Inleiding
+
+In deze analyse kijk ik naar de samenhang tussen slaap, hartslag, stappen, calorieën en stressmanagement. Ik gebruik daarbij simpele grafieken en lineaire regressie om patronen te vergelijken tussen personen en binnen personen.
+Ook bereken ik van alle gebruikte variabelen de p waarden en de R²-waarden van de regressies, zodat we kunnen zien welke factoren het meest samenhangen met slaapkwaliteit en hartslag tijdens slaap.
+
+## Toelichting analysekeuzes
+
+### Waarom lineaire regressie?
+
+In deze analyse gebruik ik lineaire regressiemodellen om te kijken hoe slaap, hartslag en leefstijl samenhangen.
+
+Deze keuze maak ik omdat:
+
+- de meeste variabelen continu zijn, zoals slaapduur, hartslag, REM-slaap, stappen en calorieën;
+- slaapkwaliteit niet door één factor wordt bepaald, waardoor ik met een meervoudig model het effect van één variabele kan bekijken terwijl ik corrigeer voor de andere;
+- lineaire modellen makkelijk te interpreteren zijn en goed passen bij een exploratieve analyse.
+
+Ik heb grafieken per persoon gemaakt en een gecombineerde grafiek met alle drie personen.
+
+### Waarom een gecorrigeerde slaapscore?
+
+De standaard Fitbit-slaapscore hangt sterk samen met hoe lang iemand slaapt. Daardoor kan een lange nacht automatisch een hoge score krijgen, ook als de slaapkwaliteit minder goed was.
+Om slaapkwaliteit eerlijker te vergelijken tussen nachten, gebruik ik een gecorrigeerde slaapscore. Deze score corrigeert de oorspronkelijke slaapscore voor slaapduur, zodat niet alleen hoe lang maar vooral hoe goed iemand slaapt wordt meegenomen.
+
+### Hoe is de gecorrigeerde slaapscore berekend?
+
+De berekening:
+
+- de gemeten slaapduur wordt begrensd tussen 6 en 9 uur;
+- de begrensde slaapduur wordt gedeeld door 8 uur.
+- de originele slaapscore wordt gedeeld door deze factor.
+
+Dus: slaapfactor = effectieve slaapduur / 8 en gecorrigeerde slaapscore = slaapscore / slaapfactor.
+
+Hierdoor:
+
+- worden korte maar goede nachten minder slecht beoordeeld;
+- krijgen lange nachten niet automatisch een hogere score.
+
 ## 1. Libraries laden
 
 ```{r}
