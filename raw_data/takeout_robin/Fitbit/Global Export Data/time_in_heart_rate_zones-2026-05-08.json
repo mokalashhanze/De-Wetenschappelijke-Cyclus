@@ -2,10 +2,10 @@
   "dateTime" : "05/08/26 00:00:00",
   "value" : {
     "valuesInZones" : {
-      "IN_DEFAULT_ZONE_1" : 62.0,
-      "BELOW_DEFAULT_ZONE_1" : 590.0,
       "IN_DEFAULT_ZONE_2" : 6.0,
-      "IN_DEFAULT_ZONE_3" : 6.0
+      "IN_DEFAULT_ZONE_3" : 6.0,
+      "BELOW_DEFAULT_ZONE_1" : 590.0,
+      "IN_DEFAULT_ZONE_1" : 62.0
     }
   }
 }]

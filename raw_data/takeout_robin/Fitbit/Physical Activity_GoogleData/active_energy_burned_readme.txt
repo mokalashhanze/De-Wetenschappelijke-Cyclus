@@ -5,7 +5,7 @@ The Time Series export provides a detailed timeline of your tracked activity.
 Files Included:
 ----------
 
-active_energy_burned.csv              - Contains all data for this type.
+active_energy_burned_YYYY-MM-DD.csv   - Where YYYY-MM-DD is the starting date for the entries in the file.
 
 Each entry has the following values:
 
