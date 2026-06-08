@@ -201,12 +201,17 @@ def process_person(person):
     heart_rate_dir = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData"
     output_dir = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data"
     form_file = "/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/betere Naamloos formulier (Antwoorden)(3).csv"
-    calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned.csv"
+    calories_files = [
+        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv",
+        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-06-01.csv",
+    ]
     heart_rate_files = ["heart_rate_2026-04-06.csv"] \
         + [f"heart_rate_2026-05-{i:02d}.csv" for i in range(6, 32)] \
         + [f"heart_rate_2026-06-{i:02d}.csv" for i in range(1, 8)]
-    if person == 'lucas':
-        calories_file = f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv"
+    calories_files = [
+        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-05-01.csv",
+        f"/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/raw_data/takeout_{person}/Fitbit/Physical Activity_GoogleData/active_energy_burned_2026-06-01.csv",
+    ]
 
     sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
@@ -215,7 +220,9 @@ def process_person(person):
     form_data = read_form_data(form_file, person)
     heart_rate_data = read_heart_rate_data(heart_rate_dir, heart_rate_files)
     steps_data = read_steps_data(steps_file)
-    daily_calories = read_calories_data(calories_file)
+    daily_calories = {}
+    for calories_file in calories_files:
+        daily_calories.update(read_calories_data(calories_file))
 
     awake_heart_rate = [(ts, bpm) for ts, bpm in heart_rate_data if not is_during_sleep(ts, sleep_intervals)]
     sleep_heart_rate = [(ts, bpm) for ts, bpm in heart_rate_data if is_during_sleep(ts, sleep_intervals)]
