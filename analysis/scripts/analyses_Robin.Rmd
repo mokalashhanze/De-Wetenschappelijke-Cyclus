@@ -82,7 +82,6 @@ aggregate(total_steps ~ naam, data = df_all, FUN = mean)
 ```{r}
 df_all$last_food <- as.factor(df_all$last_food)
 ```
-
 ```{r}
 model_sleep <- lm(corrected_sleep_score ~ sleep_duration_hours + 
                     rem_sleep_minutes + 
@@ -112,6 +111,42 @@ model_hr <- lm(average_sleep_heart_rate ~ sleep_duration_hours +
 
 summary(model_hr)
 ```
+
+De variabelen met de laagste p-waarden in dit model (dus die het dichtst bij statistische significantie komen) zijn `calories_burned` en daarna slaapfase-variabelen zoals `rem_sleep_minutes` en `deep_sleep_minutes`.
+
+Waarom dat waarschijnlijk zo is:
+- De p-waarden zijn allemaal groter dan 0.05, dus er is geen goed statistisch bewijs voor een effect in deze dataset. De reden dat `calories_burned` relatief laag staat, kan komen door een relatie met hartslag of doordat die variabele minder ruis heeft dan andere metingen.
+- Mogelijke oorzaken voor lage significantie zijn onder anderen: Een kleine steekproef, veel natuurlijke variatie tussen nachten en personen, meetfouten in Fitbit-data, veel andere factoren die niet gemeten zijn die de slaapkwaliteit ook kunnen beinvloeden en correlatie tussen voorspellers die het moeilijk maakt om individuele effecten precies te schatten.
+- Wellicht met meer data of een grotere steekproef zouden sommige van deze factoren wel significant kunnen worden, maar op dit moment is er geen sterk bewijs voor een duidelijk effect van deze variabelen op de gemiddelde hartslag tijdens slaap in deze dataset.
+```
+
+## R² per variabele
+
+```{r}
+predictors <- c(
+  "sleep_duration_hours",
+  "rem_sleep_minutes",
+  "deep_sleep_minutes",
+  "stress_management_score",
+  "calories_burned",
+  "time_between_phone_used_and_sleep_hours",
+  "time_between_last_food_and_sleep_hours",
+  "last_food"
+)
+
+calc_r2 <- function(outcome, predictor, data) {
+  summary(lm(reformulate(predictor, response = outcome), data = data))$r.squared
+}
+
+r2_overview <- data.frame(
+  variable = predictors,
+  r2_corrected_sleep_score = sapply(predictors, calc_r2, outcome = "corrected_sleep_score", data = df_all),
+  r2_average_sleep_heart_rate = sapply(predictors, calc_r2, outcome = "average_sleep_heart_rate", data = df_all)
+)
+
+r2_overview
+```
+
 
 ## 4. Correlatie gecorrigeerde slaapscore vs hartslag
 
