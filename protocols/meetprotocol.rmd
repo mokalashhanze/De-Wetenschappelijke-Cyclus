@@ -69,7 +69,14 @@ De online vragenlijst heeft precies deze vragen en keuzes:
 
 ---
 
-# 6. Wat doen we daarna met de cijfers?
-Als de 4 weken voorbij zijn, halen we alle antwoorden uit Google Forms. Ook schrijven we de cijfers uit de Fitbit-app op (zoals de slaapscore en hoe laag de hartslag 's nachts was). 
+# 6. Wat doen we aan het einde met de cijfers?
 
-Daarna gaan we kijken of er duidelijke verschillen zijn. Bijvoorbeeld: slaap je slechter als je vlak voor bedtijd nog vet hebt gegeten? Of klopt je hart rustiger 's nachts als je overdag veel hebt gewandeld?
+Als de 4 weken voorbij zijn, gaan we alle verzamelde gegevens samenvoegen en bestuderen:
+
+## 6.1 Data downloaden via Fitbit Takeout
+Aan het einde van de 4 weken loggen we in op de Google/Fitbit-account van de 3 proefpersonen. We gebruiken **Fitbit Takeout** om alle gedetailleerde gegevens (zoals de exacte hartslag per minuut en de slaapfases) als computerbestanden te downloaden. Ook downloaden we alle antwoorden uit de Google Forms.
+
+## 6.2 Analyseren met R-code
+We laden de bestanden van de Google Forms en de Fitbit Takeout samen in **RStudio**. Met behulp van **R-code** gaan we berekeningen maken en controleren we de volgende dingen:
+* Slaap je korter of onrustiger als je vlak voor het slapengaan nog op een scherm hebt gekeken?
+* Slaat je hart 's nachts sneller of onrustiger na een maaltijd met vol vet vergeleken met een magere maaltijd?
