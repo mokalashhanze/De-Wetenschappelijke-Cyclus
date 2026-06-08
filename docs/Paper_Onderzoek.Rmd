@@ -3,6 +3,15 @@ title: "Paper"
 output: html_document
 date: "2026-06-05"
 ---
+# Introductie.
+ 
+Slaap is een van de belangrijkste processen voor het herstel van het lichaam en de hersenen. Tijdens de slaap vertraagt de hartslag, wat vaak een teken is dat het lichaam goed tot rust komt. Een lagere hartslag tijdens de slaap wordt daarom vaak gezien als een teken van goede slaapkwaliteit (Cleveland Clinic, 2024). 
+Uit onderzoek blijkt dat verschillende factoren invloed hebben op de hartslag. Zo spelen stress, lichamelijke beweging en dagelijkse gewoonten een grote rol bij hoe hoog of laag de hartslag is, zowel overdag als tijdens de slaap (Valentini & Parati, 2009). Wanneer het lichaam voldoende kan herstellen, daalt de hartslag en komt het lichaam in een diepere rusttoestand. 
+In dit onderzoek wordt gekeken of een betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag, zowel overdag als tijdens de slaap. Drie proefpersonen meten gedurende vier weken hun hartslag met behulp van een Fitbit-smartwatch. Deze smartwatch houdt continu de hartslag bij en verzamelt ook gegevens over de slaap. 
+Naast de hartslagmetingen vullen de proefpersonen elke dag een korte vragenlijst in. Hierin noteren zij factoren die mogelijk invloed hebben op hun slaap en hartslag, zoals lichamelijke beweging, alcoholgebruik, laat eten en schermgebruik vlak voor het slapengaan. Het gebruik van een telefoon voor het slapen kan de slaap verstoren en zorgen voor een minder diepe slaap, wat invloed kan hebben op de hartslag (Cleveland Clinic, 2022). 
+De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter slapen. Ook wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals veel schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. 
+Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel.
+
 
 # 1. analysis en resultaten van plotten(eten en schermgerbuik vs hartslag):
 Uit ons onderzoek blijkt heel duidelijk dat dagelijkse gewoonten, zoals eten en telefoongebruik, voor iedereen een ander effect hebben op de slaapkwaliteit. Dankzij de data van de Fitbit-smartwatches en de dagelijkse vragenlijsten hebben we deze persoonlijke verschillen mooi in kaart kunnen brengen. 
@@ -12,3 +21,6 @@ Als we kijken naar de invloed van schermtijd, zien we drie verschillende verhale
 Bij de maaltijden zien we ook duidelijke patronen. Zowel Robin als Lucas slapen het allerbeste na een lichte, magere maaltijd. Een vette hap vlak voor het slapen zorgt bij Robin juist voor een flinke dip, waarbij zijn slaapscore onder de 60 zakt. Vet eten vlak voor bedtijd is voor zijn lichaam dus erg ongunstig. Bij Mohammed schommelt de slaapscore na een magere maaltijd heel erg per nacht, maar hij haalt juist een stabiele en goede score na een kleine snack.  
 
 Al deze gewoonten hebben tot slot ook een directe invloed op je hartslag tijdens het slapen. Als je vlak voor het slapengaan nog een zware of vette maaltijd eet, moet je maag de hele nacht heel hard werken om dat voedsel te verteren. Ook het blauwe licht en de prikkels van een telefoonscherm zorgen voor actie in je hoofd. Hierdoor kan je lichaam niet goed ontspannen. Je merkt dit doordat je gemiddelde hartslag in de nacht hoger blijft en je minder diepe slaap krijgt. Je Fitbit registreert deze onrustige hartslag en vertaalt dit direct naar een lagere slaapscore. Om goed te herstellen, is het voor de meeste proefpersonen dus beter om rustig aan te doen met schermen en zwaar eten in de avond.
+
+# 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
+
