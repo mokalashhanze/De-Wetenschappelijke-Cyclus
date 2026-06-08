@@ -1,22 +1,32 @@
-
-
-Intro: 
+---
+title: "Paper"
+output: html_document
+date: "2026-06-05"
+---
+# Introductie.
  
-Slaap is heel belangrijk voor het herstel van je lichaam en je hersenen. Als je slaapt, herstellen je spieren en verwerken je hersenen de informatie van de dag. Een belangrijk teken dat je lichaam echt uitrust, is dat je hartslag omlaaggaat. Dit komt doordat je zenuwstelsel in de ruststand schakelt. Wetenschappelijk onderzoek laat zien dat een lage hartslag in de nacht vaak betekent dat je diep en goed slaapt (Cleveland Clinic, 2024).
+Slaap is een van de belangrijkste processen voor het herstel van het lichaam en de hersenen. Tijdens de slaap vertraagt de hartslag, wat vaak een teken is dat het lichaam goed tot rust komt. Een lagere hartslag tijdens de slaap wordt daarom vaak gezien als een teken van goede slaapkwaliteit (Cleveland Clinic, 2024). 
+Uit onderzoek blijkt dat verschillende factoren invloed hebben op de hartslag. Zo spelen stress, lichamelijke beweging en dagelijkse gewoonten een grote rol bij hoe hoog of laag de hartslag is, zowel overdag als tijdens de slaap (Valentini & Parati, 2009). Wanneer het lichaam voldoende kan herstellen, daalt de hartslag en komt het lichaam in een diepere rusttoestand. 
+In dit onderzoek wordt gekeken of een betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag, zowel overdag als tijdens de slaap. Drie proefpersonen meten gedurende vier weken hun hartslag met behulp van een Fitbit-smartwatch. Deze smartwatch houdt continu de hartslag bij en verzamelt ook gegevens over de slaap. 
+Naast de hartslagmetingen vullen de proefpersonen elke dag een korte vragenlijst in. Hierin noteren zij factoren die mogelijk invloed hebben op hun slaap en hartslag, zoals lichamelijke beweging, alcoholgebruik, laat eten en schermgebruik vlak voor het slapengaan. Het gebruik van een telefoon voor het slapen kan de slaap verstoren en zorgen voor een minder diepe slaap, wat invloed kan hebben op de hartslag (Cleveland Clinic, 2022). 
+De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter slapen. Ook wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals veel schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. 
+Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel.
 
-Hoe hoog of laag je hartslag is, hangt af van je dagelijkse leven. Onderzoekers hebben ontdekt dat stress, sporten en je leefstijl hier een grote rol bij spelen (Valentini & Parati, 2009). Als je overdag veel stress hebt, blijft je hartslag vaak hoog. Maar als je overdag goed beweegt en op tijd ontspant, kan je hart tot rust komen. Je hartslag zakt dan en daardoor val je 's avonds makkelijker in een diepe slaap.
 
+## 1. analysis en resultaten van plotten(eten en schermgerbuik vs hartslag):
 
-In dit onderzoek willen we kijken of een betere slaapkwaliteit echt zorgt voor een lagere gemiddelde hartslag. We kijken hierbij naar de hartslag overdag en in de nacht. Om dit te onderzoeken, hebben drie proefpersonen vier weken lang hun hartslag gemeten. Ze droegen hiervoor een Fitbit-smartwatch. Dit slimme horloge meet de hele dag door de hartslag via de pols. Ook houdt het horloge met speciale software bij hoe lang en hoe diep de proefpersonen slapen.
+### Conclusie en Discussie:
 
-De proefpersonen moesten niet alleen het horloge dragen, maar ook elke dag een korte vragenlijst invullen. In dit dagboekje schreven ze op wat ze die dag hadden gedaan. Ze letten bijvoorbeeld op hoeveel ze hadden bewogen, of ze alcohol hadden gedronken, hoe laat ze nog hadden gegeten en of ze vlak voor het slapen op een scherm keken. Vooral dat laatste is belangrijk. Het blauwe licht en de prikkels van een telefoon zorgen ervoor dat je minder snel slaperig wordt. Dit verstoort je slaap en zorgt voor een minder diepe slaap, waardoor je hartslag in de nacht hoger blijft (Cleveland Clinic, 2022).
+**Wat zien we in de grafieken?**
+Als we naar de plots kijken, vallen de grote verschillen tussen ons drieën direct op [1]. Robin heeft in de nacht standaard een veel lagere hartslag (rond de 53 bpm) dan Lucas en Mohammed (die rond de 64 bpm zitten). 
 
-De verwachting van dit onderzoek is dat proefpersonen met een lagere gemiddelde hartslag beter en dieper slapen. Ook verwachten we dat genoeg bewegen overdag helpt. Als je daarnaast stopt met slechte gewoonten, zoals op je telefoon kijken in bed, zal dit zorgen voor een lagere hartslag en een betere nachtrust.
+* **Bij de eten-timing** zie ik dat alleen bij Mohammed de hartslag lager wordt als er meer uren tussen de maaltijd en het slapen zitten. Bij Robin en Lucas loopt de lijn juist een klein beetje omhoog.
+* **Bij de scherm-timing** valt op dat Mohammed en Lucas hun telefoon bijna altijd direct voor het slapen wegleggen. Robin heeft een paar grote uitschieters (tot wel 15 uur voor het slapen). Mijn mening is dat deze paar losse uitschieters de trendlijn bij Robin en Lucas een beetje vertekend omhoog trekken.
 
-Dit onderzoek is heel belangrijk omdat veel mensen tegenwoordig last hebben van stress, vermoeidheid en slaapproblemen. Vaak hebben we niet door dat dagelijkse gewoonten zoals tot laat op onze telefoon kijken of te weinig bewegen, onze gezondheid slechter maken. Op de lange termijn kan dit zelfs leiden tot ernstige problemen, zoals een burn-out of hartklachten.
+**Niet statistisch significant**
+Hoewel de lijnen in de grafieken een richting op bewegen, laat de statistiek zien dat dit effect **niet statistisch significant** is. De p-waarden zijn groter dan 0.05. Dit betekent dat het aantal uren tussen het eten of telefoongebruik en het slapengaan in ons onderzoek **niet officieel bewijzen** dat de hartslag hierdoor verandert. De verbanden die we in de grafiek zien, kunnen dus ook door toeval komen.
 
-Met de gegevens van de Fitbit en de dagboeken maakt dit onderzoek de gevolgen van onze leefstijl direct zichtbaar met echte cijfers. Het laat zwart-op-wit zien wat er in je lichaam gebeurt als je wel sport of je telefoon op tijd weglegt.
-Dankzij dit onderzoek kunnen we mensen heel gericht helpen om hun gewoonten aan te passen. Het laat zien dat je met kleine, simpele veranderingen in je dagelijks leven je gezondheid al flink kunt verbeteren. Hierdoor kunnen mensen in de toekomst bewuster kiezen voor een betere leefstijl, waardoor ze dieper slapen, sneller herstellen en zich overdag fitter en energieker voelen.
- 
+**Alleen effect bij het type eten**
+Het enige moment waarop er wel echt een duidelijk verschil te zien is, is bij het **type eten** uit de boxplot. Het eten van een zware, vette maaltijd zorgt er wel duidelijk voor dat het lichaam 's nachts harder moet werken. Hierdoor gaat de gemiddelde hartslag tijdens de slaap omhoog vergeleken met een lichte snack of een magere maaltijd.
 
- 
+## 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
