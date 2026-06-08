@@ -411,25 +411,39 @@ slaapscore = slaapscore / slaapfactor.</p>
 </ul>
 </div>
 </div>
-<div id="libraries-laden" class="section level2">
-<h2>1. Libraries laden</h2>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<hr />
-</div>
-<div id="data-inladen" class="section level2">
-<h2>2. Data inladen</h2>
-<pre class="r"><code>df_all &lt;- read.csv(&quot;/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv&quot;)</code></pre>
+<div id="libraries-laden-en-data-inladen" class="section level2">
+<h2>Libraries laden en data inladen</h2>
+<pre class="r"><code>library(ggplot2)
+library(pwr)
+df_all &lt;- read.csv(&quot;/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv&quot;)</code></pre>
 <hr />
 </div>
 <div id="statistieken" class="section level2">
-<h2>3. Statistieken</h2>
-<pre class="r"><code>cat(&quot;--- Gemiddelde Slaapscore per persoon ---\n&quot;)</code></pre>
-<pre><code>## --- Gemiddelde Slaapscore per persoon ---</code></pre>
-<pre class="r"><code>aggregate(sleep_score ~ naam, data = df_all, FUN = mean)</code></pre>
-<pre><code>##       naam sleep_score
-## 1    Lucas    80.64286
-## 2 Mohammed    73.27273
-## 3    Robin    72.96296</code></pre>
+<h2>Statistieken</h2>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde Gecorrigeerde Slaapscore per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde Gecorrigeerde Slaapscore per persoon ---</code></pre>
+<pre class="r"><code>aggregate(corrected_sleep_score ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam corrected_sleep_score
+## 1    Lucas              78.06857
+## 2 Mohammed              80.62773
+## 3    Robin              79.97259</code></pre>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde Slaapduur per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde Slaapduur per persoon ---</code></pre>
+<pre class="r"><code>aggregate(sleep_duration_hours ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam sleep_duration_hours
+## 1    Lucas             9.055333
+## 2 Mohammed             8.116667
+## 3    Robin             8.074815</code></pre>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde slaaphartslag per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde slaaphartslag per persoon ---</code></pre>
+<pre class="r"><code>aggregate(average_sleep_heart_rate ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam average_sleep_heart_rate
+## 1    Lucas                 69.27391
+## 2 Mohammed                 63.22708
+## 3    Robin                 52.65516</code></pre>
 <pre class="r"><code>cat(&quot;\n--- Gemiddelde Hartslag per persoon ---\n&quot;)</code></pre>
 <pre><code>## 
 ## --- Gemiddelde Hartslag per persoon ---</code></pre>
@@ -438,6 +452,14 @@ slaapscore = slaapscore / slaapfactor.</p>
 ## 1    Lucas           92.40760
 ## 2 Mohammed           87.66323
 ## 3    Robin           76.62839</code></pre>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde Rusthartslag per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde Rusthartslag per persoon ---</code></pre>
+<pre class="r"><code>aggregate(resting_heart_rate ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam resting_heart_rate
+## 1    Lucas           71.50000
+## 2 Mohammed           67.72727
+## 3    Robin           56.44444</code></pre>
 <pre class="r"><code>cat(&quot;\n--- Gemiddelde Stappen per persoon ---\n&quot;)</code></pre>
 <pre><code>## 
 ## --- Gemiddelde Stappen per persoon ---</code></pre>
@@ -446,6 +468,22 @@ slaapscore = slaapscore / slaapfactor.</p>
 ## 1    Lucas    7399.200
 ## 2 Mohammed    5824.806
 ## 3    Robin   11186.452</code></pre>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde Calorieën per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde Calorieën per persoon ---</code></pre>
+<pre class="r"><code>aggregate(calories_burned ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam calories_burned
+## 1    Lucas        413.5204
+## 2 Mohammed        405.3526
+## 3    Robin        561.4006</code></pre>
+<pre class="r"><code>cat(&quot;\n--- Gemiddelde Stressmanagementscore per persoon ---\n&quot;)</code></pre>
+<pre><code>## 
+## --- Gemiddelde Stressmanagementscore per persoon ---</code></pre>
+<pre class="r"><code>aggregate(stress_management_score ~ naam, data = df_all, FUN = mean)</code></pre>
+<pre><code>##       naam stress_management_score
+## 1    Lucas                75.85714
+## 2 Mohammed                73.40000
+## 3    Robin                75.38889</code></pre>
 </div>
 <div id="meervoudige-lineaire-regressie-gecorrigeerde-slaapscore" class="section level2">
 <h2>Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore</h2>
@@ -1149,8 +1187,7 @@ correlatie en benodigde n)</h2>
 <div id="bereken-de-correlatie-tussen-gemiddelde-hartslag-en-gecorrigeerde-slaapscore" class="section level3">
 <h3>bereken de correlatie tussen gemiddelde hartslag en gecorrigeerde
 slaapscore</h3>
-<pre class="r"><code>library(pwr)
-r &lt;- cor(df_all$average_heart_rate, df_all$corrected_sleep_score, use=&quot;pairwise.complete.obs&quot;)
+<pre class="r"><code>r &lt;- cor(df_all$average_heart_rate, df_all$corrected_sleep_score, use=&quot;pairwise.complete.obs&quot;)
 n &lt;- 87
 cat(&quot;Geobserveerde correlatie r:&quot;, round(r,3), &quot;\n&quot;)</code></pre>
 <pre><code>## Geobserveerde correlatie r: -0.132</code></pre>

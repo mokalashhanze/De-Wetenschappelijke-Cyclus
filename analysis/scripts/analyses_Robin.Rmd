@@ -48,34 +48,43 @@ Hierdoor:
 - worden korte maar goede nachten minder slecht beoordeeld;
 - krijgen lange nachten niet automatisch een hogere score.
 
-## 1. Libraries laden
+## Libraries laden en data inladen
 
 ```{r}
 library(ggplot2)
-```
-
----
-
-## 2. Data inladen
-
-```{r}
+library(pwr)
 df_all <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/analysis/data/combined_data/combined_data.csv")
 ```
 
 ---
 
 
-## 3. Statistieken
+## Statistieken
 
 ```{r}
-cat("--- Gemiddelde Slaapscore per persoon ---\n")
-aggregate(sleep_score ~ naam, data = df_all, FUN = mean)
+cat("\n--- Gemiddelde Gecorrigeerde Slaapscore per persoon ---\n")
+aggregate(corrected_sleep_score ~ naam, data = df_all, FUN = mean)
+
+cat("\n--- Gemiddelde Slaapduur per persoon ---\n")
+aggregate(sleep_duration_hours ~ naam, data = df_all, FUN = mean)
+
+cat("\n--- Gemiddelde slaaphartslag per persoon ---\n")
+aggregate(average_sleep_heart_rate ~ naam, data = df_all, FUN = mean)
 
 cat("\n--- Gemiddelde Hartslag per persoon ---\n")
 aggregate(average_heart_rate ~ naam, data = df_all, FUN = mean)
 
+cat("\n--- Gemiddelde Rusthartslag per persoon ---\n")
+aggregate(resting_heart_rate ~ naam, data = df_all, FUN = mean)
+
 cat("\n--- Gemiddelde Stappen per persoon ---\n")
 aggregate(total_steps ~ naam, data = df_all, FUN = mean)
+
+cat("\n--- Gemiddelde Calorieën per persoon ---\n")
+aggregate(calories_burned ~ naam, data = df_all, FUN = mean)
+
+cat("\n--- Gemiddelde Stressmanagementscore per persoon ---\n")
+aggregate(stress_management_score ~ naam, data = df_all, FUN = mean)
 ```
 
 ## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore
@@ -117,9 +126,9 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
 summary(model_hr)
 ```
 
-In dit model is `resting_heart_rate` statistisch significant geassocieerd met `average_sleep_heart_rate` (p ≈ 0.000029). Dit betekent dat rusthartslag in deze dataset een duidelijke voorspeller is van de gemiddelde hartslag tijdens slaap.
+In dit model is `resting_heart_rate` statistisch significant geassocieerd met `average_sleep_heart_rate` (p = 0.000029). Dit betekent dat rusthartslag in deze dataset een duidelijke voorspeller is van de gemiddelde hartslag tijdens slaap.
 
-Daarnaast is ook `last_foodSnack` significant (p ≈ 0.035). Deze waarde is wel een stuk hoger dan de andere p-waarde, dus minder betrouwbaar.
+Daarnaast is ook `last_foodSnack` significant (p = 0.035). Deze waarde is wel een stuk hoger dan de andere p-waarde, dus minder betrouwbaar.
 De overige variabelen in dit model hebben p-waarden > 0.05 en zijn in deze steekproef niet statistisch significant.
 
 Interpretatie:
@@ -191,7 +200,7 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
 summary(model_hr)
 ```
 
-De variabelen met de laagste p-waarden in dit model (dus die het dichtst bij statistische significantie komen) zijn `calories_burned` (p ≈ 0.11).
+De variabelen met de laagste p-waarden in dit model (dus die het dichtst bij statistische significantie komen) zijn `calories_burned` (p = 0.11).
 Helaas is geen enkele variabele in dit model statistisch significant (p < 0.05), wat betekent dat er in deze dataset geen sterk bewijs is voor een effect van deze variabelen op de gemiddelde hartslag tijdens slaap, als er rekening is gehouden met verschillen tussen personen.
 
 Waarom dat waarschijnlijk zo is:
@@ -230,11 +239,11 @@ r2_overview <- data.frame(
 r2_overview
 ```
 
-Voor de gecorrigeerde slaapscore verklaart geen enkele losse variabele veel: hoogste R2 is last_food ≈ 0.045 (4.5%).
-De andere R2 liggen rond 0–3.8% (bijv. stress_management_score ≈ 3.8%, calories_burned ≈ 2.5%).
+Voor de gecorrigeerde slaapscore verklaart geen enkele losse variabele veel: hoogste R2 is last_food = 0.045 (4.5%).
+De andere R2 liggen rond 0–3.8% (bijv. stress_management_score = 3.8%, calories_burned = 2.5%).
 
-Voor de gemiddelde slaaphartslag zijn de R2‑waarden over het algemeen hoger: last_food is het grootst met ≈ 0.11 (11%), daarna deep_sleep_minutes ≈ 5.5%, stress_management_score ≈ 5.4% en sleep_duration_hours ≈ 4.9%.
-Sommige variabelen verklaren bijna niets (bv. calories_burned ≈ 0.27%).
+Voor de gemiddelde slaaphartslag zijn de R2‑waarden over het algemeen hoger: last_food is het grootst met = 0.11 (11%), daarna deep_sleep_minutes = 5.5%, stress_management_score = 5.4% en sleep_duration_hours = 4.9%.
+Sommige variabelen verklaren bijna niets (bv. calories_burned = 0.27%).
 
 ## Correlatie gecorrigeerde slaapscore vs hartslag overdag
 
@@ -429,7 +438,6 @@ ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, co
 
 ### bereken de correlatie tussen gemiddelde hartslag en gecorrigeerde slaapscore
 ```{r}
-library(pwr)
 r <- cor(df_all$average_heart_rate, df_all$corrected_sleep_score, use="pairwise.complete.obs")
 n <- 87
 cat("Geobserveerde correlatie r:", round(r,3), "\n")
@@ -453,8 +461,8 @@ Onze waarde van r=-0.15 ligt onder deze drempel, wat verklaart waarom we geen si
 pwr.r.test(r = 0.15, sig.level = 0.05, power = 0.8)
 pwr.r.test(r = .13, sig.level = 0.05, power = 0.8)
 ```
-Voor r = 0.15 is n ≈ 345 nodig, wat betekent dat we ongeveer 345 dagen aan data nodig zouden hebben om een significant effect te detecteren met power=0.8.
-Voor een nog zwakkere correlatie van r = 0.13 is n ≈ 460 nodig om een significant effect te detecteren met power=0.8.
+Voor r = 0.15 is n = ca 345 nodig, wat betekent dat we ongeveer 345 dagen aan data nodig zouden hebben om een significant effect te detecteren met power=0.8.
+Voor een nog zwakkere correlatie van r = 0.13 is n = 460 nodig om een significant effect te detecteren met power=0.8.
 Onze dataset heeft ongeveer 87 dagen aan data, wat duidelijk te weinig is om een statistisch significant effect te detecteren bij deze zwakke correlaties.
 
 
