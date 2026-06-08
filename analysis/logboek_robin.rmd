@@ -251,3 +251,4 @@ Ik moest ook het csv_sort.py bestand aanpassen zodat het de nieuwe format van de
 
 Ik heb code toegevoegd om de R2 waarden te berekenen voor de regressies en deze toegevoegd aan mijn rmd bestand.
 Ik heb analyses gemaakt van mijn grafieken en kwam erachter dat de slaapscore geen goede indicator is voor slaapkwaliteit en dat de gemiddelde hartslag tijdens slaap een betere indicator is.
+Ik heb ook extra gemiddelden berekend.
