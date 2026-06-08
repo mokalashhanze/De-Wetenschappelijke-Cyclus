@@ -19,10 +19,10 @@ def to_24_hour(time_text):
         except ValueError:
             return time_text
 
-def calculate_corrected_score(sleep_score, sleep_duration_hours):
-    if sleep_score == '' or sleep_duration_hours == '' or sleep_duration_hours <= 0:
+def calculate_corrected_score(sleep_score, fitbit_sleep_duration_hours):
+    if sleep_score == '' or fitbit_sleep_duration_hours == '' or fitbit_sleep_duration_hours <= 0:
         return ''
-    actual_hours = float(sleep_duration_hours)
+    actual_hours = float(fitbit_sleep_duration_hours)
     effective_hours = max(min(actual_hours, 9.0), 6.0)
     duration_factor = effective_hours / 8.0
     return round(float(sleep_score) / duration_factor, 2)
@@ -44,6 +44,7 @@ def read_sleep_data(sleep_file):
     print("Reading sleep data...")
     sleep_intervals = []
     sleep_times = {}
+    fitbit_sleep_durations = {}
     try:
         with open(sleep_file, 'r') as f:
             reader = csv.DictReader(f)
@@ -56,9 +57,11 @@ def read_sleep_data(sleep_file):
                 date = end.date()
                 if date not in sleep_times:
                     sleep_times[date] = {'start': start.strftime('%H:%M'), 'end': end.strftime('%H:%M')}
+                if date not in fitbit_sleep_durations:
+                    fitbit_sleep_durations[date] = round((end - start).total_seconds() / 3600.0, 2)
     except (FileNotFoundError, KeyError, ValueError):
         pass
-    return sleep_intervals, sleep_times
+    return sleep_intervals, sleep_times, fitbit_sleep_durations
 
 def read_sleep_score_data(sleep_score_file):
     print("Reading sleep score data...")
@@ -165,7 +168,7 @@ fieldnames = [
     'min_heart_rate', 'max_heart_rate',
     'start', 'end',
     'rem_sleep_minutes', 'deep_sleep_minutes',
-    'sleep_score', 'sleep_duration_hours', 'corrected_sleep_score',
+    'sleep_score', 'fitbit_sleep_duration_hours', 'corrected_sleep_score',
     'calories_burned', 'total_steps',
     'phone_last_used', 'last_food_time', 'last_food'
 ]
@@ -184,7 +187,7 @@ def process_person(person):
 
     heart_rate_files = ["heart_rate_2026-04-06.csv"] + [f"heart_rate_2026-05-{i:02d}.csv" for i in range(6, 22)]
 
-    sleep_intervals, sleep_times = read_sleep_data(sleep_file)
+    sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
     sleep_scores = read_sleep_score_data(sleep_score_file)
     form_data = read_form_data(form_file, person)
@@ -237,9 +240,9 @@ def process_person(person):
                 meal_time = ''
                 meal_type = ''
 
-            duration = calculate_sleep_duration(sleep_start_time, sleep_end_time)
+            fitbit_sleep_duration_hours = fitbit_sleep_durations.get(date, '')
             raw_score = sleep_scores.get(date, '')
-            corr_score = calculate_corrected_score(raw_score, duration)
+            corr_score = calculate_corrected_score(raw_score, fitbit_sleep_duration_hours)
 
             row_data = {
                 'naam': person.capitalize(),
@@ -253,7 +256,7 @@ def process_person(person):
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': raw_score,
-                'sleep_duration_hours': duration,
+                'fitbit_sleep_duration_hours': fitbit_sleep_duration_hours,
                 'corrected_sleep_score': corr_score,
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
