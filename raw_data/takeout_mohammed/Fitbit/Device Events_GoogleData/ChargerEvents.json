@@ -2884,5 +2884,7571 @@
       "event": "CHARGER_OUT"
     },
     "timestamp": "2026-05-20T10:07:41.561Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:33:13.59Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:33:33.162Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:33:33.792Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:33:52.461Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:33:53.091Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:34:11.771Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:34:12.411Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:34:31.051Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:34:31.681Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:34:51.652Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:34:52.283Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:35:09.663Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:35:10.295Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:35:27.692Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:35:28.33Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:35:46.991Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:35:47.628Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:36:05.012Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4438
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:36:05.639Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:36:22.411Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:36:23.047Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:36:42.342Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:36:42.962Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:37:00.351Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:37:00.968Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:37:19.651Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:37:20.291Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:37:36.377Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:37:37.003Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:37:55.681Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:37:56.333Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:38:12.421Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:38:13.051Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:38:29.14Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:38:29.78Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:38:45.451Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:38:46.09Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:39:14.605Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:39:15.25Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:39:34.781Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:39:35.421Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:39:52.132Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:39:52.761Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:40:12.101Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4437
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:40:12.741Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:40:31.401Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:40:32.031Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:40:50.697Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:40:51.34Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:41:07.161Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:41:07.792Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:41:25.451Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:41:26.09Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:41:42.161Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:41:42.801Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4417
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:42:02.772Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:42:03.41Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:42:20.781Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4437
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:42:21.42Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:42:41.378Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:42:42.019Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:42:57.041Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:42:57.678Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:43:13.552Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:43:14.189Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:43:34.231Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:43:34.87Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:43:53.991Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:43:54.629Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:44:11.991Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:44:12.622Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:44:30.011Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:44:30.642Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:44:50.611Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:44:51.251Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:45:09.911Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:45:10.549Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:45:29.211Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:45:29.85Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:45:47.491Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:45:48.126Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:46:13.762Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:46:14.388Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:46:32.282Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:46:32.92Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:46:48.461Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:46:49.092Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:47:07.012Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4420
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:47:07.649Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:47:26.33Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:47:26.981Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:47:45.632Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:47:46.262Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:48:03.642Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4437
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:48:04.279Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:48:19.091Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:48:19.731Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:48:39.688Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:48:40.33Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:48:57.685Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:48:58.33Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:49:12.301Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:49:12.939Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:49:32.451Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4420
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:49:33.09Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:49:48.582Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:49:49.219Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:50:14.7Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:50:15.341Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:50:32.92Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:50:33.561Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:50:52.23Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:50:52.871Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:51:10.237Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:51:10.881Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:51:25.682Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:51:26.319Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:51:44.082Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:51:44.706Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:52:04.302Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:52:04.94Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:52:22.322Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:52:22.96Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:52:42.911Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:52:43.542Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:52:59.627Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:53:00.283Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:53:16.354Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-05-25T11:53:16.974Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-05-25T11:53:28.291Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 10,
+        "percentageRt": 10,
+        "powerGood": true,
+        "voltage": 3865
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T11:33:25.019Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:01:27.732Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:01:28.363Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:01:44.473Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:01:45.113Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:02:02.492Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:02:03.13Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:02:20.502Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:02:21.142Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:02:38.534Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:02:39.173Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:02:55.262Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:02:55.903Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:03:12.003Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:03:12.641Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:03:26.394Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:03:27.033Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:03:44.184Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:03:44.823Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:04:02.192Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:04:02.823Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:04:16.582Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:04:17.215Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:04:34.353Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4437
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:04:34.983Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:04:51.063Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:04:51.701Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:05:14.572Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:05:15.213Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:05:29.682Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:05:30.323Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:05:46.404Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:05:47.033Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:06:14.052Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:06:14.693Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:06:28.462Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:06:29.106Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:06:45.582Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:06:46.223Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:07:03.592Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:07:04.227Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:07:20.335Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:07:20.968Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:07:35.767Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4427
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:07:36.411Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:07:52.512Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:07:53.153Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:08:10.532Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:08:11.186Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:08:29.842Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:08:30.482Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:08:47.872Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:08:48.503Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:09:07.172Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:09:07.812Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:09:23.902Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:09:24.541Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:09:41.903Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:09:42.541Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:09:59.924Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:10:00.561Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:10:14.318Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:10:14.965Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:10:33.392Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:10:34.032Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:10:47.772Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:10:48.424Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:11:05.565Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:11:06.192Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:11:23.573Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:11:24.209Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:11:41.593Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:11:42.232Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:11:55.989Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:11:56.632Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:12:15.052Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:12:15.683Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:12:31.772Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:12:32.424Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:12:47.223Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:12:47.862Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:13:02.662Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:13:03.302Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:13:18.092Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:13:18.732Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:13:36.122Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:13:36.76Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:13:52.843Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:13:53.473Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:14:07.243Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:14:07.869Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:14:26.292Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:14:26.932Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:14:43.022Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:14:43.661Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:14:57.432Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:14:58.072Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:15:16.492Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:15:17.127Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:15:31.93Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:15:32.572Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:15:51.243Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:15:51.882Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:16:14.011Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:16:14.653Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:16:28.593Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:16:29.232Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:16:42.972Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:16:43.609Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:17:02.013Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:17:02.637Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:17:17.436Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:17:18.071Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:17:31.823Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:17:32.462Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:17:50.912Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:17:51.552Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:18:07.643Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:18:08.277Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:18:25.663Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:18:26.297Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:18:44.972Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:18:45.603Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:18:59.493Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:19:00.123Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:19:15.862Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:19:16.502Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:19:32.604Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:19:33.234Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:19:51.892Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:19:52.524Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:20:09.912Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:20:10.542Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:20:25.352Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:20:25.992Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:20:43.362Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:20:44.002Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:21:14.022Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:21:14.663Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:21:33.533Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:21:34.157Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:21:51.563Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:21:52.193Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:22:06.977Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:22:07.622Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:22:24.997Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:22:25.638Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:22:40.452Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:22:41.093Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:22:54.862Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:22:55.495Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:23:13.923Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:23:14.561Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:23:29.372Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:23:30.012Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:23:59.264Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:23:59.892Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:24:19.033Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:24:19.665Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:24:33.422Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:24:34.062Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:24:52.483Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4423
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:24:53.122Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:25:09.198Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:25:09.841Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:25:25.942Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:25:26.595Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:25:45.262Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4423
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:25:45.892Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:26:14.092Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:26:14.736Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:26:34.163Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:26:34.813Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:26:52.173Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:26:52.811Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:27:11.482Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:27:12.123Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:27:25.883Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:27:26.516Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:27:42.862Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:27:43.514Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:28:01.652Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:28:02.285Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:28:16.092Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:28:16.732Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:28:30.502Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:28:31.134Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:28:50.573Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4427
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:28:51.213Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:29:07.292Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:29:07.922Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:29:26.603Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:29:27.241Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:29:40.982Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:29:41.621Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:29:58.782Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:29:59.423Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:30:14.392Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:30:15.037Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:30:33.522Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:30:34.165Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:30:47.953Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:30:48.592Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:31:04.392Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:31:05.023Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:31:35.167Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:31:35.819Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:31:49.498Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:31:50.122Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:32:14.347Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:32:15Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:32:28.747Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:32:29.378Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:32:43.137Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4423
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:32:43.777Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:32:57.574Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:32:58.216Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:33:11.958Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:33:12.596Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:33:26.387Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:33:27.023Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:33:40.774Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:33:41.406Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:33:55.358Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:33:55.997Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:34:14.447Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:34:15.098Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:34:28.858Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:34:29.489Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:34:46.804Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:34:47.446Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:35:01.201Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:35:01.846Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:35:15.727Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:35:16.366Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:35:30.127Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:35:30.766Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:35:44.517Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:35:45.156Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:35:58.907Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:35:59.546Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:36:13.279Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:36:13.916Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:36:27.707Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:36:28.346Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:36:42.068Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:36:42.698Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:36:56.468Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:36:57.106Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:37:10.859Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:37:11.496Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:37:25.262Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:37:25.906Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:37:39.658Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:37:40.288Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:37:54.038Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:37:54.667Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:38:08.439Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:38:09.076Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:38:22.807Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:38:23.447Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:38:37.218Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:38:37.847Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:38:51.618Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:38:52.238Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:39:14.557Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:39:15.189Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:39:28.957Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:39:29.593Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:39:46.498Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:39:47.136Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:40:06.738Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:40:07.376Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:40:21.187Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:40:21.828Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:40:35.657Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:40:36.29Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:40:50.087Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:40:50.727Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:41:04.524Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:41:05.166Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:41:18.947Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:41:19.587Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:41:39.781Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:41:40.401Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:41:54.291Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:41:54.922Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:42:14.435Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4423
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:42:15.079Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:42:28.832Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:42:29.468Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:42:43.36Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:42:43.99Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4426
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:42:57.726Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:42:58.37Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:43:12.16Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:43:12.8Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:43:26.518Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:43:27.158Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:43:40.914Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:43:41.559Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:43:55.33Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:43:55.969Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:44:09.76Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:44:10.399Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:44:24.16Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:44:24.799Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:44:38.55Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:44:39.19Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:44:52.991Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4432
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:44:53.629Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:45:13.811Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:45:14.443Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4418
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:45:28.211Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:45:28.831Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:45:42.73Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:45:43.368Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:45:57.111Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:45:57.748Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:46:14.279Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:46:14.919Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:46:31.02Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:46:31.651Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:46:45.59Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:46:46.233Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:47:00.041Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:47:00.679Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:47:14.431Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:47:15.059Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:47:28.8Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:47:29.44Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:47:43.18Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:47:43.831Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:47:57.59Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:47:58.223Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:48:11.98Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:48:12.62Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:48:26.38Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:48:27.019Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:48:40.96Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:48:41.593Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4417
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:48:55.38Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4411
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:48:56.011Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:49:09.801Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4426
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:49:10.438Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:49:24.191Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:49:24.819Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:49:38.58Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:49:39.211Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:49:52.991Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:49:53.614Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:50:07.407Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:50:08.048Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:50:21.96Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:50:22.591Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:50:36.371Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:50:37.004Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4420
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:50:50.741Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:50:51.38Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4416
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:51:10.98Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4416
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:51:11.619Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:51:25.45Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:51:26.101Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:51:39.89Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:51:40.521Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:51:54.301Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:51:54.927Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:52:14Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:52:14.64Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:52:28.38Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:52:29.01Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:52:42.921Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4427
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:52:43.552Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:52:57.3Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:52:57.939Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:53:11.76Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:53:12.399Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:53:26.16Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:53:26.799Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:53:40.58Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:53:41.219Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:53:55.08Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:53:55.72Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:54:09.501Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4424
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:54:10.133Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:54:23.871Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:54:24.502Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:54:38.211Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:54:38.848Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:54:52.68Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:54:53.32Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:55:07.06Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:55:07.7Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:55:21.47Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4427
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:55:22.109Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:55:35.85Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:55:36.489Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:55:50.24Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:55:50.87Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4423
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:56:04.599Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:56:05.239Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:56:18.981Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:56:19.619Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:56:43.841Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:56:44.483Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:56:58.382Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:56:59.013Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:57:18.611Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4417
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:57:19.248Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:57:33.002Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:57:33.641Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:57:47.532Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:57:48.172Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:58:01.901Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:58:02.541Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:58:16.3Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": true,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:58:16.932Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:58:30.722Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:58:31.359Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:58:45.251Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4418
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:58:45.881Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:58:59.651Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4422
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:59:00.29Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4415
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:59:14.512Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4415
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:59:15.15Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:59:28.902Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:59:29.529Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:59:43.341Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:59:43.979Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T21:59:57.792Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4433
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T21:59:58.423Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4412
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:00:14.061Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:00:14.7Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4424
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:00:28.491Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4423
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:00:29.131Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4411
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:00:42.981Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4411
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:00:43.62Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:00:57.412Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4429
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:00:58.061Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:01:11.781Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:01:12.412Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4421
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:01:42.57Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4412
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:01:43.21Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:01:57.121Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4435
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:01:57.755Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:02:14.2Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:02:14.842Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4413
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:02:28.622Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4413
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:02:29.26Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4422
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:02:43.022Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": true,
+        "voltage": 4434
+      },
+      "event": "CHARGER_IN"
+    },
+    "timestamp": "2026-06-03T22:02:43.66Z"
+  },
+  {
+    "event": {
+      "chargerState": {
+        "isCharging": false,
+        "percentage": 100,
+        "percentageRt": 100,
+        "powerGood": false,
+        "voltage": 4400
+      },
+      "event": "CHARGER_OUT"
+    },
+    "timestamp": "2026-06-03T22:02:55.794Z"
   }
 ]
