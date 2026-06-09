@@ -12,13 +12,23 @@ Naast de hartslagmetingen vullen de proefpersonen elke dag een korte vragenlijst
 De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter slapen. Ook wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals veel schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. 
 Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel.
 
+# Resultaten
 
 ## 1. analysis en resultaten van plotten(eten en schermgerbuik vs gemiddelde hartslag tijdens de slaap):
 ![Uren tussen eten en slaap vs Gemiddelde Hartslag](Grafieken/eten_grafiek.png)
 ![Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag](Grafieke/scherm_grafiek.png)
 
-### Conclusie en Discussie:
+## 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
+![Verbrande calorieen vs hartslag](Grafieken/grafiek_calorieen.png)
+Bij de grafiek die verbrande calorieën vergelijkt met slaapscore [7] is bij alle drie een licht negatieve trend zichtbaar. Dit is het sterkst bij Lucas, waar lage calorieverbranding (~150 kcal) samengaat met slaapscores van soms boven de negentig. Bij de vergelijking met gemiddelde hartslag tijdens slaap [8] zijn de lijnen van Robin en Mohammed vrijwel vlak, terwijl Lucas een stijgende trend vertoont.
+![REM-slaap vs slaapscore](Grafieken/grafiek_REM-slaap.png)
+Bij het vergelijken van REM-slaap tegenover slaapscore [4] is bij alle drie de proefpersonen een stijgende lijn zichtbaar. Lucas heeft zowel de hoogste als laagste REM-waarden gemeten: de nacht met weinig REM-slaap correspondeert met een extreem lage slaapscore, terwijl nachten met veel REM-slaap hoge scores opleveren. Hetzelfde patroon geldt voor Mohammed. Robin vormt een uitzondering: ondanks veel REM-slaap scoort hij regelmatig lager, wat wijst op uitschieters. Bij de grafiek die REM-slaap tegenover gemiddelde hartslag vergelijkt [5] is een zwakke negatieve trend zichtbaar bij alle drie de proefpersonen. In de grafiek van REM-slaap versus minimale hartslag [6] is vrijwel geen duidelijk verband te zien.
+![stappen vs hartslag](stappen_grafiek.png)
+Bij de grafiek die hartslag versus stappen vergelijkt [1] is bij Lucas en Mohammed een lichte daling in gemiddelde hartslag zichtbaar naarmate het stappenaantal stijgt. Bij Robin lijkt de hartslag juist toe te nemen. Bij de grafiek met minimale hartslag [2] is een soortgelijk patroon te zien, met het verschil dat ook Mohammeds minimale hartslag stijgt bij meer stappen. Bij de grafiek die stappen tegenover slaapscore uitzet [3] is bij Robin en Mohammed vrijwel geen verband zichtbaar, terwijl Lucas een licht dalende trend toont.
 
+# Conclusie en Discussie:
+
+## 1. Eten en schermgebruik vs hartslag tijdens slaap
 **Wat zien we in de grafieken?**
 Als we naar de plots kijken, vallen de grote verschillen tussen ons drieën direct op [1]. Robin heeft in de nacht standaard een veel lagere hartslag (rond de 53 bpm) dan Lucas en Mohammed (die rond de 64 bpm zitten). 
 
@@ -31,4 +41,33 @@ Hoewel de lijnen in de grafieken een richting op bewegen, laat de statistiek zie
 **Alleen effect bij het type eten**
 Het enige moment waarop er wel echt een duidelijk verschil te zien is, is bij het **type eten** uit de boxplot. Het eten van een zware, vette maaltijd zorgt er wel duidelijk voor dat het lichaam 's nachts harder moet werken. Hierdoor gaat de gemiddelde hartslag tijdens de slaap omhoog vergeleken met een lichte snack of een magere maaltijd.
 
-## 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
+## 2. REM-slaap vs slaapscore, stappen en verbrande calorieen vs hartslag tijdens slaap
+
+## Grafiekselectie
+
+Niet alle gegenereerde grafieken zijn in de bespreking opgenomen. Grafieken waarbij de lijn volledig vlak verloopt en datapunten sterk verspreid zijn zoals de vergelijking van REM-slaap met minimale hartslag en calorieën met minimale hartslag zijn niet meegenomen in onze conclusie. De opgenomen grafieken vertonen ten minste een zichtbare, bespreekbare trend.
+
+## Interpretatie van de bevindingen
+
+De meest consistente bevinding is het positieve verband tussen REM-slaap en slaapscore [4], zichtbaar bij alle drie de proefpersonen.Dit kan een resultaat zijn van verschillende dingen, misschien meet de fitbit slaapscore op dezelfde manier als dat hij REM-slaap meet waardoor je als resultaat een hogere slaapscore krijgt als je meer REM-slaap hebt, of misschien is het omdat hoe meer REM-slaap je hebt hoe meer je ook in totaal geslapen hebt waardoor je ook een hogere slaap score krijgt. Uit het onderzoek valt moeilijk een conclusie te trekken of de verbetering in slaapscore komt doordat er een daadwerkelijke link tussen de twee zit of omdat er een andere reden achter zit.
+
+Het stappenaantal toont geen duidelijk verband tussen slaapkwaliteit en hartslag. De richting van de trend verschilt per proefpersoon, wat erop wijst dat het aantal stappen alleen een te grove maat is voor fysieke belasting. Intensiteit, tijdstip van de activiteit en individueel herstelvermogen zijn variabelen die hierbij een rol spelen maar niet zijn gemeten.
+
+De licht negatieve relatie tussen calorieverbranding en slaapscore [7] sluit aan bij bevindingen dat intensieve inspanning de slaapkwaliteit op de korte termijn kan verlagen, met name wanneer dit laat op de dag plaatsvindt. Het verband is echter zwak en niet consistent genoeg voor sterke conclusies.
+
+## Beperkingen
+
+De voornaamste beperking van dit onderzoek is de kleine steekproefgrootte van drie proefpersonen. Hierdoor kunnen de trends niet worden gegeneraliseerd naar een bredere bevolking en is het niet mogelijk verbanden vast te stellen. Daarnaast ontbreekt er een controlegroep, stressniveau en tijdstip van sporten. Tot slot zijn de gebruikte fitness-trackers beperkt in nauwkeurigheid: slaapfasen worden geschat op basis van hartslag en beweging, niet gemeten via polysomnografie.
+
+---
+
+# Conclusie
+
+Op basis van de verzamelde data kunnen de volgende voorzichtige conclusies worden getrokken:
+
+1. **REM-slaap en slaapkwaliteit** vertonen de sterkste en meest consistente samenhang: meer REM-slaap gaat bij alle drie de proefpersonen gepaard met een hogere slaapscore, maar dit kan ook komen door andere factoren die mee spelen.
+2. **Fysieke activiteit (stappenaantal)** laat geen eenduidig verband zien met slaapkwaliteit of hartslag; het verband verschilt per individu.
+3. **Calorieverbranding** toont een zwak negatief verband met slaapscore, maar dit is onvoldoende consistent voor definitieve uitspraken.
+
+Gezien de kleine steekproef en de gebrekkige proefpersonen en data zijn de bevindingen uitsluitend verkennend van aard. Vervolgonderzoek met een grotere steekproef, gestandaardiseerde meetmethoden en controle voor confounders is nodig om de gesignaleerde verbanden te bevestigen of te weerleggen.
+Door de kleine hoeveelheid proefpersonen en datapunten is het moeilijk om onze bevindingen als een definitief bewijs van een verband te zien. Als er in een vervolgonderzoek nogmaals een verband tussen bijvoorbeeld REM-slaap en slaapkwaliteit, zou je het beste alle andere factoren die spelen zo veel mogelijk moeten verwijderen. 
