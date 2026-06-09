@@ -328,7 +328,7 @@ def process_person(person):
     return person_results
 
 all_results, all_sleep_score_results = [], []
-for person in ['robin', 'mohammed', 'lucas']:
+for person in ['person_1', 'person_2', 'person_3']:
     p_res = process_person(person)
     all_results.extend(p_res)
 
