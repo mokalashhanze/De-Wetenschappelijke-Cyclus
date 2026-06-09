@@ -220,7 +220,7 @@ Pas als je de R^2 waarden bij elkaar neemt in een meervoudig model, krijg je een
 ### Voorbeelden van niet-significante verbanden:
 
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("Grafieken/slaap_score_hartslag_overdag.png")
+knitr::include_graphics("Grafieken/slaapscore_hartslag_overdag.png")
 ```
 
 p-waarde zonder persoon als factor toegevoegd: ca. 0.77 (niet significant)
@@ -247,7 +247,7 @@ p-waarde met persoon als factor toegevoegd: ca. 0.18 (niet significant)
 De individuele lijnen zijn relatief consistenter dan bij slaapscore, wat wijst op een sterkere relatie tussen deze twee hartslagmetingen.
 
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("Grafieken/eten_grafiek_2.png")
+knitr::include_graphics("Grafieken/eten_grafiek.png")
 ```
 
 p-waarde zonder persoon als factor toegevoegd: ca. 0.84 (niet significant)
@@ -330,12 +330,12 @@ Andere factoren, zoals verbrande calorieën, stressmanagement, slaapduur en het 
 De Fitbit-slaapscore bleek in dit onderzoek geen betrouwbare maat voor slaapkwaliteit. De slaapscore wordt sterk beïnvloed door slaapduur en laat veel schommelingen zien, waardoor verbanden met andere variabelen zwak en niet consistent zijn. Daarom is in deze paper gekozen om de gemiddelde hartslag tijdens slaap te gebruiken als belangrijkste maat voor slaapkwaliteit, omdat deze minder gevoelig is voor meetfouten in slaapduur en beter laat zien hoe goed het lichaam tot rust komt.
 Wel is er één duidelijk en constant significant verband gevonden met de Fitbit-slaapscore: de duur van de REM-slaap. Zowel met als zonder correctie voor persoon is REM-slaap significant gekoppeld aan een hogere slaapscore (p = ca. 0.01–0.02). Dit is logisch, omdat de Fitbit-slaapscore voor een groot deel wordt bepaald door de hoeveelheid REM-slaap. Dit betekent echter niet automatisch dat de slaapscore een goede maat is voor echte slaapkwaliteit, maar vooral dat de score technisch sterk samenhangt met REM-slaap.
 
-Kortom, de belangrijkste conclusies van dit onderzoek zijn:
-rusthartslag en aantal stappen op groepsniveau duidelijk samenhangen met de gemiddelde hartslag tijdens slaap.
-personen met meer stappen gemiddeld ook een lagere rusthartslag hebben, wat opnieuw wijst op het belang van rusthartslag voor de gemiddelde hartslag tijdens slaap.
-deze verbanden niet hetzelfde blijven binnen personen, door grote verschillen tussen mensen.
-de gemiddelde hartslag tijdens slaap een stabielere en betrouwbaardere maat is dan de Fitbit-slaapscore.
-en dat de Fitbit-slaapscore vooral REM-slaap weerspiegelt, en daarom met voorzichtigheid bekeken moet worden.
 
-Door het kleine aantal dagen zijn de resultaten op individueel niveau niet significant. Voor sterkere conclusies op individueel niveau is vervolgonderzoek nodig met meer proefpersonen en meer metingen per persoon.
-Wel laat dit onderzoek duidelijk zien hoe dagelijkse beweging, rusthartslag en persoonlijke verschillen samenhangen met hartslag en slaapkwaliteit, en hoe belangrijk het is om bij slaaponderzoek rekening te houden met de beperkingen van trackers zoals de Fitbit.
+Kortom, de belangrijkste conclusies van dit onderzoek zijn:
+
+De rusthartslag en de gemiddelde hartslag tijdens de slaap hangen op groepsniveau sterk samen. Ook het aantal stappen per dag hangt samen met de gemiddelde hartslag tijdens de slaap, waarbij meer stappen en een lagere rusthartslag samengaan met een lagere hartslag tijdens de slaap.
+Wanneer er wordt gecorrigeerd voor verschillen tussen personen, verdwijnen deze verbanden. Dit laat zien dat de effecten vooral worden verklaard door vaste verschillen tussen individuen, en minder door veranderingen binnen personen.
+De Fitbit-slaapscore blijkt geen stabiele maat voor slaapkwaliteit in dit onderzoek, omdat deze sterk wordt beïnvloed door slaapduur en weinig consistente verbanden laat zien met andere variabelen. Alleen REM-slaap hangt duidelijk samen met de slaapscore, wat vooral de rekenwijze van de Fitbit laat zien.
+Door het kleine aantal metingen per persoon kunnen er geen betrouwbare effecten binnen personen worden vastgesteld. Verder onderzoek met meer data is nodig om dit beter te onderzoeken.
+
+Op basis van de resultaten kan de nulhypothese voor het verband tussen rusthartslag en gemiddelde hartslag tijdens de slaap worden verworpen op groepsniveau. Verder onderzoek is nodig om te bepalen of er ook binnen personen een verband bestaat, en om de rol van andere factoren beter te begrijpen. 
