@@ -23,7 +23,7 @@ Dagelijks vullen zij een korte vragenlijst in over beweging, alcoholgebruik, eet
 - Tijdspanne: vier weken per proefpersoon
 - Analyse: gemiddelde hartslag tijdens slaap, gemiddelde daghartslag, stappen per dag, en regressies met slaapscore als uitkomst
 
-## 2026-05-20 — Opsplitsing naar Rmd en correlatie stappen en hartslag analyse
+## 20-05-2026 — Opsplitsing naar Rmd en correlatie stappen en hartslag analyse
 
 Vandaag heb ik mijn eerdere R-script opgesplitst naar een R Markdown-bestand zodat ik losse codechunks kan runnen en direct resultaten (tabellen/plots) kan tonen.
 Hieronder staan korte voorbeelden van het inlezen en verkennen van de Fitbit-data uit de export.
@@ -103,7 +103,7 @@ Dit geeft aan dat hartslag een betere indicator is voor slaapkwaliteit dan fysie
 - R^2 analyse toevoegen om procenten verklaarde variantie te berekenen
 - lm() functie gebruiken om meerdere variabalen tegelijk te analyseren (hartslag + stappen etc) en p waarden vergelijken
 
-## 2026-05-21 — R^2 analyse en lm() functie toegevoegd
+## 21-05-2026 — R^2 analyse en lm() functie toegevoegd
 
 Vandaag heb ik de R^2-waarden toegevoegd aan de correlatietests zodat we kunnen zien hoeveel van de variantie in slaapscore wordt verklaard door hartslag en stappen.
 Daarnaast heb ik een lineair model gemaakt met zowel hartslag als stappen als voorspellers van slaapscore, zodat we kunnen zien welke variabele sterker bijdraagt als we ze samen in één model
@@ -127,7 +127,7 @@ Ik ga van deze data ook kijken of die samenhangt met slaapkwaliteit.
 
 Verder hebben Lucas en Mohammed hun Fitbit data gedeeld, dus kan ik deze data vergelijken met mijn eigen data.
 
-## 2026-05-22 — Ziek
+## 22-05-2026 — Ziek
 
 Vandaag heb ik weer slecht geslapen en voel ik me ziek. Ik ga vandaag niet zo veel doen.
 In de les analyseren we de githubs van klasgenoten en bespreken we de data die ze hebben verzameld.
@@ -141,7 +141,7 @@ In de les analyseren we de githubs van klasgenoten en bespreken we de data die z
 - Data van Mohammed toevoegen aan analyses en vergelijken met mijn data
 
 
-## 2026-06-01 — Bespreking in de klas
+## 01-06-2026 — Bespreking in de klas
 
 Gisteren hebben we in de klas nog eens besproken wie wat gaat doen.
 Ik ga verder met het Python-bestand en met mijn slaap en hartslagdata en extra analyses maken met de nieuwe data van Lucas en Mohammed.
@@ -150,7 +150,7 @@ Gelukkig had ik mijn data op mijn telefoon apart opgeschreven en zo konden we ac
 Ik ga ook verder om elke dag de Google Form in te vullen en de Fitbit te dragen.
 
 
-## 2026-06-02 — Python-bestand afgemaakt
+## 02-06-2026 — Python-bestand afgemaakt
 
 Vandaag heb ik het Python-bestand afgemaakt en opgesplitst in functies. Ik heb data als calorieen en het Google formulier ook toegevoegd.
 Verder heb ik alle gecombineerde data bestanden in een mapje gezet en een apart mapje voor alleen de dagen met een slaapscore.
@@ -182,7 +182,7 @@ with open(sleep_score_output_file, 'w', newline='') as f:
 - Data van Mohammed en Lucas toevoegen aan analyses en vergelijken met mijn data
 - Extra analyses maken met de nieuwe data
 
-## 2026-06-03 — REM, diepe slaap en stressmanagement score toegevoegd
+## 03-06-2026 — REM, diepe slaap en stressmanagement score toegevoegd
 
 Vandaag heb ik de REM-slaap, diepe slaap en stressmanagement score toegevoegd aan de data. Ik ben benieuwd of deze variabelen ook invloed hebben op de slaapscore.
 Ik heb ook een extra python bestand gemaakt die de data van alle drie de personen samenvoegt zodat ik makkelijk vergelijkingen kan maken tussen de drie personen.
@@ -237,7 +237,7 @@ Ik heb het python bestand aangepast zodat het de gemiddelde hartslag tijdens sla
 - Discussie en conclusie schrijven
 - Rusthartslag toevoegen aan de csv-bestanden 
 
-## 2026-06-08 - Analyses afmaken
+## 08-06-2026 - Analyses afmaken
 
 Ik heb mijn data vernieuwd met een nieuwe export.
 Verder heb ik het python bestand verbeterd en een stressmanagement score aan de variabelen toegevoegd en hier analyses mee gemaakt.
@@ -253,7 +253,7 @@ Ik heb code toegevoegd om de R2 waarden te berekenen voor de regressies en deze 
 Ik heb analyses gemaakt van mijn grafieken en kwam erachter dat de slaapscore geen goede indicator is voor slaapkwaliteit en dat de gemiddelde hartslag tijdens slaap een betere indicator is.
 Ik heb ook extra gemiddelden berekend.
 
-## 2026-06-09 - Grafieken en interpretaties toegevoegd
+## 09-06-2026 - Grafieken en interpretaties toegevoegd
 
 Ik heb al mijn grafieken en tabellen toegevoegd aan de paper en intepretaties geschreven
 Verder heb ik de layout van de paper logisch gemaakt zodat al onze informatie een logische volgorde heeft

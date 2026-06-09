@@ -106,7 +106,7 @@ Ook maken we de namen anoniem door ze te vervangen door "Persoon 1", "Persoon 2"
 Aan het einde van de 4 weken loggen we in op de Google/Fitbit-account van de 3 proefpersonen. We gebruiken **Fitbit Takeout** om alle gedetailleerde gegevens (zoals de exacte hartslag per minuut en de slaapfases) als computerbestanden te downloaden. Ook downloaden we alle antwoorden uit de Google Forms.
 
 #### Data samenvoegen met Python
-
+De gegevens van de Fitbit en de Google Forms worden in Python samengevoegd tot één groot bestand. In dit bestand staan alle metingen per dag, zoals de gemiddelde hartslag tijdens slaap, het aantal stappen, de tijd van het laatste eten, etc.
 
 #### Analyseren met R-code
 We laden de bestanden van de Google Forms en de Fitbit Takeout samen in **RStudio**. Met behulp van **R-code** gaan we berekeningen maken en controleren we de volgende dingen:
@@ -332,12 +332,12 @@ Andere factoren, zoals verbrande calorieën, stressmanagement, slaapduur en het 
 De Fitbit-slaapscore bleek in dit onderzoek geen betrouwbare maat voor slaapkwaliteit. De slaapscore wordt sterk beïnvloed door slaapduur en laat veel schommelingen zien, waardoor verbanden met andere variabelen zwak en niet consistent zijn. Daarom is in deze paper gekozen om de gemiddelde hartslag tijdens slaap te gebruiken als belangrijkste maat voor slaapkwaliteit, omdat deze minder gevoelig is voor meetfouten in slaapduur en beter laat zien hoe goed het lichaam tot rust komt.
 Wel is er één duidelijk en constant significant verband gevonden met de Fitbit-slaapscore: de duur van de REM-slaap. Zowel met als zonder correctie voor persoon is REM-slaap significant gekoppeld aan een hogere slaapscore (p = ca. 0.01–0.02). Dit is logisch, omdat de Fitbit-slaapscore voor een groot deel wordt bepaald door de hoeveelheid REM-slaap. Dit betekent echter niet automatisch dat de slaapscore een goede maat is voor echte slaapkwaliteit, maar vooral dat de score technisch sterk samenhangt met REM-slaap.
 
-Samenvattend laat dit onderzoek zien dat:
-
+Kortom, de belangrijkste conclusies van dit onderzoek zijn:
 rusthartslag en aantal stappen op groepsniveau duidelijk samenhangen met de gemiddelde hartslag tijdens slaap.
 personen met meer stappen gemiddeld ook een lagere rusthartslag hebben, wat opnieuw wijst op het belang van rusthartslag voor de hartslag tijdens slaap.
 deze verbanden niet hetzelfde blijven binnen personen, door grote verschillen tussen mensen.
 de gemiddelde hartslag tijdens slaap een stabielere en betrouwbaardere maat is dan de Fitbit-slaapscore.
 en dat de Fitbit-slaapscore vooral REM-slaap weerspiegelt, en daarom met voorzichtigheid bekeken moet worden.
 
-Door het kleine aantal dagen zijn de resultaten op individueel niveau niet significant. Voor sterkere conclusies op individueel niveau is vervolgonderzoek nodig met meer proefpersonen en meer metingen per persoon. Wel laat dit onderzoek duidelijk zien hoe dagelijkse beweging, rusthartslag en persoonlijke verschillen samenhangen met hartslag en slaapkwaliteit, en hoe belangrijk het is om bij slaaponderzoek rekening te houden met de beperkingen van trackers zoals de Fitbit.
+Door het kleine aantal dagen zijn de resultaten op individueel niveau niet significant. Voor sterkere conclusies op individueel niveau is vervolgonderzoek nodig met meer proefpersonen en meer metingen per persoon.
+Wel laat dit onderzoek duidelijk zien hoe dagelijkse beweging, rusthartslag en persoonlijke verschillen samenhangen met hartslag en slaapkwaliteit, en hoe belangrijk het is om bij slaaponderzoek rekening te houden met de beperkingen van trackers zoals de Fitbit.
