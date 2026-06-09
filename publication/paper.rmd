@@ -32,3 +32,8 @@ Hoewel de lijnen in de grafieken een richting op bewegen, laat de statistiek zie
 Het enige moment waarop er wel echt een duidelijk verschil te zien is, is bij het **type eten** uit de boxplot. Het eten van een zware, vette maaltijd zorgt er wel duidelijk voor dat het lichaam 's nachts harder moet werken. Hierdoor gaat de gemiddelde hartslag tijdens de slaap omhoog vergeleken met een lichte snack of een magere maaltijd.
 
 ## 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
+
+### Statistische interpretatie
+
+In het model zonder `naam` als factor is `resting_heart_rate` significant gerelateerd aan `average_sleep_heart_rate` (p < 0.05). Ook `last_food = snack` komt naar voren (p ≈ 0.035), maar die p‑waarde zit aan de rand en is minder betrouwbaar. Zodra we echter `naam` als factor toevoegen om voor individuele verschillen te corrigeren, verdwijnt die significantie. Dat betekent: op groepsniveau zien we wel een verband (lagere rusthartslag → lagere slaaphartslag), maar met deze dataset kun je niet betrouwbaar concluderen dat dat ook altijd voor één specifieke persoon geldt. Bovendien is de power laag (≈ 0.23); om het geobserveerde zwakke effect betrouwbaar te detecteren is naar schatting ≈ 460 dagen nodig.
+
