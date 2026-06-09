@@ -252,3 +252,12 @@ Ik moest ook het csv_sort.py bestand aanpassen zodat het de nieuwe format van de
 Ik heb code toegevoegd om de R2 waarden te berekenen voor de regressies en deze toegevoegd aan mijn rmd bestand.
 Ik heb analyses gemaakt van mijn grafieken en kwam erachter dat de slaapscore geen goede indicator is voor slaapkwaliteit en dat de gemiddelde hartslag tijdens slaap een betere indicator is.
 Ik heb ook extra gemiddelden berekend.
+
+## 2026-06-09 - Grafieken en interpretaties toegevoegd
+
+Ik heb al mijn grafieken en tabellen toegevoegd aan de paper en intepretaties geschreven
+Verder heb ik de layout van de paper logisch gemaakt zodat al onze informatie een logische volgorde heeft
+Ook heb ik aan de grafieken van mijn groepsgenoten p waarden toegevoegd
+Ook heb ik de conclusie van de paper geschreven
+Ik heb extra grafieken toegevoegd in de paper en de grafieken van mijn groepsgenoten verbeterd door de kleuren aan te passen en de assen beter te labelen.
+Ik heb een abstract geschreven voor de paper en de materiaal en methode uitgebreid met een hypothese en een uitleg van de data-analyse stappen.

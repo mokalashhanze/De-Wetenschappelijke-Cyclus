@@ -48,6 +48,10 @@ Hierdoor:
 - worden korte maar goede nachten minder slecht beoordeeld;
 - krijgen lange nachten niet automatisch een hogere score.
 
+Ik heb toch besloten om de gewone slaapscore te gebruiken omdat ik niet precies weet hoe de gecorrigeerde slaapscore zich gedraagt en of die betrouwbaar is.
+De slaapscore is misschien niet perfect, maar ik heb er meer vertrouwen in dan in de gecorrigeerde slaapscore, die ik zelf heb berekend en waarvan ik niet zeker weet of die goed werkt.
+
+
 ## Libraries laden en data inladen
 
 ```{r}
@@ -62,8 +66,8 @@ df_all <- read.csv("/Users/robinoffringa/Desktop/De-Wetenschappelijke-Cyclus/ana
 ## Statistieken
 
 ```{r}
-cat("\n--- Gemiddelde Gecorrigeerde Slaapscore per persoon ---\n")
-aggregate(corrected_sleep_score ~ naam, data = df_all, FUN = mean)
+cat("\n--- Gemiddelde Slaapscore per persoon ---\n")
+aggregate(sleep_score ~ naam, data = df_all, FUN = mean)
 
 cat("\n--- Gemiddelde Slaapduur per persoon ---\n")
 aggregate(sleep_duration_hours ~ naam, data = df_all, FUN = mean)
@@ -89,11 +93,12 @@ aggregate(stress_management_score ~ naam, data = df_all, FUN = mean)
 
 ## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore
 ```{r}
-model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
+model_sleep <- lm(sleep_score ~ average_heart_rate +
                     resting_heart_rate +
                     sleep_duration_hours + 
                     rem_sleep_minutes + 
                     deep_sleep_minutes + 
+                    total_steps +
                     stress_management_score + 
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
@@ -115,6 +120,7 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
                     sleep_duration_hours + 
                     rem_sleep_minutes + 
                     deep_sleep_minutes + 
+                    total_steps +
                     stress_management_score + 
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
@@ -141,18 +147,19 @@ Interpretatie:
 
 Naam als factor toevoegen zodat het model rekening houdt met verschillen tussen personen:
 
-## Meervoudige Lineaire Regressie — Gecorrigeerde Slaapscore + Naam als factor
+## Meervoudige Lineaire Regressie — Slaapscore + Naam als factor
 
 ```{r}
 df_all$last_food <- as.factor(df_all$last_food)
 df_all$naam <- as.factor(df_all$naam)
 ```
 ```{r}
-model_sleep <- lm(corrected_sleep_score ~ average_heart_rate +
+model_sleep <- lm(sleep_score ~ average_heart_rate +
                     resting_heart_rate +
                     sleep_duration_hours + 
                     rem_sleep_minutes + 
                     deep_sleep_minutes + 
+                    total_steps +
                     stress_management_score + 
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
@@ -176,6 +183,7 @@ model_hr <- lm(average_sleep_heart_rate ~ average_heart_rate +
                     sleep_duration_hours + 
                     rem_sleep_minutes + 
                     deep_sleep_minutes + 
+                    total_steps +
                     stress_management_score + 
                     calories_burned + 
                     time_between_phone_used_and_sleep_hours + 
@@ -219,7 +227,7 @@ calc_r2 <- function(outcome, predictor, data) {
 
 r2_overview <- data.frame(
   variable = predictors,
-  r2_corrected_sleep_score = sapply(predictors, calc_r2, outcome = "corrected_sleep_score", data = df_all),
+  r2_sleep_score = sapply(predictors, calc_r2, outcome = "sleep_score", data = df_all),
   r2_average_sleep_heart_rate = sapply(predictors, calc_r2, outcome = "average_sleep_heart_rate", data = df_all)
 )
 
@@ -235,41 +243,60 @@ Sommige variabelen verklaren bijna niets (bv. calories_burned = 0.27%).
 Pas als je de R^2 waarden bij elkaar neemt in een meervoudig model, krijg je een hoge R^2 van 0.82, wat aangeeft dat deze variabelen samen een sterk verband hebben met de gemiddelde hartslag tijdens slaap.
 
 
-## Correlatie gecorrigeerde slaapscore vs hartslag overdag
-
-```{r fig.width=12, fig.height=4}
-ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = naam)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +
-  facet_wrap(~ naam) +
-  scale_color_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
-  scale_fill_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag Overdag",
-       x = "Gemiddelde hartslag (bpm)",
-       y = "Gecorrigeerde Slaapscore (0-100)") +
-  theme_minimal() +
-  theme(legend.position = "none")
-```
+## Correlatie hartslag tijdens slaap vs tijd tussen eten en slapen
 
 ```{r}
-ggplot(df_all, aes(x = average_heart_rate, y = corrected_sleep_score, color = naam)) +
+plot_data <- subset(df_all, time_between_last_food_and_sleep_hours <= 12)
+
+ggplot(plot_data, aes(x = time_between_last_food_and_sleep_hours, y = average_sleep_heart_rate, color = naam)) +
   geom_point(size = 3, alpha = 0.7) +
   geom_smooth(method = "lm", aes(color = naam, fill = naam), se = TRUE, alpha = 0.15) +
   scale_color_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
   scale_fill_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
-  labs(title = "Gecorrigeerde Slaapscore vs Gemiddelde Hartslag Overdag",
-       x = "Gemiddelde hartslag (bpm)",
-       y = "Gecorrigeerde Slaapscore (0-100)",
+  labs(title = "Tijd tussen eten en slapen vs Gemiddelde Hartslag Tijdens Slaap",
+       x = "Tijd tussen laatste maaltijd en slapen (uren)",
+       y = "Gemiddelde hartslag tijdens slaap (bpm)",
        color = "Persoon") +
   theme_minimal() +
   theme(legend.position = "right")
 ```
 
-**Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de gecorrigeerde slaapscore.
+
+## Correlatie slaapscore vs hartslag overdag
+
+```{r fig.width=12, fig.height=4}
+ggplot(df_all, aes(x = average_heart_rate, y = sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = TRUE) +
+  facet_wrap(~ naam) +
+  scale_color_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
+  scale_fill_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
+  labs(title = "Slaapscore vs Gemiddelde Hartslag Overdag",
+       x = "Gemiddelde hartslag (bpm)",
+       y = "Slaapscore (0-100)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+```{r}
+ggplot(df_all, aes(x = average_heart_rate, y = sleep_score, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", aes(color = naam, fill = naam), se = TRUE, alpha = 0.15) +
+  scale_color_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
+  scale_fill_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
+  labs(title = "Slaapscore vs Gemiddelde Hartslag Overdag",
+       x = "Gemiddelde hartslag (bpm)",
+       y = "Slaapscore (0-100)",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right")
+```
+
+**Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de slaapscore.
 Individuele grafieken laten verschillende richtingen en steilheden zien, en de gecombineerde plot toont veel overlap tussen personen.
 
-Waarschijnlijk is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit dan de gecorrigeerde slaapscore, gezien de onaccuraatheid van de slaapscore en de sterke invloed van slaapduur op die score.
-Vanwege de onbetrouwbaarheid van de gecorrigeerde slaapscore zal alleen de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit genomen wordenin plaats van de gecorrigeerde slaapscore.
+Waarschijnlijk is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit dan de slaapscore, gezien de onaccuraatheid van de slaapscore en de sterke invloed van slaapduur op die score.
+Vanwege de onbetrouwbaarheid van de slaapscore zal alleen de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit genomen wordenin plaats van de slaapscore.
 
 ## Correlatie gemiddelde hartslag slaap vs hartslag overdag
 
@@ -366,8 +393,23 @@ ggplot(df_all, aes(x = total_steps, y = average_sleep_heart_rate, color = naam))
   theme(legend.position = "right")
 ```
 
-**Observatie:** Er is geen duidelijke, consistente samenhang tussen stappen en gemiddelde slaaphartslag.
-Sommige personen tonen kleine trends, maar over het galgemeen is de spreiding groot en zijn patronen niet te zien bij alle personen.
+**Observatie:** Er is een duidelijke, consistente samenhang tussen stappen en gemiddelde slaaphartslag.
+
+## Correlatie rusthartslag vs stappen
+
+```{r}
+ggplot(df_all, aes(x = total_steps, y = resting_heart_rate, color = naam)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", aes(color = naam, fill = naam), se = TRUE, alpha = 0.15) +
+  scale_color_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +
+  scale_fill_manual(values = c("person_1" = "steelblue", "person_2" = "darkorange", "person_3" = "forestgreen")) +  labs(title = "Rusthartslag vs Stappen per dag",
+       x = "Stappen per dag",
+       y = "Rusthartslag (bpm)",
+       color = "Persoon") +
+  theme_minimal() +
+  theme(legend.position = "right")
+```
+
 
 ## 9. Correlatie gemiddelde hartslag slaap vs calorieën
 
@@ -431,6 +473,8 @@ ggplot(df_all, aes(x = stress_management_score, y = average_sleep_heart_rate, co
 
 
 
+
+
 ### Waarom vinden we wel significantie op groepsniveau maar niet als we per persoon corrigeren?
 
 Het model zonder naam als factor kijkt naar het totale verband over alle nachten. Als sommige personen structureel veel hogere of lagere hartslag hebben (bijv. persoon_1 lager dan persoon_3), dan kan dat tussen‑persoon verschil samen met de rusthartslag een significant groepsverband veroorzaken.
@@ -439,26 +483,34 @@ Als je de naam als factor toevoegt corrigeer je voor die vaste verschillen tusse
 
 - `p < 0.05` in het model zonder `naam` betekent dat er op groepsniveau iets gebeurt — maar niet automatisch dat elk individu hetzelfde patroon laat zien.
 - Zodra we voor individuele verschillen corrigeren verdwijnt de significantie: dan blijkt het verband niet robuust binnen personen.
-- De lage power (≈ 0.23) maakt schattingen onzeker: een p‑waarde kleiner dan 0.05 hebben we gevonden, maar het bewijs is zwak en instabiel.
+
+
+De power-berekening:
+
+```{r}
+library(pwr)
+
+pwr.r.test(r = 0.91, n = 87, sig.level = 0.05)
+```
+
+
+
 
 
 ## Conclusie en belangrijkste resultaten
 
 - De rusthartslag hangt duidelijk samen met de gemiddelde hartslag tijdens slaap: nachten met een hogere rusthartslag hebben meestal ook een hogere gemiddelde slaaphartslag.
-- Gemiddelde hartslag overdag correleert ook met de slaaphartslag, maar de samenhang met de gecorrigeerde slaapscore is zwak en inconsistent.
-- De gecorrigeerde slaapscore lijkt minder betrouwbaar als indicator in deze dataset (sterke invloed van slaapduur en meer ruis); gemiddelde slaaphartslag is hier nuttiger om slaapkwaliteit te meten.
-- Stappen, verbrande calorieën en stressmanagement laten geen consistente, sterke verbanden zien met slaaphartslag of gecorrigeerde slaapscore in deze steekproef.
+- Gemiddelde hartslag overdag correleert ook met de slaaphartslag, maar de samenhang met de slaapscore is zwak en inconsistent.
+- De slaapscore lijkt minder betrouwbaar als indicator in deze dataset (sterke invloed van slaapduur en meer ruis); gemiddelde slaaphartslag is hier nuttiger om slaapkwaliteit te meten.
+- Stappen, verbrande calorieën en stressmanagement laten geen consistente, sterke verbanden zien met slaaphartslag of slaapscore in deze steekproef.
 
-- Als we geen rekening houden met wie de persoon is (dus naam niet als factor nemen), zien we wel statistische significantie: de rusthartslag hangt significant samen met de gemiddelde slaaphartslag (p ≈ 0.00003). Ook de laatste maaltijd met waarde "snack" heeft een significant effect (p ≈ 0.035), maar die p-waarde is relatief hoog en dus minder betrouwbaar.
+- Als we geen rekening houden met wie de persoon is (dus naam niet als factor nemen), zien we wel statistische significantie: de rusthartslag hangt significant samen met de gemiddelde slaaphartslag (p ≈ 0.00003). ook de laatste maaltijd met waarde "snack" heeft een significant effect (p ≈ 0.035), maar die p-waarde is relatief hoog en dus minder betrouwbaar.
 
 - In de gecombineerde analyse over alle nachten geldt dat een lagere rusthartslag meestal samengaat met een lagere hartslag tijdens slaap — dat is aantoonbaar op groepsniveau.
 - Maar zodra we in het model corrigeren voor verschillen tussen personen door naam als factor toe te voegen, verdwijnt die significantie. Individuele verschillen tussen proefpersonen zijn zo groot dat het effect niet meer statistisch aantoonbaar is.
 - Bij het model met naam als factor was er geen p‑waarde < 0.05. Dit betekent dat we geen wetenschappelijke conclusies kunnen trekken uit deze dataset: de nulhypothese (dat er geen effect is, en dat de gemiddelde hartslag tijdens slaap niet lager is bij een lagere hartslag overdag) kan niet verworpen worden.
 - We hebben meer data nodig en wellicht zouden sommige van de factoren dan wel significant worden binnen personen.
 
-- Onze r-waarde van 0.13 en n van 87 geeft een power van ongeveer 0.23, wat betekent dat we maar 23% kans hebben om een echt effect van deze grootte te detecteren met deze steekproefgrootte.
-- Om een significant effect te detecteren bij een correlatie van r = 0.13 en een power van 0.80, zouden we ongeveer 460 dagen aan data nodig hebben. 
-- Onze dataset heeft ongeveer 87 dagen aan data, wat duidelijk te weinig is om met zekerheid een statistisch significant effect aan te tonen. 
 
--
+
 
