@@ -1,6 +1,6 @@
 ---
 title: "logboek"
-author: "mohammed"
+author: "Mohammed Kalash"
 output: html_document
 ---
 
