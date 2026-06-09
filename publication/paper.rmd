@@ -1,6 +1,6 @@
 ---
 title: "Paper"
-output: pdf_document
+output: html_document
 date: "2026-06-05"
 ---
 # Introductie.
@@ -14,8 +14,8 @@ Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed
 
 
 ## 1. analysis en resultaten van plotten(eten en schermgerbuik vs gemiddelde hartslag tijdens de slaap):
-![Uren tussen eten en slaap vs Gemiddelde Hartslag](eten_grafiek.png)
-![Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag](scherm_grafiek.png)
+![Uren tussen eten en slaap vs Gemiddelde Hartslag](Grafieken/eten_grafiek.png)
+![Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag](Grafieke/scherm_grafiek.png)
 
 ### Conclusie en Discussie:
 
