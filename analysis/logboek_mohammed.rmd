@@ -194,7 +194,7 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 * Een nieuwe map genaamd 'publication' aangemaakt in ons project.
 * De screenshots van de grafieken (eten-timing en scherm-timing) verplaatst naar de submap 'Grafieken'.
 * De introductie voor het artikel helemaal uitgeschreven en klaargemaakt.
-* De conclusie en de discussie geschreven op basis van de resultaten uit mijn eigen data-analyse.
+* De conclusie en de discussie van mijn data geschreven op basis van de resultaten uit mijn eigen data-analyse.
 * Het pad naar de afbeeldingen in de code aangepast naar 'Grafieken/...png' zodat ze goed laden.
 
 **Resultaten:** De map 'publication' is nu helemaal compleet. Het artikel bevat nu de introductie, de statistieken, de grafieken en een sluitende conclusie.
