@@ -1,133 +1,222 @@
 ---
-  title: "Logboek"
+title: "Logboek"
 author: "Lucas Bos"
 output: html_document
 ---
-  
-  # Slaap en hartslag — logboek
-  
-  ## Introductie
-  
-  Slaap is belangrijk voor het herstel van zowel het lichaam als de hersenen. 
-Tijdens het slapen daalt de hartslag meestal, omdat het lichaam ontspant en energie herstelt. 
-Een lagere hartslag tijdens de slaap wordt daarom vaak gekoppeld aan een betere slaapkwaliteit. 
+
+# Slaap en hartslag — logboek
+
+## Introductie
+
+Slaap is belangrijk voor het herstel van zowel het lichaam als de hersenen.
+Tijdens het slapen daalt de hartslag meestal, omdat het lichaam ontspant en energie herstelt.
+Een lagere hartslag tijdens de slaap wordt daarom vaak gekoppeld aan een betere slaapkwaliteit.
 Factoren zoals stress, beweging, voeding en schermgebruik in de avond kunnen invloed hebben op zowel slaap als hartslag.
 
-In dit onderzoek bekijken we of een betere slaapkwaliteit samenhangt met een lagere gemiddelde hartslag. 
-Drie proefpersonen dragen vier weken lang een Fitbit-smartwatch die continu slaap en hartslag meet. 
+In dit onderzoek bekijken we of gedragsmatige factoren — zoals het aantal gezette stappen, verbrande calorieën en de hoeveelheid REM-slaap — samenhangen met de slaapkwaliteit en hartslag tijdens de slaap.
+Drie proefpersonen (Robin, Mohammed en Lucas) dragen vier weken lang een Fitbit-smartwatch die continu slaap en hartslag meet.
 Daarnaast vullen zij elke dag een korte vragenlijst in over onder andere beweging, alcoholgebruik, eetgewoonten en schermtijd voor het slapen gaan.
 
+- **Gebruikte data:** De geëxporteerde Fitbit-data met output in `analysis/data/combined_data_robin.csv`, `analysis/data/combined_data_mohammed.csv` en `analysis/data/combined_data_lucas.csv`
+- **Duur van het onderzoek:** Vier weken, met drie proefpersonen
 
-- Gebruikte data: De ge-exporteerde fitbit data met de output in `analysis/data/combined_data_robin.csv, analysis/data/combined_data_mohammed.csv, analysis/data/combined_data_lucas.csv
-- Duur van het onderzoek: Over een verloop van vier weken met drie proefpersonen
+---
+
 # 20/05/2026
 
 **Doelen van de dag:**
-  Succesvol beginnen met het schrijven van code in Rstudio met R.
-  Begin maken aan het verwerken van de output
-  Fitbit data exporteren
+- Beginnen met het opzetten van de RStudio-omgeving
+- Fitbit-data exporteren en inladen
+- Introductie schrijven
 
-**Uitgevoerde taken**
-  - Begonnen met code schrijven in RStudio
-  - Exporteren van de fitbit data
+**Uitgevoerde taken:**
+- RStudio opgezet en eerste code geschreven
+- Fitbit-data geëxporteerd via het Fitbit-dashboard
+- Robin heeft een eerste grafiek gemaakt die hartslag en slaapscore vergelijkt; de introductie van het rapport is afgerond
 
-**Huidige stand van zaken**
-  - We zijn redelijk ver op weg, Robin heeft een grafiek gemaakt die hartslag en slaapscore vergelijkt. En de intro is klaar.
+**Huidige stand van zaken:**
+- De basis staat. Robin is al begonnen met visualisaties. Mijn eigen bijdrage betreft vandaag vooral de opzet van de analysestructuur en het exporteren van de data.
 
-**Conclusie**
-  - Hoewel er nog veel te doen is zijn we goed op weg
+**Conclusie:**
+- Goede start gemaakt. Er is nog veel te doen, maar de taakverdeling is duidelijk en we liggen op schema.
 
-  # 21/05/2026
-Ik was deze dag ziek en dus afwezig, heb niet veel kunnen uitvoeren naast iets meer code geschreven.
+---
 
-  # 23/05/2026
+# 21/05/2026
 
-**Doelen van de dag**
-  Code met een grafiek die hartslag en stappen vergelijkt afmaken
-  Logboek afmaken
-  Alles uploaden naar github
+Ik was deze dag ziek en dus grotendeels afwezig. Ik heb wel wat kleine aanpassingen in de code kunnen maken, maar heb verder weinig kunnen bijdragen.
 
-**Uitgevoerde taken**
-  - Code is afgelukt hij displayed nu een grafiek.
-  - Logboek is goed onderweg maar nog niet helemaal af.
-  - Geen toegang tot github dus kon mijn files niet uploaden.
+---
 
-**Huidige stand van zaken**
-  - Ik heb niks gehoord van mijn groepje, hoe ver ze zijn, of waar ze aan werken.
-  - Ik ben onder de indruk dat we redelijk goed opweg zijn.
+# 23/05/2026
 
-**Conclusie**
-  - Heb redelijk veel progressie gemaakt vandaag en we zijn goed onderweg.
+**Doelen van de dag:**
+- Een werkende grafiek maken die het aantal dagelijkse stappen vergelijkt met de slaapscore
+- Het logboek bijwerken
+- Bestanden uploaden naar GitHub
 
-  # 25/05/2026
-**Doelen van de dag**
-  Logboek afmaken.
-  Hopelijk toegang krijgen tot github.
+**Uitgevoerde taken:**
+- De code voor de stappen-slaapscore grafiek is afgerond; de grafiek wordt correct weergegeven in RStudio
+- Het logboek is verder uitgewerkt
+- GitHub-toegang lukt helaas nog niet; bestanden kunnen nog niet worden geüpload
 
-**Uitgevoerde taken**
-  - Logboek is af.
-  - Nog geen toegang tot de github.
+**Huidige stand van zaken:**
+- Ik heb geen update ontvangen van Robin of Mohammed over hun voortgang, maar mijn eigen deel loopt redelijk goed.
+- De grafiek maakt gebruik van `ggplot2` en toont per persoon een scatterplot met regressielijn (stappen vs. slaapscore).
 
-**Huidige stand van zaken**
-  - We zijn goed onderweg, heb contact gehad met Robin.
-  - Nog steeds geen toegang tot de github, ik vraag morgen of ik erin kan.
-  
-  # 26/05/2026
-**Doelen van de dag**
-  Aan de presentatie werken.
-  In de github komen
-  Alle files uploaden
+**Conclusie:**
+- Productieve dag. De stappen-analyse staat, GitHub-toegang is het enige obstakel.
 
-**Uitgevoerde taken**
-  - Presentatie is klaar
-  - Ik zit in de github
-  - Alle files zijn geupload
+---
 
-**Huidige stand van zaken**
-  - Ik krijg de indruk dat mijn groepje niet tevreden in over mijn inzet, ik zal meer gaan doen.
+# 25/05/2026
 
-**Conclusie**
-  - Zelf meer gaan doen en meer communicatie met de rest.
+**Doelen van de dag:**
+- Logboek afmaken
+- GitHub-toegang regelen
 
-  # 1/06/2026
-**Doelen van de dag**
-  - Praten met team over wat er nog gedaan moet worden, en taken verdelen
-  - Presentatie geven
-**Uitgevoerde taken**
-  - Presentatie gegeven
-  - Taken besproken en verdeeld
+**Uitgevoerde taken:**
+- Logboek is afgerond voor de tot nu toe voltooide werkdagen
+- GitHub-toegang is nog niet geregeld; ik vraag dit morgen aan een groepslid
 
-**Huidige stand van zaken**
-  - Alles loopt goed op schema
+**Huidige stand van zaken:**
+- Ik heb contact gehad met Robin. De algehele voortgang ziet er goed uit.
+- Mijn analyses bevinden zich lokaal op mijn laptop; zodra ik GitHub-toegang heb worden ze geüpload.
 
-**Conclusie**
-  - Ik denk dat we op tijd klaar zijn
+**Conclusie:**
+- Kleine dag, maar logboek is op orde. Morgen GitHub regelen als prioriteit.
 
-  # 3/06/2026
-**Doelen van de dag**
-  - Werken aan logboek updaten
-  - Wachten tot robin klaar is met zijn gedeelte zodat ik verder kan.
+---
 
-**Uitgevoerde taken**
-  - Logboek bijgewerkt
-  - Robin is klaar met zijn gedeelte dus ik kan nu beginnen met code
+# 26/05/2026
 
-**Huidige stand van zaken**
-  - We lopen goed op schema, ik ga proberen voordat het zaterdag is alle code af te hebben
+**Doelen van de dag:**
+- Werken aan de presentatie
+- GitHub-toegang verkrijgen en alle bestanden uploaden
 
-**Conclusie**
-  - Het gaat als het goed is lukken om alles op tijd af te krijgen
+**Uitgevoerde taken:**
+- Presentatie is afgerond; bevat een overzicht van de onderzoeksvraag, methode en voorlopige resultaten
+- GitHub-toegang verkregen via een groepslid
+- Alle lokale bestanden geüpload naar de gezamenlijke repository
 
-  # 5/06/2026
-**Doelen van de dag**
-  - Code voetstappen-slaapscore vergelijking afmaken
-  - Code verbrande calorieen-slaapscore vergelijking schrijven
+**Huidige stand van zaken:**
+- Na feedback van groepsleden heb ik het idee dat mijn inbreng groter moet. Ik ga de komende dagen meer taken op me nemen en actiever communiceren.
 
-**Uitgevoerde taken**
-  - Code is klaar
+**Conclusie:**
+- Goede dag qua output. Communicatie en taakverdeling moeten beter; ik neem daar zelf meer initiatief in.
 
-**Huidige stand van zaken**
-  - Goed onderweg, morgen maak ik de remslaap af, maar dat kon vandaag niet IVM dat er nog geen remslaap in het bestand staat.
+---
 
-**Conclusie**
-  - Zodra Robin dat gefixed heeft ga ik verder aan de vergelijking remslaap-slaapscore
+# 1/06/2026
+
+**Doelen van de dag:**
+- Taken bespreken en verdelen voor de resterende periode
+- Presentatie geven
+
+**Uitgevoerde taken:**
+- Tussentijdse presentatie gegeven aan de klas; toelichting gegeven op de aanpak en de analyses die tot dan toe klaar waren
+- Taken besproken met Robin en Mohammed: ik neem de analyses voor stappen, verbrande calorieën en REM-slaap op me
+
+**Huidige stand van zaken:**
+- Taakverdeling is duidelijk. Ik ga drie R Markdown-analyses schrijven:
+  1. Stappen vs. slaapscore/hartslag
+  2. Verbrande calorieën vs. slaapscore/hartslag
+  3. REM-slaap vs. slaapscore/hartslag
+
+**Conclusie:**
+- We liggen op schema. De taakverdeling geeft structuur voor de laatste weken van het project.
+
+---
+
+# 3/06/2026
+
+**Doelen van de dag:**
+- Wachten op Robin totdat het gedeelde databestand klaar is
+- Logboek bijwerken
+
+**Uitgevoerde taken:**
+- Logboek bijgewerkt
+- Robin heeft het gecombineerde databestand (`combined_data.csv`) aangeleverd, zodat ik verder kan met mijn analyses
+
+**Huidige stand van zaken:**
+- Het databestand bevat kolommen zoals `total_steps`, `calories_burned`, `sleep_score`, `rem_sleep_minutes`, `average_sleep_heart_rate` en `min_heart_rate` — precies wat ik nodig heb.
+- Ik ga de komende twee dagen alle drie de analyses schrijven in R Markdown.
+
+**Conclusie:**
+- Alles klaar om te beginnen. Doel is om voor het weekend alle code af te hebben.
+
+---
+
+# 5/06/2026
+
+**Doelen van de dag:**
+- R Markdown voor stappen-slaapscore schrijven en afmaken
+- R Markdown voor verbrande calorieën-slaapscore schrijven en afmaken
+
+**Uitgevoerde taken:**
+- `Analyse_slaap_stappen_7e_versie.Rmd` afgerond: bevat drie analyses (stappen vs. gem. hartslag tijdens slaap, stappen vs. minimale hartslag, stappen vs. slaapscore) met per analyse correlaties (R² en p-waarde) en scatterplots per persoon én gecombineerd
+- `Analyse_calorieen_slaap.Rmd` afgerond: dezelfde structuur, maar met `calories_burned` als onafhankelijke variabele
+
+**Technische toelichting:**
+- Beide bestanden laden de data in via `read.csv`, filteren complete gevallen op de relevante kolommen, berekenen groepsstatistieken via `dplyr` en produceren visualisaties met `ggplot2`
+- Elke persoon heeft een vaste kleur: Robin = rood (`#E05252`), Mohammed = blauw (`#5285E0`), Lucas = groen (`#52C452`)
+- REM-slaap kon vandaag nog niet worden geanalyseerd omdat die kolom nog niet aanwezig was in het gecombineerde bestand
+
+**Conclusie:**
+- Twee van de drie analyses zijn klaar. Zodra Robin de REM-slaapdata heeft toegevoegd, schrijf ik de derde analyse.
+
+---
+
+# 6/06/2026
+
+**Doelen van de dag:**
+- `Analyse_remslaap_slaap.Rmd` schrijven en afmaken
+- Beginnen met het schrijven van de resultaten voor mijn drie analyses
+
+**Uitgevoerde taken:**
+- Robin heeft de REM-slaapkolom (`rem_sleep_minutes`) toegevoegd aan het gecombineerde databestand
+- `Analyse_remslaap_slaap.Rmd` afgerond: bevat analyses van REM-slaap vs. slaapscore, vs. gemiddelde hartslag tijdens slaap, en vs. minimale hartslag — per persoon en gecombineerd
+- Resultaten geschreven voor alle drie mijn analyses
+
+**Inhoud resultaten:**
+- De resultaten beschrijven per analyse de R²-waarden en p-waarden per proefpersoon, en geven een toelichting op de richting en sterkte van de gevonden verbanden
+- Opvallend: de verbanden verschillen aanzienlijk per persoon, wat kan wijzen op individuele verschillen in slaappatroon en conditie
+
+**Conclusie:**
+- Alle drie mijn R Markdown-analyses zijn klaar en de resultaten zijn beschreven. Iedereen werkt nu aan zijn eigen discussieparagraaf.
+
+---
+
+# 8/06/2026
+
+**Doelen van de dag:**
+- Conclusie en discussie schrijven voor mijn analyses
+
+**Uitgevoerde taken:**
+- Conclusie en discussie afgerond voor de stappen-, calorieën- en REM-slaapanalyses
+- In de discussie worden mogelijke verklaringen besproken voor de gevonden verbanden en de beperkingen van het onderzoek (kleine steekproef van drie personen, observationeel design, individuele verschillen)
+
+**Huidige stand van zaken:**
+- Mijn eigen inhoudelijke bijdrage is volledig klaar. Ik hoef alleen nog mijn secties in het gezamenlijke paper te plaatsen zodra de rest ook klaar is.
+
+**Conclusie:**
+- Het inhoudelijke werk is af. Integratie in het paper is de laatste stap.
+
+---
+
+# 9/06/2026
+
+**Doelen van de dag:**
+- Alle secties samenvoegen in het gezamenlijke paper
+- Eindcontrole uitvoeren
+
+**Uitgevoerde taken:**
+- Mijn resultaten, conclusie en discussie zijn toegevoegd aan het gezamenlijke paper
+- Eindcontrole uitgevoerd: opmaak, referenties en samenhang tussen secties gecheckt
+- Alle bestanden definitief geüpload naar GitHub
+
+**Huidige stand van zaken:**
+- Het project is volledig afgerond.
+
+**Conclusie:**
+- Ik ben tevreden met het eindproduct. De drie analyses die ik heb geschreven geven een goed beeld van de verbanden tussen dagelijkse beweging, REM-slaap en slaapkwaliteit. Als ik het opnieuw zou doen, zou ik eerder beginnen met de analyses en meer tussentijds communiceren met mijn groepsleden.
