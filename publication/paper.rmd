@@ -227,11 +227,12 @@ p-waarde zonder persoon als factor toegevoegd: ca. 0.77 (niet significant)
 
 p-waarde met persoon als factor toegevoegd: 0.77 (niet significant)
 
-**Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de gecorrigeerde slaapscore.
+**Observatie:** De punten en regressielijnen tonen zwakke en inconsistente verbanden tussen gemiddelde hartslag en de slaapscore.
 Individuele grafieken laten verschillende richtingen en steilheden zien, en de gecombineerde plot toont veel overlap tussen personen.
 
-Waarschijnlijk is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit dan de gecorrigeerde slaapscore, gezien de onaccuraatheid van de slaapscore en de sterke invloed van slaapduur op die score.
-Vanwege de onbetrouwbaarheid van de gecorrigeerde slaapscore zal alleen de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit genomen worden in plaats van de gecorrigeerde slaapscore.
+Het verschil in resultaten tussen de grafieken van gemiddelde hartslag tijdens slaap en slaapscore is opvallend. De slaapscore lijkt geen betrouwbaar verband te hebben met de gemiddelde hartslag tijdens slaap, terwijl de gemiddelde hartslag tijdens slaap wel een duidelijker verband heeft met de rusthartslag en andere factoren.
+Dit ondersteunt de keuze om de gemiddelde hartslag tijdens slaap als een betere indicator voor slaapkwaliteit te gebruiken dan de slaapscore, gezien de onbetrouwbaarheid van de slaapscore in deze dataset.
+Vanwege de onbetrouwbaarheid van de slaapscore zal alleen de gemiddelde hartslag tijdens slaap als indicator voor slaapkwaliteit genomen worden en niet de slaapscore.
 
 
 ```{r echo=FALSE, out.width="80%"}
