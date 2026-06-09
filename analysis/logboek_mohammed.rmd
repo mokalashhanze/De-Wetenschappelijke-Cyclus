@@ -158,7 +158,6 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 
 **Conclusie:** De voorbereiding is nu helemaal klaar. De vragenlijst en het plan passen nu perfect bij de code en de grafieken die we op dag 7 gaan maken.
 
----
 # Dag 7:
 
 ## Datum: 08/06/2026
@@ -180,4 +179,26 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 
 **Analyse:** Het was even puzzelen met de tijdnotaties en de foutbalken in R, maar door de code korter te maken is het nu heel overzichtelijk.  
 
-**Conclusie:** Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst.  
+**Conclusie:** Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst. 
+
+# Dag 8:
+
+## Datum: 09/06/2026
+
+**Doel van de dag:** Het definitieve artikel klaarmaken door een nieuwe map 'publication' aan te maken en de grafieken daarin te zetten.
+
+**Motivatie:** Ik wil dat ons eindartikel op een nette, overzichtelijke plek op GitHub staat, compleet met de juiste tekst en afbeeldingen, zodat het direct klaar is voor het verslag.
+
+**Uitgevoerde werkzaamheden:**
+
+* Een nieuwe map genaamd 'publication' aangemaakt in ons project.
+* De screenshots van de grafieken (eten-timing en scherm-timing) verplaatst naar de submap 'Grafieken'.
+* De introductie voor het artikel helemaal uitgeschreven en klaargemaakt.
+* De conclusie en de discussie geschreven op basis van de resultaten uit mijn eigen data-analyse.
+* Het pad naar de afbeeldingen in de code aangepast naar 'Grafieken/...png' zodat ze goed laden.
+
+**Resultaten:** De map 'publication' is nu helemaal compleet. Het artikel bevat nu de introductie, de statistieken, de grafieken en een sluitende conclusie.
+
+**Analyse:** Het schrijven van de conclusie hielp om goed te begrijpen wat de data nu echt vertellen. Door de grafieken in een aparte map te zetten, blijft de structuur van ons project heel netjes.
+
+**Conclusie:** De definitieve publicatie is nu helemaal af. Alle bestanden staan op de juiste plek en het artikel is klaar om ingeleverd te worden.
