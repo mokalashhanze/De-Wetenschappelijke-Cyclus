@@ -157,16 +157,15 @@ knitr::include_graphics("Grafieken/power.png")
 
 Als we naar de power-berekening kijken zien we dat de power 1 is bij een r van 0.91, Wat betekent dat de kans bijna 100% is dat we een bestaand effect ook als statistisch significant detecteren.
 
-Interpretatie:
-- De significante uitkomst voor de gemiddelde rusthartslag ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
-- Voor de meeste andere voorspellers blijft het bewijs beperkt, waarschijnlijk door een combinatie van kleine steekproef, natuurlijke variatie tussen nachten/personen en overlap tussen voorspellers.
-- Dat een snack als laatste maaltijd geassocieerd is met een lagere gemiddelde slaaphartslag kan wijzen op een mogelijk gunstig effect van een lichte maaltijd, maar de betrouwbaarheid hiervan is beperkt en heeft verder onderzoek nodig.
-- Wellicht dat iemand met een lagere rusthartslag ook een lagere gemiddelde hartslag tijdens slaap heeft. Ik voeg de persoon als factor toe in het model, zodat er rekening wordt gehouden met verschillen tussen personen.
-
-persoon als factor toevoegen zodat het model rekening houdt met verschillen tussen personen:
+De significante uitkomst voor de gemiddelde rusthartslag ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
+Voor de meeste andere voorspellers blijft het bewijs beperkt, waarschijnlijk door een combinatie van een kleine steekproef, natuurlijke variatie tussen nachten en personen, en overlap tussen de verschillende voorspellers.
+Dat een snack als laatste maaltijd geassocieerd is met een lagere gemiddelde slaaphartslag kan wijzen op een mogelijk gunstig effect van een lichte maaltijd, maar de betrouwbaarheid hiervan is beperkt en vraagt om verder onderzoek.
+Daarnaast lijkt het erop dat personen met een lagere rusthartslag ook een lagere gemiddelde hartslag tijdens slaap hebben.
+Daarom is de persoon als factor toegevoegd aan het model, zodat er rekening wordt gehouden met verschillen tussen personen.
 
 ### Meervoudige Regressie Gemiddelde Hartslag Slaap vs. Factoren (met persoon als factor)
 
+persoon als factor toevoegen zodat het model rekening houdt met verschillen tussen personen:
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("Grafieken/meervoudige_regressie_naam.png")
 knitr::include_graphics("Grafieken/R2_meervoudige_regressie_naam.png")
@@ -177,10 +176,8 @@ De adjusted R^2 is hier 0.92, wat aangeeft dat dit model een groot deel van de v
 Helaas is geen enkele variabele in dit model statistisch significant (p < 0.05), wat betekent dat er in deze dataset geen sterk bewijs is voor een effect van deze variabelen op de gemiddelde hartslag tijdens slaap, als er rekening is gehouden met verschillen tussen personen.
 De individuele voorspellers zelf dragen weinig bij aan het verklaren van de variatie binnen personen.
 
-Waarom dat waarschijnlijk zo is:
-
-- Het toevoegen van persoon als factor laat zien dat er grote verschillen tussen personen zijn, en dat de individuele variabelen niet sterk genoeg zijn om deze verschillen te verklaren.
-- Als de hoeveelheid dagen gemeten meer was, zou er mogelijk meer variatie binnen personen zijn, waardoor sommige van deze variabelen wel significant zouden kunnen worden.
+Het toevoegen van persoon als factor laat zien dat er grote verschillen zijn tussen personen, en dat de individuele variabelen niet sterk genoeg zijn om deze verschillen te verklaren.
+Als het aantal meetdagen groter was geweest, zou er mogelijk meer variatie binnen personen zichtbaar zijn geweest, waardoor sommige van deze variabelen wel significant hadden kunnen worden.
 
 We kunnen ook nog kijken naar de meervoudige regressie met de fitbit slaapscore vs factoren, om te zien of er misschien een verband is tussen slaapscore en deze factoren, maar gezien de onbetrouwbaarheid van de slaapscore is dat minder zinvol.
 
