@@ -13,7 +13,7 @@ De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter sla
 Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel.
 
 
-## 1. analysis en resultaten van plotten(eten en schermgerbuik vs hartslag):
+## 1. analysis en resultaten van plotten(eten en schermgerbuik vs gemiddelde hartslag tijdens de slaap):
 ![Uren tussen eten en slaap vs Gemiddelde Hartslag](Grafieken/eten_grafiek.png)
 ![Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag](Grafieken/scherm_grafiek.png)
 
