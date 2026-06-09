@@ -18,16 +18,25 @@ Hieronder vind je een overzicht van de mappen en bestanden in deze repository:
 
 * **analysis/**: De hoofdmap voor de analyses.
     * **data/**: Bevat de map met samengevoegde gegevens per persoon.
-        * **combined_filetered/**: Bevat de gecombineerde databestanden (`combined_data_lucas.csv`, `combined_data_mohammed.csv` en `combined_data_robin.csv`).
+        * **combined_filetered/**: Bevat de gecombineerde databestanden ('combined_data_lucas.csv', 'combined_data_mohammed.csv' en 'combined_data_robin.csv').
+        * **combined_data/**: Bevat het centrale, gecombineerde bestand 'combined_data.csv' waar alle info van ons drieën al in staat.
     * **scripts/**: Bevat alle codebestanden voor de verwerking en analyse:
         * `csv_sort.py` / `csv_sort_combined.py`: Python-scripts voor het sorteren van data.
         * `analysis_eten_en_scherm_vs_slaapscore.Rmd`: R-Markdown script voor de analyse van maaltijden en schermtijd.
+        * `Analyse_calorieen_slaap.Rmd`: R-Markdown script voor de analyse van verbrande calorieën versus slaap.
+        * `Analyse_remslaap_slaap.Rmd`: R-Markdown script voor de analyse van remslaap versus algemene slaap.
+        * `Analyse_slaap_stappen_7e_versie.Rmd`: Oudere of specifieke versies van het analysescript.
+        * `analyses_Robin.Rmd` / `analyses_Robin.html`: De persoonlijke analyses en resultaten van Robin.
         * `LucasLogboek.Rmd`: Het persoonlijke logboek van Lucas.
-        * `logboek_mohammed.Rmd`: Het persoonlijke logboek van Mohammed.
-        * `logboek_robin.Rmd`: Het persoonlijke logboek van Robin.
-* **docs/**: Documenten voor de onderbouwing van het onderzoek (zoals `Intro.md` en `Paper_Onderzoek.Rmd`).
-* **protocols/**: Bevat het meetprotocol (`meetprotocol.md`) met de methodologie en afspraken.
-* **raw_data/**: De basismappen met de originele Fitbit-exports per persoon (`takeout_lucas`, `takeout_mohammed` en `takeout_robin`).
+        * `logboek_mohammed.rmd`: Het persoonlijke logboek van Mohammed.
+        * `logboek_robin.rmd`: Het persoonlijke logboek van Robin.
+* **docs/**: Documenten voor de onderbouwing van het onderzoek (zoals 'Intro.md' en 'Paper_Onderzoek.Rmd').
+* **protocols/**: Bevat het meetprotocol ('meetprotocol.md') met de methodologie en afspraken.
+* **raw_data/**: De basismappen met de originele Fitbit-exports per persoon ('takeout_lucas', 'takeout_mohammed' en 'takeout_robin').
+* **publication/**: De map voor het definitieve onderzoeksartikel dat ingeleverd moet worden.
+    * `paper.rmd`: Het definitieve R-Markdown script van ons artikel.
+    * `eten_grafiek.png`: De screenshot van de grafiek over de eten-timing.
+    * `scherm_grafiek.png`: De screenshot van de grafiek over de scherm-timing.
 
 ### Proefpesonen: 
 

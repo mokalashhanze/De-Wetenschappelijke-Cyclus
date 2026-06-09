@@ -6,7 +6,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 RAW_DATA_DIR = ROOT_DIR / "raw_data"
 ANALYSIS_DIR = ROOT_DIR / "analysis"
 COMBINED_DATA_DIR = ANALYSIS_DIR / "data" / "combined_data"
-FORM_FILE = ANALYSIS_DIR / "data" / "vragen_forum.csv"
+FORM_FILE = RAW_DATA_DIR / "vragen_forum.csv"
 
 def is_during_sleep(timestamp, sleep_intervals):
     for start, end in sleep_intervals:
@@ -72,6 +72,7 @@ def read_sleep_data(sleep_file):
 def read_sleep_score_data(sleep_score_file):
     print("Reading sleep score data...")
     sleep_scores = {}
+    resting_heart_rates = {}
     try:
         with open(sleep_score_file, 'r') as f:
             reader = csv.DictReader(f)
@@ -79,9 +80,12 @@ def read_sleep_score_data(sleep_score_file):
                 timestamp = datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00'))
                 date = timestamp.date()
                 sleep_scores[date] = int(row['overall_score'])
+                resting_hr_text = row.get('resting_heart_rate', '').strip()
+                if resting_hr_text:
+                    resting_heart_rates[date] = int(float(resting_hr_text))
     except (FileNotFoundError, KeyError, ValueError):
         pass
-    return sleep_scores
+    return sleep_scores, resting_heart_rates
 
 def read_stress_score_data(stress_score_file):
     print("Reading stress score data...")
@@ -192,7 +196,7 @@ fieldnames = [
     'time_between_last_food_and_sleep_hours',
     'time_between_phone_used_and_sleep_hours',
     'rem_sleep_minutes', 'deep_sleep_minutes',
-    'sleep_score', 'corrected_sleep_score',
+    'sleep_score', 'resting_heart_rate', 'corrected_sleep_score',
     'stress_management_score',
     'calories_burned', 'total_steps',
     'phone_last_used', 'last_food_time', 'last_food'
@@ -221,7 +225,7 @@ def process_person(person):
 
     sleep_intervals, sleep_times, fitbit_sleep_durations = read_sleep_data(sleep_file)
     sleep_stage_totals = read_sleep_stage_data(sleep_stage_file)
-    sleep_scores = read_sleep_score_data(sleep_score_file)
+    sleep_scores, resting_heart_rates = read_sleep_score_data(sleep_score_file)
     stress_scores = read_stress_score_data(stress_score_file)
     form_data = read_form_data(form_file, person)
     heart_rate_data = read_heart_rate_data(heart_rate_dir, heart_rate_files)
@@ -279,6 +283,10 @@ def process_person(person):
 
             fitbit_sleep_duration_hours = fitbit_sleep_durations.get(date, '')
             raw_score = sleep_scores.get(date, '')
+            resting_hr = resting_heart_rates.get(date, '')
+            stress_management_score = stress_scores.get(date, '')
+            if stress_management_score == 0:
+                stress_management_score = ''
             corr_score = calculate_corrected_score(raw_score, fitbit_sleep_duration_hours)
             food_to_sleep = calculate_sleep_duration(meal_time, sleep_start_time)
             phone_to_sleep = calculate_sleep_duration(phone_time, sleep_start_time)
@@ -298,8 +306,9 @@ def process_person(person):
                 'rem_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('rem_minutes', 0), 2),
                 'deep_sleep_minutes': round(sleep_stage_totals.get(date, {}).get('deep_minutes', 0), 2),
                 'sleep_score': raw_score,
+                'resting_heart_rate': resting_hr,
                 'corrected_sleep_score': corr_score,
-                'stress_management_score': stress_scores.get(date, ''),
+                'stress_management_score': stress_management_score,
                 'calories_burned': round(daily_calories.get(date, 0), 2),
                 'total_steps': daily_steps[date],
                 'phone_last_used': phone_time,

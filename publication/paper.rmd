@@ -13,7 +13,9 @@ De verwachting is dat proefpersonen met een lagere gemiddelde hartslag beter sla
 Dit onderzoek is belangrijk omdat het laat zien hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewuster keuzes maken die zorgen voor betere rust en herstel.
 
 
-# 1. analysis en resultaten van plotten(eten en schermgerbuik vs hartslag):
+## 1. analysis en resultaten van plotten(eten en schermgerbuik vs gemiddelde hartslag tijdens de slaap):
+![Uren tussen eten en slaap vs Gemiddelde Hartslag](Grafieken/eten_grafiek.png)
+![Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag](Grafieke/scherm_grafiek.png)
 
 ### Conclusie en Discussie:
 
@@ -29,5 +31,4 @@ Hoewel de lijnen in de grafieken een richting op bewegen, laat de statistiek zie
 **Alleen effect bij het type eten**
 Het enige moment waarop er wel echt een duidelijk verschil te zien is, is bij het **type eten** uit de boxplot. Het eten van een zware, vette maaltijd zorgt er wel duidelijk voor dat het lichaam 's nachts harder moet werken. Hierdoor gaat de gemiddelde hartslag tijdens de slaap omhoog vergeleken met een lichte snack of een magere maaltijd.
 
-# 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)
-
+## 2. analysis en resultaten van plotten(Rem slaap, verbrande calorieën en voetstappen per dag vs slaapscore/hartslag)

@@ -1,6 +1,6 @@
 ---
-title: "eten en scherm gebruik vs slaapscore — Analyse"
-author: "mohammed"
+title: "Eten en scherm gebruik vs Gemiddelde Hartslag — Analyse"
+author: "Mohammed"
 output: html_document
 ---
 
@@ -11,82 +11,100 @@ library(ggplot2)
 library(lubridate)
 library(dplyr)
 library(readr)
+library(tidyr)
 ```
 
-# 2. bestanden lezen 
-``` {r bestanden lezen}
-bestanden <- c(
-  "../data/combined_all/combined_data_robin.csv",
-  "../data/combined_all/combined_data_lucas.csv",
-  "../data/combined_all/combined_data_mohammed.csv"
-)
+# 2. Data inladen & voorbereiden
 
-df <- read_csv(bestanden, id = "bestandsnaam") %>%
-  mutate(
-    proefpersoon = case_when(
-      grepl("robin", bestandsnaam) ~ "Robin",
-      grepl("lucas", bestandsnaam) ~ "Lucas",
-      grepl("mohammed", bestandsnaam) ~ "Mohammed"
-    ),
-    date = as.Date(date),
-    last_food = case_when(
-      grepl("mager", last_food) ~ "Maaltijd - mager",
-      grepl("vet", last_food) ~ "Maaltijd - vd vet",
-      grepl("Snack", last_food) ~ "Snack",
-    ),
-    last_food = factor(last_food, levels = c("Snack", "Maaltijd - mager", "Maaltijd - vd vet"))
+```{r data-laden, message=FALSE, warning=FALSE}
+data <- read_csv("combined_data.csv")
+data$date <- as.Date(data$date)
+data <- drop_na(data, last_food, time_between_phone_used_and_sleep_hours, time_between_last_food_and_sleep_hours, average_sleep_heart_rate)
+```
+
+# 3. Statistieken
+
+```{r statistieken}
+analyse_data <- data
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    gem_slaap_hartslag   = round(mean(average_sleep_heart_rate), 2),
+    sd_slaap_hartslag    = round(sd(average_sleep_heart_rate), 2),
+    gem_uren_na_eten     = round(mean(time_between_last_food_and_sleep_hours), 2),
+    sd_uren_na_eten      = round(sd(time_between_last_food_and_sleep_hours), 2),
+    gem_uren_na_scherm   = round(mean(time_between_phone_used_and_sleep_hours), 2),
+    sd_uren_na_scherm    = round(sd(time_between_phone_used_and_sleep_hours), 2)
   ) %>%
-  filter(!is.na(last_food))
+  print()
 ```
 
-# 2. Resultaten en Grafieken
+# 4. Kleuren instellen
 
-## Invloed van Eten op Slaapscore
-
-```{r plot-eten-per-persoon, message=FALSE, warning=FALSE}
-ggplot(df, aes(x = last_food, y = sleep_score, fill = proefpersoon)) +
-  geom_boxplot(alpha = 0.7, na.rm = TRUE) +
-  geom_jitter(width = 0.1, alpha = 0.5, size = 2, na.rm = TRUE, show.legend = FALSE) +
-  facet_wrap(~ proefpersoon, ncol = 3) + 
-  scale_fill_manual(values = c("Robin" = "#F8766D", "Lucas" = "#00BA38", "Mohammed" = "#619CFF")) +
-  labs(
-    title = "Slaapscore per maaltijdgrootte per persoon",
-    x = "Type laatste maaltijd",
-    y = "Slaapscore",
-    fill = "Proefpersoon"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "right"
-  )
+```{r kleuren}
+groeps_kleuren <- c("Robin" = "#F8766D",
+                    "Lucas" = "#00BA38",
+                    "Mohammed" = "#619CFF")
 ```
 
-## Invloed van Schermtijd op Slaapscore
+## 5. Analyse A — Eten-timing vs Gemiddelde Hartslag tijdens Slaap
 
-```{r plot-scherm-per-persoon, message=FALSE, warning=FALSE}
-df_scherm <- df %>%
-  mutate(
-    tijd_telefoon = as.POSIXct(paste("2026-01-01", phone_last_used), format="%Y-%m-%d %H:%M"),
-    tijd_slaap    = as.POSIXct(paste("2026-01-01", start), format="%Y-%m-%d %H:%M"),
-    uren_tot_slaap = as.numeric(difftime(tijd_telefoon, tijd_slaap, units = "hours")),
-    uren_tot_slaap = ifelse(uren_tot_slaap > 12, uren_tot_slaap - 24, uren_tot_slaap),
-    uren_tot_slaap = ifelse(uren_tot_slaap < -12, uren_tot_slaap + 24, uren_tot_slaap),
-    uren_tot_slaap = ifelse(uren_tot_slaap > 0, -uren_tot_slaap, uren_tot_slaap)
-  )
+### Correlatie
 
-ggplot(df_scherm, aes(x = abs(uren_tot_slaap), y = sleep_score, color = proefpersoon)) +
-  geom_point(size = 3, alpha = 0.8, na.rm = TRUE) +
-  geom_smooth(method = "lm", linetype = "dashed", se = FALSE, na.rm = TRUE) +
-  facet_wrap(~ proefpersoon, ncol = 3) + 
-  scale_color_manual(values = c("Robin" = "#F8766D", "Lucas" = "#00BA38", "Mohammed" = "#619CFF")) +
-  scale_x_reverse(limits = c(6, 0)) +
+```{r cor-hartslag-eten}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_last_food_and_sleep_hours))$r.squared, 3),
+    p  = round(cor.test(time_between_last_food_and_sleep_hours, average_sleep_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-hartslag-combined, fig.width=8, fig.height=5, message=FALSE, warning=FALSE}
+ggplot(data, aes(x = time_between_last_food_and_sleep_hours, y = average_sleep_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8, na.rm = TRUE) +
+  geom_smooth(method = "lm", alpha = 0.15, na.rm = TRUE) +
+  scale_color_manual(values = groeps_kleuren, name = "Persoon") +
+  scale_fill_manual(values  = groeps_kleuren, name = "Persoon") +
   labs(
-    title = "Invloed van schermtijd op slaapscore per persoon",
-    x = "Aantal uren van telefoongebruik voor het slapen",
-    y = "Slaapscore",
-    color = "Proefpersoon"
+    title = "Alle personen — Uren tussen laatste maaltijd en slaap vs Gemiddelde Hartslag",
+    x     = "Aantal uren tussen eten en slapen",
+    y     = "Gemiddelde Hartslag tijdens Slaap (bpm)"
   ) +
-  theme_minimal() +
-  theme(legend.position = "right")
+  theme_minimal()
+```
+
+## 6. Analyse B — Schermgebruik vs Gemiddelde hartslag tijdens slaap
+
+### Correlatie
+
+```{r cor-hartslag-scherm}
+analyse_data %>%
+  group_by(naam) %>%
+  summarise(
+    R2 = round(summary(lm(average_sleep_heart_rate ~ time_between_phone_used_and_sleep_hours))$r.squared, 3),
+    p  = round(cor.test(time_between_phone_used_and_sleep_hours, average_sleep_heart_rate)$p.value, 3)
+  ) %>%
+  print()
+```
+
+### Plot — alle personen vergeleken
+
+```{r plot-scherm-combined, fig.width=8, fig.height=5, message=FALSE, warning=FALSE}
+ggplot(data, aes(x = time_between_phone_used_and_sleep_hours, y = average_sleep_heart_rate,
+                          color = naam, fill = naam)) +
+  geom_point(size = 3.5, alpha = 0.8, na.rm = TRUE) +
+  geom_smooth(method = "lm", alpha = 0.15, na.rm = TRUE) +
+  scale_color_manual(values = groeps_kleuren, name = "Persoon") +
+  scale_fill_manual(values  = groeps_kleuren, name = "Persoon") +
+  labs(
+    title = "Alle personen — Uren tussen telefoongebruik en slaap vs Gemiddelde Hartslag",
+    x     = "Aantal uren van telefoongebruik voor het slapen",
+    y     = "Gemiddelde Hartslag tijdens Slaap (bpm)"
+  ) +
+  theme_minimal()
 ```

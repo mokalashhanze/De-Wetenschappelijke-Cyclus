@@ -1,6 +1,6 @@
 ---
 title: "logboek"
-author: "mohammed"
+author: "Mohammed Kalash"
 output: html_document
 ---
 
@@ -137,8 +137,28 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 **Conclusie:** De afspraak was succesvol. We hebben een duidelijke planning en ik kan nu zelfstandig aan de slag met mijn R-codes.  
 
 ---
+# dag 6:
+## Datum: 07/06/2026
 
-# Dag 6:
+**Doel van de dag:** het meetprotocol helemaal afmaken 
+
+**Motivatie:** Ik wil dat ons plan heel simpel is zodat iedereen snapt wat hij moet doen. Ook moeten de cijfers uit de vragenlijst en de Fitbit straks goed samenwerken in R.
+
+**Uitgevoerde werkzaamheden:**
+
+* Het plan opnieuw opgeschreven in RStudio met makkelijke woorden en duidelijke kopjes.
+* Opgeschreven dat we het onderzoek met 3 vaste personen doen (Robin, Lucas en Mohammed) voor 4 weken lang.
+* De online vragenlijst (Google Forms) verbeterd met duidelijke keuzes voor het eten (snack, mager en vol vet).
+* Opgeschreven dat we aan het einde alle cijfers van de Fitbits gaan downloaden met de website Fitbit Takeout.
+* Vastgelegd dat we alle cijfers samen in het programma RStudio gaan stoppen om ze te onderzoeken.
+
+**Resultaten:** Het plan is nu helemaal af en staat in een net bestand. De online vragenlijst is klaar om vanaf morgen elke ochtend ingevuld te worden.
+
+**Analyse:** Door alles in gewone taal op te schrijven, kan niemand meer fouten maken bij het invullen. Het downloaden via Fitbit Takeout zorgt ervoor dat we straks heel veel goede cijfers hebben voor onze code.
+
+**Conclusie:** De voorbereiding is nu helemaal klaar. De vragenlijst en het plan passen nu perfect bij de code en de grafieken die we op dag 7 gaan maken.
+
+# Dag 7:
 
 ## Datum: 08/06/2026
 
@@ -159,4 +179,26 @@ Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken
 
 **Analyse:** Het was even puzzelen met de tijdnotaties en de foutbalken in R, maar door de code korter te maken is het nu heel overzichtelijk.  
 
-**Conclusie:** Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst.  
+**Conclusie:** Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst. 
+
+# Dag 8:
+
+## Datum: 09/06/2026
+
+**Doel van de dag:** Het definitieve artikel klaarmaken door een nieuwe map 'publication' aan te maken en de grafieken daarin te zetten.
+
+**Motivatie:** Ik wil dat ons eindartikel op een nette, overzichtelijke plek op GitHub staat, compleet met de juiste tekst en afbeeldingen, zodat het direct klaar is voor het verslag.
+
+**Uitgevoerde werkzaamheden:**
+
+* Een nieuwe map genaamd 'publication' aangemaakt in ons project.
+* De screenshots van de grafieken (eten-timing en scherm-timing) verplaatst naar de submap 'Grafieken'.
+* De introductie voor het artikel helemaal uitgeschreven en klaargemaakt.
+* De conclusie en de discussie geschreven op basis van de resultaten uit mijn eigen data-analyse.
+* Het pad naar de afbeeldingen in de code aangepast naar 'Grafieken/...png' zodat ze goed laden.
+
+**Resultaten:** De map 'publication' is nu helemaal compleet. Het artikel bevat nu de introductie, de statistieken, de grafieken en een sluitende conclusie.
+
+**Analyse:** Het schrijven van de conclusie hielp om goed te begrijpen wat de data nu echt vertellen. Door de grafieken in een aparte map te zetten, blijft de structuur van ons project heel netjes.
+
+**Conclusie:** De definitieve publicatie is nu helemaal af. Alle bestanden staan op de juiste plek en het artikel is klaar om ingeleverd te worden.
