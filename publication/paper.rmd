@@ -259,12 +259,12 @@ Als we naar de plots kijken, vallen de grote verschillen tussen de drie proefper
 Sommige personen laten een trend zien, maar de combinatie van lage aantallen en variatie tussen nachten maakt echte conclusies niet mogelijk.
 Ook zijn de p-waarden van de laatste maaltijd (zowel zonder als met persoon als factor) hoog (ca. 0.84 en ca. 0.80), wat aangeeft dat er geen statistisch significant verband is.
 
-
+    
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("Grafieken/gemiddelde_gemiddelde rusthartslag.png")
+knitr::include_graphics("Grafieken/gemiddelde_rusthartslag.png")
 ```
-```{r echo=FALSE, out.width="30%", fig.cap="gemiddelde rusthartslag per persoon"}
-knitr::include_graphics("Grafieken/gemiddelde rusthartslag_average.png")
+```{r echo=FALSE, out.width="30%", fig.cap="Gemiddelde rusthartslag per persoon"}
+knitr::include_graphics("Grafieken/rusthartslag_average.png")
 ```
 
 p-waarde zonder persoon als factor toegevoegd: ca. 0.000029 (statistisch significant)
@@ -295,7 +295,7 @@ De slaapscore is echter niet een volledig betrouwbare indicator voor slaapkwalit
 knitr::include_graphics("Grafieken/stappen.png")
 ``` 
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("Grafieken/gemiddelde rusthartslag_vs_stappen.png")
+knitr::include_graphics("Grafieken/rusthartslag_vs_stappen.png")
 ```
 ```{r echo=FALSE, out.width="30%", fig.cap="Gemiddeld aantal stappen per dag per persoon"}
 knitr::include_graphics("Grafieken/steps_average.png")
@@ -333,7 +333,7 @@ De Fitbit-slaapscore bleek in dit onderzoek geen betrouwbare maat voor slaapkwal
 Wel is er één duidelijk en constant significant verband gevonden met de Fitbit-slaapscore: de duur van de REM-slaap. Zowel met als zonder correctie voor persoon is REM-slaap significant gekoppeld aan een hogere slaapscore (p = ca. 0.01–0.02). Dit is logisch, omdat de Fitbit-slaapscore voor een groot deel wordt bepaald door de hoeveelheid REM-slaap. Dit betekent echter niet automatisch dat de slaapscore een goede maat is voor echte slaapkwaliteit, maar vooral dat de score technisch sterk samenhangt met REM-slaap.
 
 
-Kortom, de belangrijkste conclusies van dit onderzoek zijn:
+#### Kortom, de belangrijkste conclusies van dit onderzoek zijn:
 
 De gemiddelde rusthartslag overdag en de gemiddelde hartslag tijdens de slaap hangen op groepsniveau sterk samen. Ook het aantal stappen per dag hangt samen met de gemiddelde hartslag tijdens de slaap, waarbij meer stappen en een lagere gemiddelde rusthartslag samengaan met een lagere hartslag tijdens de slaap.
 
@@ -341,7 +341,7 @@ Dit wijst erop dat mensen met een betere algemene lichamelijke conditie (lagere 
 Wanneer er wordt gecorrigeerd voor verschillen tussen personen echter, verdwijnen deze verbanden. Dit laat zien dat de effecten vooral worden verklaard door vaste verschillen tussen individuen, en minder door veranderingen binnen personen.
 Door het kleine aantal metingen per persoon kunnen er geen betrouwbare effecten binnen personen worden vastgesteld. Verder onderzoek met meer data per persoon is nodig om dit beter te onderzoeken.
 
-De Fitbit-slaapscore blijkt geen stabiele maat voor slaapkwaliteit in dit onderzoek, omdat deze sterk wordt beïnvloed door slaapduur en de metingen hiervan onnauwkeurig zijn. Daarom is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit in deze dataset.
+De Fitbit-slaapscore blijkt geen stabiele maat voor slaapkwaliteit in dit onderzoek, omdat deze sterk wordt beïnvloed door slaapduur en de metingen die de Fitbit hiervan heeft gedaan onnauwkeurig zijn. Daarom is de gemiddelde hartslag tijdens slaap een betere indicator voor slaapkwaliteit in deze dataset.
 Alleen REM-slaap hangt duidelijk samen met de slaapscore, wat vooral de rekenwijze van de Fitbit laat zien.
 
 Op basis van de resultaten kan de nulhypothese voor het verband tussen gemiddelde rusthartslag en gemiddelde hartslag tijdens de slaap worden verworpen op groepsniveau. Verder onderzoek is nodig om te bepalen of er ook binnen personen een verband bestaat, en om de rol van andere factoren beter te begrijpen. 
