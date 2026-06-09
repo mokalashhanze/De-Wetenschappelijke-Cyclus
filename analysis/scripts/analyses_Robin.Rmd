@@ -234,9 +234,6 @@ r2_overview <- data.frame(
 r2_overview
 ```
 
-Voor de gecorrigeerde slaapscore verklaart geen enkele losse variabele veel: hoogste R2 is last_food = 0.045 (4.5%).
-De andere R2 liggen rond 0–3.8% (bijv. stress_management_score = 3.8%, calories_burned = 2.5%).
-
 Voor de gemiddelde slaaphartslag zijn de R2‑waarden over het algemeen hoger: last_food is het grootst met = 0.11 (11%), daarna deep_sleep_minutes = 5.5%, stress_management_score = 5.4% en sleep_duration_hours = 4.9%.
 Sommige variabelen verklaren bijna niets (bv. calories_burned = 0.27%).
 
