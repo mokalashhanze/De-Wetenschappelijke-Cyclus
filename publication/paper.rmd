@@ -335,6 +335,7 @@ Wel is er één duidelijk en constant significant verband gevonden met de Fitbit
 Kortom, de belangrijkste conclusies van dit onderzoek zijn:
 
 De gemiddelde rusthartslag overdag en de gemiddelde hartslag tijdens de slaap hangen op groepsniveau sterk samen. Ook het aantal stappen per dag hangt samen met de gemiddelde hartslag tijdens de slaap, waarbij meer stappen en een lagere rusthartslag samengaan met een lagere hartslag tijdens de slaap.
+
 Dit wijst erop dat mensen met een betere algemene lichamelijke conditie (lagere rusthartslag, meer fysieke activiteit) ook een lagere hartslag tijdens de slaap hebben, wat duidt op een betere slaapkwaliteit.
 Wanneer er wordt gecorrigeerd voor verschillen tussen personen echter, verdwijnen deze verbanden. Dit laat zien dat de effecten vooral worden verklaard door vaste verschillen tussen individuen, en minder door veranderingen binnen personen.
 Door het kleine aantal metingen per persoon kunnen er geen betrouwbare effecten binnen personen worden vastgesteld. Verder onderzoek met meer data per persoon is nodig om dit beter te onderzoeken.
