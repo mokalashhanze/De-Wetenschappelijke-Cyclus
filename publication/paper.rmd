@@ -126,7 +126,7 @@ De grafieken van de resultaten van de drie proefpersonen laten we gecombineerd z
 
 We hebben de slaapscore en de gemiddelde hartslag tijdens slaap als indicatoren voor slaapkwaliteit gebruikt.
 Echter, de slaapscore bleek sterk afhankelijk van de slaapduur, en deze werd niet altijd accuraat gemeten door de Fitbit. Daarom hebben we besloten om de gemiddelde hartslag tijdens slaap als een betrouwbaardere maat voor slaapkwaliteit te gebruiken, omdat deze minder beïnvloed wordt door de onnauwkeurigheid van de slaapduurmetingen.
-Daarom focussen wij ons op de gemiddelde hartslag tijdens de slaap als een maat voor slaapkwaliteit. Een lagere hartslag tijdens de slaap duidt op een betere slaapkwaliteit, omdat het aangeeft dat het lichaam goed tot rust komt en herstelt (Cleveland Clinic, 2024).
+Daarom focussen wij ons op de gemiddelde hartslag tijdens de slaap als een maat voor slaapkwaliteit. Een lagere gemiddelde hartslag tijdens de slaap duidt op een betere slaapkwaliteit, omdat het aangeeft dat het lichaam goed tot rust komt en herstelt (Cleveland Clinic, 2024).
 
 Verder is er een meervoudige regressie-analyse uitgevoerd om te onderzoeken welke factoren samenhangen met de gemiddelde hartslag tijdens de slaap.
 In deze analyse zijn alle gemeten variabelen meegenomen: slaapduur, REM-slaap, diepe slaap, stappen, stressmanagementscore, calorieverbranding en tijd tussen telefoongebruik en slapen. 
@@ -245,7 +245,7 @@ p-waarde zonder persoon als factor toegevoegd: ca. 0.80 (niet significant)
 
 p-waarde met persoon als factor toegevoegd: ca. 0.18 (niet significant)
 
-**Observatie:** Voor de relatie tussen gemiddelde hartslag en hartslag tijdens slaap is over het algemeen een positieve samenhang: personen met hogere hartslag overdag hebben vaak ook hogere hartslag tijdens slaap.
+**Observatie:** Voor de relatie tussen gemiddelde hartslag en gemiddelde hartslag tijdens slaap is over het algemeen een positieve samenhang: personen met hogere hartslag overdag hebben vaak ook hogere gemiddelde hartslag tijdens slaap.
 De individuele lijnen zijn relatief consistenter dan bij slaapscore, wat wijst op een sterkere relatie tussen deze twee hartslagmetingen.
 
 ```{r echo=FALSE, out.width="80%"}
@@ -310,7 +310,7 @@ p-waarde met persoon als factor toegevoegd: ca. 0.20 (niet significant)
 **Observatie:** De fysieke activiteit (stappenaantal) laat geen verband zien met slaapkwaliteit of hartslag per persoon; het verband verschilt per individu en de lijnen zijn haast niet te onderscheiden van een vlakke lijn.
 Echter is er wel een correlatie op groepsniveau: meer stappen gaan samen met een lagere gemiddelde hartslag tijdens slaap.
 Persoon 1 heeft bijvoorbeeld over het algemeen meer dan 10000 stappen per dag en heeft een aanzienlijk lagere gemiddelde hartslag tijdens slaap (rond de 50 bpm) dan persoon 2 en 3, die meestal rond de 6000 of 7000 stappen per dag zitten en een gemiddelde slaaphartslag van rond de 60 bpm hebben.
-Ook de grafiek van rusthartslag versus stappen laat een klein verband per persoon zien, maar een groter verband op groepsniveau: meer stappen gaan samen met een lagere rusthartslag, wat weer samenhangt met een lagere hartslag tijdens slaap.
+Ook de grafiek van rusthartslag versus stappen laat een klein verband per persoon zien, maar een groter verband op groepsniveau: meer stappen gaan samen met een lagere rusthartslag, wat weer samenhangt met een lagere gemiddelde hartslag tijdens slaap.
 
 ### Grafiekselectie
 
@@ -326,7 +326,7 @@ Gezien de kleine steekproef zijn de bevindingen uitsluitend verkennend van aard.
 
 In dit onderzoek hebben we gekeken naar de relatie tussen slaapkwaliteit, hartslag en dagelijkse gewoonten bij drie proefpersonen die vier weken lang zijn gevolgd met een Fitbit. Het doel was om te onderzoeken of een betere slaap samenhangt met een lagere gemiddelde hartslag, vooral tijdens de slaap.
 Uit de resultaten blijkt dat de gemiddelde hartslag tijdens slaap sterk samenhangt met de rusthartslag. Op groepsniveau zien we een duidelijk en statistisch significant verband: nachten met een hogere rusthartslag gaan meestal samen met een hogere gemiddelde slaaphartslag (p = ca. 0.00003). Dit ondersteunt het idee dat iemands algemene lichamelijke toestand een belangrijke rol speelt bij hoe goed het lichaam ’s nachts tot rust komt.
-Daarnaast laten ook het aantal stappen per dag een significant verband zien met de gemiddelde hartslag tijdens slaap op groepsniveau (p = ca. 0.02). Personen die gemiddeld meer stappen zetten, hebben niet alleen een lagere hartslag tijdens de slaap, maar ook een lagere rusthartslag. Dit laat opnieuw zien dat een lagere rusthartslag samenhangt met een lagere hartslag tijdens de slaap, en dat fysieke activiteit hier waarschijnlijk indirect aan bijdraagt.
+Daarnaast laten ook het aantal stappen per dag een significant verband zien met de gemiddelde gemiddelde hartslag tijdens slaap op groepsniveau (p = ca. 0.02). Personen die gemiddeld meer stappen zetten, hebben niet alleen een lagere gemiddelde hartslag tijdens de slaap, maar ook een lagere rusthartslag. Dit laat opnieuw zien dat een lagere rusthartslag samenhangt met een lagere gemiddelde hartslag tijdens de slaap, en dat fysieke activiteit hier waarschijnlijk indirect aan bijdraagt.
 Wanneer we echter rekening houden met verschillen tussen personen door de naam als factor toe te voegen aan het model, verdwijnen deze significante verbanden voor zowel rusthartslag als stappen. Dit laat zien dat de gevonden effecten vooral worden veroorzaakt door vaste verschillen tussen mensen, en niet zozeer door veranderingen binnen één persoon. Met andere woorden: sommige mensen hebben van zichzelf een lagere hartslag en zijn actiever, en dit bepaalt een groot deel van het verband in de groep. Binnen personen is het effect in deze dataset te klein of te wisselend om statistisch significant aan te tonen.
 Andere factoren, zoals verbrande calorieën, stressmanagement, slaapduur en het tijdstip of soort van de laatste maaltijd, laten geen duidelijke significante verbanden zien met de gemiddelde hartslag tijdens slaap, zeker niet wanneer er per persoon wordt gecorrigeerd.
 De Fitbit-slaapscore bleek in dit onderzoek geen betrouwbare maat voor slaapkwaliteit. De slaapscore wordt sterk beïnvloed door slaapduur en laat veel schommelingen zien, waardoor verbanden met andere variabelen zwak en niet consistent zijn. Daarom is in deze paper gekozen om de gemiddelde hartslag tijdens slaap te gebruiken als belangrijkste maat voor slaapkwaliteit, omdat deze minder gevoelig is voor meetfouten in slaapduur en beter laat zien hoe goed het lichaam tot rust komt.
@@ -334,7 +334,7 @@ Wel is er één duidelijk en constant significant verband gevonden met de Fitbit
 
 Kortom, de belangrijkste conclusies van dit onderzoek zijn:
 rusthartslag en aantal stappen op groepsniveau duidelijk samenhangen met de gemiddelde hartslag tijdens slaap.
-personen met meer stappen gemiddeld ook een lagere rusthartslag hebben, wat opnieuw wijst op het belang van rusthartslag voor de hartslag tijdens slaap.
+personen met meer stappen gemiddeld ook een lagere rusthartslag hebben, wat opnieuw wijst op het belang van rusthartslag voor de gemiddelde hartslag tijdens slaap.
 deze verbanden niet hetzelfde blijven binnen personen, door grote verschillen tussen mensen.
 de gemiddelde hartslag tijdens slaap een stabielere en betrouwbaardere maat is dan de Fitbit-slaapscore.
 en dat de Fitbit-slaapscore vooral REM-slaap weerspiegelt, en daarom met voorzichtigheid bekeken moet worden.
