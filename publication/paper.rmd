@@ -141,9 +141,9 @@ knitr::include_graphics("Grafieken/meervoudige_regressie.png")
 knitr::include_graphics("Grafieken/R2_meervoudige_regressie.png")
 ```
 
-In dit model is `resting_heart_rate` statistisch significant geassocieerd met `average_sleep_heart_rate` (p = 0.000029). Dit betekent dat rusthartslag in deze dataset een duidelijke voorspeller is van de gemiddelde hartslag tijdens slaap.
+In dit model is de gemiddelde rusthartslag statistisch significant geassocieerd met de gemiddelde hartslag tijdens slaap (p = 0.000029). Dit betekent dat rusthartslag in deze dataset een duidelijke voorspeller is van de gemiddelde hartslag tijdens slaap.
 
-Daarnaast is ook laatste eten als snack significant (p = 0.035) en de dagelijkse stappen (p = 0.02). Deze waarden zijn wel een stuk hoger dan de andere p-waarde, dus minder betrouwbaar.
+Daarnaast is ook het verband tusssen laatste eten als snack en de gemiddelde hartslag tijdens slaap  (p = 0.035) en de dagelijkse stappen (p = 0.02) significant. Deze waarden zijn wel een stuk hoger dan de andere p-waarde, dus minder betrouwbaar.
 De overige variabelen in dit model hebben p-waarden > 0.05 en zijn in deze steekproef niet statistisch significant.
 
 Verder is hier de adjusted R^2 0.82, wat betekent dat ongeveer 82% van de variatie in gemiddelde hartslag tijdens slaap verklaard wordt door dit model. Dat is een vrij hoog percentage, wat aangeeft dat deze variabelen samen een sterk verband hebben met de slaaphartslag in deze dataset.
@@ -158,7 +158,7 @@ knitr::include_graphics("Grafieken/power.png")
 Als we naar de power-berekening kijken zien we dat de power 1 is bij een r van 0.91, Wat betekent dat de kans bijna 100% is dat we een bestaand effect ook als statistisch significant detecteren.
 
 Interpretatie:
-- De significante uitkomst voor `resting_heart_rate` ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
+- De significante uitkomst voor de gemiddelde rusthartslag ondersteunt het idee dat nachten met een hogere rusthartslag vaak samengaan met een hogere gemiddelde slaaphartslag.
 - Voor de meeste andere voorspellers blijft het bewijs beperkt, waarschijnlijk door een combinatie van kleine steekproef, natuurlijke variatie tussen nachten/personen en overlap tussen voorspellers.
 - Dat een snack als laatste maaltijd geassocieerd is met een lagere gemiddelde slaaphartslag kan wijzen op een mogelijk gunstig effect van een lichte maaltijd, maar de betrouwbaarheid hiervan is beperkt en heeft verder onderzoek nodig.
 - Wellicht dat iemand met een lagere rusthartslag ook een lagere gemiddelde hartslag tijdens slaap heeft. Ik voeg de persoon als factor toe in het model, zodat er rekening wordt gehouden met verschillen tussen personen.
