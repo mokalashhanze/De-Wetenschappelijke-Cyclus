@@ -1,7 +1,11 @@
 ---
-title: "Paper"
+title: "Hoe beïnvloeden de gemiddelde rusthartslag overdag en andere factoren de slaapkwaliteit?"
 output: html_document
 date: "2026-06-05"
+autors:
+  - "Robin Offringa"
+  - "Mohammed"
+  - "Lucas Bos"
 ---
 
 
