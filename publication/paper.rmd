@@ -1,6 +1,6 @@
 ---
 title: "Paper"
-output: html_document
+output: pdf_document
 date: "2026-06-05"
 ---
 # Introductie.
