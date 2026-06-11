@@ -327,14 +327,16 @@ def process_person(person):
 
     return person_results
 
-all_results, all_sleep_score_results = [], []
-for person in ['person_1', 'person_2', 'person_3']:
-    p_res = process_person(person)
-    all_results.extend(p_res)
 
-output_file_combined = COMBINED_DATA_DIR / "combined_data.csv"
+def main():
+    all_results, all_sleep_score_results = [], []
+    for person in ['p1', 'p2', 'p3']:
+        p_res = process_person(person)
+        all_results.extend(p_res)
 
-with open(output_file_combined, 'w', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(all_results)
+    output_file_combined = COMBINED_DATA_DIR / "combined_data.csv"
+
+    with open(output_file_combined, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(all_results)

@@ -1,12 +1,16 @@
 ---
 title: "Hoe beïnvloeden de gemiddelde rusthartslag overdag en andere factoren de slaapkwaliteit?"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 date: "2026-06-05"
 autors:
-  - "Robin Offringa"
-  - "Mohammed"
-  - "Lucas Bos"
+- Robin Offringa
+- Mohammed Kalash
+- Lucas Bos
 ---
+
+Robin Offringa, Mohammed Kalash en Lucas Bos
 
 
 # Abstract
@@ -142,6 +146,8 @@ De p-waarden geven aan of deze verbanden statistisch significant zijn, wat betek
 ### Meervoudige Regressie Gemiddelde Hartslag Slaap vs. Factoren
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("Grafieken/meervoudige_regressie.png")
+```
+```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("Grafieken/R2_meervoudige_regressie.png")
 ```
 
@@ -172,6 +178,8 @@ Daarom is de persoon als factor toegevoegd aan het model, zodat er rekening word
 persoon als factor toevoegen zodat het model rekening houdt met verschillen tussen personen:
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("Grafieken/meervoudige_regressie_naam.png")
+```
+```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("Grafieken/R2_meervoudige_regressie_naam.png")
 ```
 
