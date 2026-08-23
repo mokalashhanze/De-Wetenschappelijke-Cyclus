@@ -1,1 +1,132 @@
+# Logboek - Mohammed Kalash
+**Vak:** De Wetenschappelijke Cyclus
+**Onderzoek:** Effect van schermgebruik en eten op de gemiddelde slaaphartslag
+
+# Introductie:
+**Inleiding:**  
+Goed slapen is heel belangrijk voor je lichaam en je hersenen. Als je slaapt, herstelt je lichaam van de dag. Je hartslag gaat tijdens het slapen omlaag omdat je lichaam helemaal tot rust komt. Als je een lage hartslag hebt in de nacht, betekent dit meestal dat je diep en goed slaapt. Je hart hoeft dan minder hard te werken. Daarom kijken we in dit onderzoek naar de hartslag, want die vertelt ons veel over hoe goed je slaapt.
+
+**Onderzoek**  
+In dit onderzoek bestuderen we de slaapkwaliteit door middel van een smartwatch die de hartslag tijdens het slapen meet. Dit onderzoek wordt uitgevoerd bij drie proefpersonen. We hopen met de resultaten mensen te kunnen helpen hun slaap te verbeteren. We weten dat ook andere factoren een rol spelen bij de hartslagmetingen, zoals het tijdstip van slapen, het type fysieke activiteit overdag, het tijdstip van de laatste maaltijd en telefoongebruik voor het slapengaan. Om deze factoren in kaart te brengen, vullen de proefpersonen dagelijks een korte vragenlijst in. Zo registreren we mogelijke storende variabelen die invloed kunnen hebben op de slaap en de hartslag.   
+
+**Onderzoekvraag en hypothese:**  
+Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap? De verwachting is dat proefpersonen met een lagere gemiddelde hartslag tijdens de slaap beter slapen. Daarnaast wordt verwacht dat voldoende beweging overdag en het beperken van storende gewoonten, zoals schermgebruik voor het slapen, bijdragen aan een lagere hartslag en een betere slaapkwaliteit. Dit onderzoek is relevant omdat het inzichtelijk maakt hoe dagelijkse gewoonten invloed hebben op slaap en hartslag. Door deze verbanden beter te begrijpen, kunnen mensen bewustere keuzes maken voor een betere rust en optimaal herstel.   
+
+**Gebruikte data:**  
+Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De benodigde gegevens worden via een data-export uit de Fitbit-app gehaald. Dit bestand bevat alle relevante variabelen, waaronder de gemiddelde slaapkwaliteit en de gemiddelde hartslag tijdens de slaap. Via Google Forms registreren we de overige dagelijkse factoren met een vragenlijst. Met behulp van R-code analyseren we de data en genereren we een plot die de relatie tussen de slaapkwaliteit en de hartslag tijdens het slapen visualiseert.   
+
+
+In dit logboek houd ik per dag mijn stappen, code en korte resultaten bij voor ons onderzoek naar de slaapscore.
+
+
+---
+
+## Dag 1 (18/05/2026)
+* **Doel & Motivatie:** Het opzetten van de R-omgeving en de benodigde libraries inladen.
+* **Uitgevoerde werkzaamheden:** Vandaag zijn we gestart met het formuleren van de hypotheses (H0 en H1) over schermgebruik (`uren_tot_slaap`) en de gemiddelde hartslag tijdens de slaap (`gemiddelde_hartslag_slaap`). Direct daarna heb ik een nieuw RMarkdown-script aangemaakt en de libraries geladen. Ik koos voor `ggplot2` voor de visualisaties, `lubridate` voor het parsen van tijden, `dplyr` voor data en `readr` voor een snelle import van csv-bestanden.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Laden van de werkomgeving
+library(ggplot2)
+library(lubridate)
+library(dplyr)
+library(readr)
+```
+* **Resultaat & Conclusie:** De bibliotheken zijn zonder foutmeldingen ingeladen.
+
+---
+
+## Dag 2 (20/05/2026)
+* **Doel & Motivatie:** De ruwe Fitbit Takeout data en Google Forms data per persoon inlezen.
+* **Uitgevoerde werkzaamheden:** Omdat we de data anoniem en georganiseerd willen verwerken, heb ik de drie csv-bestanden van de groepsleden apart ingeladen via `read_csv()`. Ik heb de individuele datasets in R de tijdelijke namen `p1`, `p2` en `p3` gegeven om de code overzichtelijk te houden en te controleren of alle kolommen (zoals data, stappen en hartslagen) overal exact dezelfde datatypen hebben.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Individuele csv-bestanden inladen in RStudio
+p1 <- read_csv("../data/combined_data_P1.csv")
+p2 <- read_csv("../data/combined_data_P2.csv")
+p3 <- read_csv("../data/combined_data_P3.csv")
+```
+* **Resultaat & Conclusie:** De drie datasets zijn succesvol geïmporteerd in de R-omgeving. De kolomstructuren komen overeen, wat het samenvoegen later makkelijker maakt.
+
+---
+
+## Dag 3 (21/05/2026)
+* **Doel & Motivatie:**  de gecombineerde dataset filteren.
+* **Uitgevoerde werkzaamheden:** Tijdens het dragen van de Fitbit is er soms een dag overgeslagen of is het horloge niet goed gedragen, waardoor er lege cellen (NA's) in de tabellen zijn ontstaan. Om te voorkomen dat wiskundige berekeningen of regressies straks vastlopen, heb ik de ingebouwde functie `na.omit()` toegepast op onze samengevoegde dataframe.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Alle rijen met ontbrekende gegevens (NA) strikt verwijderen
+dataset_schoon <- na.omit(dataset)
+```
+* **Resultaat & Conclusie:** De dataset is nu clean. Het aantal observaties is iets gekrompen, maar alle overgebleven rijen bevatten nu 100% volledige datapunten.
+
+---
+
+## Dag 4 (25/05/2026)
+* **Doel & Motivatie:** Het corrigeren van data-invoerfouten in de variabele voor schermtijd.
+* **Uitgevoerde werkzaamheden:** Bij het controleren van de ingevoerde schermuren (`uren_tot_slaap`) merkte ik op dat er door invoerverschillen soms negatieve getallen (zoals -2 of -1) in de tabel stonden. Dit klopt biologisch gezien natuurlijk niet. Ik heb de functie `abs()` gebruikt om alle waarden om te zetten naar absolute, positieve uren tot de slaap start.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Negatieve uren transformeren naar absolute positieve getallen
+dataset_schoon\(uren_tot_slaap_abs <- abs(dataset_schoon\)uren_tot_slaap)
+```
+* **Resultaat & Conclusie:** Alle data in de kolom voor schermgebruik zijn nu gecorrigeerd naar bruikbare, positieve uren.
+
+---
+
+## Dag 5 (26/05/2026)
+* **Doel & Motivatie:** De algemene verdeling en spreiding van de hartslagdata bekijken.
+* **Uitgevoerde werkzaamheden:** Voordat we formele modellen gaan draaien, wil ik eerst weten wat de gemiddelde waarden zijn van onze data. Ik heb de functie `summary()` gedraaid om de kwartielen, het gemiddelde en de mediaan te berekenen van de slaaphartslag voor de proefpersonen.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Descriptieve statistiek opvragen voor de datatabel
+summary(dataset_schoon)
+```
+* **Resultaat & Conclusie:** De samenvatting laat zien dat de rusthartslagen per proefpersoon enorm uit elkaar lopen. Waar p1 (Robin) een heel laag gemiddelde heeft (rond de 53 bpm), liggen de baselines van p2 en p3 (boven de 63 bpm) veel hoger. Dit betekent dat groepsgemiddelden een vertekend beeld kunnen geven.
+
+---
+
+## Dag 6 (27/05/2026)
+* **Doel & Motivatie:** Een eerste visuele controle uitvoeren op de schermtijd en de hartslag.
+* **Uitgevoerde werkzaamheden:** Ik heb een basis scatterplot gegenereerd met de standaard `plot()` functie in R om te kijken hoe de datapunten zich verdelen. Hierbij heb ik direct de factor `proefpersoon` gekoppeld aan de kleur van de punten, om te zien of de groepsverschillen ook visueel direct opvallen.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Basis scatterplot genereren met kleurindeling op proefpersoon
+plot(dataset_schoon\(uren_tot_slaap_abs, dataset_schoon\)gemiddelde_hartslag_slaap, 
+     col = as.factor(dataset_schoon\$proefpersoon),
+     xlab = "Uren zonder scherm voor slaap", ylab = "Gemiddelde Hartslag (BPM)")
+```
+* **Resultaat & Conclusie:** De grafiek toont de rode punten (p1) die zich direct afsplitsen aan de onderkant van de grafiek. Dit bevestigt visueel dat een standaardanalyse zonder correctie voor het individu onbetrouwbaar zal zijn.
+
+---
+
+## Dag 7 (08/06/2026)
+* **Doel & Motivatie:** Een geavanceerde visualisatie maken per persoon.
+* **Uitgevoerde werkzaamheden:** Vandaag heb ik `ggplot2` gebruikt om de definitieve grafiek voor ons paper op te leveren. Met `geom_smooth(method = "lm")` heb ik een aparte lineaire trendlijn getrokken voor p1, p2 en p3 om te kijken of schermtijd binnen de personen hetzelfde effect heeft.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Ggplot aanmaken met punten en lineaire trendlijnen per persoon
+ggplot(dataset_schoon, aes(x = uren_tot_slaap_abs, y = gemiddelde_hartslag_slaap, color = proefpersoon)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal()
+```
+* **Resultaat & Conclusie:** De grafiek laat een heel interessant patroon zien: de lijnen lopen niet parallel. Mijn eigen blauwe lijn (Mohammed) daalt licht, wat betekent dat mijn hartslag lager wordt als ik langer mijn telefoon wegleg. Bij Lucas stijgt de lijn juist iets. De factor 'proefpersoon' is dus een cruciale variabele.
+
+---
+
+## Dag 8 (09/06/2026)
+* **Doel & Motivatie:** Meervoudige lineaire regressiemodellen toetsen met de `lm()` functie.
+* **Uitgevoerde werkzaamheden:** Om de feedback van de docent over verschuivende p-waarden formeel op te lossen, heb ik twee opeenvolgende modellen gedraaid met `lm()`. Model 1 kijkt puur naar het effect van schermuren op de hele groep. Model 2 voegt de factor `proefpersoon` toe om te corrigeren voor de individuele biologische baselines.
+* **Toegepaste R-code:**
+```{r, eval=FALSE}
+# Model 1: Groepsmodel zonder persoonsvariabele
+model1 <- lm(gemiddelde_hartslag_slaap ~ uren_tot_slaap_abs, data = dataset_schoon)
+summary(model1)
+
+# Model 2: Uitgebreid model met correctie voor proefpersoon
+model2 <- lm(gemiddelde_hartslag_slaap ~ uren_tot_slaap_abs + proefpersoon, data = dataset_schoon)
+summary(model2)
+```
+* **Resultaat & Conclusie:** In Model 1 leek schermtijd een heel ander effect te hebben, omdat de extreem lage basishartslag van p1 (Robin) het model scheefrok (schijnverband). Zodra de factor `proefpersoon` werd toegevoegd in Model 2, veranderden de p-waarden van schermtijd volledig en was het effect binnen de proefpersonen niet meer statistisch significant. Dit bewijst dat de individuele verschillen tussen ons als mensen vele malen groter zijn dan het losse, dagelijkse effect van het schermgebruik. Dit is als hoofdresultaat opgenomen in ons definitieve paper.
 
