@@ -90,12 +90,11 @@ boxplot(sleep_score ~ last_food, data = df_scherm, col = "lightblue")
 ---
 
 ## Dag 6 (08/06/2026)
-* **Doel & Motivatie:** Kijken naar de schermtijd per persoon in een grafiek.
+* **Doel & Motivatie:** Kijken naar de schermtijd per persoon in een grafiek met de gemiddelde hartslag tijdens de slaap.
 * **Uitgevoerde werkzaamheden:** Ik heb een scatterplot gemaakt om de schermtijd tegenover de slaapscore te zetten, waarbij ik elke proefpersoon een eigen kleur heb gegeven.
 * **Code van vandaag:**
 ```{r, eval=FALSE}
-# Puntengrafiek maken met een kleur per proefpersoon
-plot(df_scherm\(uren_tot_slaap_abs, df_scherm\)sleep_score, 
+plot(df_scherm\$uren_tot_slaap_abs, df_scherm\$gemiddelde_hartslag_slaap,
      col = as.factor(df_scherm\$proefpersoon))
 ```
 * **Kort resultaat:** De lijnen in de grafiek lopen per persoon heel anders. Bij de ene persoon maakt schermtijd veel uit, bij de ander bijna niks. 
