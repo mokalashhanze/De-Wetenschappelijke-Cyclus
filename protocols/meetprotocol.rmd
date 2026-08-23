@@ -77,6 +77,14 @@ Als de 4 weken voorbij zijn, gaan we alle verzamelde gegevens samenvoegen en bes
 Aan het einde van de 4 weken loggen we in op de Google/Fitbit-account van de 3 proefpersonen. We gebruiken **Fitbit Takeout** om alle gedetailleerde gegevens (zoals de exacte hartslag per minuut en de slaapfases) als computerbestanden te downloaden. Ook downloaden we alle antwoorden uit de Google Forms.
 
 ## 6.2 Analyseren met R-code
-We laden de bestanden van de Google Forms en de Fitbit Takeout samen in **RStudio**. Met behulp van **R-code** gaan we berekeningen maken en controleren we de volgende dingen:
-* Slaap je korter of onrustiger als je vlak voor het slapengaan nog op een scherm hebt gekeken?
-* Slaat je hart 's nachts sneller of onrustiger na een maaltijd met vol vet vergeleken met een magere maaltijd?
+
+We laden de bestanden van de Google Forms en de Fitbit Takeout samen in **RStudio**. Met behulp van **R-code** gaan we de data onderzoeken.
+
+Heel belangrijk hierbij is dat we kijken naar de invloed van schermgebruik op de gemiddelde hartslag tijdens de slaap. Omdat we als proefpersonen biologisch erg van elkaar verschillen (de een heeft van zichzelf een veel lagere hartslag dan de ander), moeten we hier in de statistiek voor corrigeren. 
+
+We maken daarom twee lineaire regressiemodellen met de `lm()` functie:
+1. Een basismodel waarin we alleen kijken naar de schermuren en de hartslag van de groep.
+2. Een uitgebreid model waarin we ook de factor `proefpersoon` toevoegen. 
+
+Door de factor proefpersoon mee te nemen, voorkomen we dat veranderende p-waarden voor verkeerde conclusies zorgen. Zo meten we het échte effect van de telefoon binnen de persoon zelf.
+
