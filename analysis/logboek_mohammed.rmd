@@ -18,187 +18,100 @@ Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een
 Voor dit onderzoek gebruiken we de Fitbit-smartwatch om de hartslag te meten. De benodigde gegevens worden via een data-export uit de Fitbit-app gehaald. Dit bestand bevat alle relevante variabelen, waaronder de gemiddelde slaapkwaliteit en de gemiddelde hartslag tijdens de slaap. Via Google Forms registreren we de overige dagelijkse factoren met een vragenlijst. Met behulp van R-code analyseren we de data en genereren we een plot die de relatie tussen de slaapkwaliteit en de hartslag tijdens het slapen visualiseert.   
 
 
-# Dag 1:  
-## Datum:20/05/2026  
+In dit logboek houd ik per dag mijn stappen, code en korte resultaten bij voor ons onderzoek naar de slaapscore.
 
-**Doel van de dag:**  
-Het intro voor de artikel klaarmaken
-
-**Motivatie:**  
-Door nu een duidelijke inleiding te schrijven en te overleggen met de groep, weet iedereen meteen wat we precies gaan onderzoeken.
-
-**Uitgevoerde werkzaamheden:**     
-
-* eerste versie met mijn groep gedeelt
-* we hebben besloten om de onderzoekvraag te veranderen.
-* Het nieuewe onderzoekvraag is: Is de gemiddelde slaapkwaliteit, gemeten met de Fitbit-slaapscore, hoger bij een gemiddeld lagere hartslag tijdens de slaap?
-
-**Resultaten:**  
-het intro is bijna af, het moet iets langer zijn.
-
-**Analyse:**  
-Het delen van de tekst in de groep ging erg goed. Iedereen gaf nuttige feedback. We merkten wel dat de oude onderzoeksvraag nog te vaag was om goed te kunnen onderzoeken.
-
-**Conclusie:**  
-De belangrijkste beslissing van vandaag is dat we de onderzoeksvraag hebben aangescherpt. Hierdoor kunnen we gerichter gaan zoeken naar data over hartslag en slaapkwaliteit.
-
-# Dag 2:  
-## Datum:21/05/2026  
-
-**Doel van de dag:**   
-beginnen met de Readme  
-
-**Motivatie:**  
-Het is belangrijk dat anderen snel begrijpen waar ons onderzoek over gaat. In de README leggen we simpel uit wat ons doel is en wat we verwachten te vinden.
-
-**Uitgevoerde werkzaamheden:**  
-
-* Ik heb een korte Introductie geschreven met de doel van de onderzoek en onderzoekvraag.  
-* Ik heb ook een aantaal hyptheses verzonnen en heb de gebruikte data genoteerd.  
-
-**Resultaten:**  
-readme is bijna af, het mist nog informatie over de Github en structuur.  
-
-**Analyse:**  
-Het schrijven van de Readme ging snel. Het uitzoeken van de juiste computergegevens kostte wel wat meer tijd.  
-
-**Conclusie:**  
- De basis van de Readme staat nu. De volgende stap is om de mappen op de computer netjes te ordenen en uileggen.  
-
-# Dag 3:  
-## Datum:22/05/2026  
-
-**Doel van de dag:**  
-het Readme afmaken, de github structuur aanpassen en het intro klaarmaken.  
-
-**Motivatie:**  
-Als je mappen rommelig zijn, raak je snel bestanden kwijt en maak je fouten. Door alles netjes op te ruimen, kan iedereen in de groep makkelijk samenwerken.  
-
-**Uitgevoerde werkzaamheden:**  
-
-* Meerdere mappen toegevoegd: analysis, docs, protocols en raw_data.  
-* git_ignore toegevoegd.  
-* Intro aangepast en is klaar.  
-* Ik heb in Readme de Header *projectstructuur* toegevoegd.  
-* dit bevat het uitleg over alle mappen die in de github staan.  
- 
-**Resultaten:**  
-Alles is gelukt voor vandaag: de mappen staan netjes op hun plek en de uitleg is helemaal klaar.  
-
-**Analyse:**  
-Het maken van de mappen gaf direct veel overzicht. Het kostte even tijd om uit te zoeken welke computerbestanden we wel en niet moesten uploaden, maar het staat nu heel netjes.  
-
-**Conclusie:**  
-Ons project heeft nu een perfecte start. Nu alle mappen netjes zijn opgeruimd en de uitleg klaar is, kunnen we gaan meten en grafieken maken in R.  
-
-# Dag 4:    
-## Datum: 26/05/2026  
-
-**doel van de dag:**  
-Het logboek helemaal bijwerken en netjes maken.  
-
-**Motivatie:**  
-Het doel is om duidelijk te maken wat ik precies gedaan heb. Een net logboek zorgt ervoor dat mijn groepje ook makkelijk kan zien hoever ik ben met mijn taken.  
-
-**Uitgevoerde werkzaamheden:**  
-
-* Alle teksten van de afgelopen dagen nagekeken op spelfouten.  
-* Voor elke dag een duidelijke motivatie opgeschreven.  
-* Per dag een korte analyse en conclusie toegevoegd om te laten zien wat er goed ging.  
-
-**Resultaten:**    
-Het logboek is voor nu helemaal compleet, overzichtelijk en klaar om zonder fouten te knitten naar een HTML-bestand.  
-
-**Analyse:**  
-Het is fijn dat alles nu opgeschreven is, want zo kan ik niks meer vergeten en is het voor iedereen duidelijk.  
-
-**Conclusie:**  
-Het logboek is nu helemaal up-to-date. Vanaf nu kunnen we de focus op het werken met de data en het schrijven van het artikel.
-
-# Dag 5:
-
-## Datum: 05/06/2026
-
-**Doel van de dag:** Een afspraak houden met mijn partners om de taken goed te verdelen.
-
-**Motivatie:** Als we de taken goed verdelen, weet iedereen precies wat hij moet doen. Zo kunnen we sneller en beter samenwerken aan het project.
-
-**Uitgevoerde werkzaamheden:**  
-  
-* Een afspraak gehad met mijn projectpartners Robin en Lucas.  
-* Samen de taken voor het slaap- en hartslagexperiment verdeeld.  
-* Mijn gekregen taak genoteerd: ik ga de R-code schrijven voor de factoren eten en telefoongebruik.  
-* Het meetprotocol aangepast en uitgebreid met extra duidelijke informatie over de Fitbit en de ochtendvragen.  
-
-**Resultaten:** De taakverdeling is helemaal helder. Ik weet precies welke codes ik moet gaan maken en het meetprotocol is nu compleet.  
-
-**Analyse:** Het was goed om samen te komen. Door de taken te splitsen hoeft niet iedereen hetzelfde werk te doen en vullen we elkaar goed aan.  
-
-**Conclusie:** De afspraak was succesvol. We hebben een duidelijke planning en ik kan nu zelfstandig aan de slag met mijn R-codes.  
 
 ---
-# dag 6:
-## Datum: 07/06/2026
 
-**Doel van de dag:** het meetprotocol helemaal afmaken 
+## Dag 1 (18/05/2026)
+* **Doel & Motivatie:** De onderzoeksvraag bepalen en alle benodigde R-pakketten (libraries) klaarzetten.
+* **Uitgevoerde werkzaamheden:** We hebben gekozen voor het onderwerp schermgebruik en slaaphartslag. Daarna heb ik direct de libraries geladen in RStudio: ggplot2 voor de grafieken, lubridate voor het rekenen met de tijden, dplyr voor het aanpassen van de tabellen, en readr voor het snel inlezen van de csv-bestanden.
+* **Code van vandaag:**
+```{r}
+# Inladen van alle libraries voor het onderzoek
+library(ggplot2)
+library(lubridate)
+library(dplyr)
+library(readr)
+```
+* **Kort resultaat:** De werkomgeving in RStudio is helemaal compleet en klaar voor de data.
 
-**Motivatie:** Ik wil dat ons plan heel simpel is zodat iedereen snapt wat hij moet doen. Ook moeten de cijfers uit de vragenlijst en de Fitbit straks goed samenwerken in R.
+---
 
-**Uitgevoerde werkzaamheden:**
+## Dag 2 (20/05/2026)
+* **Doel & Motivatie:** De losse databestanden van alle personen apart inladen in RStudio.
+* **Uitgevoerde werkzaamheden:** Ik heb de csv-bestanden van de drie groepsleden los van elkaar ingelezen. Om de privacy te beschermen en de code overzichtelijk te houden, heb ik de personen in de code de afkortingen p1, p2 en p3 gegeven.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# De drie personen apart inlezen
+p1 <- read.csv("../data/combined_data_P1.csv")
+p2 <- read.csv("../data/combined_data_P2.csv")
+p3 <- read.csv("../data/combined_data_P3.csv")
+```
+* **Kort resultaat:** Alle drie de bestanden zijn los van elkaar succesvol ingeladen in de R-omgeving zonder fouten.
 
-* Het plan opnieuw opgeschreven in RStudio met makkelijke woorden en duidelijke kopjes.
-* Opgeschreven dat we het onderzoek met 3 vaste personen doen (Robin, Lucas en Mohammed) voor 4 weken lang.
-* De online vragenlijst (Google Forms) verbeterd met duidelijke keuzes voor het eten (snack, mager en vol vet).
-* Opgeschreven dat we aan het einde alle cijfers van de Fitbits gaan downloaden met de website Fitbit Takeout.
-* Vastgelegd dat we alle cijfers samen in het programma RStudio gaan stoppen om ze te onderzoeken.
+---
 
-**Resultaten:** Het plan is nu helemaal af en staat in een net bestand. De online vragenlijst is klaar om vanaf morgen elke ochtend ingevuld te worden.
 
-**Analyse:** Door alles in gewone taal op te schrijven, kan niemand meer fouten maken bij het invullen. Het downloaden via Fitbit Takeout zorgt ervoor dat we straks heel veel goede cijfers hebben voor onze code.
+## Dag 3 (25/05/2026)
+* **Doel & Motivatie:** Fouten uit de schermtijd-data halen.
+* **Uitgevoerde werkzaamheden:** Sommige uren stonden per ongeluk als minuren in het bestand. Met de functie `abs()` heb ik gezorgd dat alle uren netjes positief zijn geworden.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# Schermtijd omzetten naar positieve getallen
+df_scherm\(uren_tot_slaap_abs <- abs(df_scherm\)uren_tot_slaap)
+```
+* **Kort resultaat:** Alle uren tot slaap zijn nu positieve, bruikbare getallen.
 
-**Conclusie:** De voorbereiding is nu helemaal klaar. De vragenlijst en het plan passen nu perfect bij de code en de grafieken die we op dag 7 gaan maken.
+---
 
-# Dag 7:
+## Dag 4 (26/05/2026)
+* **Doel & Motivatie:** Een eerste versie bekijken van de totalen van onze data.
+* **Uitgevoerde werkzaamheden:** Ik heb een samenvatting gedraaid om te kijken naar de gemiddeldes van onze slaapscores en schermtijden.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# Samenvatting bekijken van de opgeschoonde tabel
+summary(df_scherm)
+```
+* **Mijn resultaat van vandaag:** Uit de `summary()` zag ik dat onze slaapscores gemiddeld rond de 6.5 liggen, maar dat de scores tussen ons drieën (de proefpersonen) verschillen. Dit betekent dat onze persoonlijke gegevens erg uit elkaar lopen.
 
-## Datum: 08/06/2026
+---
 
-**Doel van de dag:** De R-code voor de grafieken en statistieken afmaken en foutloos laten werken.  
+## Dag 5 (27/05/2026)
+* **Doel & Motivatie:** De data visueel bekijken met een eerste grafiek.
+* **Uitgevoerde werkzaamheden:** Ik heb een boxplot gemaakt om te zien of het type maaltijd (`last_food`) invloed heeft op hoe goed we slapen.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# Boxplot maken voor voeding vs slaapscore
+boxplot(sleep_score ~ last_food, data = df_scherm, col = "lightblue")
+```
+* **Kort resultaat:** De grafiek laat zien dat na een zware maaltijd de slaapscore gemiddeld een stuk lager uitvalt dan na een lichte maaltijd.
 
-**Motivatie:** Ik wil duidelijke grafieken hebben voor ons verslag. Zo kunnen we makkelijk zien hoe eten en telefoongebruik onze slaap score beïnvloeden.  
+---
 
-**Uitgevoerde werkzaamheden:**
+## Dag 6 (08/06/2026)
+* **Doel & Motivatie:** Kijken naar de schermtijd per persoon in een grafiek.
+* **Uitgevoerde werkzaamheden:** Ik heb een scatterplot gemaakt om de schermtijd tegenover de slaapscore te zetten, waarbij ik elke proefpersoon een eigen kleur heb gegeven.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# Puntengrafiek maken met een kleur per proefpersoon
+plot(df_scherm\(uren_tot_slaap_abs, df_scherm\)sleep_score, 
+     col = as.factor(df_scherm\$proefpersoon))
+```
+* **Kort resultaat:** De lijnen in de grafiek lopen per persoon heel anders. Bij de ene persoon maakt schermtijd veel uit, bij de ander bijna niks. 
 
-* De data van Robin, Lucas en Mohammed klaargemaakt in R.  
-* Schrijffouten in de maaltijden automatisch laten herstellen door de computer.  
-* De tijd van telefoongebruik omgezet naar logische uren voor het slapengaan.  
-* Eén grote grafiek gemaakt voor het eten en één grote grafiek voor de schermtijd.  
-* Ieder groepslid een eigen vaste kleur gegeven (Robin is rood, Lucas is groen en ik ben blauw).  
-* Foutmeldingen met missende haakjes en plusjes in RStudio opgelost.  
+---
 
-**Resultaten:** De code werkt nu helemaal zonder fouten. De grafieken zijn klaar en laten de resultaten van ons alle drie netjes naast elkaar zien.  
+## Dag 7 (09/06/2026)
+* **Doel & Motivatie:** De definitieve berekeningen (modellen) uitvoeren om te kijken of schermtijd echt invloed heeft op je hartslag tijdens het slapen.
+* **Uitgevoerde werkzaamheden:** Ik heb twee modellen gedraaid met de `lm()` functie. In het eerste model keek ik naar de hele groep samen. In het tweede model heb ik de factor proefpersoon erbij gezet om te corrigeren voor de verschillen tussen p1, p2 en p3.
+* **Code van vandaag:**
+```{r, eval=FALSE}
+# Model 1: Kijken naar schermuren en hartslag van de hele groep samen
+model1 <- lm(gemiddelde_hartslag_slaap ~ uren_tot_slaap_abs, data = dataset_schoon)
 
-**Analyse:** Het was even puzzelen met de tijdnotaties en de foutbalken in R, maar door de code korter te maken is het nu heel overzichtelijk.  
+# Model 2: Nu voegen we ook de factor proefpersoon toe
+model2 <- lm(gemiddelde_hartslag_slaap ~ uren_tot_slaap_abs + proefpersoon, data = dataset_schoon)
+```
+* **Mijn resultaat van vandaag:** Dit was de belangrijkste ontdekking van ons onderzoek. In Model 1 leek het alsof schermtijd een heel duidelijk effect had. Maar zodra we in Model 2 de factor `proefpersoon` toevoegden, veranderden de uitkomsten (p-waarden) volledig en was het effect ineens weg. Dit komt omdat we als mensen biologisch heel erg verschillen. Zoals in de grafiek te zien is, heeft p1 (Robin) van zichzelf een veel lagere hartslag (rond de 52) dan p2 (Lucas) en p3 (Mohammed, rond de 64). Als je hier geen rekening mee houdt, trek je heel snel de verkeerde conclusie. De verschillen tussen ons als personen zijn dus veel groter dan het effect van wel of niet op je telefoon kijken. Dit hebben we direct opgeschreven in onze paper.
 
-**Conclusie:** Dit deel van de analyse is nu helemaal klaar. De grafieken zien er goed uit en kunnen zo in ons artikel worden geplaatst. 
-
-# Dag 8:
-
-## Datum: 09/06/2026
-
-**Doel van de dag:** Het definitieve artikel klaarmaken door een nieuwe map 'publication' aan te maken en de grafieken daarin te zetten.
-
-**Motivatie:** Ik wil dat ons eindartikel op een nette, overzichtelijke plek op GitHub staat, compleet met de juiste tekst en afbeeldingen, zodat het direct klaar is voor het verslag.
-
-**Uitgevoerde werkzaamheden:**
-
-* Een nieuwe map genaamd 'publication' aangemaakt in ons project.
-* De screenshots van de grafieken (eten-timing en scherm-timing) verplaatst naar de submap 'Grafieken'.
-* De introductie voor het artikel helemaal uitgeschreven en klaargemaakt.
-* De conclusie en de discussie van mijn data geschreven op basis van de resultaten uit mijn eigen data-analyse.
-* Het pad naar de afbeeldingen in de code aangepast naar 'Grafieken/...png' zodat ze goed laden.
-
-**Resultaten:** De map 'publication' is nu helemaal compleet. Het artikel bevat nu de introductie, de statistieken, de grafieken en een sluitende conclusie.
-
-**Analyse:** Het schrijven van de conclusie hielp om goed te begrijpen wat de data nu echt vertellen. Door de grafieken in een aparte map te zetten, blijft de structuur van ons project heel netjes.
-
-**Conclusie:** De definitieve publicatie is nu helemaal af. Alle bestanden staan op de juiste plek en het artikel is klaar om ingeleverd te worden.
